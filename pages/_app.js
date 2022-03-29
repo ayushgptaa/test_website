@@ -1,9 +1,7 @@
-import type { AppProps } from 'next/app'
-
 import 'styles/globals.scss'
 import 'styles/fonts.scss'
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
+const MyApp = ({ Component, pageProps }) => {
     return <Component {...pageProps} />
 }
 
