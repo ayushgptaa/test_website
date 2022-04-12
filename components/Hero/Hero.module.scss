@@ -1,0 +1,19 @@
+@use '/styles/variables.scss';
+
+.mainHeading {
+  margin-top: 4rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.2rem;
+  span {
+    color: variables.$primary-blue;
+    display: inline;
+  }
+}
+.secondaryHeading {
+  font-weight: 600;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
