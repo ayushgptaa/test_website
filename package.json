@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "clsx": "^1.1.1",
     "framer-motion": "^6.2.8",
     "next": "12.1.2",
     "prop-types": "^15.8.1",

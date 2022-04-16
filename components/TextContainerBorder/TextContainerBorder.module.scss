@@ -1,0 +1,29 @@
+@use '/styles/variables.scss' as *;
+
+.container {
+  margin-top: 2.5rem;
+}
+
+.heading {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  padding-left: 1rem;
+}
+
+.para {
+  font-weight: 400;
+  padding: 0.8rem 0;
+  color: #ffffff;
+  opacity: 0.64;
+  border-left: 3px solid $primary-blue;
+  padding-left: 1rem;
+}
+
+.learnMore {
+  padding-left: 1rem;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: $primary-blue;
+}

@@ -1,0 +1,28 @@
+@use '/styles/mixins.scss' as *;
+
+.container {
+  position: relative;
+  width: 85%;
+  margin: 2rem auto;
+  height: 376px;
+  width: 327px;
+  background-color: #030819;
+  border-radius: 1rem;
+  padding: 3rem 1.5rem;
+  overflow: hidden;
+}
+
+.bgPattern {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  inset: 0;
+  background: url('../../../public/images/Features/bgEllipse.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.para {
+  @include primary-text-mobile;
+  margin-top: 1.5rem;
+}

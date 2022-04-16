@@ -1,0 +1,32 @@
+@use '/styles/mixins.scss' as *;
+@use '/styles/variables.scss' as *;
+
+.container {
+  position: relative;
+  margin-top: 5rem;
+}
+
+.textContainer {
+  width: 327px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  top: -7rem;
+}
+
+.heading {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+
+  span {
+    color: $primary-blue;
+    margin-left: -0.5rem;
+  }
+}
+
+.para {
+  @include primary-text-mobile;
+  margin: 1.8rem 0;
+}

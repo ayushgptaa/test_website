@@ -1,9 +1,18 @@
-.buttonForm {
+@use '/styles/variables.scss' as *;
+
+.button {
   margin: auto;
   padding: 0.8rem 1.5rem;
   color: #fff;
   display: block;
-  width: 85%;
+  max-width: 327px;
   background: linear-gradient(121.99deg, #00d3ff -26.48%, #1a49ff 64.48%);
   border-radius: 8px;
+}
+
+.black {
+  background: $color-background;
+  margin: 1rem auto;
+  width: 100%;
+  border: 1px solid #fff;
 }
