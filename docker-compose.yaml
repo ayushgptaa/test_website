@@ -1,0 +1,20 @@
+version: '2.2'
+
+services:
+
+  website:
+    container_name: new-website
+    build:
+      context: ./
+      dockerfile: ./docker/Dockerfile
+    restart: unless-stopped
+    mem_limit: 512m
+    cpus: 0.5
+    ports:
+      - 3000:80
+    networks:
+      - proxy-tier
+
+networks:
+  proxy-tier:
+    driver: bridge
