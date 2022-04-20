@@ -14,18 +14,6 @@
   margin-top: -7rem;
 }
 
-.heading {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 44px;
-
-  span {
-    color: $primary-blue;
-    margin-left: -0.5rem;
-  }
-}
-
 .para {
   @include primary-text-mobile;
   text-align: left;

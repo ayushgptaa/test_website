@@ -1,0 +1,18 @@
+@use '/styles/variables.scss' as *;
+
+.heading {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+
+  span {
+    color: $primary-blue;
+    margin-left: -0.5rem;
+  }
+}
+
+.uppercase {
+  text-align: center;
+  text-transform: uppercase;
+}

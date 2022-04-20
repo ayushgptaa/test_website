@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
 import Button from '/components/Button'
+import Heading from 'components/Heading'
 
 import iphoneImgMobile from '/public/images/Features/iphoneImgMobile.png'
 
@@ -22,9 +23,7 @@ const MobileBackground = () => {
         priority={false}
       />
       <div className={styles.textContainer}>
-        <h2 className={styles.heading}>
-          {data.heading} <span>.</span>
-        </h2>
+        <Heading text={data.heading} />
         <p className={styles.para}>{data.para}</p>
         <Button type="button" text={data.btnText} black />
       </div>
