@@ -1,0 +1,30 @@
+.accordionContainer {
+  width: 327px;
+  margin-top: 2.5rem;
+}
+
+.contentPlaceholder {
+  padding: 1rem 0;
+  transform-origin: top center;
+  p {
+    padding-bottom: 1rem;
+    font-weight: 400;
+    font-size: 14px;
+  }
+}
+
+.container {
+  color: white;
+  cursor: pointer;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.section {
+  overflow: hidden;
+  border-bottom: 1px solid rgba($color: #fff, $alpha: 0.1);
+}
