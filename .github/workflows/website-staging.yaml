@@ -1,0 +1,20 @@
+name: "Run Website on staging server"
+
+on: [workflow_dispatch]
+
+jobs:
+  website_deployment:
+    runs-on: site
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Extract current branch name
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
+
+      - name: "Deploy Website"
+        run: |
+          echo "Branch name is ${{ steps.extract_branch.outputs.branch }}"
+          docker-compose down
+          docker-compose up -d --build
