@@ -1,30 +1,24 @@
-import { AiOutlineTwitter } from 'react-icons/ai'
-import { FaDiscord } from 'react-icons/fa'
-import { RiTelegramFill } from 'react-icons/ri'
-import { IconContext } from 'react-icons'
+import IconContainer from '/components/IconContainer'
+
+import discord from '/public/images/SocialIcons/discord.svg'
+import twitter from '/public/images/SocialIcons/twitter.svg'
+import telegram from '/public/images/SocialIcons/telegram.svg'
 
 import styles from './SocialIcons.module.scss'
 
-const value = {
-  color: 'white',
-  size: '28px',
-}
-
 const SocialIcons = () => {
   return (
-    <IconContext.Provider value={value}>
-      <ul className={styles.socialIcons}>
-        <li>
-          <AiOutlineTwitter />
-        </li>
-        <li>
-          <FaDiscord />
-        </li>
-        <li>
-          <RiTelegramFill />
-        </li>
-      </ul>
-    </IconContext.Provider>
+    <ul className={styles.socialIcons}>
+      <li>
+        <IconContainer img={discord} alt="discord" height={28} width={28} />
+      </li>
+      <li>
+        <IconContainer img={twitter} alt="twitter" height={28} width={28} />
+      </li>
+      <li>
+        <IconContainer img={telegram} alt="telegram" />
+      </li>
+    </ul>
   )
 }
 

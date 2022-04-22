@@ -1,18 +1,22 @@
 import PropTypes from 'prop-types'
-import { FiMenu, FiX } from 'react-icons/fi'
-import { IconContext } from 'react-icons'
 
-const value = {
-  color: 'white',
-  size: '26px',
+import IconContainer from '/components/IconContainer'
+
+import menuIcon from '/public/images/NavIcons/menuIcon.svg'
+import closeIcon from '/public/images/NavIcons/closeIcon.svg'
+
+const MenuIcon = () => {
+  return <IconContainer img={menuIcon} alt="Menu" height={24} width={24} />
+}
+
+const CloseIcon = () => {
+  return <IconContainer img={closeIcon} alt="Close" height={24} width={24} />
 }
 
 const ToggleBtn = ({ toggleNavbar, showNavLinks }) => {
   return (
     <button type="button" onClick={toggleNavbar} style={{ zIndex: 20 }}>
-      <IconContext.Provider value={value}>
-        {showNavLinks ? <FiX /> : <FiMenu />}
-      </IconContext.Provider>
+      {showNavLinks ? <CloseIcon /> : <MenuIcon />}
     </button>
   )
 }
