@@ -1,33 +1,43 @@
 import Image from 'next/image'
+import propTypes from 'prop-types'
+import clsx from 'clsx'
 
-import { MobileNav, ToggleBtn } from './MobileNav'
 import ZusLogo from 'components/ZusLogo'
+import { MobileNav, ToggleBtn } from './MobileNav'
 
 import useAnimatedNavToggler from 'Hooks/useAnimatedNavToggler'
 
-import HeroImg from 'public/images/Hero/heroImg.png'
+import HeroImg from 'public/images/homePage/Hero/heroImg.png'
 
 import styles from './Header.module.scss'
 
-const ImgComponent = () => {
+const ImgComponent = ({ removeImg }) => {
   return (
-    <div className={styles.imgContainer}>
+    <div className={clsx(styles.imgContainer, removeImg && styles.removeImg)}>
       <Image src={HeroImg} alt="HeroImg" quality={100} />
     </div>
   )
 }
 
-const Header = () => {
+ImgComponent.propTypes = {
+  removeImg: propTypes.bool,
+}
+
+const Header = ({ removeImg }) => {
   const { showNavLinks, animation, toggleNavbar } = useAnimatedNavToggler()
 
   return (
     <header className={styles.header}>
-      <ImgComponent />
+      <ImgComponent removeImg={removeImg} />
       <ZusLogo />
       <MobileNav animation={animation} />
       <ToggleBtn toggleNavbar={toggleNavbar} showNavLinks={showNavLinks} />
     </header>
   )
+}
+
+Header.propTypes = {
+  removeImg: propTypes.bool,
 }
 
 export default Header

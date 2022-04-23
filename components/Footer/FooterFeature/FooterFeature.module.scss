@@ -1,3 +1,5 @@
+@use '/styles/mixins.scss' as *;
+
 .container {
   padding: 5rem 0;
   margin: auto;
@@ -7,12 +9,7 @@
 }
 
 .text {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 29px;
-  text-align: center;
-  color: #ffffff;
-  opacity: 0.8;
+  @include primary-text-mobile;
   margin-top: 1.8rem;
 }
 

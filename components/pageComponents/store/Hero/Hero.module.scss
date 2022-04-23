@@ -1,0 +1,35 @@
+@use '/styles/mixins.scss' as *;
+@use '/styles/variables.scss' as *;
+
+.container {
+  position: relative;
+  margin-top: 4rem;
+}
+
+.heroImg {
+  position: absolute;
+  height: 185px;
+  width: 100%;
+  background: url('/images/store/Hero/heroImgMobile.png') no-repeat
+    center/contain;
+  z-index: -9;
+  top: 3rem;
+}
+
+.contentContainer {
+  width: $mobile-width;
+  margin: auto;
+  text-align: center;
+}
+
+.text {
+  @include primary-text-mobile;
+  margin: 2rem 0 3rem 0;
+}
+
+.secondaryHeading {
+  font-weight: 600;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}

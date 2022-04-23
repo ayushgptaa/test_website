@@ -1,0 +1,32 @@
+.prevBtn,
+.nextBtn {
+  width: 56px;
+  height: 32px;
+  position: relative;
+  margin-top: 1.8rem;
+  font-size: 0;
+}
+
+.nextBtn {
+  margin-left: 1.8rem;
+}
+
+.prevBtn:disabled,
+.nextBtn:disabled {
+  opacity: 0.2;
+}
+
+.prevBtn::before {
+  content: '';
+  background: url('/images/homePage/Testimonials/arrow-prev.svg');
+  position: absolute;
+  inset: 0;
+}
+
+.nextBtn::before {
+  content: '';
+  background: url('/images/homePage/Testimonials/arrow-next.svg') center/contain
+    no-repeat;
+  position: absolute;
+  inset: 0;
+}

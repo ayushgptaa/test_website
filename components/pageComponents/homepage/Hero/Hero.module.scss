@@ -1,0 +1,26 @@
+@use '/styles/variables.scss' as *;
+
+.container {
+  margin: auto;
+  width: $mobile-width;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.mainHeading {
+  margin-top: 4rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.2rem;
+  span {
+    color: $primary-blue;
+    display: inline;
+  }
+}
+.secondaryHeading {
+  font-weight: 600;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}

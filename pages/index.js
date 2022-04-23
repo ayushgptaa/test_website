@@ -1,7 +1,7 @@
 import Header from 'components/Header'
-import Hero from 'components/Hero'
-import Features from 'components/Features'
-import Testimonials from 'components/Testimonials'
+import Hero from 'pageComponents/homepage/Hero'
+import Features from 'pageComponents/homepage/Features'
+import Testimonials from 'pageComponents/homepage/Testimonials'
 import Footer from 'components/Footer'
 
 const Home = () => {
@@ -11,7 +11,7 @@ const Home = () => {
       <Hero />
       <Features />
       <Testimonials />
-      <Footer/>
+      <Footer />
     </>
   )
 }

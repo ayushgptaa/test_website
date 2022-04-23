@@ -1,0 +1,54 @@
+@use '/styles/variables.scss' as *;
+@use '/styles/mixins.scss' as *;
+
+.container {
+  width: 100%;
+}
+
+.serial {
+  height: 40px;
+  width: 40px;
+  background-color: $primary-blue;
+  font-weight: 700;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  @include flex-center;
+}
+
+.heading {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 28px;
+  margin: 1.5rem 0;
+}
+
+.primaryText {
+  @include primary-text-mobile;
+  text-align: left;
+}
+
+.primaryText2 {
+  @include primary-text-mobile;
+  text-align: left;
+  margin-top: 1rem;
+}
+
+.secondaryText {
+  padding-left: 1rem;
+  border-left: 3px solid $primary-blue;
+  margin-top: 3rem;
+
+  h5 {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  p {
+    margin: 4px 0px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+    opacity: 0.64;
+  }
+}

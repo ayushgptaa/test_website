@@ -10,5 +10,11 @@
   text-align: center;
   color: #ffffff;
   opacity: 0.8;
-  line-height: 28.56px;
+  line-height: 28px;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -10,7 +10,7 @@ const MenuIcon = () => {
 }
 
 const CloseIcon = () => {
-  return <IconContainer img={closeIcon} alt="Close" height={24} width={24} />
+  return <IconContainer img={closeIcon} alt="Close" height={28} width={28} />
 }
 
 const ToggleBtn = ({ toggleNavbar, showNavLinks }) => {

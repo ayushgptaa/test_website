@@ -1,0 +1,36 @@
+@use '/styles/mixins.scss' as *;
+@use '/styles/variables.scss' as *;
+
+.container {
+  margin: 3rem 0;
+}
+
+.imgContainer {
+  position: relative;
+  max-width: 500px;
+}
+
+.imgText {
+  width: $mobile-width;
+  top: 10rem;
+  left: 50%;
+  transform: translate(-50%);
+  position: absolute;
+}
+
+.heading {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 44px;
+  text-align: center;
+}
+
+.text {
+  margin-top: 2rem;
+  @include primary-text-mobile;
+}
+
+.workStepContainer {
+  width: $mobile-width;
+  margin: auto;
+}

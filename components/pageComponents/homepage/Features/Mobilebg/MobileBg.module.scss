@@ -1,0 +1,25 @@
+@use '/styles/mixins.scss' as *;
+@use '/styles/variables.scss' as *;
+
+.container {
+  margin-top: 5rem;
+}
+
+.imgContainer {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+}
+
+.textContainer {
+  width: $mobile-width;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  top: -7rem;
+}
+
+.para {
+  @include primary-text-mobile;
+  margin: 1.8rem 0;
+}
