@@ -5,11 +5,11 @@ import Button from 'components/Button'
 
 import styles from './FeaturesList.module.scss'
 
-const FeaturesList = ({ heading, text, img }) => {
+const FeaturesList = ({ pattern, heading, text, img, buttonText }) => {
   return (
     <div className={styles.container}>
       <div className={styles.feature}>
-        <div className={styles[`pattern${heading}`]}></div>
+        <div className={styles[`pattern${pattern}`]}></div>
         <div className={styles.icon}>
           <Image src={img} quality={100} layout="fixed" />
         </div>
@@ -17,16 +17,18 @@ const FeaturesList = ({ heading, text, img }) => {
           <h3 className={styles.heading}>{heading}</h3>
           <p className={styles.para}>{text}</p>
         </div>
-        <Button type="button" text="Learn More " black />
+        <Button type="button" black text={buttonText} />
       </div>
     </div>
   )
 }
 
 FeaturesList.propTypes = {
+  pattern: PropTypes.number,
   heading: PropTypes.string,
   text: PropTypes.string,
   img: PropTypes.object,
+  buttonText: PropTypes.string,
 }
 
 export default FeaturesList

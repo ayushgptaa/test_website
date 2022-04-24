@@ -11,7 +11,7 @@ const Features = () => {
   return (
     <>
       <section className={styles.container}>
-        <Heading text="Data consumption is rapidly increasing." />
+        <Heading text="Data consumption is rapidly increasing" />
         <h3 className={styles.secondaryHeading}>Time to decentralize</h3>
         <div className={styles.imgContainer}>
           <Image src={staticsImg} alt="Global Data consumption" />

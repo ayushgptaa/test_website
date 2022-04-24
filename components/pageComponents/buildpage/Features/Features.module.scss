@@ -1,0 +1,36 @@
+@use '/styles/variables.scss' as *;
+@use '/styles/mixins.scss' as *;
+
+.container {
+  margin: auto;
+  margin-top: 4rem;
+  width: $mobile-width;
+}
+
+.textContainer {
+  margin-top: 1rem;
+
+  button {
+    margin-top: 2rem;
+  }
+}
+
+.bgImgContainer {
+  padding: 2rem;
+  text-align: center;
+  margin-top: 4rem;
+  width: $mobile-width;
+  height: 347px;
+  border-radius: 16px;
+  background: url('/images/buildPage/Features/bgPattern.png') top left/contain
+    no-repeat;
+}
+
+.featureList {
+  margin-top: 6rem;
+  text-align: center;
+
+  button {
+    margin-top: 2rem;
+  }
+}

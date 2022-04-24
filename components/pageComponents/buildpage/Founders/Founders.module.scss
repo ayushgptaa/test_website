@@ -1,0 +1,46 @@
+@use '/styles/mixins.scss' as *;
+@use '/styles/variables.scss' as *;
+
+.container {
+  margin: 4rem 0;
+}
+
+.bgPattern {
+  padding: 2rem;
+  text-align: center;
+  margin: 4rem auto;
+  width: $mobile-width;
+  height: 429px;
+  border-radius: 16px;
+  background: url('/images/buildPage/Founders/bgPattern.png') top left/contain
+    no-repeat;
+}
+
+.imgContainer {
+  width: 100%;
+  max-width: 500px;
+  position: absolute;
+}
+
+.imgText {
+  text-align: center;
+  width: $mobile-width;
+  margin: auto;
+  position: relative;
+  z-index: 9;
+  padding-top: 5rem;
+
+  p {
+    span {
+      display: block;
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+.foundersImg {
+  width: $mobile-width;
+  margin: auto;
+  border-style: 16px;
+  margin-top: 5rem;
+}

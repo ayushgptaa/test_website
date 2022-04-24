@@ -1,0 +1,29 @@
+@use '/styles/mixins.scss' as *;
+@use '/styles/variables.scss' as *;
+
+.container {
+  margin-top: 4rem;
+  overflow: hidden;
+}
+
+.heroImg {
+  position: absolute;
+  height: 920px;
+  width: 100%;
+  background: url('/images/buildPage/Hero/heroImgMobile.png') no-repeat top
+    left/cover;
+  z-index: -9;
+  inset: 0;
+  overflow: hidden;
+}
+
+.contentContainer {
+  width: $mobile-width;
+  margin: auto;
+  text-align: center;
+}
+
+.text {
+  @include primary-text-mobile;
+  margin: 2rem 0 3rem 0;
+}

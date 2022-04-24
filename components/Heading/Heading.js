@@ -6,7 +6,7 @@ import styles from './Heading.module.scss'
 const Heading = ({ text, uppercase }) => {
   return (
     <h1 className={clsx(styles.heading, uppercase && styles.uppercase)}>
-      {text} <span>.</span>
+      {text}<span>.</span>
     </h1>
   )
 }
