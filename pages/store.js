@@ -4,7 +4,7 @@ import Features from 'pageComponents/store/Features'
 import Hero from 'pageComponents/store/Hero'
 import Work from 'pageComponents/store/Work'
 
-const Home = () => {
+const Store = () => {
   return (
     <>
       <Header removeImg />
@@ -16,4 +16,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Store

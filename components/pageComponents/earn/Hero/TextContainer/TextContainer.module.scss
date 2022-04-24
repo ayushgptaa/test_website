@@ -1,0 +1,39 @@
+@use '/styles/variables.scss' as *;
+@use '/styles/mixins.scss' as *;
+
+.container {
+  position: relative;
+  width: $mobile-width;
+  height: 366px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: auto;
+  margin-bottom: 1.5rem;
+  padding: 48px 24px 19px 24px;
+
+  button {
+    margin-top: 2rem;
+  }
+}
+
+.bgPattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -9;
+  background: url('/images/earn/Hero/bgPattern.png') center/cover no-repeat;
+}
+
+.heading {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.text {
+  margin-top: 1rem;
+  @include primary-text-mobile;
+  text-align: left;
+}

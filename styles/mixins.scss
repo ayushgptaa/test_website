@@ -18,3 +18,9 @@
   justify-content: center;
   align-items: center;
 }
+
+@mixin flex-vertical-center($justifyContent) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: center;
+}

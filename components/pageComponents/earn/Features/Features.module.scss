@@ -1,0 +1,33 @@
+@use '/styles/variables.scss' as *;
+@use '/styles/mixins.scss' as *;
+
+.container {
+  text-align: left;
+  margin: auto;
+  margin-top: 3rem;
+  line-height: 29px;
+
+  button {
+    width: 150px;
+    height: 50px;
+    margin: 0;
+    font-size: 1rem;
+  }
+}
+
+.imgContainer {
+  max-width: 500px;
+}
+
+.textContent {
+  width: $mobile-width;
+  margin: auto;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.text {
+  @include primary-text-mobile;
+  text-align: left;
+  margin: 2rem 0;
+}

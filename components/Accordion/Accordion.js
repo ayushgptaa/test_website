@@ -7,7 +7,7 @@ import { DownIcon, UpIcon } from './AccordionIcons'
 
 import styles from './Accordion.module.scss'
 
-const SingleAccordion = ({ id, expanded, setExpanded, name }) => {
+const SingleAccordion = ({ id, expanded, setExpanded, name, subLinks }) => {
   const isOpen = id === expanded
 
   return (
@@ -34,7 +34,7 @@ const SingleAccordion = ({ id, expanded, setExpanded, name }) => {
               collapsed: { opacity: 0, height: 0 },
             }}
             transition={{ duration: 0.5, ease: [0.04, 0.62, 0.23, 0.98] }}>
-            <ContentPlaceholder />
+            <ContentPlaceholder subLinks={subLinks} />
           </motion.section>
         )}
       </AnimatePresence>
@@ -47,13 +47,34 @@ SingleAccordion.propTypes = {
   expanded: PropTypes.any,
   setExpanded: PropTypes.func,
   name: PropTypes.string,
+  subLinks: PropTypes.array,
 }
 
 const accordionData = [
-  { id: 0, name: 'Store' },
-  { id: 1, name: 'Build' },
-  { id: 2, name: 'Earn' },
-  { id: 3, name: 'About' },
+  { id: 0, name: 'Store', subLinks: ['What Züs can do', 'Launch Apps'] },
+  {
+    id: 1,
+    name: 'Build',
+    subLinks: [
+      'Build for the Future',
+      'Join the Community',
+      'Documentation',
+      'API',
+      'GitHub',
+      'Roadmap',
+      'Zendesk Support',
+    ],
+  },
+  {
+    id: 2,
+    name: 'Earn',
+    subLinks: ['Earn Rewards', 'Register', 'Explore with Atlas'],
+  },
+  {
+    id: 3,
+    name: 'About',
+    subLinks: ['Meet the Team', 'News', 'Press & Media', 'Contact Züs'],
+  },
 ]
 
 const Accordion = () => {
@@ -62,13 +83,14 @@ const Accordion = () => {
   const [expanded, setExpanded] = useState(false)
   return (
     <div className={styles.accordionContainer}>
-      {accordionData.map(({ id, name }) => (
+      {accordionData.map(({ id, name, subLinks }) => (
         <SingleAccordion
           key={id}
           id={id}
           expanded={expanded}
           setExpanded={setExpanded}
           name={name}
+          subLinks={subLinks}
         />
       ))}
     </div>

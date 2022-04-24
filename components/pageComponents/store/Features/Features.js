@@ -1,11 +1,11 @@
 import Image from 'next/image'
 
 import Heading from 'components/Heading'
+import Button from 'components/Button'
 
 import staticsImg from '/public/images/store/Features/staticsImg.png'
 
 import styles from './Features.module.scss'
-import Button from 'components/Button'
 
 const Features = () => {
   return (

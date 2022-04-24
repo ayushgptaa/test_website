@@ -1,0 +1,13 @@
+@use '/styles/variables.scss' as *;
+@use '/styles/mixins.scss' as *;
+
+.container {
+  width: $mobile-width;
+  margin: 5rem auto;
+  text-align: center;
+}
+
+.text {
+  @include primary-text-mobile;
+  margin: 2rem auto;
+}
