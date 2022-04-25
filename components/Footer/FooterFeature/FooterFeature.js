@@ -2,6 +2,7 @@ import Image from 'next/image'
 import PropTypes from 'prop-types'
 
 import Heading from 'components/Heading'
+import Text from 'components/Text'
 import Button from 'components/Button'
 
 import ZusLogoWhite from '/public/images/Footer/zusLogoWhite.svg'
@@ -13,7 +14,7 @@ const FooterFeature = ({ data }) => {
     <div className={styles.container}>
       <Image src={ZusLogoWhite} alt="züs" quality={100} />
       <Heading text={data.heading} />
-      <p className={styles.text}>{data.text}</p>
+      <Text>{data.text}</Text>
       <div className={styles.buttons}>
         <Button text={data.buttonText} type="button" />
         {data.secondaryBtn && (

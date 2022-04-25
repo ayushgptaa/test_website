@@ -16,15 +16,19 @@ let defaultfooterFeatureData = {
   secondaryBtn: true,
 }
 
-const Footer = ({ footerFeatureData }) => {
+const Footer = ({
+  footerFeatureData,
+  showfooterBackground = true,
+  showfooterFeature = true,
+}) => {
   if (footerFeatureData && footerFeatureData?.length) {
     defaultfooterFeatureData = footerFeatureData
   }
 
   return (
     <footer className={styles.footer}>
-      <div className={styles.footerBackground}></div>
-      <FooterFeature data={defaultfooterFeatureData} />
+      {showfooterBackground && <div className={styles.footerBackground}></div>}
+      {showfooterFeature && <FooterFeature data={defaultfooterFeatureData} />}
       <div className={styles.iconContainer}>
         <ZusLogo />
         <Heading text="Go beyond the cloud" />
@@ -41,6 +45,8 @@ const Footer = ({ footerFeatureData }) => {
 
 Footer.propTypes = {
   footerFeatureData: PropTypes.object,
+  showfooterBackground: PropTypes.bool,
+  showfooterFeature: PropTypes.bool,
 }
 
 export default Footer

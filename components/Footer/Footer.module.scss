@@ -1,3 +1,5 @@
+@use '/styles/variables.scss' as *;
+
 .footer {
   margin-top: 5rem;
   position: relative;
@@ -16,10 +18,13 @@
 }
 
 .iconContainer {
-  margin-top: 3rem;
+  margin: 3rem auto 0;
+  padding-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-top: 1px solid rgba($color: #fff, $alpha: 0.1);
+  width: $mobile-width;
 
   a {
     margin: auto;
