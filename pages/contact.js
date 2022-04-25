@@ -7,7 +7,7 @@ const Contact = () => {
     <>
       <Header removeImg />
       <ContactComponent />
-      <Footer removefooterBackground={false} removefooterFeature={false} />
+      <Footer showfooterBackground={false} showfooterFeature={false} />
     </>
   )
 }
