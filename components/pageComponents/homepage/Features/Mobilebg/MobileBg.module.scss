@@ -3,16 +3,19 @@
 @import 'include-media';
 
 .container {
-  margin-top: 5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: -8rem;
+  margin-top: 7rem;
 }
 
 .imgContainer {
   display: block;
-  width: 795px;
+
+  .iphoneMobile {
+    display: block;
+  }
+
+  .iphoneDesktop {
+    display: none;
+  }
 }
 
 .textContainer {
@@ -20,7 +23,7 @@
   margin: auto;
   text-align: center;
   position: relative;
-  top: -14.5rem;
+  top: -26rem;
 }
 
 .para {
@@ -35,6 +38,9 @@
   }
 
   .textContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     max-width: 813px;
     top: -30rem;
@@ -45,9 +51,26 @@
       font-size: 78px;
       line-height: 122%;
     }
+
+    button {
+      width: 186px;
+      height: 48px;
+    }
+  }
+
+  .para {
+    max-width: 563px;
   }
 
   .imgContainer {
     width: 96%;
+
+    .iphoneDesktop {
+      display: block;
+    }
+
+    .iphoneMobile {
+      display: none;
+    }
   }
 }
