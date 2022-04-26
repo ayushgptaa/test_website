@@ -1,7 +1,6 @@
 import CountDownTimer from './CountdownTimer'
 import Heading from 'components/Heading'
-import InputBox from 'components/InputBox'
-import Button from 'components/Button'
+import GetNotified from 'components/GetNotified'
 import SocialIcons from 'components/SocialIcons'
 
 import styles from './Hero.module.scss'
@@ -15,8 +14,7 @@ const Hero = () => {
       <h4 className={styles.secondaryHeading}>
         Get notified as soon as mainnet launches
       </h4>
-      <InputBox type="email" />
-      <Button type="submit" text="Get notified" />
+      <GetNotified />
       <SocialIcons styles={styles} />
     </main>
   )

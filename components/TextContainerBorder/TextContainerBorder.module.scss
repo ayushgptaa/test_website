@@ -1,29 +1,41 @@
 @use '/styles/variables.scss' as *;
 
 .container {
-  margin-top: 2.5rem;
+  display: flex;
+  gap: 1.8rem;
+  align-items: center;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  a {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    color: #0b9dff;
+  }
 }
 
 .heading {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
-  padding-left: 1rem;
 }
 
 .para {
   font-weight: 400;
-  padding: 0.8rem 0;
+  font-size: 14px;
+  line-height: 180%;
   color: #ffffff;
   opacity: 0.64;
-  border-left: 3px solid $primary-blue;
-  padding-left: 1rem;
 }
 
-.learnMore {
-  padding-left: 1rem;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 18px;
-  color: $primary-blue;
+.divider {
+  width: 6px;
+  height: 108px;
+
+  background: #0b9dff;
 }

@@ -4,7 +4,7 @@ import TextContainerBorder from 'components/TextContainerBorder'
 import Button from '/components/Button'
 import Heading from 'components/Heading'
 
-import laptopImg from '/public/images/homePage/Features/laptopImgMobile.png'
+import laptopLarge from '/public/images/homePage/Features/laptopLarge.svg'
 
 import styles from './LaptoBg.module.scss'
 
@@ -19,7 +19,7 @@ const MobileBackground = () => {
     <div className={styles.laptopImgBg}>
       <div className={styles.imgContainer}>
         <Image
-          src={laptopImg}
+          src={laptopLarge}
           quality={100}
           layout="responsive"
           priority={false}
@@ -29,7 +29,9 @@ const MobileBackground = () => {
         <Heading text={data.heading} />
         <p className={styles.para}>{data.para}</p>
         <Button type="button" text={data.btnText} black />
-        <TextContainerBorder />
+        <div className={styles.textDetails}>
+          <TextContainerBorder />
+        </div>
       </div>
     </div>
   )

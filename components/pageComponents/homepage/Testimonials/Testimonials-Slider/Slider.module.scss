@@ -1,3 +1,5 @@
+@import 'include-media';
+
 .testimonialContainer {
   margin-top: 2rem;
   width: 100%;
@@ -20,19 +22,22 @@
   &:before {
     content: '';
     display: inline-block;
-    height: 100px;
-    width: 72px;
-    background: url('/images/homePage/Testimonials/textPattern.png')
+    width: 97px;
+    height: 72px;
+    background: url('/images/homePage/Testimonials/textPattern.svg')
       center/contain no-repeat;
     position: absolute;
     z-index: -99;
-    top: -30px;
+    top: -20px;
+    left: -25px;
   }
 }
 
 .role {
   margin-top: 1.8rem;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .description {
@@ -48,4 +53,47 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 28px;
+}
+
+@include media('>tablet') {
+  .testimonialContainer {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+  }
+
+  .image {
+    width: 492px;
+    height: 492px;
+  }
+
+  .reviewContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10rem;
+  }
+
+  .review {
+    margin: 0;
+    width: 580px;
+    font-size: 32px;
+    line-height: 48px;
+
+    &:before {
+      width: 199px;
+      height: 147px;
+      top: -60px;
+      left: -65px;
+    }
+  }
+
+  .role {
+    gap: 0.6rem;
+  }
+
+  .name {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+  }
 }

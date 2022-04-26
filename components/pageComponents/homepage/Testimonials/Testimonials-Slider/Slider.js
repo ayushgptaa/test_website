@@ -48,12 +48,14 @@ const Slider = () => {
                   style={{ borderRadius: '16px' }}
                 />
               </div>
-              <div className={styles.review}>
-                <p>{text}</p>
-              </div>
-              <div className={styles.role}>
-                <p className={styles.description}>{description}</p>
-                <p className={styles.name}>{name}</p>
+              <div className={styles.reviewContainer}>
+                <div className={styles.review}>
+                  <p>{text}</p>
+                </div>
+                <div className={styles.role}>
+                  <p className={styles.description}>{description}</p>
+                  <p className={styles.name}>{name}</p>
+                </div>
               </div>
             </div>
           </SwiperSlide>

@@ -1,4 +1,5 @@
 @import '/styles/fonts.scss';
+@import 'include-media';
 
 .showCounter {
   display: flex;
@@ -24,5 +25,23 @@
     margin: 0;
     margin-bottom: 22px;
     font-size: 2rem;
+  }
+}
+
+@include media('>tablet') {
+  .showCounter {
+    gap: 0.9rem;
+    margin-bottom: 5rem;
+
+    div {
+      p {
+        font-size: 60px;
+      }
+      span {
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+    }
   }
 }

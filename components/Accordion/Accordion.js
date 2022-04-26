@@ -50,40 +50,13 @@ SingleAccordion.propTypes = {
   subLinks: PropTypes.array,
 }
 
-const accordionData = [
-  { id: 0, name: 'Store', subLinks: ['What Züs can do', 'Launch Apps'] },
-  {
-    id: 1,
-    name: 'Build',
-    subLinks: [
-      'Build for the Future',
-      'Join the Community',
-      'Documentation',
-      'API',
-      'GitHub',
-      'Roadmap',
-      'Zendesk Support',
-    ],
-  },
-  {
-    id: 2,
-    name: 'Earn',
-    subLinks: ['Earn Rewards', 'Register', 'Explore with Atlas'],
-  },
-  {
-    id: 3,
-    name: 'About',
-    subLinks: ['Meet the Team', 'News', 'Press & Media', 'Contact Züs'],
-  },
-]
-
-const Accordion = () => {
+const Accordion = ({ data }) => {
   // This approach is if you only want max one section open at a time. If you want multiple
   // sections to potentially be open simultaneously, they can all be given their own `useState`.
   const [expanded, setExpanded] = useState(false)
   return (
     <div className={styles.accordionContainer}>
-      {accordionData.map(({ id, name, subLinks }) => (
+      {data.map(({ id, name, subLinks }) => (
         <SingleAccordion
           key={id}
           id={id}
@@ -95,6 +68,10 @@ const Accordion = () => {
       ))}
     </div>
   )
+}
+
+Accordion.propTypes = {
+  data: PropTypes.array,
 }
 
 export default Accordion

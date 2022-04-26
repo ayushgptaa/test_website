@@ -1,9 +1,10 @@
 import styles from './TextContainerBorder.module.scss'
+import Link from 'next/link'
 
 const data = [
   {
     heading: 'Individual',
-    para: ' Anyone can move their data over to Züs. Zero headaches. An abundance ofstorage features.',
+    para: ' Anyone can move their data over to Züs. Zero headaches. An abundance of storage features.',
   },
   {
     heading: 'Enterprise',
@@ -14,11 +15,12 @@ const data = [
 const TextContainerBorder = () => {
   return data.map(({ heading, para }) => (
     <div className={styles.container} key={heading}>
-      <h4 className={styles.heading}>{heading}</h4>
-      <p className={styles.para}>{para}</p>
-      <a href="/" className={styles.learnMore}>
-        Learn more
-      </a>
+      <div className={styles.divider}></div>
+      <div className={styles.textContainer}>
+        <h4 className={styles.heading}>{heading}</h4>
+        <p className={styles.para}>{para}</p>
+        <Link href="/">Learn more</Link>
+      </div>
     </div>
   ))
 }

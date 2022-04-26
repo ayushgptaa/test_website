@@ -1,6 +1,7 @@
 @use '/styles/variables.scss' as *;
 
 .button {
+  cursor: pointer;
   margin: auto;
   padding: 0.8rem 1.5rem;
   color: #fff;

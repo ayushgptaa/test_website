@@ -1,4 +1,22 @@
+@import 'include-media';
+
 .container {
   width: 327px;
   margin: auto;
+  margin-top: -3rem;
+  margin-bottom: 3rem;
+}
+
+@include media('>tablet') {
+  .container {
+    width: 100%;
+    padding: 7.5rem 2rem;
+    background-color: #040819;
+    margin-bottom: 0;
+
+    h1 {
+      font-size: 80px;
+      line-height: 116%;
+    }
+  }
 }

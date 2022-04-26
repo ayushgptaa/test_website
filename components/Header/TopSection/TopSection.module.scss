@@ -1,0 +1,34 @@
+@import 'include-media';
+
+.wrapper {
+  cursor: pointer;
+  display: flex;
+  margin: 1rem 2rem 0;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.5rem;
+
+  span {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+.wrapperLeft {
+  display: block;
+}
+
+.wrapperRight {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 229px;
+  height: 24px;
+}
+
+@include media('<=tablet') {
+  .wrapper {
+    display: none;
+  }
+}

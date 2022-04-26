@@ -11,6 +11,7 @@
 .icon {
   margin: auto;
   width: fit-content;
+  height: 87px;
 }
 
 .textContainer {
@@ -27,7 +28,7 @@
 
 .para {
   @include primary-text-mobile;
-  margin-top: 1rem;
+  margin: 2rem 0;
 }
 
 .pattern1 {

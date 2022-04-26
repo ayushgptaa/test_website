@@ -1,8 +1,13 @@
 @use '/styles/mixins.scss' as *;
 @use '/styles/variables.scss' as *;
+@import 'include-media';
 
 .container {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 85%;
   margin: 2rem auto;
   height: 376px;
@@ -26,4 +31,24 @@
 .para {
   @include primary-text-mobile;
   margin-top: 1.5rem;
+  max-width: 602px;
+}
+
+@include media('>tablet') {
+  .container {
+    width: 96%;
+    height: 704px;
+    gap: 1rem;
+  }
+
+  .heading {
+    width: 602px;
+    height: 294px;
+  }
+
+  .bgPattern {
+    background: url('/images/homePage/Features/boxLarge.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }

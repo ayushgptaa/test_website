@@ -10,6 +10,8 @@ import useAnimatedNavToggler from 'Hooks/useAnimatedNavToggler'
 import HeroImg from 'public/images/homePage/Hero/heroImg.png'
 
 import styles from './Header.module.scss'
+import DesktopNav from './DesktopNav'
+import TopSection from './TopSection'
 
 const ImgComponent = ({ removeImg }) => {
   return (
@@ -27,12 +29,16 @@ const Header = ({ removeImg }) => {
   const { showNavLinks, animation, toggleNavbar } = useAnimatedNavToggler()
 
   return (
-    <header className={styles.header}>
-      <ImgComponent removeImg={removeImg} />
-      <ZusLogo />
-      <MobileNav animation={animation} />
-      <ToggleBtn toggleNavbar={toggleNavbar} showNavLinks={showNavLinks} />
-    </header>
+    <>
+      <TopSection />
+      <header className={styles.header}>
+        <ImgComponent removeImg={removeImg} />
+        <ZusLogo />
+        <DesktopNav />
+        <MobileNav animation={animation} />
+        <ToggleBtn toggleNavbar={toggleNavbar} showNavLinks={showNavLinks} />
+      </header>
+    </>
   )
 }
 

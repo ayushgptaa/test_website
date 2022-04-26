@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Button from '/components/Button'
 import Heading from 'components/Heading'
 
-import iphoneImgMobile from '/public/images/homePage/Features/iphoneImgMobile.png'
+import iphoneImgLarge from '/public/images/homePage/Features/iphoneImgLarge.svg'
 
 import styles from './MobileBg.module.scss'
 
@@ -17,12 +17,7 @@ const MobileBackground = () => {
   return (
     <div className={styles.container}>
       <div className={styles.imgContainer}>
-        <Image
-          src={iphoneImgMobile}
-          quality={100}
-          priority={false}
-          layout="responsive"
-        />
+        <Image src={iphoneImgLarge} quality={100} />
       </div>
       <div className={styles.textContainer}>
         <Heading text={data.heading} />

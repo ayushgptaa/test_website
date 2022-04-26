@@ -7,6 +7,8 @@ import storeIcon from '/public/images/homePage/Features/storeIcon.svg'
 import buildIcon from '/public/images/homePage/Features/buildIcon.svg'
 import earnIcon from '/public/images/homePage/Features/earnIcon.svg'
 
+import styles from './Features.module.scss'
+
 const featurelistData = [
   {
     pattern: 1,
@@ -32,16 +34,18 @@ const Features = () => {
   return (
     <section>
       <MainFeature />
-      {featurelistData.map(({ pattern, heading, text, img }) => (
-        <FeaturesList
-          pattern={pattern}
-          heading={heading}
-          text={text}
-          img={img}
-          key={heading}
-          buttonText="Learn More"
-        />
-      ))}
+      <div className={styles.featureListWrapper}>
+        {featurelistData.map(({ pattern, heading, text, img }) => (
+          <FeaturesList
+            pattern={pattern}
+            heading={heading}
+            text={text}
+            img={img}
+            key={heading}
+            buttonText="Learn More"
+          />
+        ))}
+      </div>
       <MobileBg />
       <LaptopBg />
     </section>

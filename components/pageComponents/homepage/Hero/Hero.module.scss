@@ -1,4 +1,5 @@
 @use '/styles/variables.scss' as *;
+@import 'include-media';
 
 .container {
   margin: auto;
@@ -18,9 +19,26 @@
     display: inline;
   }
 }
+
 .secondaryHeading {
   font-weight: 600;
   margin-top: 2.5rem;
   margin-bottom: 1rem;
   text-align: center;
+}
+
+@include media('>tablet') {
+  .container {
+    width: 100%;
+    padding: 0 2rem;
+    margin-bottom: 10rem;
+  }
+
+  .secondaryHeading {
+    margin-top: 4rem;
+    margin-bottom: 1.6rem;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 120%;
+  }
 }

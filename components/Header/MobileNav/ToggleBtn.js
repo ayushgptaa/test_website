@@ -5,6 +5,8 @@ import IconContainer from '/components/IconContainer'
 import menuIcon from '/public/images/NavIcons/menuIcon.svg'
 import closeIcon from '/public/images/NavIcons/closeIcon.svg'
 
+import styles from './ToggleBtn.module.scss'
+
 const MenuIcon = () => {
   return <IconContainer img={menuIcon} alt="Menu" height={24} width={24} />
 }
@@ -15,7 +17,11 @@ const CloseIcon = () => {
 
 const ToggleBtn = ({ toggleNavbar, showNavLinks }) => {
   return (
-    <button type="button" onClick={toggleNavbar} style={{ zIndex: 20 }}>
+    <button
+      className={styles.toggleBtn}
+      type="button"
+      onClick={toggleNavbar}
+      style={{ zIndex: 20 }}>
       {showNavLinks ? <CloseIcon /> : <MenuIcon />}
     </button>
   )
