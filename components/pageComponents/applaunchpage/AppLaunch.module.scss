@@ -1,0 +1,33 @@
+@use '/styles/variables.scss' as *;
+
+.container {
+  margin-top: 3rem;
+}
+
+.mainText {
+  width: $mobile-width;
+  margin: auto;
+  text-align: center;
+}
+
+.containerContent {
+  & > h1 {
+    margin-top: 2rem;
+  }
+
+  & > p {
+    margin-top: 1rem;
+  }
+}
+
+.mainBackground {
+  position: absolute;
+  width: 100%;
+  height: 1626px;
+  left: 1188px;
+  top: -885px;
+  background: url('/images/applaunchpage/primaryBackground.png') no-repeat top
+    left/cover;
+  inset: 0;
+  overflow: hidden;
+}

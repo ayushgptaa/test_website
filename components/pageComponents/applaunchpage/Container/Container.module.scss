@@ -1,0 +1,54 @@
+@use '/styles/variables.scss' as *;
+@use '/styles/mixins.scss' as *;
+
+.container {
+  position: relative;
+  height: $mobile-width;
+  width: $mobile-width;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 1rem auto;
+  padding: 2rem;
+
+  & > button {
+    padding: 8px 12px;
+    position: absolute;
+    left: 236px;
+    top: 24px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #ffffff;
+    opacity: 0.8;
+  }
+}
+
+.bgPattern {
+  position: absolute;
+  width: 1694px;
+  height: 1694px;
+  left: -699px;
+  top: -735px;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #1477f8 0%,
+    rgba(5, 11, 25, 0) 100%
+  );
+  opacity: 0.24;
+  z-index: -2;
+}
+
+.textContainer {
+  @include flex-vertical-center(center);
+  z-index: 2;
+  margin-bottom: 5rem;
+
+  & > h1 {
+    font-size: 32px;
+    line-height: 37px;
+    text-align: center;
+    color: #ffffff;
+  }
+}
