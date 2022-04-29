@@ -8,6 +8,8 @@ import SocialIcons from 'components/SocialIcons'
 import ZusLogo from 'components/ZusLogo'
 import FooterFeature from './FooterFeature'
 
+import footerMenu from './footerMenu'
+
 import styles from './Footer.module.scss'
 
 let defaultfooterFeatureData = {
@@ -16,33 +18,6 @@ let defaultfooterFeatureData = {
   buttonText: 'Launch Apps',
   secondaryBtn: true,
 }
-
-const footerMenu = [
-  { id: 0, name: 'Store', subLinks: ['What Züs can do', 'Launch Apps'] },
-  {
-    id: 1,
-    name: 'Build',
-    subLinks: [
-      'Build for the Future',
-      'Join the Community',
-      'Documentation',
-      'API',
-      'GitHub',
-      'Roadmap',
-      'Zendesk Support',
-    ],
-  },
-  {
-    id: 2,
-    name: 'Earn',
-    subLinks: ['Earn Rewards', 'Register', 'Explore with Atlas'],
-  },
-  {
-    id: 3,
-    name: 'About',
-    subLinks: ['Meet the Team', 'News', 'Press & Media', 'Contact Züs'],
-  },
-]
 
 const Footer = ({
   footerFeatureData,
@@ -79,10 +54,10 @@ const Footer = ({
                 <div key={menu.id} className={styles.footerMenuItem}>
                   <span className={styles.titleMenu}>{menu.name}</span>
                   <ul className={styles.subMenu}>
-                    {menu.subLinks.map((subLink) => {
+                    {menu.subLinks.map(({ name, link }) => {
                       return (
-                        <li key={subLink}>
-                          <Link href="/">{subLink}</Link>
+                        <li key={name}>
+                          <Link href={link ? `/${link}` : '/'}>{name}</Link>
                         </li>
                       )
                     })}

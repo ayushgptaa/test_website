@@ -6,8 +6,10 @@
 .contentPlaceholder {
   padding: 1rem 0;
   transform-origin: top center;
-  p {
-    padding-bottom: 1rem;
+
+  a {
+    display: block;
+    margin-bottom: 1rem;
     font-weight: 400;
     font-size: 14px;
   }

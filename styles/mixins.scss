@@ -13,6 +13,12 @@
   line-height: 28px;
 }
 
+@mixin flex($justifyContent, $alignItems) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+
 @mixin flex-center {
   display: flex;
   justify-content: center;
@@ -23,4 +29,10 @@
   display: flex;
   justify-content: $justifyContent;
   align-items: center;
+}
+
+@mixin flex-horizontal-center($alignItems) {
+  display: flex;
+  justify-content: center;
+  align-items: $alignItems;
 }

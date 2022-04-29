@@ -1,0 +1,54 @@
+@use '/styles/variables.scss' as *;
+@use '/styles/mixins.scss' as *;
+
+.container {
+  width: $mobile-width;
+  margin: auto;
+  height: max-content;
+}
+
+.content {
+  @include flex(space-between, flex-start);
+  position: relative;
+  padding-bottom: 4rem;
+}
+
+.lineContainer {
+  width: 16px;
+  height: 100%;
+  @include flex-horizontal-center(center);
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.circle {
+  width: 16px;
+  height: 16px;
+  background-color: $primary-blue;
+  border-radius: 50%;
+}
+
+.textContainer {
+  padding-left: 1.5rem;
+}
+
+.line {
+  position: absolute;
+  top: 3rem;
+  bottom: 0;
+  width: 2px;
+  background-color: $primary-blue;
+}
+
+.blue {
+  background-color: $primary-blue;
+}
+
+.grey {
+  background: #ffffff;
+  opacity: 0.4;
+}
+
+.removeLineContainer {
+  display: none;
+}

@@ -27,11 +27,7 @@
   border-top: 1px solid rgba($color: #fff, $alpha: 0.1);
   width: $mobile-width;
 
-  a {
-    margin: auto;
-  }
-
-  button {
+  & > button {
     padding: 6px 24px;
     height: 36px;
     width: 133px;
@@ -39,12 +35,12 @@
     margin-top: 1.5rem;
   }
 
-  h1 {
+  & > h1 {
     font-size: 1.5rem;
     margin-top: 1.5rem;
   }
 
-  ul {
+  & > ul {
     margin-top: 1.5rem;
   }
 }

@@ -1,9 +1,9 @@
 import Image from 'next/image'
 
 import Container from './Container'
-
 import Heading from 'components/Heading'
 import Text from 'components/Text'
+import MobilePrimaryBg from 'components/MobilePrimaryBg'
 
 import applaunchData from './applaunchData'
 
@@ -12,7 +12,7 @@ import styles from './AppLaunch.module.scss'
 const AppLaunchComponent = () => {
   return (
     <section className={styles.container}>
-      <div className={styles.mainBackground}></div>
+      <MobilePrimaryBg />
       <div className={styles.mainText}>
         <Heading text="Dive into the app ecosystem" uppercase />
         <Text>See what’s possible on the Zus Cloud Network.</Text>

@@ -1,0 +1,34 @@
+@use '/styles/variables.scss' as *;
+
+.container {
+  margin-top: 3rem;
+}
+
+.mainText {
+  width: $mobile-width;
+  margin: auto;
+  text-align: center;
+}
+
+.textContainer {
+  position: relative;
+  margin-top: 7rem;
+  overflow: hidden;
+}
+
+.bgPattern {
+  position: absolute;
+  width: 1343px;
+  height: 1343px;
+  left: -672px;
+  top: 190px;
+
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #1477f8 0%,
+    rgba(5, 11, 25, 0) 100%
+  );
+  opacity: 0.2;
+  filter: blur(200px);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}

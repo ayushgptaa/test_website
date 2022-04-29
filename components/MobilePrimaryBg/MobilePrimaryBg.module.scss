@@ -1,0 +1,10 @@
+.mainBackground {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  background: url('/images/MobilePrimaryBg/primaryBackground.png') no-repeat top
+    left/cover;
+  inset: 0;
+  overflow: hidden;
+  z-index: -99;
+}

@@ -17,6 +17,12 @@
   text-transform: uppercase;
 }
 
+.withoutPeriod {
+  & > span {
+    display: none;
+  }
+}
+
 @include media('>tablet') {
   .heading {
     font-size: 56px;
