@@ -1,21 +1,21 @@
-import { forwardRef } from 'react'
+import clsx from 'clsx'
 
 import styles from './Button.module.scss'
 
-const NextBtn = forwardRef((_, ref) => {
+const NextBtn = () => {
   return (
-    <button className={styles.nextBtn} ref={ref} type="next-btn">
+    <button className={clsx(styles.nextBtn, 'next-btn')} type="next-btn">
       Next
     </button>
   )
-})
+}
 
-const PrevBtn = forwardRef((_, ref) => {
+const PrevBtn = () => {
   return (
-    <button className={styles.prevBtn} ref={ref} type="prev-btn">
+    <button className={clsx(styles.prevBtn, 'prev-btn')} type="prev-btn">
       Prev
     </button>
   )
-})
+}
 
 export { PrevBtn, NextBtn }

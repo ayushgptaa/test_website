@@ -58,7 +58,7 @@ const Founders = () => {
           src={FoundersImg}
           alt="Founders"
           quality={100}
-          layout="fixed"
+          layout="responsive"
           priority={false}
         />
       </div>

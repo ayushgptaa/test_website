@@ -1,4 +1,3 @@
-import { createRef } from 'react'
 import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper'
@@ -14,23 +13,13 @@ import 'swiper/css/navigation'
 import styles from './Slider.module.scss'
 
 const Slider = () => {
-  const navigationPrevRef = createRef(null)
-  const navigationNextRef = createRef(null)
-
   return (
     <>
       <Swiper
         modules={[Navigation]}
         navigation={{
-          prevEl: navigationPrevRef.current,
-          nextEl: navigationNextRef.current,
-        }}
-        onBeforeInit={(swiper) => {
-          const {
-            params: { navigation },
-          } = swiper
-          navigation.prevEl = navigationPrevRef.current
-          navigation.nextEl = navigationNextRef.current
+          prevEl: '.prev-btn',
+          nextEl: '.next-btn',
         }}
         spaceBetween={100}
         slidesPerView={1}
@@ -61,8 +50,8 @@ const Slider = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <PrevBtn ref={navigationPrevRef} />
-      <NextBtn ref={navigationNextRef} />
+      <PrevBtn />
+      <NextBtn />
     </>
   )
 }

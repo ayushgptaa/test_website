@@ -39,8 +39,13 @@
 }
 
 .foundersImg {
+  position: relative;
   width: $mobile-width;
   margin: auto;
-  border-style: 16px;
-  margin-top: 5rem;
+  border-radius: 16px;
+  margin-top: 4rem;
+
+  & > span {
+    border-radius: 16px;
+  }
 }

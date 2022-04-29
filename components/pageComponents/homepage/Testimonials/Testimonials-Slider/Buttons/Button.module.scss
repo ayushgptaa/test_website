@@ -19,7 +19,8 @@
 
 .prevBtn::before {
   content: '';
-  background: url('/images/homePage/Testimonials/arrow-prev.svg');
+  background: url('/images/homePage/Testimonials/arrow-prev.svg') center/contain
+    no-repeat;
   position: absolute;
   inset: 0;
 }
