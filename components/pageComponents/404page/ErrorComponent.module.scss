@@ -1,0 +1,34 @@
+@use '/styles/variables.scss' as *;
+@use '/styles/mixins.scss' as *;
+
+.container {
+  margin-top: 7.5rem;
+  margin-bottom: 12rem;
+  overflow: hidden;
+}
+
+.errorImg {
+  @include center-absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 302px;
+  background: url('/images/errorPage/errorImg.svg') no-repeat top left/100% 100%;
+  z-index: -9;
+  overflow: hidden;
+}
+
+.content {
+  position: relative;
+  overflow: hidden;
+}
+
+.textContainer {
+  text-align: center;
+  width: $mobile-width;
+  margin: auto;
+
+  a {
+    color: $primary-blue;
+  }
+}
