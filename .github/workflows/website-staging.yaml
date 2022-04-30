@@ -16,5 +16,5 @@ jobs:
       - name: "Deploy Website"
         run: |
           echo "Branch name is ${{ steps.extract_branch.outputs.branch }}"
-          docker-compose down
+          #docker-compose down
           docker-compose up -d --build
