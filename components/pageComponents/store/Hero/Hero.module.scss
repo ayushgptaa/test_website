@@ -1,6 +1,8 @@
 @use '/styles/mixins.scss' as *;
 @use '/styles/variables.scss' as *;
 
+@import 'include-media';
+
 .container {
   position: relative;
   margin-top: 4rem;
@@ -32,4 +34,34 @@
   margin-top: 2.5rem;
   margin-bottom: 1rem;
   text-align: center;
+}
+
+@include media('>tablet') {
+  .container {
+    margin-top: 8rem;
+  }
+
+  .contentContainer {
+    width: 764px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      font-weight: 700;
+      font-size: 72px;
+      line-height: 120%;
+    }
+
+    .text {
+      width: 563px;
+    }
+  }
+
+  .heroImg {
+    height: 371px;
+    background: url('/images/store/Hero/heroImgDesktop.svg') no-repeat
+      center/contain;
+    top: -2rem;
+  }
 }

@@ -1,8 +1,4 @@
-import Image from 'next/image'
-
 import WorkStep from './WorkStep'
-
-import workImg from '/public/images/store/Work/workImg.png'
 
 import styles from './Work.module.scss'
 
@@ -11,13 +7,10 @@ const Work = () => {
     <>
       <section className={styles.container}>
         <div className={styles.imgContainer}>
-          <Image
-            src={workImg}
-            alt="workImg"
-            quality={100}
-            layout="responsive"
-            priority={false}
-          />
+          <div className={styles.ellipseLeft} />
+          <div className={styles.bgTexture} />
+          <div className={styles.textureLayer} />
+          <div className={styles.textureLayer2} />
           <div className={styles.imgText}>
             <h1 className={styles.heading}>How Does it Work?</h1>
             <p className={styles.text}>

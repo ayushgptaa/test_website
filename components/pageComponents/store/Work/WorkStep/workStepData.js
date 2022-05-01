@@ -1,7 +1,7 @@
-import img1 from '/public/images/store/Work/workSteps/1.png'
-import img2 from '/public/images/store/Work/workSteps/2.png'
-import img3 from '/public/images/store/Work/workSteps/3.png'
-import img4 from '/public/images/store/Work/workSteps/4.png'
+import img1 from '/public/images/store/Work/workSteps/1.svg'
+import img2 from '/public/images/store/Work/workSteps/2.svg'
+import img3 from '/public/images/store/Work/workSteps/3.svg'
+import img4 from '/public/images/store/Work/workSteps/4.svg'
 
 const workStepData = [
   {
@@ -12,7 +12,7 @@ const workStepData = [
     primaryText2:
       'Once your offer is matched with a batch of Blobbers, you can select a file to upload to the Züs Cloud Network.',
     secondaryText: {
-      text: 'A proof of this storage agreement is issued to the Züs blockchainin the form of an “Allocation ID”.',
+      text: 'Once your storage plan is “matched, a proof of this storage agreement is issued to the Züs blockchain in the form of an “Allocation ID”.',
     },
   },
   {

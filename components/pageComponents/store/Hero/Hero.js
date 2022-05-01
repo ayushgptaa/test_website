@@ -18,8 +18,10 @@ const Hero = () => {
         <h4 className={styles.secondaryHeading}>
           Get notified when it&#39;s ready
         </h4>
-        <GetNotified />
-        <SocialIcons />
+        <div className={styles.bottom}>
+          <GetNotified />
+          <SocialIcons />
+        </div>
       </div>
     </main>
   )

@@ -1,8 +1,11 @@
 @use '/styles/variables.scss' as *;
 @use '/styles/mixins.scss' as *;
 
+@import 'include-media';
+
 .container {
   width: 100%;
+  margin-top: 3rem;
 }
 
 .serial {
@@ -29,6 +32,7 @@
 
 .primaryText2 {
   @include primary-text-mobile;
+  display: block;
   text-align: left;
   margin-top: 1rem;
 }
@@ -42,13 +46,55 @@
     font-weight: 700;
     font-size: 14px;
     line-height: 18px;
+    margin-bottom: 0.5rem;
   }
 
-  p {
+  span {
     margin: 4px 0px;
     font-weight: 400;
     font-size: 14px;
     line-height: 25px;
     opacity: 0.64;
+  }
+}
+
+.imgContainer {
+  margin: -2rem;
+}
+
+.textContainer {
+  max-width: 480px;
+}
+
+@include media('>tablet') {
+  .container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .imgContainer {
+    max-width: 50%;
+  }
+
+  .serial {
+    width: 64px;
+    height: 64px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 122%;
+    margin-bottom: 2rem;
+  }
+
+  .heading {
+    font-weight: 700;
+    font-size: 47px;
+    line-height: 122%;
+  }
+
+  .textContainer {
+    margin: 4rem;
+    padding-top: 13rem;
   }
 }

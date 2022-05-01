@@ -19,15 +19,15 @@ const WorkStep = () => {
           <Image src={img} alt={primaryHeading} />
         </div>
         <div className={styles.textContainer}>
-          <p className={styles.serial}>{serialNo}</p>
+          <span className={styles.serial}>{serialNo}</span>
           <h4 className={styles.heading}>{primaryHeading}</h4>
-          <p className={styles.primaryText}>{primaryText}</p>
+          <span className={styles.primaryText}>{primaryText}</span>
           {primaryText2 && (
-            <p className={styles.primaryText2}>{primaryText2}</p>
+            <span className={styles.primaryText2}>{primaryText2}</span>
           )}
           <div className={styles.secondaryText}>
             <h5>Technical Note</h5>
-            <p>{secondaryText.text}</p>
+            <span>{secondaryText.text}</span>
           </div>
         </div>
       </div>
