@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
 
@@ -12,7 +13,7 @@ import footerMenu from './footerMenu'
 
 import styles from './Footer.module.scss'
 
-let defaultfooterFeatureData = {
+const defaultfooterFeatureData = {
   heading: 'Reclaim control of your data',
   text: ' The Züs Cloud Network is a decentralized data storage network. Enabled by a cutting-edge storage protocol; secured by a novel layer 1 blockchain.',
   buttonText: 'Launch Apps',
@@ -24,9 +25,15 @@ const Footer = ({
   showfooterBackground = true,
   showfooterFeature = true,
 }) => {
-  if (footerFeatureData && footerFeatureData?.length) {
-    defaultfooterFeatureData = footerFeatureData
-  }
+  const [featureData, setFeatureData] = useState(defaultfooterFeatureData)
+
+  useEffect(() => {
+    if (footerFeatureData) {
+      setFeatureData(footerFeatureData)
+    } else {
+      setFeatureData(defaultfooterFeatureData)
+    }
+  }, [footerFeatureData])
 
   const renderMobile = () => {
     return (
@@ -80,7 +87,7 @@ const Footer = ({
   return (
     <footer className={styles.footer}>
       {showfooterBackground && <div className={styles.footerBackground}></div>}
-      {showfooterFeature && <FooterFeature data={defaultfooterFeatureData} />}
+      {showfooterFeature && <FooterFeature data={featureData} />}
       {renderMobile()}
       {renderDesktop()}
     </footer>

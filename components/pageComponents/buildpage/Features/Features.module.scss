@@ -1,29 +1,48 @@
 @use '/styles/variables.scss' as *;
 @use '/styles/mixins.scss' as *;
 
+@import 'include-media';
+
 .container {
   margin: auto;
-  margin-top: 4rem;
+  margin-top: 2rem;
   width: $mobile-width;
 }
 
 .textContainer {
-  margin-top: 1rem;
+  margin-top: -2rem;
+  z-index: 1;
 
   button {
     margin-top: 2rem;
   }
 }
 
+.codeImgContainer {
+  span {
+    width: $mobile-width !important;
+  }
+}
+
 .bgImgContainer {
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
-  margin-top: 4rem;
+  margin-top: 6rem;
   width: $mobile-width;
   height: 347px;
   border-radius: 16px;
   background: url('/images/buildPage/Features/bgPattern.png') top left/contain
     no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 122%;
+  }
 }
 
 .featureList {
@@ -32,5 +51,112 @@
 
   button {
     margin-top: 2rem;
+  }
+}
+
+@include media('>880px') {
+  .container {
+    margin: 0;
+    padding: 6rem 2rem;
+    width: 100%;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .codeImgContainer {
+      span {
+        width: 460px !important;
+      }
+    }
+
+    .textContainer {
+      max-width: 490px;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      h1 {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 79px;
+        line-height: 116%;
+      }
+
+      p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 178.5%;
+        margin: 0;
+      }
+
+      button {
+        margin: 0;
+        width: 183px;
+        height: 48px;
+      }
+    }
+  }
+
+  .bgImgContainer {
+    width: 100%;
+    height: 605px;
+    background: url('/images/buildPage/Features/bgPatternDesktop.svg')
+      center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 0;
+
+    h1 {
+      font-weight: 700;
+      font-size: 79px;
+      line-height: 122%;
+      max-width: 704px;
+    }
+
+    p {
+      max-width: 993px;
+      font-weight: 700;
+      font-size: 31px;
+      line-height: 178.5%;
+    }
+  }
+
+  .featureList {
+    margin: 8rem 0 2rem;
+
+    > h1 {
+      font-weight: 700;
+      font-size: 79px;
+      line-height: 116%;
+    }
+
+    > p {
+      max-width: 607px;
+      margin: 2rem auto;
+
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 178.5%;
+    }
+
+    .featureListDataContainer {
+      display: flex;
+      gap: 4rem;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      p {
+        width: 288px;
+        height: 87px;
+      }
+    }
   }
 }

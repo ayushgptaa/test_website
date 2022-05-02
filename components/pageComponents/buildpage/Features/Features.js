@@ -7,30 +7,32 @@ import FeaturesList from 'pageComponents/homepage/Features/FeaturesList'
 
 import featurelistData from './featuresListData'
 
-import codeImg from 'public/images/buildPage/Features/codeImg.png'
+import codeImg from 'public/images/buildPage/Features/codeImg.svg'
 
 import styles from './Features.module.scss'
 
 const Features = () => {
   return (
     <section className={styles.container}>
-      <div className={styles.codeImgContainer}>
-        <Image
-          src={codeImg}
-          alt="migrate any app"
-          quality={100}
-          layout="fixed"
-        />
-      </div>
-      <div className={styles.textContainer}>
-        <Heading text="Migrate Any App" />
-        <Text>
-          Züs is designed from the ground-up to simplify the migration process
-          from traditional cloud. Tools such as the Zbox CLI allow any
-          application to easily migrate to the Züs Cloud Network for
-          enterprise-grade storage.
-        </Text>
-        <Button type="button" text="Get Notified" />
+      <div className={styles.header}>
+        <div className={styles.codeImgContainer}>
+          <Image
+            src={codeImg}
+            alt="migrate any app"
+            quality={100}
+            layout="fixed"
+          />
+        </div>
+        <div className={styles.textContainer}>
+          <Heading text="Migrate Any App" />
+          <Text>
+            Züs is designed from the ground-up to simplify the migration process
+            from traditional cloud. Tools such as the Zbox CLI allow any
+            application to easily migrate to the Züs Cloud Network for
+            enterprise-grade storage.
+          </Text>
+          <Button type="button" text="Storage Tutorials" />
+        </div>
       </div>
 
       <div className={styles.bgImgContainer}>
@@ -49,16 +51,20 @@ const Features = () => {
           generation of the public cloud.
         </Text>
 
-        {featurelistData.map(({ pattern, heading, text, img, buttonText }) => (
-          <FeaturesList
-            pattern={pattern}
-            heading={heading}
-            text={text}
-            img={img}
-            key={heading}
-            buttonText={buttonText}
-          />
-        ))}
+        <div className={styles.featureListDataContainer}>
+          {featurelistData.map(
+            ({ pattern, heading, text, img, buttonText }) => (
+              <FeaturesList
+                pattern={pattern}
+                heading={heading}
+                text={text}
+                img={img}
+                key={heading}
+                buttonText={buttonText}
+              />
+            )
+          )}
+        </div>
       </div>
     </section>
   )

@@ -1,6 +1,8 @@
 @use '/styles/mixins.scss' as *;
 @use '/styles/variables.scss' as *;
 
+@import 'include-media';
+
 .container {
   margin-top: 4rem;
   overflow: hidden;
@@ -25,5 +27,50 @@
 
 .text {
   @include primary-text-mobile;
-  margin: 2rem 0 3rem 0;
+  margin: 2rem 0 3rem;
+}
+
+@include media('>tablet') {
+  .container {
+    margin: 9rem 0;
+  }
+
+  .heroImg {
+    height: 725px;
+    background: linear-gradient(180deg, rgba(3, 8, 25, 0) 0%, #030819 100%),
+      url('/images/buildPage/Hero/heroImgDesktop.svg') no-repeat top left/cover;
+    opacity: 0.3;
+  }
+
+  .contentContainer {
+    width: 100%;
+    max-width: 853px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 71px;
+      line-height: 120%;
+    }
+
+    p {
+      max-width: 567px;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 178.5%;
+      text-align: center;
+    }
+
+    button {
+      width: 227px;
+      height: 48px;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 24px;
+    }
+  }
 }

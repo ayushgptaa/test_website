@@ -20,14 +20,14 @@ const featurelistData = [
   },
   {
     pattern: 3,
-    heading: 'Zboxcli',
+    heading: 'ZboxCLI',
     text: 'A client CLI using GoSDK to interface the blockchain, storage platform, and blobbers (storage providers).',
     img: zboxcli,
     buttonText: 'Discover',
   },
   {
     pattern: 1,
-    heading: 'Zwalletcli',
+    heading: 'ZwalletCLI',
     text: 'A client CLI using GoSDK to interface the blockchain, and smart contracts for interest, lock, stake, and vesting.',
     img: zwalletcli,
     buttonText: 'Learn More',

@@ -4,8 +4,8 @@ import Heading from 'components/Heading'
 import Text from 'components/Text'
 import SocialIcons from 'components/SocialIcons'
 
-import workImg from '/public/images/store/Work/workImg.png'
 import FoundersImg from '/public/images/buildPage/Founders/Founders.png'
+import bgPatternLarge from '/public/images/buildPage/Founders/bgPatternLarge.png'
 
 import styles from './Founders.module.scss'
 
@@ -13,22 +13,26 @@ const Founders = () => {
   return (
     <section className={styles.container}>
       <div className={styles.bgPattern}>
-        <Heading text="Join the Community" />
-        <Text>
-          Join the conversation in our community groups. Share ideas, throughts,
-          feedbaack and help us grow this unique network. You’ll find us on the
-          usual channels below
-        </Text>
-        <SocialIcons />
+        <div className={styles.textContainer}>
+          <Heading text="Join the Community" />
+          <Text>
+            Join the conversation in our community groups. Share ideas,
+            throughts, feedbaack and help us grow this unique network. You’ll
+            find us on the usual channels below
+          </Text>
+          <SocialIcons width={64} height={64} />
+        </div>
       </div>
       <div className={styles.imgContainer}>
         <Image
-          src={workImg}
+          src={bgPatternLarge}
           alt="bgImage"
           quality={100}
           layout="responsive"
           priority={false}
         />
+        <div className={styles.overlay} />
+        <div className={styles.overlay2} />
       </div>
       <div className={styles.imgText}>
         <Heading text="The Founders" />
