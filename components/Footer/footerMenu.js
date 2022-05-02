@@ -3,7 +3,6 @@ const footerMenu = [
     id: 0,
     name: 'Store',
     subLinks: [
-      { name: 'Build for the Future' },
       { name: 'What Züs can do' },
       { name: 'Launch Apps', link: 'applaunch' },
     ],
@@ -25,7 +24,6 @@ const footerMenu = [
     id: 2,
     name: 'Earn',
     subLinks: [
-      { name: 'Build for the Future' },
       { name: 'Earn Rewards' },
       { name: 'Register' },
       { name: 'Explore with Atlas' },
