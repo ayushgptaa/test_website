@@ -19,9 +19,11 @@ const TextContainer = () => {
     <div className={styles.container} key={heading}>
       <div className={styles.bgPattern}></div>
       <div className={styles.ellipseBottom}></div>
-      <h3 className={styles.heading}>{heading}</h3>
-      <p className={styles.text}>{text}</p>
-      <Button type="button" text={buttonText} black transparent />
+      <div className={styles.textContainer}>
+        <h3 className={styles.heading}>{heading}</h3>
+        <p className={styles.text}>{text}</p>
+        <Button type="button" text={buttonText} black transparent />
+      </div>
     </div>
   ))
 }

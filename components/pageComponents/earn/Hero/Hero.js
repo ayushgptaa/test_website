@@ -15,7 +15,9 @@ const Hero = () => {
           tokens to Blobbers.
         </p>
       </div>
-      <TextContainer />
+      <div className={styles.textContainer}>
+        <TextContainer />
+      </div>
     </main>
   )
 }
