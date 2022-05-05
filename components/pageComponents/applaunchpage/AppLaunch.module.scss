@@ -1,13 +1,39 @@
 @use '/styles/variables.scss' as *;
 
+@import 'include-media';
+
 .container {
+  position: relative;
   margin-top: 3rem;
+}
+
+.ellipse {
+  position: absolute;
+  width: 100%;
+  height: 1626px;
+  top: -885px;
+  background: $blue-gradient-top-right-to-bottom-left;
+  opacity: 0.2;
+  filter: blur(150px);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  pointer-events: none;
 }
 
 .mainText {
   width: $mobile-width;
   margin: auto;
   text-align: center;
+}
+
+.iconContainer {
+  span {
+    width: 100px !important;
+    height: 100px !important;
+  }
+}
+
+.appLaunchContainer {
+  margin-top: 5rem;
 }
 
 .containerContent {
@@ -17,5 +43,52 @@
 
   & > p {
     margin-top: 1rem;
+  }
+}
+
+@include media('>tablet') {
+  .ellipse {
+    height: 1410px;
+    top: -1100px;
+    background: $blue-gradient-center;
+    filter: blur(164.527px);
+  }
+
+  .mainText {
+    width: 100%;
+    max-width: 1145px;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+
+    h1 {
+      font-weight: 700;
+      font-size: 72px;
+      line-height: 120%;
+    }
+  }
+
+  .containerContent {
+    & > h1 {
+      font-weight: 700;
+      font-size: 52px;
+      line-height: 116%;
+    }
+  }
+
+  .appLaunchContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 983px;
+    margin: 6rem auto;
+    gap: 1.5rem;
+  }
+
+  .iconContainer {
+    span {
+      width: 140px !important;
+      height: 140px !important;
+    }
   }
 }

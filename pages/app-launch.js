@@ -2,7 +2,7 @@ import Header from 'components/Header'
 import AppLaunchComponent from 'pageComponents/applaunchpage'
 import Footer from 'components/Footer'
 
-const Contact = () => {
+const AppLaunch = () => {
   return (
     <>
       <Header removeImg />
@@ -12,4 +12,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default AppLaunch

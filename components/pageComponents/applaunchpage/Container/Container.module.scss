@@ -1,6 +1,8 @@
 @use '/styles/variables.scss' as *;
 @use '/styles/mixins.scss' as *;
 
+@import 'include-media';
+
 .container {
   position: relative;
   height: $mobile-width;
@@ -13,8 +15,8 @@
   & > button {
     padding: 8px 12px;
     position: absolute;
-    left: 236px;
-    top: 24px;
+    right: 1.5rem;
+    top: 1.5rem;
     height: 40px;
     background: rgba(255, 255, 255, 0.08);
     border-radius: 8px;
@@ -50,5 +52,28 @@
     line-height: 37px;
     text-align: center;
     color: #ffffff;
+    cursor: pointer;
+  }
+}
+
+@include media('>tablet') {
+  .container {
+    width: 440px;
+    height: 446px;
+    border-radius: 32px;
+    padding: 4rem;
+
+    & > button {
+      right: 2rem;
+      top: 2rem;
+    }
+  }
+
+  .textContainer {
+    & > h1 {
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 116%;
+    }
   }
 }
