@@ -34,7 +34,7 @@ const footerMenu = [
     name: 'About',
     subLinks: [
       { name: 'Meet the Team' },
-      { name: 'News' },
+      { name: 'News', link: 'news' },
       { name: 'Press & Media' },
       { name: 'Contact Züs', link: 'contact' },
     ],

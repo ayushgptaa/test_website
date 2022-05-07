@@ -1,0 +1,115 @@
+@use '/styles/variables.scss' as *;
+
+@import 'include-media';
+
+.container {
+  position: relative;
+  margin: 3rem auto;
+  width: $mobile-width;
+  text-align: center;
+
+  > h1 {
+    margin: 2.5rem auto;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 120%;
+  }
+}
+
+.topEllipse {
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  top: -200px;
+  background: $blue-gradient-top-right-to-bottom-left;
+  opacity: 0.2;
+  filter: blur(150px);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  z-index: -9;
+}
+
+.pagination {
+  position: relative;
+  margin: 3rem auto 5rem;
+  display: flex;
+  justify-content: center;
+  width: $mobile-width;
+
+  > ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    list-style-type: none;
+    cursor: pointer;
+
+    > li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    > li:is(:first-child) {
+      position: absolute;
+      left: 25%;
+      bottom: -3rem;
+    }
+
+    > li:is(:last-child) {
+      position: absolute;
+      right: 25%;
+      bottom: -3rem;
+    }
+
+    > li:not(:first-child, :last-child) {
+      width: 40px;
+      height: 40px;
+
+      > a {
+        padding: 1em;
+        margin: -1em;
+      }
+    }
+  }
+
+  .active {
+    background: rgba(250, 251, 255, 0.08);
+    border-radius: 8px;
+  }
+
+  .disabled {
+    opacity: 0.2;
+  }
+}
+
+.cta {
+  margin: 8rem auto;
+}
+
+@include media('>tablet') {
+  .container {
+    width: 100%;
+    padding: 0 2rem;
+    margin-top: 6rem;
+
+    > h1 {
+      font-size: 71px;
+    }
+  }
+
+  .topEllipse {
+    height: 1410px;
+    top: -1100px;
+    background: $blue-gradient-center;
+  }
+
+  .pagination {
+    width: 100%;
+
+    > ul {
+      > li:is(:first-child, :last-child) {
+        position: unset;
+      }
+    }
+  }
+}

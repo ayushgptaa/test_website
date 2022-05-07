@@ -13,6 +13,16 @@ $blue-gradient-top-right-to-bottom-left: radial-gradient(
   #1477f8 0%,
   rgba(5, 11, 25, 0) 100%
 );
+$gradient-for-card-mobile: radial-gradient(
+  circle at bottom,
+  #030c21 0%,
+  rgba(5, 11, 25, 0) 100%
+);
+$gradient-for-card-desktop: radial-gradient(
+  circle at right,
+  #05193b 0%,
+  rgba(5, 11, 25, 0) 100%
+);
 
 // Layout
 $mobile-width: 327px;

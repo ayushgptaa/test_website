@@ -1,0 +1,97 @@
+@use '/styles/variables.scss' as *;
+
+@import 'include-media';
+
+.cardWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem auto;
+  padding-bottom: 1rem;
+  border-radius: 16px;
+  background: $gradient-for-card-mobile;
+  text-align: left;
+}
+
+.imageWrapper {
+  position: relative;
+  height: 180px;
+
+  > span {
+    border-radius: 16px 16px 0px 0px;
+  }
+}
+
+.textWrapper {
+  padding: 1rem;
+  height: 218px;
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tagWrapper {
+  display: flex;
+  gap: 0.5rem;
+  position: absolute;
+  top: 8rem;
+  left: 1rem;
+}
+
+.title {
+  display: block;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 130%;
+}
+
+.description {
+  display: block;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: #bebeca;
+}
+
+@include media('>tablet') {
+  .cardWrapper {
+    flex-direction: row;
+    padding-bottom: 0;
+    border-radius: 24px;
+    max-width: 960px;
+    align-items: center;
+    background: $gradient-for-card-desktop;
+  }
+
+  .imageWrapper {
+    width: 472px;
+    height: 325px;
+
+    > span {
+      border-radius: 24px 0px 0px 24px;
+    }
+  }
+
+  .textWrapper {
+    width: 408px;
+    height: 100%;
+
+    > button {
+      margin: 0;
+      margin-top: 1rem;
+      width: 143px;
+    }
+  }
+
+  .tagWrapper {
+    position: unset;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 116%;
+  }
+}

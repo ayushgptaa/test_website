@@ -1,0 +1,75 @@
+@use '/styles/variables.scss' as *;
+
+@import 'include-media';
+
+.container {
+  margin: 0 auto;
+  width: $mobile-width;
+  height: 412px;
+  background: url('/images/blog/cta/pattern-mobile.svg') no-repeat center/cover;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  height: 100%;
+  gap: 1.8rem;
+
+  h1 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 122%;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 178.5%;
+    opacity: 0.8;
+  }
+
+  > button {
+    margin: 0;
+  }
+}
+
+@include media('>tablet') {
+  .container {
+    width: 100%;
+    max-width: 960px;
+    height: 364px;
+    border-radius: 32px;
+    background: url('/images/blog/cta/pattern-desktop.svg') no-repeat
+      center/cover;
+  }
+
+  .wrapper {
+    width: 660px;
+    padding: unset;
+
+    > h1 {
+      max-width: 552px;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 116%;
+      margin: 0;
+    }
+
+    > p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 178.5%;
+      color: #bebeca;
+    }
+
+    > button {
+      width: 186px;
+    }
+  }
+}
