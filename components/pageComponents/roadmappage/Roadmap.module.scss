@@ -1,7 +1,35 @@
 @use '/styles/variables.scss' as *;
 
+@import 'include-media';
+
 .container {
+  position: relative;
   margin-top: 3rem;
+}
+
+.topEllipse {
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  top: -200px;
+  background: $blue-gradient-top-right-to-bottom-left;
+  opacity: 0.2;
+  filter: blur(150px);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  z-index: -9;
+}
+
+.centerEllipse {
+  position: absolute;
+  width: 100%;
+  height: 1410px;
+  left: -20%;
+  top: 25rem;
+  background: $blue-gradient-center;
+  opacity: 0.2;
+  filter: blur(164.527px);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  z-index: -9;
 }
 
 .mainText {
@@ -11,24 +39,42 @@
 }
 
 .textContainer {
-  position: relative;
   margin-top: 7rem;
   overflow: hidden;
 }
 
-.bgPattern {
-  position: absolute;
-  width: 1343px;
-  height: 1343px;
-  left: -672px;
-  top: 190px;
+@include media('>tablet') {
+  .topEllipse {
+    height: 1410px;
+    top: -1100px;
+    background: $blue-gradient-center;
+  }
 
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    #1477f8 0%,
-    rgba(5, 11, 25, 0) 100%
-  );
-  opacity: 0.2;
-  filter: blur(200px);
-  transform: matrix(-1, 0, 0, 1, 0, 0);
+  .centerEllipse {
+    left: unset;
+  }
+
+  .textContainer {
+    margin: 10rem auto;
+  }
+
+  .mainText {
+    width: 100%;
+    max-width: 649px;
+    margin-top: 6rem;
+
+    h1 {
+      font-weight: 700;
+      font-size: 72px;
+      line-height: 120%;
+    }
+
+    p {
+      max-width: 600px;
+      margin: 1rem auto;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 178.5%;
+    }
+  }
 }

@@ -18,7 +18,6 @@ const roadmapData = [
     heading: 'Kilimanjaro - Zus Expansion',
     text: 'The Kilimanjaro phase will focus on added decentralization. This process will be an important balancing act of adding new ‘decentralizing’ features while ensuring the network remains secure, fully optimized, and highly scalable. View Change, the primary new feature in this phase, is a built-in protocol where the Active Set (Züs Miners and Sharders) is shuffled every Epoch (a fixed number of blocks). An Epoch is expected to occur every few weeks on Züs, pending test results. The View Change event utilizes a randomized squared-staking selection process to protect against Sybil Miners when selecting the new Active Set. Kilimanjaro will introduce the first View Change round on Züs. Kilimanjaro will also give birth to the ZüsDAO, by way of activating the Self-Governance Protocol. This protocol leverages a ping-pong governance model, which enables the community to vote on issues, veto issues and overrule a veto until one side is unable to exceed the needed threshold. Voting rights are achieved through ZCN token locking, as their token rewards are treated as votes. ',
     color: 'grey',
-    removeLineContainer: true,
   },
 ]
 
