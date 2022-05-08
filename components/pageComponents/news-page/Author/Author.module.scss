@@ -1,0 +1,37 @@
+@import 'include-media';
+
+.wrapper {
+  max-width: 327px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.photoProfile {
+  > span {
+    border-radius: 50%;
+  }
+}
+
+.title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 116%;
+}
+
+.description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 178.5%;
+  color: #bebeca;
+}
+
+@include media('>tablet') {
+  .wrapper {
+    max-width: 480px;
+  }
+}

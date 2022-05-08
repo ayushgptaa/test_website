@@ -3,7 +3,7 @@ import Image from 'next/image'
 import ReactPaginate from 'react-paginate'
 
 import Card from './Card'
-import WorkWithUs from './CTA'
+import { WorkWithUs } from './CTA'
 
 import newsPageData from './NewsPageData'
 import styles from './NewsPage.module.scss'

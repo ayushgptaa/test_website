@@ -3,7 +3,7 @@ import clsx from 'clsx'
 
 import styles from './Button.module.scss'
 
-const Button = ({ type, text, black, transparent }) => {
+const Button = ({ type, text, black, transparent, onClick }) => {
   return (
     <button
       type={type}
@@ -11,7 +11,8 @@ const Button = ({ type, text, black, transparent }) => {
         styles.button,
         black && styles.black,
         transparent && styles.transparent
-      )}>
+      )}
+      onClick={onClick}>
       {text}
     </button>
   )
@@ -22,6 +23,7 @@ Button.propTypes = {
   text: PropTypes.string.isRequired,
   black: PropTypes.bool,
   transparent: PropTypes.bool,
+  onClick: PropTypes.func,
 }
 
 export default Button

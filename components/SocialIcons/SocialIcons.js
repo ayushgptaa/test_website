@@ -12,7 +12,7 @@ const SocialIcons = ({ height = 28, width = 28 }) => {
     <ul className={styles.socialIcons}>
       <li>
         <IconContainer
-          img={discord}
+          img={`/${discord.src}`}
           alt="discord"
           height={height}
           width={width}
@@ -20,7 +20,7 @@ const SocialIcons = ({ height = 28, width = 28 }) => {
       </li>
       <li>
         <IconContainer
-          img={twitter}
+          img={`/${twitter.src}`}
           alt="twitter"
           height={height}
           width={width}
@@ -28,7 +28,7 @@ const SocialIcons = ({ height = 28, width = 28 }) => {
       </li>
       <li>
         <IconContainer
-          img={telegram}
+          img={`/${telegram.src}`}
           alt="telegram"
           height={height}
           width={width}

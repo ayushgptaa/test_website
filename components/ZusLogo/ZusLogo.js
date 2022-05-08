@@ -11,7 +11,7 @@ const ZusLogo = () => {
     <Link href="/" passHref>
       <a className={styles.logoLink}>
         <Image
-          src={ZusLogoImg}
+          src={`/${ZusLogoImg.src}`}
           alt="ZusLogo"
           height={40}
           width={40}

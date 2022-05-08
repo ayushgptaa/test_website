@@ -8,7 +8,7 @@ const IconContainer = ({ img, alt, height, width }) => {
 }
 
 IconContainer.propTypes = {
-  img: PropTypes.object,
+  img: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
   alt: PropTypes.string,
   height: PropTypes.number,
   width: PropTypes.number,

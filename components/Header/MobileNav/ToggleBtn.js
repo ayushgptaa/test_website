@@ -8,11 +8,20 @@ import closeIcon from '/public/images/NavIcons/closeIcon.svg'
 import styles from './ToggleBtn.module.scss'
 
 const MenuIcon = () => {
-  return <IconContainer img={menuIcon} alt="Menu" height={24} width={24} />
+  return (
+    <IconContainer img={`/${menuIcon.src}`} alt="Menu" height={24} width={24} />
+  )
 }
 
 const CloseIcon = () => {
-  return <IconContainer img={closeIcon} alt="Close" height={28} width={28} />
+  return (
+    <IconContainer
+      img={`/${closeIcon.src}`}
+      alt="Close"
+      height={28}
+      width={28}
+    />
+  )
 }
 
 const ToggleBtn = ({ toggleNavbar, showNavLinks }) => {

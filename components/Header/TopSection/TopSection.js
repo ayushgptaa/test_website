@@ -13,9 +13,24 @@ const TopSection = () => {
       </div>
       <div className={styles.wrapperRight}>
         <span>Whitepapers</span>
-        <IconContainer img={discord} alt="discord" height={20} width={20} />
-        <IconContainer img={twitter} alt="twitter" height={20} width={20} />
-        <IconContainer img={telegram} alt="telegram" height={20} width={20} />
+        <IconContainer
+          img={`/${discord.src}`}
+          alt="discord"
+          height={20}
+          width={20}
+        />
+        <IconContainer
+          img={`/${twitter.src}`}
+          alt="twitter"
+          height={20}
+          width={20}
+        />
+        <IconContainer
+          img={`/${telegram.src}`}
+          alt="telegram"
+          height={20}
+          width={20}
+        />
       </div>
     </div>
   )
