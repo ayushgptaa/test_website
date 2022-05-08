@@ -1,0 +1,34 @@
+.container {
+  width: 100%;
+}
+
+.leftTitle {
+  font-family: 'Averta Std';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.rightTitle {
+  background: #ffffff;
+  border: 1px solid #bebeca;
+  border-radius: 8px;
+  font-family: 'Averta Std';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  color: #000000;
+}
+
+.textContainer {
+  justify-content: space-between;
+  display: flex;
+  padding-bottom: 12px;
+}
+
+.sliderContent {
+  padding-top: 12px;
+}
