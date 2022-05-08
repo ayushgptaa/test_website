@@ -1,0 +1,61 @@
+.container {
+  width: 100%;
+}
+
+.leftTitle {
+  font-family: 'Averta Std';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.rightTitle {
+  background: #ffffff;
+  border: 1px solid #bebeca;
+  border-radius: 8px;
+  font-family: 'Averta Std';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  color: #000000;
+}
+
+.textContainer {
+  justify-content: space-between;
+  display: flex;
+}
+
+.nodeContainer {
+  cursor: pointer;
+  height: 48px;
+  width: 48px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 999999px;
+}
+
+.sliderContainer {
+  width: 100%;
+  background: #0053ff;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  border-radius: 9999px;
+}
+.labelContainer {
+  justify-content: space-between;
+  display: flex;
+}
+
+.label {
+  font-family: 'Averta Std';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  color: #81858e;
+}
