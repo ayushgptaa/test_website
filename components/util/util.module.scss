@@ -1,0 +1,29 @@
+.justifyContentContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.expandableDivContainer {
+  transition: all 0.5s ease-out;
+  background: #1d2434;
+  border: 1px solid rgba(129, 133, 142, 0.4);
+  border-radius: 12px;
+  padding: 25px 40px;
+}
+
+.expandableDivTitle {
+  font-family: 'Averta Std';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+
+  display: flex;
+  align-items: center;
+
+  color: #ffffff;
+}
+
+.expandableDivChildren {
+  padding-top: 8px;
+}
