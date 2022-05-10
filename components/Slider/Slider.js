@@ -1,16 +1,14 @@
-/* eslint-disable jsx-a11y/mouse-events-have-key-events */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React from 'react'
 import PropTypes from 'prop-types'
 import Draggable from 'react-draggable'
-import { ReactComponent as Node } from '/public/images/slider/node.svg'
+import Image from 'next/image'
 
 import styles from './SliderEditor.module.scss'
 
 const SliderNode = () => {
   return (
     <div className={styles.nodeContainer}>
-      <Node />
+      <Image src="/images/slider/node.svg" width={40} height={40} />
     </div>
   )
 }
