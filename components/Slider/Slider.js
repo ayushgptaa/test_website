@@ -1,14 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Draggable from 'react-draggable'
-import Image from 'next/image'
 
 import styles from './SliderEditor.module.scss'
+import Node from './Node'
 
 const SliderNode = () => {
   return (
     <div className={styles.nodeContainer}>
-      <Image src="/images/slider/node.svg" width={40} height={40} />
+      <Node />
     </div>
   )
 }
