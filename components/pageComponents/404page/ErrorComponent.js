@@ -2,14 +2,14 @@ import Link from 'next/link'
 
 import Heading from 'components/Heading'
 import Text from 'components/Text'
-import MobilePrimaryBg from 'components/MobilePrimaryBg'
+import PageBackground from 'components/PageBackground'
 
 import styles from './ErrorComponent.module.scss'
 
 const ErrorComponent = () => {
   return (
     <section className={styles.container}>
-      <MobilePrimaryBg />
+      <PageBackground />
       <div className={styles.content}>
         <div className={styles.errorImg}></div>
         <div className={styles.textContainer}>

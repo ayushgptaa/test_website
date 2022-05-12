@@ -20,6 +20,14 @@
   line-height: 28px;
 }
 
+@mixin background-image($url, $position, $size, $height, $width) {
+  background: url($url) $position/$size no-repeat;
+  position: absolute;
+  z-index: -9;
+  height: $height;
+  width: $width;
+}
+
 @mixin flex($justifyContent, $alignItems) {
   display: flex;
   justify-content: $justifyContent;

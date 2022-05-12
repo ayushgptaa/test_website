@@ -1,0 +1,118 @@
+@use '/styles/variables.scss' as *;
+@use '/styles/mixins.scss' as *;
+
+@import 'include-media';
+
+.primaryContainer {
+  position: relative;
+  width: clamp($mobile-width, 80%, 650px);
+  text-align: center;
+  padding: 3rem 1.5rem;
+  margin: 2rem auto;
+  background: linear-gradient(96.94deg, #052948 -2.21%, #08174b 64.97%);
+  border-radius: 16px;
+  overflow: hidden;
+  z-index: -1 !important;
+
+  & > p {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    opacity: 0.8;
+  }
+
+  h1 {
+    margin-top: 2rem;
+  }
+}
+
+.iconContainer {
+  margin: 2rem auto 4rem;
+  @include flex-vertical-center(center);
+  gap: 5px;
+
+  p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    opacity: 0.8;
+  }
+}
+
+.bgImage {
+  @include background-image(
+    '/images/BlueContainerWithImg/bgImageMobile.png',
+    center,
+    contain,
+    296px,
+    157px
+  );
+  bottom: 0;
+  right: 0;
+}
+
+.secondaryContainer {
+  width: $mobile-width;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  text-align: center;
+  padding: 1.5rem;
+  margin: 6rem auto;
+
+  & > p {
+    margin: 0;
+  }
+
+  a {
+    color: $primary-blue;
+    display: inline-block;
+  }
+}
+
+@include media('>tablet') {
+  .primaryContainer {
+    position: relative;
+    width: 96%;
+    margin: 5rem auto 6rem;
+    height: 600px;
+    padding: 7rem 6rem;
+    border-radius: 32px;
+
+    & > h1 {
+      font-weight: 600;
+      font-size: 48px;
+      line-height: 132%;
+    }
+
+    & > button {
+      width: 182px;
+      height: 48px;
+      padding: 12px 28px;
+    }
+  }
+
+  .bgImage {
+    @include background-image(
+      '/images/BlueContainerWithImg/bgImage.png',
+      center,
+      contain,
+      454px,
+      364px
+    );
+  }
+
+  .iconContainer {
+    & > p {
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 178.5%;
+    }
+  }
+
+  .secondaryContainer {
+    width: 600px;
+    padding: 2.5rem 3rem;
+    margin: 6rem auto 10rem;
+  }
+}

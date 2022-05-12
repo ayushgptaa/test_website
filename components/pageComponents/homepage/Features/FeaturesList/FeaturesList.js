@@ -27,7 +27,7 @@ FeaturesList.propTypes = {
   pattern: PropTypes.number,
   heading: PropTypes.string,
   text: PropTypes.string,
-  img: PropTypes.object,
+  img: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
   buttonText: PropTypes.string,
 }
 
