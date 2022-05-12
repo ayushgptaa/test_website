@@ -47,7 +47,7 @@ const BlobberCalculator = () => {
             Ipsum, Lorem ipsum dolor sit amet.., comes from a line in section
             1.10.32.
           </div>
-        </ExpandableDivs>
+        </Expandable>
       </div>
     </div>
   )
