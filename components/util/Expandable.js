@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import PropTypes from 'prop-types'
 import styles from './util.module.scss'
 
-const ExpandableDivs = ({ title, children }) => {
+const Expandable = ({ title, children }) => {
   const [isExpanded, setExpanded] = React.useState(false)
 
   return (
@@ -44,9 +44,9 @@ const ExpandableDivs = ({ title, children }) => {
   )
 }
 
-ExpandableDivs.propTypes = {
+Expandable.propTypes = {
   children: PropTypes.any,
   title: PropTypes.any.isRequired,
 }
 
-export default ExpandableDivs
+export default Expandable

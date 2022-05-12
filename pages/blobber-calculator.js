@@ -1,6 +1,6 @@
 import React from 'react'
 import SliderEditor from 'components/Slider'
-import ExpandableDivs from 'components/util/ExpandableDivs'
+import Expandable from 'components/util/Expandable'
 
 const BlobberCalculator = () => {
   const [storage, setStorage] = React.useState(3000)
@@ -23,7 +23,7 @@ const BlobberCalculator = () => {
       </div>
 
       <div>
-        <ExpandableDivs title="Test Title">
+        <Expandable title="Test Title">
           <div>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industrys standard dummy text
