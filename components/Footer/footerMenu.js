@@ -24,7 +24,7 @@ const footerMenu = [
     id: 2,
     name: 'Earn',
     subLinks: [
-      { name: 'Earn Rewards' },
+      { name: 'Earn Rewards', link: 'earn' },
       { name: 'Register' },
       { name: 'Explore with Atlas' },
     ],
@@ -35,7 +35,7 @@ const footerMenu = [
     subLinks: [
       { name: 'Meet the Team' },
       { name: 'News', link: 'news' },
-      { name: 'Press & Media' },
+      { name: 'Press & Media', link: 'press' },
       { name: 'Contact Züs', link: 'contact' },
     ],
   },

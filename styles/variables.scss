@@ -8,8 +8,18 @@ $blue-gradient-center: radial-gradient(
   #1477f8 0%,
   rgba(5, 11, 25, 0) 100%
 );
+$blue-gradient-circle-center: radial-gradient(
+  circle at 50% 50%,
+  #1477f8 0%,
+  rgba(5, 11, 25, 0) 100%
+);
 $blue-gradient-top-right-to-bottom-left: radial-gradient(
   ellipse at top left,
+  #1477f8 0%,
+  rgba(5, 11, 25, 0) 100%
+);
+$blue-gradient-50-percent-top-right: radial-gradient(
+  50% 50% at top left,
   #1477f8 0%,
   rgba(5, 11, 25, 0) 100%
 );

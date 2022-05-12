@@ -1,22 +1,23 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import PropTypes from 'prop-types'
 
-import Button from 'components/Button'
 import Heading from 'components/Heading'
 import Text from 'components/Text'
+import Button from 'components/Button'
 
 import twitterIcon from '/public/images/contact/twitterIcon.svg'
 
-import styles from './ContactComponent.module.scss'
+import styles from './BlueContainerWithImg.module.scss'
 
-const ContactComponent = () => {
+// Main content for Contact and Press page
+const BlueContainerWithImg = ({ heading, subHeading }) => {
   return (
-    <main className={styles.container}>
-      <div className={styles.mainBackground}></div>
+    <>
       <div className={styles.primaryContainer}>
         <div className={styles.bgImage}></div>
-        <p>Contact Züs.</p>
-        <Heading text="Want to reach out? Message us on Twitter" />
+        <p>{subHeading}</p>
+        <Heading text={heading} />
         <div className={styles.iconContainer}>
           <Image
             src={twitterIcon}
@@ -38,8 +39,13 @@ const ContactComponent = () => {
           <Link href="/">forum</Link>. is a great place to start.
         </Text>
       </div>
-    </main>
+    </>
   )
 }
 
-export default ContactComponent
+BlueContainerWithImg.propTypes = {
+  heading: PropTypes.string,
+  subHeading: PropTypes.string,
+}
+
+export default BlueContainerWithImg

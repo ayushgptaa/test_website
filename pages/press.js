@@ -3,18 +3,18 @@ import Header from 'components/Header'
 import BlueContainerWithImg from 'components/BlueContainerWithImg'
 import Footer from 'components/Footer'
 
-const Contact = () => {
+const Press = () => {
   return (
     <>
       <PageBackground />
       <Header removeImg />
       <BlueContainerWithImg
-        heading="Want to reach out? Message us on Twitter"
-        subHeading="Contact Züs."
+        heading="For press and other media inquiries please message us on Twitter"
+        subHeading="Press & Media."
       />
       <Footer showfooterBackground={false} showfooterFeature={false} />
     </>
   )
 }
 
-export default Contact
+export default Press
