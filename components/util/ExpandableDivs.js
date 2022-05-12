@@ -1,37 +1,46 @@
 import React from 'react'
 
-import useCollapse from 'react-collapsed'
 import { ReactComponent as ArrowDown } from 'public/images/util/arrow-down.svg'
 import { ReactComponent as ArrowRight } from 'public/images/util/arrow-right.svg'
-
+import { motion, AnimatePresence } from 'framer-motion'
 import PropTypes from 'prop-types'
-
 import styles from './util.module.scss'
 
 const ExpandableDivs = ({ title, children }) => {
   const [isExpanded, setExpanded] = React.useState(false)
 
-  const { getCollapseProps, getToggleProps } = useCollapse({ isExpanded })
-
   return (
-    <div className={styles.expandableDivContainer}>
+    <motion.div className={styles.expandableDivContainer}>
       <div className={styles.justifyContentContainer}>
         {/* Title */}
         <div className={styles.expandableDivTitle}>{title}</div>
         {/* Button */}
         <button
-          style={{ cursor: 'pointer' }}
-          {...getToggleProps({
-            onClick: () => setExpanded((prevExpanded) => !prevExpanded),
-          })}>
+          onClick={() => setExpanded(!isExpanded)}
+          style={{ cursor: 'pointer' }}>
           {isExpanded && <ArrowDown />}
           {!isExpanded && <ArrowRight />}
         </button>
       </div>
-      <section {...getCollapseProps()} className={styles.expandableDivChildren}>
-        {children}
-      </section>
-    </div>
+
+      <AnimatePresence initial={false}>
+        {isExpanded && (
+          <motion.section
+            className={styles.expandableDivChildren}
+            key="content"
+            initial="collapsed"
+            animate="open"
+            exit="collapsed"
+            variants={{
+              open: { opacity: 1, height: 'auto' },
+              collapsed: { opacity: 0, height: 0 },
+            }}
+            transition={{ duration: 0.2, ease: 'linear' }}>
+            {children}
+          </motion.section>
+        )}
+      </AnimatePresence>
+    </motion.div>
   )
 }
 
