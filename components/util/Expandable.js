@@ -1,7 +1,6 @@
 import React from 'react'
 
-import { ReactComponent as ArrowDown } from 'public/images/util/arrow-down.svg'
-import { ReactComponent as ArrowRight } from 'public/images/util/arrow-right.svg'
+import { DownArrow, RightArrow } from 'components/Icons'
 import { motion, AnimatePresence } from 'framer-motion'
 import PropTypes from 'prop-types'
 import styles from './util.module.scss'
@@ -18,8 +17,8 @@ const Expandable = ({ title, children }) => {
         <button
           onClick={() => setExpanded(!isExpanded)}
           style={{ cursor: 'pointer' }}>
-          {isExpanded && <ArrowDown />}
-          {!isExpanded && <ArrowRight />}
+          {isExpanded && <DownArrow />}
+          {!isExpanded && <RightArrow />}
         </button>
       </div>
 
