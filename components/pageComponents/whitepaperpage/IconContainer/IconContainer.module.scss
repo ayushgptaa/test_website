@@ -1,0 +1,84 @@
+@use '/styles/variables.scss' as *;
+@use '/styles/mixins.scss' as *;
+
+@import 'include-media';
+
+.rootContainer {
+  margin-top: 3rem;
+  padding-bottom: 4.5rem;
+  border-bottom: 1px solid rgba($color: #fff, $alpha: 0.1);
+}
+
+.container {
+  position: relative;
+  @include flex-center;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: 228px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: auto;
+  margin-bottom: 1.5rem;
+
+  & > p {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 116%;
+  }
+}
+
+.bgPattern {
+  @include background-image(
+    '/images/whitepaperpage/bgPatternMobile.svg',
+    top left,
+    cover,
+    100%,
+    100%
+  );
+  inset: 0;
+}
+
+@include media('>tablet') {
+  .rootContainer {
+    @include flex-center;
+    gap: 40px;
+    padding-bottom: 6rem;
+  }
+
+  .container {
+    width: 262px;
+    height: 256px;
+    border-radius: 32px;
+    margin: 0;
+
+    & > p {
+      font-size: 28px;
+    }
+
+    &:nth-child(odd) {
+      .bgPattern {
+        @include background-image(
+          '/images/whitepaperpage/bgPatternDesktopOdd.svg',
+          top left,
+          cover,
+          100%,
+          100%
+        );
+        inset: 0;
+      }
+    }
+
+    &:nth-child(even) {
+      .bgPattern {
+        @include background-image(
+          '/images/whitepaperpage/bgPatternDesktopEven.svg',
+          top left,
+          cover,
+          100%,
+          100%
+        );
+        inset: 0;
+      }
+    }
+  }
+}

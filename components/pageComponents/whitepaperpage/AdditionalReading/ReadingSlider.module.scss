@@ -1,0 +1,63 @@
+@use '/styles/variables.scss' as *;
+@use '/styles/mixins.scss' as *;
+@import 'include-media';
+
+.desktopContainer {
+  display: none;
+}
+
+.mobileContainer {
+  margin: auto 2rem;
+}
+
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 1.5rem;
+  height: 314px;
+
+  & > p {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 120%;
+    opacity: 0.6;
+    text-align: center;
+  }
+}
+
+.imgContainer {
+  position: relative;
+  width: 160px;
+  height: 232px;
+  border-radius: 16px;
+
+  & > span {
+    border-radius: 16px;
+  }
+}
+
+.scrollbar {
+  width: 100%;
+  height: 4px;
+  margin: auto;
+  border-radius: 10px;
+  background: #132b66;
+  margin-top: 3.5rem;
+}
+
+@include media('>tablet') {
+  .mobileContainer {
+    display: none;
+  }
+
+  .desktopContainer {
+    display: block;
+    @include flex-center;
+  }
+
+  .pageContainer {
+    width: 220px;
+  }
+}

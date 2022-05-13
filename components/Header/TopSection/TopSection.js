@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import IconContainer from 'components/IconContainer'
 import discord from '/public/images/SocialIcons/discord.svg'
 import twitter from '/public/images/SocialIcons/twitter.svg'
@@ -12,7 +14,9 @@ const TopSection = () => {
         <span>EN</span>
       </div>
       <div className={styles.wrapperRight}>
-        <span>Whitepapers</span>
+        <span>
+          <Link href="/whitepapers">Whitepapers</Link>
+        </span>
         <IconContainer
           img={`/${discord.src}`}
           alt="discord"

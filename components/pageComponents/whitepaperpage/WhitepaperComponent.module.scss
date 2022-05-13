@@ -1,0 +1,36 @@
+@import 'include-media';
+
+.mainContainer {
+  margin: 3rem 2rem 0;
+}
+
+.sectionContainer {
+  padding: 6rem 0;
+}
+
+.heading {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  width: 154px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+@include media('>tablet') {
+  .mainContainer {
+    margin: 6rem 2rem 0;
+
+    & > h1 {
+      font-size: 72px;
+    }
+  }
+
+  .sectionContainer {
+    padding: 6rem 0 10rem;
+  }
+
+  .heading {
+    width: 100%;
+  }
+}

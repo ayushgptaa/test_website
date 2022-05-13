@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import Accordion from 'components/Accordion'
 import Button from 'components/Button'
@@ -26,6 +27,7 @@ const Footer = ({
   showfooterFeature = true,
 }) => {
   const [featureData, setFeatureData] = useState(defaultfooterFeatureData)
+  const router = useRouter()
 
   useEffect(() => {
     if (footerFeatureData) {
@@ -40,7 +42,13 @@ const Footer = ({
       <div className={styles.mobileContainer}>
         <ZusLogo />
         <Heading text="Go beyond the cloud" />
-        <Button text="Whitepapers" type="button" black transparent />
+        <Button
+          text="Whitepapers"
+          type="button"
+          black
+          transparent
+          onClick={() => router.push('/whitepapers')}
+        />
         <SocialIcons />
         <Accordion data={footerMenu} />
         <p className={styles.bottomText}>
