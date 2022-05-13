@@ -2,7 +2,9 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "pageComponents/*": ["./components/pageComponents/*"]
+      "*": ["*"],
+      "pageComponents/*": ["./components/pageComponents/*"],
+      "util": ["./util/*"]
     }
   }
 }

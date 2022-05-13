@@ -1,0 +1,68 @@
+@import '/styles/color.scss';
+
+.projectedStatsContainer {
+  background: $darkGray;
+  border: 1px solid $lightgray;
+  padding: 40px;
+  border-radius: 12px;
+  gap: 20px;
+  display: grid;
+}
+
+.projectedStatsContainerTitle {
+  font-family: 'Averta Std';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.blueText {
+  color: rgb(0, 162, 250);
+}
+
+.focusText {
+  background-color: rgb(52, 61, 73);
+  padding: 8px 12px;
+  border-radius: 12px;
+  width: fit-content;
+}
+
+.gap {
+  display: flex;
+  gap: 24px;
+}
+
+.statsContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.statsItem {
+  display: grid;
+  gap: 5px;
+}
+
+.statsItemBottomRow {
+  font-family: 'Averta Std';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #e6e7e8;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  font-family: 'Averta Std';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  color: #e6e7e8;
+  gap: 18.14px;
+}

@@ -2,6 +2,7 @@ import React from 'react'
 
 import SliderEditor from 'components/Slider'
 import AccordianContainer from 'components/pageComponents/blobber-calculator-page/AccordianContainer'
+import ProjectedStats from 'pageComponents/blobber-calculator/ProjectedStats'
 
 const BlobberCalculator = () => {
   const [storage, setStorage] = React.useState(3000)
@@ -46,6 +47,15 @@ const BlobberCalculator = () => {
           the Renaissance. The first line of Lorem Ipsum, Lorem ipsum dolor sit
           amet.., comes from a line in section 1.10.32.
         </AccordianContainer>
+
+        <div>
+          <ProjectedStats
+            avgActiveStorage={200}
+            avgZCNDelegation={3213123}
+            avgZCNStake={321312}
+            totalBlobber={200}
+          />
+        </div>
       </div>
     </div>
   )

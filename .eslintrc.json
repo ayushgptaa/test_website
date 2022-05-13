@@ -38,6 +38,7 @@
     "react/self-closing-comp": 0,
     "react/button-has-type": 0,
     "import/extensions": 0,
-    "@next/next/no-html-link-for-pages": 0
+    "@next/next/no-html-link-for-pages": 0,
+    "react/no-unescaped-entities": 0
   }
 }
