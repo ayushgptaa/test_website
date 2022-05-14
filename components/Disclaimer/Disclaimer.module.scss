@@ -1,0 +1,20 @@
+@use '/styles/variables.scss' as *;
+
+.disclaimerContent {
+  h1 {
+    color: #ff014d;
+    font-size: 24px;
+    line-height: 30px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: #e6e7e8;
+  }
+}
