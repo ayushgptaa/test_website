@@ -1,6 +1,6 @@
-import image1 from '/public/images/whitepaperpage/image1.png'
-import image2 from '/public/images/whitepaperpage/image2.png'
-import image3 from '/public/images/whitepaperpage/image3.png'
+import image1 from '/public/images/whitepaperpage/image1.svg'
+import image2 from '/public/images/whitepaperpage/image2.svg'
+import image3 from '/public/images/whitepaperpage/image3.svg'
 
 const sliderData = [
   {

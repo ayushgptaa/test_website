@@ -19,10 +19,10 @@ const MobileBackground = () => {
     <div className={styles.container}>
       <div className={styles.imgContainer}>
         <div className={styles.iphoneMobile}>
-          <Image src={iphoneMobile} quality={100} />
+          <Image src={iphoneMobile} quality={100} priority={1} />
         </div>
         <div className={styles.iphoneDesktop}>
-          <Image src={iphoneDesktop} quality={100} />
+          <Image src={iphoneDesktop} quality={100} priority={1} />
         </div>
       </div>
       <div className={styles.textContainer}>

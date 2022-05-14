@@ -6,12 +6,13 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  top: -1001px;
   background: $blue-gradient-circle-center;
   opacity: 0.3;
   filter: blur(200px);
   transform: matrix(-1, 0, 0, 1, 0, 0);
   z-index: -9;
+  inset: 0;
+  top: -20rem;
 }
 
 .blueCenterLeft {
@@ -19,7 +20,7 @@
   width: 100%;
   height: 100%;
   left: -942px;
-  top: -154px;
+  top: 25rem;
   background: $blue-gradient-center;
   opacity: 0.2;
   filter: blur(200px);

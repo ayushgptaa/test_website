@@ -21,6 +21,7 @@ const Card = ({ data }) => {
         <Image
           src={data.image}
           alt={data.title}
+          sizes="50vw"
           layout="fill"
           objectFit="cover"
         />

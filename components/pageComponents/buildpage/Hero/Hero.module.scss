@@ -10,10 +10,12 @@
 
 .heroImg {
   position: absolute;
-  height: 920px;
+  height: 725px;
   width: 100%;
-  background: url('/images/buildPage/Hero/heroImgMobile.png') no-repeat top
-    left/cover;
+  background: linear-gradient(180deg, rgba(3, 8, 25, 0) 0%, #030819 100%),
+    url('/images/buildPage/Hero/heroImg.svg') no-repeat top left/cover;
+  background-size: cover;
+  opacity: 0.3;
   z-index: -9;
   inset: 0;
   overflow: hidden;
@@ -33,13 +35,6 @@
 @include media('>tablet') {
   .container {
     margin: 9rem 0;
-  }
-
-  .heroImg {
-    height: 725px;
-    background: linear-gradient(180deg, rgba(3, 8, 25, 0) 0%, #030819 100%),
-      url('/images/buildPage/Hero/heroImgDesktop.svg') no-repeat top left/cover;
-    opacity: 0.3;
   }
 
   .contentContainer {

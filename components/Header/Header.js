@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import propTypes from 'prop-types'
 import clsx from 'clsx'
 
@@ -7,8 +6,6 @@ import { MobileNav, ToggleBtn } from './MobileNav'
 
 import useAnimatedNavToggler from 'Hooks/useAnimatedNavToggler'
 
-import HeroImg from 'public/images/homePage/Hero/heroImg.png'
-
 import styles from './Header.module.scss'
 import DesktopNav from './DesktopNav'
 import TopSection from './TopSection'
@@ -16,7 +13,7 @@ import TopSection from './TopSection'
 const ImgComponent = ({ removeImg }) => {
   return (
     <div className={clsx(styles.imgContainer, removeImg && styles.removeImg)}>
-      <Image src={HeroImg} alt="HeroImg" quality={100} />
+      <div className={styles.heroImg} />
     </div>
   )
 }

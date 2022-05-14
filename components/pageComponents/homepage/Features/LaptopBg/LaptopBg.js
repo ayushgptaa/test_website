@@ -4,7 +4,8 @@ import TextContainerBorder from 'components/TextContainerBorder'
 import Button from '/components/Button'
 import Heading from 'components/Heading'
 
-import laptopLarge from '/public/images/homePage/Features/laptopLarge.svg'
+import laptopDesktop from '/public/images/homePage/Features/laptopDesktop.svg'
+import laptopMobile from '/public/images/homePage/Features/laptopMobile.svg'
 
 import styles from './LaptoBg.module.scss'
 
@@ -18,12 +19,22 @@ const MobileBackground = () => {
   return (
     <div className={styles.laptopImgBg}>
       <div className={styles.imgContainer}>
-        <Image
-          src={laptopLarge}
-          quality={100}
-          layout="responsive"
-          priority={false}
-        />
+        <div className={styles.laptopDesktop}>
+          <Image
+            src={laptopDesktop}
+            quality={100}
+            layout="responsive"
+            priority={1}
+          />
+        </div>
+        <div className={styles.laptopMobile}>
+          <Image
+            src={laptopMobile}
+            quality={100}
+            layout="responsive"
+            priority={1}
+          />
+        </div>
       </div>
       <div className={styles.textContainer}>
         <Heading text={data.heading} />

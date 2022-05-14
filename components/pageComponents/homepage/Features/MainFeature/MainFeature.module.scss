@@ -14,7 +14,7 @@
   width: $mobile-width;
   background-color: #030819;
   border-radius: 1rem;
-  padding: 3rem 1.5rem;
+  padding: 3rem 2rem;
   overflow: hidden;
 }
 
@@ -23,7 +23,7 @@
   height: 100%;
   width: 100%;
   inset: 0;
-  background: url('/images/homePage/Features/bgEllipse.png');
+  background: url('/images/homePage/Features/boxSmall.svg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -39,11 +39,6 @@
     width: 96%;
     height: 704px;
     gap: 1rem;
-  }
-
-  .heading {
-    width: 602px;
-    height: 294px;
   }
 
   .bgPattern {

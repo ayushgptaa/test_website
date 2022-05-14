@@ -33,8 +33,7 @@ const Slider = () => {
                   quality={100}
                   layout="fill"
                   objectFit="cover"
-                  objectPosition="center top"
-                  style={{ borderRadius: '16px' }}
+                  priority={1}
                 />
               </div>
               <div className={styles.reviewContainer}>

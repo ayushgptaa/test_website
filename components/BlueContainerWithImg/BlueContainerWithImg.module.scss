@@ -42,8 +42,8 @@
 
 .bgImage {
   @include background-image(
-    '/images/BlueContainerWithImg/bgImageMobile.png',
-    center,
+    '/images/BlueContainerWithImg/bgImageMobile.svg',
+    right,
     contain,
     296px,
     157px
@@ -94,8 +94,8 @@
 
   .bgImage {
     @include background-image(
-      '/images/BlueContainerWithImg/bgImage.png',
-      center,
+      '/images/BlueContainerWithImg/bgImageDesktop.svg',
+      right,
       contain,
       454px,
       364px

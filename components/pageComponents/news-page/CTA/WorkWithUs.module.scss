@@ -4,7 +4,7 @@
 
 .container {
   margin: 0 auto;
-  width: $mobile-width;
+  max-width: $mobile-width;
   height: 412px;
   background: url('/images/blog/cta/pattern-mobile.svg') no-repeat center/cover;
   border-radius: 16px;

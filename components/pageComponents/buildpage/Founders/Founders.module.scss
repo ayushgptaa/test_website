@@ -15,8 +15,8 @@
   width: $mobile-width;
   height: 429px;
   border-radius: 16px;
-  background: url('/images/buildPage/Founders/bgPattern.png') top left/contain
-    no-repeat;
+  background: url('/images/buildPage/Founders/bgPatternMobile.svg') top
+    left/contain no-repeat;
 }
 
 .imgContainer {
@@ -28,10 +28,6 @@
   left: 0;
   right: 0;
   text-align: center;
-
-  img {
-    opacity: 0.2;
-  }
 
   .overlay,
   .overlay2 {
@@ -122,10 +118,6 @@
     left: 0;
     right: 0;
     text-align: center;
-
-    img {
-      opacity: 0.2;
-    }
 
     .overlay,
     .overlay2 {

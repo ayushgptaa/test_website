@@ -12,7 +12,7 @@
   position: absolute;
   height: 185px;
   width: 100%;
-  background: url('/images/store/Hero/heroImgMobile.png') no-repeat
+  background: url('/images/store/Hero/heroImgMobile.svg') no-repeat
     center/contain;
   z-index: -9;
   top: 3rem;
@@ -27,6 +27,7 @@
 .text {
   @include primary-text-mobile;
   margin: 2rem 0 3rem 0;
+  display: block;
 }
 
 .secondaryHeading {

@@ -1,18 +1,18 @@
-<svg width="1280" height="704" viewBox="0 0 1280 704" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="1280" height="704" viewBox="0 0 1280 704" fill="none" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
     <g clip-path="url(#clip0_4618_47291)">
         <rect width="1280" height="704" rx="32" fill="#030819" />
         <circle opacity="0.2" cx="148" cy="112" r="847" fill="url(#paint0_radial_4618_47291)" />
         <circle opacity="0.2" cx="1066" cy="542" r="847" fill="url(#paint1_radial_4618_47291)" />
     </g>
     <defs>
-        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-            <use xlink:href="#image0_4618_47291" transform="translate(0 -0.182823) scale(0.000830565 0.00170068)" />
-        </pattern>
-        <radialGradient id="paint0_radial_4618_47291" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(148 112) rotate(90) scale(847)">
+        <radialGradient id="paint0_radial_4618_47291" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(148 112) rotate(90) scale(847)">
             <stop stop-color="#1477F8" />
             <stop offset="1" stop-color="#050B19" stop-opacity="0" />
         </radialGradient>
-        <radialGradient id="paint1_radial_4618_47291" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1066 542) rotate(90) scale(847)">
+        <radialGradient id="paint1_radial_4618_47291" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(1066 542) rotate(90) scale(847)">
             <stop stop-color="#1477F8" />
             <stop offset="1" stop-color="#050B19" stop-opacity="0" />
         </radialGradient>

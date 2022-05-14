@@ -6,7 +6,7 @@ import Heading from 'components/Heading'
 import Text from 'components/Text'
 import Button from 'components/Button'
 
-import twitterIcon from '/public/images/contact/twitterIcon.svg'
+import twitterIcon from '/public/images/BlueContainerWithImg/twitterIcon.svg'
 
 import styles from './BlueContainerWithImg.module.scss'
 

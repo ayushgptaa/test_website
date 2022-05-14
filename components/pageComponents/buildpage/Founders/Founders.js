@@ -5,7 +5,7 @@ import Text from 'components/Text'
 import SocialIcons from 'components/SocialIcons'
 
 import FoundersImg from '/public/images/buildPage/Founders/Founders.png'
-import bgPatternLarge from '/public/images/buildPage/Founders/bgPatternLarge.png'
+import bgPatternLarge from '/public/images/buildPage/Founders/bgPatternLarge.svg'
 
 import styles from './Founders.module.scss'
 
@@ -29,7 +29,6 @@ const Founders = () => {
           alt="bgImage"
           quality={100}
           layout="responsive"
-          priority={false}
         />
         <div className={styles.overlay} />
         <div className={styles.overlay2} />

@@ -19,6 +19,14 @@
   display: block;
   width: 100%;
   max-width: 624px;
+
+  .laptopMobile {
+    display: block;
+  }
+
+  .laptopDesktop {
+    display: none;
+  }
 }
 
 .textContainer {
@@ -47,6 +55,16 @@
     flex-direction: row;
     justify-content: space-between;
     height: 972px;
+  }
+
+  .imgContainer {
+    .laptopMobile {
+      display: none;
+    }
+
+    .laptopDesktop {
+      display: block;
+    }
   }
 
   .textContainer {
