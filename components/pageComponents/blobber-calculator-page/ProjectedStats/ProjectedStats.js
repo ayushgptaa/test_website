@@ -1,66 +1,43 @@
 import PropTypes from 'prop-types'
 
-import clsx from 'clsx'
-import style from './ProjectedStats.module.scss'
 import BlueLineWrapper from 'components/SpecialWrappers/BlueLineWrapper'
-import { NotificationIcon } from 'components/Icons'
 
 import { convertToDecimalSeparated } from 'util/utilFunctions'
 
+import { NotificationIcon } from 'components/Icons'
+
+import styles from './ProjectedStats.module.scss'
+import statsData from './statsData'
+
 const FocusText = ({ text }) => {
-  return <div className={style.focusText}>{text}</div>
+  return <div className={styles.focusText}>{text}</div>
 }
 
 FocusText.propTypes = {
   text: PropTypes.node.isRequired,
 }
 
-const Stats = ({ avgActiveStorage, avgZCNStake, avgZCNDelegation }) => {
+const Stats = () => {
   return (
-    <div className={style.statsContainer}>
-      {/* Average Active Storage  */}
-      <BlueLineWrapper childenParentDivClassName={style.statsItem}>
-        <div>Average Active Storage</div>
-        <div className={style.projectedStatsContainerTitle}>
-          <FocusText text={avgActiveStorage ?? '300'} />
-        </div>
-        <div className={style.statsItemBottomRow}>Per Blobber</div>
-      </BlueLineWrapper>
-      {/* Average ZCN Stake  */}
-      <BlueLineWrapper childenParentDivClassName={style.statsItem}>
-        <div>Average ZCN Stake</div>
-        <div className={style.projectedStatsContainerTitle}>
-          <FocusText
-            text={`${convertToDecimalSeparated(avgZCNStake ?? 40000)} ZCN`}
-          />
-        </div>
-        <div className={style.statsItemBottomRow}>
-          Per Blobber(Self-Delegation)
-        </div>
-      </BlueLineWrapper>
-      {/* Average ZCN Delegations */}
-      <BlueLineWrapper childenParentDivClassName={style.statsItem}>
-        <div>Average ZCN Delegations</div>
-        <div className={style.projectedStatsContainerTitle}>
-          <FocusText
-            text={`${convertToDecimalSeparated(avgZCNDelegation ?? 30000)} ZCN`}
-          />
-        </div>
-        <div className={style.statsItemBottomRow}>Per Blobber</div>
-      </BlueLineWrapper>
+    <div className={styles.statsContainer}>
+      {statsData.map(({ heading, number, bottomText }) => (
+        <BlueLineWrapper
+          childenParentDivClassName={styles.statsItem}
+          key={heading}>
+          <h4>{heading}</h4>
+          <div className={styles.projectedStatsContainerTitle}>
+            <FocusText text={convertToDecimalSeparated(number)} />
+          </div>
+          <div className={styles.statsItemBottomRow}>{bottomText}</div>
+        </BlueLineWrapper>
+      ))}
     </div>
   )
 }
 
-Stats.propTypes = {
-  avgActiveStorage: PropTypes.number.isRequired,
-  avgZCNStake: PropTypes.number.isRequired,
-  avgZCNDelegation: PropTypes.number.isRequired,
-}
-
-const Footer = () => {
+const Note = () => {
   return (
-    <div className={style.footer}>
+    <div className={styles.note}>
       <div>
         <NotificationIcon />
       </div>
@@ -74,46 +51,25 @@ const Footer = () => {
   )
 }
 
-const ProjectedStats = ({
-  avgActiveStorage,
-  avgZCNStake,
-  avgZCNDelegation,
-  totalBlobber,
-}) => {
+const ProjectedStats = () => {
   return (
-    <div className={style.projectedStatsContainer}>
-      {/* Title */}
-      <div>
-        <div
-          className={clsx(style.projectedStatsContainerTitle, style.blueText)}>
-          Projected Züs Cloud Network Stats
-        </div>
-        <div>
+    <div className={styles.rootContainer}>
+      <div className={styles.container1}>
+        <h2 className={styles.blueText}>Projected Züs Cloud Network Stats</h2>
+        <p>
           Customize the stats on the Zus Cloud Network to calculate your
           projected share of the Blobber block rewards
-        </div>
+        </p>
       </div>
-      {/* Total Blobber */}
-      <div className={clsx(style.projectedStatsContainerTitle, style.gap)}>
-        <div>Total Blobbers on Zus</div>{' '}
-        <FocusText text={totalBlobber ?? 300} />
+
+      <div className={styles.container2}>
+        <h2>Total Blobbers on Zus</h2> <FocusText text={300} />
       </div>
-      {/* Scores */}
-      <Stats
-        avgActiveStorage={avgActiveStorage}
-        avgZCNStake={avgZCNStake}
-        avgZCNDelegation={avgZCNDelegation}
-      />
-      {/* Footer */}
-      <Footer />
+
+      <Stats />
+      <Note />
     </div>
   )
-}
-ProjectedStats.propTypes = {
-  avgActiveStorage: PropTypes.number.isRequired,
-  avgZCNStake: PropTypes.number.isRequired,
-  avgZCNDelegation: PropTypes.number.isRequired,
-  totalBlobber: PropTypes.number.isRequired,
 }
 
 export default ProjectedStats

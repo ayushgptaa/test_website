@@ -49,12 +49,7 @@ const BlobberCalculator = () => {
         </AccordianContainer>
 
         <div>
-          <ProjectedStats
-            avgActiveStorage={200}
-            avgZCNDelegation={3213123}
-            avgZCNStake={321312}
-            totalBlobber={200}
-          />
+          <ProjectedStats />
         </div>
       </div>
     </div>
