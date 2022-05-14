@@ -1,6 +1,6 @@
 import React from 'react'
 import SliderEditor from 'components/Slider'
-import Expandable from 'components/util/Expandable'
+import AccordianContainer from 'components/pageComponents/blobber-calculator-page/AccordianContainer'
 
 const BlobberCalculator = () => {
   const [storage, setStorage] = React.useState(3000)
@@ -23,7 +23,7 @@ const BlobberCalculator = () => {
       </div>
 
       <div>
-        <Expandable title="Test Title">
+        <AccordianContainer title="Test Title">
           <div>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industrys standard dummy text
@@ -47,7 +47,7 @@ const BlobberCalculator = () => {
             Ipsum, Lorem ipsum dolor sit amet.., comes from a line in section
             1.10.32.
           </div>
-        </Expandable>
+        </AccordianContainer>
       </div>
     </div>
   )

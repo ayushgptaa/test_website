@@ -3,9 +3,9 @@ import React from 'react'
 import { DownArrow, RightArrow } from 'components/Icons'
 import { motion, AnimatePresence } from 'framer-motion'
 import PropTypes from 'prop-types'
-import styles from './util.module.scss'
+import styles from './AccordianContainer.module.scss'
 
-const Expandable = ({ title, children }) => {
+const AccordianContainer = ({ title, children }) => {
   const [isExpanded, setExpanded] = React.useState(false)
 
   return (
@@ -43,9 +43,9 @@ const Expandable = ({ title, children }) => {
   )
 }
 
-Expandable.propTypes = {
+AccordianContainer.propTypes = {
   children: PropTypes.any,
   title: PropTypes.any.isRequired,
 }
 
-export default Expandable
+export default AccordianContainer
