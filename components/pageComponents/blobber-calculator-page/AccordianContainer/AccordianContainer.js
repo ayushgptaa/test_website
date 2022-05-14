@@ -13,29 +13,27 @@ const AccordianContainer = ({ title, children }) => {
     <motion.div className={styles.rootContainer}>
       <div>
         <h2 className={styles.title}>{title}</h2>
-        <button
-          onClick={() => setExpanded(!isExpanded)}
-          style={{ cursor: 'pointer' }}>
+        <button onClick={() => setExpanded(!isExpanded)}>
           {isExpanded && <DownArrow />}
           {!isExpanded && <RightArrow />}
         </button>
       </div>
 
-      <AnimatePresence initial={false}>
+      <AnimatePresence>
         {isExpanded && (
-          <motion.section
+          <motion.p
             className={styles.text}
             key="content"
             initial="collapsed"
             animate="open"
             exit="collapsed"
             variants={{
-              open: { opacity: 1, height: 'auto' },
-              collapsed: { opacity: 0, height: 0 },
+              open: { height: 'auto' },
+              collapsed: { height: 0 },
             }}
-            transition={{ duration: 0.2, ease: 'linear' }}>
+            transition={{ ease: 'linear' }}>
             {children}
-          </motion.section>
+          </motion.p>
         )}
       </AnimatePresence>
     </motion.div>

@@ -2,7 +2,6 @@
 @use '/styles/mixins.scss' as *;
 
 .rootContainer {
-  transition: all 0.5s ease-out;
   background: $darkGray;
   border: 1px solid $lightgray;
   border-radius: 12px;
@@ -10,6 +9,10 @@
 
   & > div {
     @include flex-vertical-center(space-between);
+
+    & > button {
+      cursor: pointer;
+    }
   }
 }
 
@@ -21,4 +24,5 @@
 
 .text {
   padding-top: 8px;
+  overflow: hidden;
 }
