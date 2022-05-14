@@ -1,19 +1,18 @@
-import React from 'react'
-
-import { DownArrow, RightArrow } from 'components/Icons'
+import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import PropTypes from 'prop-types'
+
+import { DownArrow, RightArrow } from 'components/Icons'
+
 import styles from './AccordianContainer.module.scss'
 
 const AccordianContainer = ({ title, children }) => {
-  const [isExpanded, setExpanded] = React.useState(false)
+  const [isExpanded, setExpanded] = useState(false)
 
   return (
-    <motion.div className={styles.expandableDivContainer}>
-      <div className={styles.justifyContentContainer}>
-        {/* Title */}
-        <div className={styles.expandableDivTitle}>{title}</div>
-        {/* Button */}
+    <motion.div className={styles.rootContainer}>
+      <div>
+        <h2 className={styles.title}>{title}</h2>
         <button
           onClick={() => setExpanded(!isExpanded)}
           style={{ cursor: 'pointer' }}>
@@ -25,7 +24,7 @@ const AccordianContainer = ({ title, children }) => {
       <AnimatePresence initial={false}>
         {isExpanded && (
           <motion.section
-            className={styles.expandableDivChildren}
+            className={styles.text}
             key="content"
             initial="collapsed"
             animate="open"

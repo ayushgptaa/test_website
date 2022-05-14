@@ -24,7 +24,7 @@ const BlobberCalculator = () => {
 
       <div>
         <AccordianContainer title="Test Title">
-          <div>
+          <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industrys standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -46,7 +46,7 @@ const BlobberCalculator = () => {
             ethics, very popular during the Renaissance. The first line of Lorem
             Ipsum, Lorem ipsum dolor sit amet.., comes from a line in section
             1.10.32.
-          </div>
+          </p>
         </AccordianContainer>
       </div>
     </div>
