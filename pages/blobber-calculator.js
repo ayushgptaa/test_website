@@ -2,7 +2,7 @@ import React from 'react'
 
 import SliderEditor from 'components/Slider'
 import AccordianContainer from 'components/pageComponents/blobber-calculator-page/AccordianContainer'
-import ProjectedStats from 'pageComponents/blobber-calculator/ProjectedStats'
+import ProjectedStats from 'components/pageComponents/blobber-calculator-page/ProjectedStats'
 
 const BlobberCalculator = () => {
   const [storage, setStorage] = React.useState(3000)

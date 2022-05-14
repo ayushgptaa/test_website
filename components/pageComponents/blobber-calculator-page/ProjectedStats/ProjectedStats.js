@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 
 import clsx from 'clsx'
-import style from './index.module.scss'
+import style from './ProjectedStats.module.scss'
 import BlueLineWrapper from 'components/SpecialWrappers/BlueLineWrapper'
 import { NotificationIcon } from 'components/Icons'
 
