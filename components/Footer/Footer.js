@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-import Accordion from 'components/Accordion'
+import Accordion from 'components/Footer/FooterAccordian'
 import Button from 'components/Button'
 import Heading from 'components/Heading'
 import SocialIcons from 'components/SocialIcons'

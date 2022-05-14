@@ -1,0 +1,79 @@
+@use '/styles/color.scss' as *;
+@use '/styles/mixins.scss' as *;
+
+.rootContainer {
+  background: $darkGray;
+  border: 1px solid $lightgray;
+  padding: 40px;
+  border-radius: 12px;
+  height: 360px;
+  width: 880px;
+  display: grid;
+  gap: 20px;
+
+  h2 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+.container1 {
+  & > p {
+    margin-top: 9px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: $blobber-text-white;
+  }
+}
+
+.blueText {
+  color: $blobber-primary-blue;
+}
+
+.focusText {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  background-color: rgb(52, 61, 73);
+  padding: 5px 12px;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.container2 {
+  @include flex-vertical-center(initial);
+  gap: 24px;
+}
+
+.statsContainer {
+  @include flex-vertical-center(space-between);
+}
+
+.statsItem {
+  display: grid;
+  gap: 5px;
+
+  & > h4 {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+.statsItemBottomRow {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: $blobber-text-white;
+}
+
+.note {
+  @include flex-vertical-center(initial);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  color: $blobber-text-white;
+  gap: 16px;
+}
