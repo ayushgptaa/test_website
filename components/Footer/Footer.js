@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
 
-import Accordion from 'components/Accordion'
+import Accordion from 'components/Footer/FooterAccordian'
 import Button from 'components/Button'
 import Heading from 'components/Heading'
 import SocialIcons from 'components/SocialIcons'
