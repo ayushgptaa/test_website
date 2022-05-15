@@ -5,15 +5,19 @@ import Draggable from 'react-draggable'
 import styles from './SliderEditor.module.scss'
 import Node from './Node'
 
-const SliderNode = () => {
+const SliderNode = ({ color }) => {
   return (
     <div className={styles.nodeContainer}>
-      <Node />
+      <Node color={color} />
     </div>
   )
 }
 
-const Slider = ({ percentage, setPercentage }) => {
+SliderNode.propTypes = {
+  color: PropTypes.string,
+}
+
+const Slider = ({ percentage, setPercentage, color }) => {
   // const [percentage, setPercentage] = React.useState(defaultPercentage ?? 0) // value only integer between [0-100]
   const [width, setWidth] = React.useState(100)
 
@@ -39,8 +43,11 @@ const Slider = ({ percentage, setPercentage }) => {
   const position = { x: Math.round((percentage * width) / 100), y: 0 }
 
   return (
-    <div style={{ padding: 16 }}>
-      <div ref={parentRef} className={styles.sliderContainer}>
+    <div style={{ padding: '16px 0px' }}>
+      <div
+        ref={parentRef}
+        className={styles.sliderContainer}
+        style={{ backgroundColor: color }}>
         <Draggable
           position={position}
           nodeRef={nodeRef}
@@ -50,7 +57,7 @@ const Slider = ({ percentage, setPercentage }) => {
             setPercentage(Math.round(d.x * 100) / width)
           }}>
           <div ref={nodeRef} style={{ width: 'fit-content' }}>
-            <SliderNode />
+            <SliderNode color={color} />
           </div>
         </Draggable>
       </div>
@@ -61,6 +68,7 @@ const Slider = ({ percentage, setPercentage }) => {
 Slider.propTypes = {
   percentage: PropTypes.number, // if not given , its zero
   setPercentage: PropTypes.func.isRequired, // a function that takes in single number(percentage) as parameter, called everytime percentage changes
+  color: PropTypes.string,
 }
 
 export default Slider

@@ -1,6 +1,6 @@
-import React from 'react'
+import PropTypes from 'prop-types'
 
-const Node = () => {
+const Node = ({ color }) => {
   return (
     <svg
       width="40"
@@ -12,7 +12,7 @@ const Node = () => {
         <circle cx="24" cy="20" r="20" fill="white" />
       </g>
       <g filter="url(#filter1_d_1099_12436)">
-        <circle cx="24" cy="20" r="13" fill="#0053FF" />
+        <circle cx="24" cy="20" r="13" fill={color ?? '#0053FF'} />
       </g>
       <defs>
         <filter
@@ -86,6 +86,10 @@ const Node = () => {
       </defs>
     </svg>
   )
+}
+
+Node.propTypes = {
+  color: PropTypes.string,
 }
 
 export default Node

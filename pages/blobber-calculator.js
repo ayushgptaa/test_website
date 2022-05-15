@@ -1,12 +1,15 @@
 import React from 'react'
+import StatsModifier from 'pageComponents/blobber-calculator-page/StatsModifier'
 
-import SliderEditor from 'components/Slider'
 import AccordianContainer from 'components/pageComponents/blobber-calculator-page/AccordianContainer'
 import ProjectedStats from 'components/pageComponents/blobber-calculator-page/ProjectedStats'
 import YourRewards from 'components/pageComponents/blobber-calculator-page/YourRewards'
 
 const BlobberCalculator = () => {
-  const [storage, setStorage] = React.useState(3000)
+  const [activeStorage, setActiveStorage] = React.useState(3000)
+  const [zcnStake, setZcnStake] = React.useState(40000)
+  const [zcnDel, setZcnDel] = React.useState(30000)
+  const [commision, setComission] = React.useState(6)
 
   const labels = [
     '11/2021',
@@ -28,17 +31,20 @@ const BlobberCalculator = () => {
   return (
     <div>
       <div>This is a test page, will be modified later1</div>
-      <div>Storage Chosen is {storage}</div>
-      <div style={{ width: '500px' }}>
-        <SliderEditor
-          leftTitle="Your Total Active Storage"
-          rightTitle="300 TB"
-          currentValue={storage}
-          maxValue={6000}
-          minValue={1}
-          leftLabel="1 TB"
-          rightLabel="6,000 TB"
-          onChange={setStorage}
+      <div>activeStorage Chosen is {activeStorage}</div>
+      <div>commision Chosen is {commision}</div>
+      <div>zcnDel Chosen is {zcnDel}</div>
+      <div>zcnStake Chosen is {zcnStake}</div>
+      <div>
+        <StatsModifier
+          activeStorage={activeStorage}
+          commision={commision}
+          setActiveStorage={setActiveStorage}
+          setComission={setComission}
+          setZcnDel={setZcnDel}
+          setZcnStake={setZcnStake}
+          zcnStake={zcnStake}
+          zcnDel={zcnDel}
         />
       </div>
 
@@ -74,7 +80,7 @@ const BlobberCalculator = () => {
       <YourRewards
         graphLabels={labels}
         graphValues={values}
-        activeStorage={storage}
+        activeStorage={activeStorage}
         zcnDel={3231}
       />
     </div>

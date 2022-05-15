@@ -31,7 +31,7 @@ const AccordianContainer = ({ title, children }) => {
               open: { height: 'auto' },
               collapsed: { height: 0 },
             }}
-            transition={{ ease: 'linear' }}>
+            transition={{ duration: 0.1, ease: 'linear' }}>
             {children}
           </motion.p>
         )}
