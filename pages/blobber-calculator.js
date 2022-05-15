@@ -3,9 +3,27 @@ import React from 'react'
 import SliderEditor from 'components/Slider'
 import AccordianContainer from 'components/pageComponents/blobber-calculator-page/AccordianContainer'
 import ProjectedStats from 'components/pageComponents/blobber-calculator-page/ProjectedStats'
+import CustomSplineChart from 'components/Chart/CustomSplineChart'
 
 const BlobberCalculator = () => {
   const [storage, setStorage] = React.useState(3000)
+
+  const labels = [
+    '11/2021',
+    '12/2021',
+    '01/2022',
+    '02/2022',
+    '03/2022',
+    '04/2022',
+    '05/2022',
+    '06/2022',
+    '07/2022',
+    '08/2022',
+    '09/2022',
+    '10/2022',
+  ]
+
+  const values = [19, 20, 30, 20, 40, 55, 65, 55, 60, 78, 70, 75]
 
   return (
     <div>
@@ -51,6 +69,18 @@ const BlobberCalculator = () => {
         <div>
           <ProjectedStats />
         </div>
+      </div>
+      <div>
+        <CustomSplineChart
+          labels={labels}
+          values={values}
+          legend="Accumulated ZCN"
+          minY={0}
+          maxY={100}
+          xAxisLegend="Time"
+          yAxisLegend="ZCN"
+          showLegend
+        />
       </div>
     </div>
   )

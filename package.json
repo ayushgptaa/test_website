@@ -9,12 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "chart.js": "^3.7.1",
     "clsx": "^1.1.1",
     "framer-motion": "^6.2.8",
     "include-media": "^1.4.10",
     "next": "12.1.2",
     "prop-types": "^15.8.1",
     "react": "18.0.0",
+    "react-chartjs-2": "^4.1.0",
     "react-dom": "18.0.0",
     "react-draggable": "^4.4.5",
     "react-paginate": "^8.1.3",
