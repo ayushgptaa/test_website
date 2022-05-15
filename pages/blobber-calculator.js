@@ -3,7 +3,7 @@ import React from 'react'
 import SliderEditor from 'components/Slider'
 import AccordianContainer from 'components/pageComponents/blobber-calculator-page/AccordianContainer'
 import ProjectedStats from 'components/pageComponents/blobber-calculator-page/ProjectedStats'
-import CustomSplineChart from 'components/Chart/CustomSplineChart'
+import YourRewards from 'components/pageComponents/blobber-calculator-page/YourRewards'
 
 const BlobberCalculator = () => {
   const [storage, setStorage] = React.useState(3000)
@@ -70,18 +70,13 @@ const BlobberCalculator = () => {
           <ProjectedStats />
         </div>
       </div>
-      <div>
-        <CustomSplineChart
-          labels={labels}
-          values={values}
-          legend="Accumulated ZCN"
-          minY={0}
-          maxY={100}
-          xAxisLegend="Time"
-          yAxisLegend="ZCN"
-          showLegend
-        />
-      </div>
+
+      <YourRewards
+        graphLabels={labels}
+        graphValues={values}
+        activeStorage={storage}
+        zcnDel={3231}
+      />
     </div>
   )
 }

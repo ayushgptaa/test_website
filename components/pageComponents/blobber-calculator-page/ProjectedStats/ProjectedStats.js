@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 
 import BlueLineWrapper from 'components/SpecialWrappers/BlueLineWrapper'
 
-import { convertToDecimalSeparated } from 'util/utilFunctions'
+import { convertToDecimalSeparated } from 'util/globalFunctions'
 
 import { NotificationIcon } from 'components/Icons'
 
