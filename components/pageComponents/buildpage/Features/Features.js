@@ -17,7 +17,9 @@ const Features = () => {
       <div className={styles.header}>
         <div className={styles.codeImgContainer}>
           <Image
-            src={codeImg}
+            src={`/${codeImg.src}`}
+            width={codeImg.width}
+            height={codeImg.height}
             alt="migrate any app"
             quality={100}
             layout="fixed"

@@ -18,10 +18,20 @@ const Features = () => {
         </div>
         <div className={styles.imgContainer}>
           <div className={styles.statisticImgMobile}>
-            <Image src={statisticImgMobile} alt="Global Data consumption" />
+            <Image
+              src={`/${statisticImgMobile.src}`}
+              width={statisticImgMobile.width}
+              height={statisticImgMobile.height}
+              alt="Global Data consumption"
+            />
           </div>
           <div className={styles.statisticImgDesktop}>
-            <Image src={statisticImgDesktop} alt="Global Data consumption" />
+            <Image
+              src={`/${statisticImgDesktop.src}`}
+              width={statisticImgDesktop.width}
+              height={statisticImgDesktop.height}
+              alt="Global Data consumption"
+            />
           </div>
         </div>
         <div className={styles.textWrapper}>

@@ -1,7 +1,10 @@
 import styles from './DesktopNav.module.scss'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const DesktopNav = () => {
+  const router = useRouter()
+
   return (
     <div className={styles.wrapper}>
       <span>
@@ -13,7 +16,7 @@ const DesktopNav = () => {
       <span>
         <Link href="/earn">Earn</Link>
       </span>
-      <button>
+      <button onClick={() => router.push('/launch-apps')}>
         <span>Launch Apps</span>
       </button>
     </div>

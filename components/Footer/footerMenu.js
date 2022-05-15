@@ -3,15 +3,15 @@ const footerMenu = [
     id: 0,
     name: 'Store',
     subLinks: [
-      { name: 'What Züs can do' },
-      { name: 'Launch Apps', link: 'applaunch' },
+      { name: 'What Züs can do', link: 'store' },
+      { name: 'Launch Apps', link: 'launch-apps' },
     ],
   },
   {
     id: 1,
     name: 'Build',
     subLinks: [
-      { name: 'Build for the Future' },
+      { name: 'Build for the Future', link: 'build' },
       { name: 'Join the Community' },
       { name: 'Documentation' },
       { name: 'API' },

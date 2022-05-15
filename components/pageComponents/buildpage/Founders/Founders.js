@@ -25,7 +25,9 @@ const Founders = () => {
       </div>
       <div className={styles.imgContainer}>
         <Image
-          src={bgPatternLarge}
+          src={`/${bgPatternLarge.src}`}
+          width={bgPatternLarge.width}
+          height={bgPatternLarge.height}
           alt="bgImage"
           quality={100}
           layout="responsive"
@@ -58,7 +60,9 @@ const Founders = () => {
       </div>
       <div className={styles.foundersImg}>
         <Image
-          src={FoundersImg}
+          src={`/${FoundersImg.src}`}
+          width={FoundersImg.width}
+          height={FoundersImg.height}
           alt="Founders"
           quality={100}
           layout="responsive"

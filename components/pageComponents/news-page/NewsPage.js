@@ -37,12 +37,16 @@ const NewsPage = () => {
       <div className={styles.pagination}>
         <ReactPaginate
           breakLabel="..."
-          nextLabel={<Image src={arrowRight} width={80} height={32} />}
+          nextLabel={
+            <Image src={`/${arrowRight.src}`} width={80} height={32} />
+          }
           onPageChange={handlePageClick}
           pageRangeDisplayed={4}
           marginPagesDisplayed={1}
           pageCount={pageCount}
-          previousLabel={<Image src={arrowLeft} width={80} height={32} />}
+          previousLabel={
+            <Image src={`/${arrowLeft.src}`} width={80} height={32} />
+          }
           renderOnZeroPageCount={null}
           activeClassName={styles.active}
           disabledClassName={styles.disabled}

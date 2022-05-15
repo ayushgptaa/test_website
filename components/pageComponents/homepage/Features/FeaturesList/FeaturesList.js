@@ -11,7 +11,14 @@ const FeaturesList = ({ pattern, heading, text, img, buttonText }) => {
       <div className={styles.feature}>
         <div className={styles[`pattern${pattern}`]}></div>
         <div className={styles.icon}>
-          <Image src={img} quality={100} layout="fixed" priority={1} />
+          <Image
+            src={`/${img.src}`}
+            width={img.width}
+            height={img.height}
+            quality={100}
+            layout="fixed"
+            priority={1}
+          />
         </div>
         <div className={styles.textContainer}>
           <h3 className={styles.heading}>{heading}</h3>

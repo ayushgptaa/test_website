@@ -13,10 +13,22 @@ const Features = () => {
       <section className={styles.container} key={heading}>
         <div className={styles.imgContainer}>
           <div className={styles.imgDesktop}>
-            <Image src={imgDesktop} alt={heading} quality={100} />
+            <Image
+              src={`/${imgDesktop.src}`}
+              width={imgDesktop.width}
+              height={imgDesktop.height}
+              alt={heading}
+              quality={100}
+            />
           </div>
           <div className={styles.imgMobile}>
-            <Image src={imgMobile} alt={heading} quality={100} />
+            <Image
+              src={`/${imgMobile.src}`}
+              width={imgMobile.width}
+              height={imgMobile.height}
+              alt={heading}
+              quality={100}
+            />
           </div>
         </div>
         <div className={styles.textContent}>

@@ -12,7 +12,13 @@ import styles from './FooterFeature.module.scss'
 const FooterFeature = ({ data }) => {
   return (
     <div className={styles.container}>
-      <Image src={ZusLogoWhite} alt="züs" quality={100} />
+      <Image
+        src={`/${ZusLogoWhite.src}`}
+        width={ZusLogoWhite.width}
+        height={ZusLogoWhite.height}
+        alt="züs"
+        quality={100}
+      />
       <Heading text={data.heading} />
       <Text>{data.text}</Text>
       <div className={styles.buttons}>

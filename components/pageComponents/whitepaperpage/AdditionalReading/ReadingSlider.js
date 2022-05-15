@@ -26,7 +26,14 @@ const DesktopComponent = () => {
       {sliderData.map(({ image, title }) => (
         <div className={styles.pageContainer} key={title}>
           <div className={styles.imgContainer}>
-            <Image src={image} alt="hello" quality={100} layout="fixed" />
+            <Image
+              src={`/${image.src}`}
+              width={image.width}
+              height={image.height}
+              alt={image.alt}
+              quality={100}
+              layout="fixed"
+            />
           </div>
           <p>{title}</p>
         </div>
@@ -58,7 +65,14 @@ const MobileComponent = () => {
           <SwiperSlide key={title}>
             <div className={styles.pageContainer}>
               <div className={styles.imgContainer}>
-                <Image src={image} alt="hello" quality={100} layout="fixed" />
+                <Image
+                  src={`/${image.src}`}
+                  width={image.width}
+                  height={image.height}
+                  alt="hello"
+                  quality={100}
+                  layout="fixed"
+                />
               </div>
               <p>{title}</p>
             </div>

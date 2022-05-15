@@ -2,7 +2,7 @@ import Header from 'components/Header'
 import AppLaunchComponent from 'pageComponents/applaunchpage'
 import Footer from 'components/Footer'
 
-const AppLaunch = () => {
+const LaunchApps = () => {
   return (
     <>
       <Header removeImg />
@@ -12,4 +12,4 @@ const AppLaunch = () => {
   )
 }
 
-export default AppLaunch
+export default LaunchApps

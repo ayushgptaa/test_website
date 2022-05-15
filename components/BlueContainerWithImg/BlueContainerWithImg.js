@@ -20,7 +20,7 @@ const BlueContainerWithImg = ({ heading, subHeading }) => {
         <Heading text={heading} />
         <div className={styles.iconContainer}>
           <Image
-            src={twitterIcon}
+            src={`/${twitterIcon.src}`}
             alt="twitter"
             quality={100}
             layout="fixed"

@@ -31,7 +31,13 @@ const Provider = () => {
         {buttonData.map(({ icon, text }) => (
           <div className={styles.button} key={text}>
             <div className={styles.icon}>
-              <Image src={icon} alt={text} layout="fixed" />
+              <Image
+                src={`/${icon.src}`}
+                width={icon.width}
+                height={icon.height}
+                alt={text}
+                layout="fixed"
+              />
             </div>
             <div className={styles.divider} />
             <span className={styles.buttonText}>{text}</span>

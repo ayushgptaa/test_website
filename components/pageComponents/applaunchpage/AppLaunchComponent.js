@@ -21,7 +21,13 @@ const AppLaunchComponent = () => {
           <Container key={heading}>
             <div className={styles.containerContent}>
               <div className={styles.iconContainer}>
-                <Image src={icon} alt={heading} layout="fixed" />
+                <Image
+                  src={`/${icon.src}`}
+                  width={icon.width}
+                  height={icon.height}
+                  alt={heading}
+                  layout="fixed"
+                />
               </div>
               <Heading text={heading} />
               <Text>{text}</Text>
