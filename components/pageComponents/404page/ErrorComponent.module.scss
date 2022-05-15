@@ -1,26 +1,19 @@
 @use '/styles/variables.scss' as *;
 @use '/styles/mixins.scss' as *;
 
-.container {
-  margin-top: 7.5rem;
-  margin-bottom: 12rem;
-  overflow: hidden;
+@import 'include-media';
+
+.rootContainer {
+  position: relative;
+  margin: 7.5rem 0 12.5rem;
 }
 
 .errorImg {
   @include center-absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
+  width: 460px;
   height: 302px;
   background: url('/images/errorPage/errorImg.svg') no-repeat top left/100% 100%;
   z-index: -9;
-  overflow: hidden;
-}
-
-.content {
-  position: relative;
-  overflow: hidden;
 }
 
 .textContainer {
@@ -28,7 +21,28 @@
   width: $mobile-width;
   margin: auto;
 
+  & > h1 {
+    font-size: 72px;
+  }
+
   a {
     color: $primary-blue;
+  }
+}
+
+@include media('>tablet') {
+  .rootContainer {
+    margin: 0 0 4.25rem;
+    height: 580px;
+  }
+
+  .errorImg {
+    width: 100%;
+    width: 100%;
+  }
+
+  .textContainer {
+    @include center-absolute;
+    width: 540px;
   }
 }

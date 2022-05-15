@@ -1,10 +1,12 @@
 import Header from 'components/Header'
 import Footer from 'components/Footer'
 import ErrorComponent from 'pageComponents/404page'
+import PageBackground from 'components/PageBackground'
 
-const Contact = () => {
+const Custom404 = () => {
   return (
     <>
+      <PageBackground />
       <Header removeImg />
       <ErrorComponent />
       <Footer showfooterBackground={false} showfooterFeature={false} />
@@ -12,4 +14,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default Custom404
