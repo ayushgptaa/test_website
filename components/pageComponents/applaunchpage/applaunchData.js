@@ -6,19 +6,19 @@ const applaunchData = [
   {
     icon: vultIcon,
     heading: 'Vult',
-    text: 'A Zus crypto app. Securely upload, download, and share files',
+    text: 'A Züs crypto app. Securely upload, download, and share files',
     btnText: 'Storage',
   },
   {
     icon: boltIcon,
     heading: 'Bolt',
-    text: 'A Zus crypto wallet. Securely sent, receive, stake and earn $ZCN.',
+    text: 'A Züs crypto wallet. Securely sent, receive, stake and earn $ZCN.',
     btnText: 'Wallet',
   },
   {
     icon: atlusIcon,
     heading: 'Atlus',
-    text: 'An explorer optimised to search and querly the Zus Cloud Network',
+    text: 'An explorer optimised to search and querly the Züs Cloud Network',
     btnText: 'Explore',
   },
 ]

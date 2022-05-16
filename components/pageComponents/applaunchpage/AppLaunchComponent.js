@@ -14,7 +14,7 @@ const AppLaunchComponent = () => {
       <div className={styles.ellipse} />
       <div className={styles.mainText}>
         <Heading text="Dive into the app ecosystem" uppercase />
-        <Text>See what’s possible on the Zus Cloud Network.</Text>
+        <Text>See what’s possible on the Züs Cloud Network.</Text>
       </div>
       <div className={styles.appLaunchContainer}>
         {applaunchData.map(({ icon, heading, text, btnText }) => (

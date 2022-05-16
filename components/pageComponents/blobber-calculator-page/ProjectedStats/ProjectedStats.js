@@ -57,13 +57,13 @@ const ProjectedStats = () => {
       <div className={styles.container1}>
         <h2 className={styles.blueText}>Projected Züs Cloud Network Stats</h2>
         <p>
-          Customize the stats on the Zus Cloud Network to calculate your
+          Customize the stats on the Züs Cloud Network to calculate your
           projected share of the Blobber block rewards
         </p>
       </div>
 
       <div className={styles.container2}>
-        <h2>Total Blobbers on Zus</h2> <FocusText text={300} />
+        <h2>Total Blobbers on Züs</h2> <FocusText text={300} />
       </div>
 
       <Stats />
