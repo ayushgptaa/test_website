@@ -18,6 +18,7 @@ const SliderEditor = ({
   onChange,
   unitSymbol,
   color,
+  secondaryColor,
   step,
 }) => {
   const [percentage, setPercentage] = React.useState(0)
@@ -63,6 +64,7 @@ const SliderEditor = ({
           percentage={percentage}
           setPercentage={setPercentage}
           color={color}
+          secondaryColor={secondaryColor}
         />
       </div>
       {/* Labels */}
@@ -91,6 +93,7 @@ SliderEditor.propTypes = {
   onChange: PropTypes.func.isRequired, // function when value changes
   unitSymbol: PropTypes.string, // symbol for unit
   color: PropTypes.string,
+  secondaryColor: PropTypes.string,
   step: PropTypes.number.isRequired,
 }
 

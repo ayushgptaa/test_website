@@ -1,21 +1,24 @@
-import styles from './Disclaimer.module.scss'
 import PropTypes from 'prop-types'
+
 import Wrapper from 'components/Wrapper'
 
-const Disclaimer = ({ title, description }) => {
+import styles from './Disclaimer.module.scss'
+
+const Disclaimer = ({ title, description, className }) => {
   return (
-    <Wrapper>
+    <Wrapper className={className}>
       <div className={styles.disclaimerContent}>
         <h1>{title}</h1>
-        <p>{description}</p>
+        {description}
       </div>
     </Wrapper>
   )
 }
 
 Disclaimer.propTypes = {
-  title: PropTypes.string,
-  description: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.node.isRequired,
+  className: PropTypes.string,
 }
 
 export default Disclaimer

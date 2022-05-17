@@ -1,19 +1,10 @@
-.statsModifiedContainer {
-  display: grid;
-  gap: 29px;
-  padding: 40px;
-  background-color: #1d2434;
-  border: 1px solid rgba(129, 133, 142, 0.4);
-  border-radius: 12px;
-}
+@use '/styles/color.scss' as *;
 
 .statsModifiedTitle {
-  font-family: 'Averta Std';
-  font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 120%;
-  color: #009eff;
+  color: $blobber-primary-blue;
 }
 
 .statsModifierTitleFooter {

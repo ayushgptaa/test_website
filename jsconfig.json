@@ -4,7 +4,8 @@
     "paths": {
       "*": ["*"],
       "pageComponents/*": ["./components/pageComponents/*"],
-      "util": ["./util/*"]
+      "util": ["./util/*"],
+      "styles": ["./styles/"]
     }
   }
 }

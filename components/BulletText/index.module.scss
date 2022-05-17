@@ -1,0 +1,9 @@
+.bulletTextContainer {
+  display: flex;
+
+  li {
+    list-style-type: disc;
+    display: list-item;
+    list-style-position: inside;
+  }
+}

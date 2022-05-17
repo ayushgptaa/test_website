@@ -21,15 +21,25 @@ SingleHeader.propTypes = {
   bottomText: PropTypes.string.isRequired,
 }
 
-const YourRewards = ({ graphLabels, graphValues, activeStorage, zcnDel }) => {
+const YourRewards = ({
+  graphLabels,
+  graphValues,
+  activeStorage,
+  zcnDel,
+  projectedAPRText,
+  projectedEarningsText,
+}) => {
   return (
     <Wrapper>
       <div className={styles.yourRewardsContainer}>
         {/* Part1 */}
         <div className={styles.part1Container}>
-          <SingleHeader bottomText="720%" headerText="Your Projected APR" />
           <SingleHeader
-            bottomText="1.34m ZCN"
+            bottomText={projectedAPRText}
+            headerText="Your Projected APR"
+          />
+          <SingleHeader
+            bottomText={projectedEarningsText}
             headerText="Your Projected Earnings"
           />
         </div>
@@ -43,8 +53,8 @@ const YourRewards = ({ graphLabels, graphValues, activeStorage, zcnDel }) => {
             labels={graphLabels}
             values={graphValues}
             legend="Accumulated ZCN"
-            minY={0}
-            maxY={100}
+            // minY={0}
+            // maxY={100}
             xAxisLegend="Time"
             yAxisLegend="ZCN"
           />
@@ -86,6 +96,8 @@ YourRewards.propTypes = {
   graphValues: PropTypes.arrayOf(PropTypes.number).isRequired,
   activeStorage: PropTypes.number.isRequired, // in TB
   zcnDel: PropTypes.number.isRequired, // in TB
+  projectedAPRText: PropTypes.string.isRequired,
+  projectedEarningsText: PropTypes.string.isRequired,
 }
 
 export default YourRewards

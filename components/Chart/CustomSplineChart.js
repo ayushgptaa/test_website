@@ -1,8 +1,9 @@
-import React from 'react'
-import { Line } from 'react-chartjs-2'
 import Chart from 'chart.js/auto'
-
 import PropTypes from 'prop-types'
+import { useState, useEffect } from 'react'
+import { Line } from 'react-chartjs-2'
+
+import { theme } from 'util/globalConsts'
 
 Chart.register('category')
 
@@ -17,12 +18,12 @@ export const CustomSplineChart = ({
   chartTitle,
   showLegend,
 }) => {
-  const [data, setData] = React.useState({
+  const [data, setData] = useState({
     labels: [],
     datasets: [],
   })
 
-  React.useEffect(() => {
+  useEffect(() => {
     const ctx = document.getElementById('chart').getContext('2d')
     const gradient = ctx.createLinearGradient(0, 0, 0, 500)
     gradient.addColorStop(0, 'rgba(0, 158, 255, 0.01)')
@@ -36,13 +37,13 @@ export const CustomSplineChart = ({
           lineTension: 0.8,
           fill: 'start',
           backgroundColor: gradient, // Put the gradient here as a fill color
-          borderColor: '#009EFF',
+          borderColor: theme.defaultTheme.blue,
           borderWidth: 2,
 
           pointBorderColor: 'rgba(0, 0, 0, 0)',
           pointBackgroundColor: 'rgba(0, 0, 0, 0)',
-          pointHoverBackgroundColor: '#009EFF',
-          pointHoverBorderColor: '#FFFFFF',
+          pointHoverBackgroundColor: theme.defaultTheme.blue,
+          pointHoverBorderColor: theme.defaultTheme.white,
           pointHoverBorderWidth: 4,
           pointHoverRadius: 8,
 
@@ -51,7 +52,7 @@ export const CustomSplineChart = ({
       ],
     }
     setData(finalData)
-  }, [])
+  }, [labels, values])
 
   const options = {
     responsive: true,
@@ -64,7 +65,7 @@ export const CustomSplineChart = ({
     scales: {
       x: {
         ticks: {
-          color: '#FFFFFF',
+          color: theme.defaultTheme.white,
         },
         title: {
           display: xAxisLegend !== undefined,
@@ -82,7 +83,7 @@ export const CustomSplineChart = ({
 
       y: {
         ticks: {
-          color: '#FFFFFF',
+          color: theme.defaultTheme.white,
         },
         min: minY,
         max: maxY,

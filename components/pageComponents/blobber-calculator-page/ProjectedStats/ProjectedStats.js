@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types'
 
 import BlueLineWrapper from 'components/SpecialWrappers/BlueLineWrapper'
+import Wrapper from 'components/Wrapper'
+import { NotificationIcon } from 'components/IconsComponents'
 
 import { convertToDecimalSeparated } from 'util/globalFunctions'
-
-import { NotificationIcon } from 'components/Icons'
+import { getStatsData } from './util'
 
 import styles from './ProjectedStats.module.scss'
-import statsData from './statsData'
 
 const FocusText = ({ text }) => {
   return <div className={styles.focusText}>{text}</div>
@@ -17,22 +17,30 @@ FocusText.propTypes = {
   text: PropTypes.node.isRequired,
 }
 
-const Stats = () => {
+const Stats = ({ avgStorage, avgZCNStake, avgZCNDel }) => {
+  const statsData = getStatsData({ avgStorage, avgZCNStake, avgZCNDel })
+
   return (
     <div className={styles.statsContainer}>
       {statsData.map(({ heading, number, bottomText }) => (
-        <BlueLineWrapper
-          childenParentDivClassName={styles.statsItem}
-          key={heading}>
-          <h4>{heading}</h4>
-          <div className={styles.projectedStatsContainerTitle}>
-            <FocusText text={convertToDecimalSeparated(number)} />
-          </div>
-          <div className={styles.statsItemBottomRow}>{bottomText}</div>
-        </BlueLineWrapper>
+        <div className={styles.singleStats} key={heading}>
+          <BlueLineWrapper childenParentDivClassName={styles.statsItem}>
+            <h4>{heading}</h4>
+            <div className={styles.projectedStatsContainerTitle}>
+              <FocusText text={number} />
+            </div>
+            <div className={styles.statsItemBottomRow}>{bottomText}</div>
+          </BlueLineWrapper>
+        </div>
       ))}
     </div>
   )
+}
+
+Stats.propTypes = {
+  avgStorage: PropTypes.number.isRequired,
+  avgZCNStake: PropTypes.number.isRequired,
+  avgZCNDel: PropTypes.number.isRequired,
 }
 
 const Note = () => {
@@ -51,9 +59,14 @@ const Note = () => {
   )
 }
 
-const ProjectedStats = () => {
+const ProjectedStats = ({
+  totalBlobbers,
+  avgStorage,
+  avgZCNStake,
+  avgZCNDel,
+}) => {
   return (
-    <div className={styles.rootContainer}>
+    <Wrapper className={styles.rootContainer}>
       <div className={styles.container1}>
         <h2 className={styles.blueText}>Projected Züs Cloud Network Stats</h2>
         <p>
@@ -61,15 +74,25 @@ const ProjectedStats = () => {
           projected share of the Blobber block rewards
         </p>
       </div>
-
       <div className={styles.container2}>
-        <h2>Total Blobbers on Züs</h2> <FocusText text={300} />
+        <h2>Total Blobbers on Züs</h2>{' '}
+        <FocusText text={`${convertToDecimalSeparated(totalBlobbers)}`} />
       </div>
-
-      <Stats />
+      <Stats
+        avgStorage={avgStorage}
+        avgZCNDel={avgZCNDel}
+        avgZCNStake={avgZCNStake}
+      />
       <Note />
-    </div>
+    </Wrapper>
   )
+}
+
+ProjectedStats.propTypes = {
+  totalBlobbers: PropTypes.number.isRequired,
+  avgStorage: PropTypes.number.isRequired,
+  avgZCNStake: PropTypes.number.isRequired,
+  avgZCNDel: PropTypes.number.isRequired,
 }
 
 export default ProjectedStats

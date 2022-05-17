@@ -17,9 +17,26 @@ SliderNode.propTypes = {
   color: PropTypes.string,
 }
 
-const Slider = ({ percentage, setPercentage, color }) => {
-  // const [percentage, setPercentage] = React.useState(defaultPercentage ?? 0) // value only integer between [0-100]
+/*
+  The maths of setting the percentage is tricky
+  we first have the width of the component rounded off to integer.
+  Then we add the radius of node both sides to get the width available to slide
+
+  Now on each drag. We get position information d.x of node relative to starting point of original width
+
+     width->               ||||||||||
+     slidingWidth ->      |||||||||||||
+
+     d.x is relative to starting point of width
+
+     We calculate the percentage,position relative to slidingWidth
+
+*/
+
+const Slider = ({ percentage, setPercentage, color, secondaryColor }) => {
+  const nodeRadius = 10
   const [width, setWidth] = React.useState(100)
+  const slidingWidth = width + 2 * nodeRadius
 
   const parentRef = React.useRef()
 
@@ -39,22 +56,40 @@ const Slider = ({ percentage, setPercentage, color }) => {
 
   const nodeRef = React.useRef(null)
 
-  const bounds = { top: 0, bottom: 0, left: 0, right: width }
-  const position = { x: Math.round((percentage * width) / 100), y: 0 }
+  const bounds = {
+    top: 0,
+    bottom: 0,
+    left: 0 - nodeRadius,
+    right: width + nodeRadius,
+  }
+  const position = {
+    x: Math.round((percentage * slidingWidth) / 100) - nodeRadius,
+    y: 0,
+  }
+
+  let background = color
+
+  if (secondaryColor)
+    background = `linear-gradient(90deg, ${color} ${percentage}%, ${secondaryColor} ${percentage}%)`
 
   return (
     <div style={{ padding: '16px 0px' }}>
       <div
         ref={parentRef}
         className={styles.sliderContainer}
-        style={{ backgroundColor: color }}>
+        style={{
+          // background: `linear-gradient(90deg, black ${percentage}%, blue ${percentage}%);`,
+          background,
+        }}>
         <Draggable
           position={position}
           nodeRef={nodeRef}
           axix="x"
           bounds={bounds}
           onDrag={(e, d) => {
-            setPercentage(Math.round(d.x * 100) / width)
+            const length = d.x + nodeRadius
+
+            setPercentage(Math.round(length * 100) / slidingWidth)
           }}>
           <div ref={nodeRef} style={{ width: 'fit-content' }}>
             <SliderNode color={color} />
@@ -69,6 +104,7 @@ Slider.propTypes = {
   percentage: PropTypes.number, // if not given , its zero
   setPercentage: PropTypes.func.isRequired, // a function that takes in single number(percentage) as parameter, called everytime percentage changes
   color: PropTypes.string,
+  secondaryColor: PropTypes.string,
 }
 
 export default Slider

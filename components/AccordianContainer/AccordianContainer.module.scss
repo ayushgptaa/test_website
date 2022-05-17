@@ -2,6 +2,7 @@
 @use '/styles/mixins.scss' as *;
 
 .rootContainer {
+  width: 100%;
   background: $darkGray;
   border: 1px solid $lightgray;
   border-radius: 12px;

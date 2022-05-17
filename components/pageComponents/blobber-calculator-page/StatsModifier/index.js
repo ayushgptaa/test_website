@@ -1,5 +1,9 @@
-import SliderEditor from 'components/Slider'
 import PropTypes from 'prop-types'
+
+import SliderEditor from 'components/Slider'
+import Wrapper from 'components/Wrapper'
+
+import { theme } from 'util/globalConsts'
 
 import styles from './index.module.scss'
 
@@ -14,7 +18,7 @@ const StatsModifier = ({
   setComission,
 }) => {
   return (
-    <div className={styles.statsModifiedContainer}>
+    <Wrapper>
       {/* Title */}
       <div>
         <div className={styles.statsModifiedTitle}>
@@ -34,7 +38,8 @@ const StatsModifier = ({
           maxValue={6000}
           minValue={1}
           unitSymbol="TB"
-          color="#009EFF"
+          color={theme.defaultTheme.blue}
+          secondaryColor={theme.defaultTheme.grayerBlue}
           step={1}
         />
       </div>
@@ -47,7 +52,8 @@ const StatsModifier = ({
           maxValue={10000000}
           minValue={1000}
           unitSymbol="ZCN"
-          color="#009EFF"
+          color={theme.defaultTheme.blue}
+          secondaryColor={theme.defaultTheme.grayerBlue}
           step={1000}
         />
       </div>
@@ -60,7 +66,8 @@ const StatsModifier = ({
           maxValue={10000000}
           minValue={0}
           unitSymbol="ZCN"
-          color="#009EFF"
+          color={theme.defaultTheme.blue}
+          secondaryColor={theme.defaultTheme.grayerBlue}
           step={1000}
         />
       </div>
@@ -73,10 +80,12 @@ const StatsModifier = ({
           maxValue={50}
           minValue={0}
           unitSymbol="%"
+          color={theme.defaultTheme.solidBlue}
+          secondaryColor={theme.defaultTheme.grayBlue}
           step={1}
         />
       </div>
-    </div>
+    </Wrapper>
   )
 }
 

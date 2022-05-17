@@ -1,8 +1,9 @@
+import PropTypes from 'prop-types'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import PropTypes from 'prop-types'
 
-import { DownArrow, RightArrow } from 'components/Icons'
+import Wrapper from 'components/Wrapper'
+import { DownArrow, RightArrow } from 'components/IconsComponents'
 
 import styles from './AccordianContainer.module.scss'
 
@@ -10,7 +11,7 @@ const AccordianContainer = ({ title, children }) => {
   const [isExpanded, setExpanded] = useState(false)
 
   return (
-    <motion.div className={styles.rootContainer}>
+    <Wrapper className={styles.rootContainer}>
       <div>
         <h2 className={styles.title}>{title}</h2>
         <button onClick={() => setExpanded(!isExpanded)}>
@@ -21,7 +22,7 @@ const AccordianContainer = ({ title, children }) => {
 
       <AnimatePresence>
         {isExpanded && (
-          <motion.p
+          <motion.div
             className={styles.text}
             key="content"
             initial="collapsed"
@@ -32,11 +33,11 @@ const AccordianContainer = ({ title, children }) => {
               collapsed: { height: 0 },
             }}
             transition={{ duration: 0.1, ease: 'linear' }}>
-            {children}
-          </motion.p>
+            <div>{children}</div>
+          </motion.div>
         )}
       </AnimatePresence>
-    </motion.div>
+    </Wrapper>
   )
 }
 

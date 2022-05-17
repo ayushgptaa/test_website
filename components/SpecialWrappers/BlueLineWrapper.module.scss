@@ -1,10 +1,12 @@
+@use '/styles/color.scss' as *;
+
 .container {
   display: flex;
   width: 100%;
 }
 
 .blueLine {
-  background-color: #009eff;
+  background-color: $blobber-primary-blue;
   border-radius: 999px;
   width: 4px;
   margin-right: 8px;
