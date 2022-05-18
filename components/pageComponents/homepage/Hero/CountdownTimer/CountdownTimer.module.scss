@@ -1,5 +1,11 @@
-@import '/styles/fonts.scss';
 @import 'include-media';
+
+.heading {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
 
 .showCounter {
   display: flex;
@@ -43,5 +49,12 @@
         text-transform: uppercase;
       }
     }
+  }
+
+  .heading {
+    margin-top: 4rem;
+    margin-bottom: 0.8rem;
+    font-size: 18px;
+    line-height: 120%;
   }
 }
