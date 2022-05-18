@@ -1,4 +1,5 @@
 import PreMainnerInflationarySupply from 'components/PreMainnerInflationarySupply'
+import CheckOurSolutions from 'components/CheckOurSolutions'
 
 const DummyPreMainner = [
   {
@@ -58,7 +59,12 @@ const DummyPreMainner = [
 ]
 
 const DisclaimerPage = () => {
-  return <PreMainnerInflationarySupply data={DummyPreMainner} />
+  return (
+    <>
+      <PreMainnerInflationarySupply data={DummyPreMainner} />
+      <CheckOurSolutions />
+    </>
+  )
 }
 
 export default DisclaimerPage
