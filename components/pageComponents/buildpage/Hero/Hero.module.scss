@@ -12,10 +12,6 @@
   position: absolute;
   height: 725px;
   width: 100%;
-  background: linear-gradient(180deg, rgba(3, 8, 25, 0) 0%, #030819 100%),
-    url('/images/buildPage/Hero/heroImg.svg') no-repeat top left/cover;
-  background-size: cover;
-  opacity: 0.3;
   z-index: -9;
   inset: 0;
   overflow: hidden;
@@ -29,6 +25,7 @@
 
 .text {
   @include primary-text-mobile;
+  display: block;
   margin: 2rem 0 3rem;
 }
 
@@ -52,7 +49,7 @@
       line-height: 120%;
     }
 
-    p {
+    span {
       max-width: 567px;
       font-weight: 400;
       font-size: 15px;

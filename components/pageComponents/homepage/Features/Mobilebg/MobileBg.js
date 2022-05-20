@@ -3,9 +3,6 @@ import Image from 'next/image'
 import Button from '/components/Button'
 import Heading from 'components/Heading'
 
-import iphoneMobile from '/public/images/homePage/Features/iphoneMobile.svg'
-import iphoneDesktop from '/public/images/homePage/Features/iphoneDesktop.svg'
-
 import styles from './MobileBg.module.scss'
 
 const data = {
@@ -18,12 +15,17 @@ const MobileBackground = () => {
   return (
     <div className={styles.container}>
       <div className={styles.imgContainer}>
-        <div className={styles.iphoneMobile}>
-          <Image src={iphoneMobile} quality={100} priority={1} />
-        </div>
-        <div className={styles.iphoneDesktop}>
-          <Image src={iphoneDesktop} quality={100} priority={1} />
-        </div>
+        <Image
+          src="/images/homePage/Features/iphone.png"
+          width={786}
+          height={799}
+          quality={100}
+          priority={1}
+        />
+        <div className={styles.firstLayer} />
+        <div className={styles.secondLayer} />
+        <div className={styles.thirdLayer} />
+        <div className={styles.fourthLayer} />
       </div>
       <div className={styles.textContainer}>
         <Heading text={data.heading} />

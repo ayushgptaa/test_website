@@ -7,8 +7,6 @@ import { WorkWithUs } from './CTA'
 
 import newsPageData from './NewsPageData'
 import styles from './NewsPage.module.scss'
-import arrowLeft from '/public/images/blog/pagination/arrow-left.svg'
-import arrowRight from '/public/images/blog/pagination/arrow-right.svg'
 
 const NewsPage = () => {
   const itemsPerPage = 5
@@ -38,14 +36,22 @@ const NewsPage = () => {
         <ReactPaginate
           breakLabel="..."
           nextLabel={
-            <Image src={`/${arrowRight.src}`} width={80} height={32} />
+            <Image
+              src="/images/blog/pagination/arrow-right.svg"
+              width={80}
+              height={32}
+            />
           }
           onPageChange={handlePageClick}
           pageRangeDisplayed={4}
           marginPagesDisplayed={1}
           pageCount={pageCount}
           previousLabel={
-            <Image src={`/${arrowLeft.src}`} width={80} height={32} />
+            <Image
+              src="/images/blog/pagination/arrow-left.svg"
+              width={80}
+              height={32}
+            />
           }
           renderOnZeroPageCount={null}
           activeClassName={styles.active}

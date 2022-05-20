@@ -19,7 +19,7 @@ const Features = () => {
         <div className={styles.imgContainer}>
           <div className={styles.statisticImgMobile}>
             <Image
-              src={`/${statisticImgMobile.src}`}
+              src={statisticImgMobile}
               width={statisticImgMobile.width}
               height={statisticImgMobile.height}
               alt="Global Data consumption"
@@ -27,7 +27,7 @@ const Features = () => {
           </div>
           <div className={styles.statisticImgDesktop}>
             <Image
-              src={`/${statisticImgDesktop.src}`}
+              src={statisticImgDesktop}
               width={statisticImgDesktop.width}
               height={statisticImgDesktop.height}
               alt="Global Data consumption"

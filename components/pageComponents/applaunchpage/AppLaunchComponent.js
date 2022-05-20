@@ -22,7 +22,7 @@ const AppLaunchComponent = () => {
             <div className={styles.containerContent}>
               <div className={styles.iconContainer}>
                 <Image
-                  src={`/${icon.src}`}
+                  src={icon}
                   width={icon.width}
                   height={icon.height}
                   alt={heading}

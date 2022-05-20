@@ -17,10 +17,12 @@ const WorkStep = () => {
       <div className={styles.container} key={serialNo}>
         <div className={styles.imgContainer}>
           <Image
-            src={`/${img.src}`}
+            src={img}
             width={img.width}
             height={img.height}
             alt={primaryHeading}
+            quality={100}
+            priority
           />
         </div>
         <div className={styles.textContainer}>

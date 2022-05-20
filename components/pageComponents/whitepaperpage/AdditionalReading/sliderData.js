@@ -1,18 +1,14 @@
-import image1 from '/public/images/whitepaperpage/image1.svg'
-import image2 from '/public/images/whitepaperpage/image2.svg'
-import image3 from '/public/images/whitepaperpage/image3.svg'
-
 const sliderData = [
   {
-    image: image1,
+    image: '/images/whitepaperpage/image1.png',
     title: 'PRE (Proxy Re-Encryption)',
   },
   {
-    image: image2,
+    image: '/images/whitepaperpage/image2.png',
     title: 'Split-Key (Serverless 2FA)',
   },
   {
-    image: image3,
+    image: '/images/whitepaperpage/image3.png',
     title: '0Chain Consensus Protocol',
   },
 ]

@@ -3,12 +3,9 @@ import PropTypes from 'prop-types'
 import { WorkWithUs, InArticle } from './CTA'
 import Tag from './Tag'
 import Image from 'next/image'
+import SocialIcons from 'components/SocialIcons'
 
 import styles from './NewsDetailPage.module.scss'
-
-import image1 from '/public/images/blog/content/1.jpg'
-import image2 from '/public/images/blog/content/2.jpg'
-import SocialIcons from 'components/SocialIcons'
 
 const NewsDetailPage = ({ data }) => {
   return (
@@ -23,10 +20,11 @@ const NewsDetailPage = ({ data }) => {
         </div>
         <div className={styles.coverImage}>
           <Image
-            src={`/${data.image}`}
+            src={data.image}
             alt={data.title}
             width={327}
             height={325}
+            quality={100}
             objectFit="cover"
           />
         </div>
@@ -68,14 +66,14 @@ const NewsDetailPage = ({ data }) => {
 
           <div className={styles.contentImages}>
             <Image
-              src={`/${image1.src}`}
+              src="/images/blog/content/1.jpg"
               alt="img 1"
               height={325}
               width={327}
               objectFit="cover"
             />
             <Image
-              src={`/${image2.src}`}
+              src="/images/blog/content/2.jpg"
               alt="img 2"
               height={325}
               width={327}

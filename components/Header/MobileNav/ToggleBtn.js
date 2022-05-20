@@ -2,21 +2,23 @@ import PropTypes from 'prop-types'
 
 import IconContainer from '/components/IconContainer'
 
-import menuIcon from '/public/images/NavIcons/menuIcon.svg'
-import closeIcon from '/public/images/NavIcons/closeIcon.svg'
-
 import styles from './ToggleBtn.module.scss'
 
 const MenuIcon = () => {
   return (
-    <IconContainer img={`/${menuIcon.src}`} alt="Menu" height={24} width={24} />
+    <IconContainer
+      img="/images/NavIcons/menuIcon.svg"
+      alt="Menu"
+      height={24}
+      width={24}
+    />
   )
 }
 
 const CloseIcon = () => {
   return (
     <IconContainer
-      img={`/${closeIcon.src}`}
+      img="/images/NavIcons/closeIcon.svg"
       alt="Close"
       height={28}
       width={28}

@@ -11,7 +11,7 @@ const IconContainer = () => {
         <div className={styles.container} key={text}>
           <div className={styles.bgPattern}></div>
           <Image
-            src={`/${icon.src}`}
+            src={icon}
             alt={text}
             quality={100}
             height={80}

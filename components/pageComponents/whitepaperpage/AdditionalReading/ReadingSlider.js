@@ -27,10 +27,10 @@ const DesktopComponent = () => {
         <div className={styles.pageContainer} key={title}>
           <div className={styles.imgContainer}>
             <Image
-              src={`/${image.src}`}
-              width={image.width}
-              height={image.height}
-              alt={image.alt}
+              src={image}
+              width={160}
+              height={232}
+              alt={title}
               quality={100}
               layout="fixed"
             />
@@ -66,10 +66,10 @@ const MobileComponent = () => {
             <div className={styles.pageContainer}>
               <div className={styles.imgContainer}>
                 <Image
-                  src={`/${image.src}`}
-                  width={image.width}
-                  height={image.height}
-                  alt="hello"
+                  src={image}
+                  width={160}
+                  height={232}
+                  alt={title}
                   quality={100}
                   layout="fixed"
                 />

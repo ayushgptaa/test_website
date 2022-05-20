@@ -4,9 +4,6 @@ import Heading from 'components/Heading'
 import Text from 'components/Text'
 import SocialIcons from 'components/SocialIcons'
 
-import FoundersImg from '/public/images/buildPage/Founders/Founders.png'
-import bgPatternLarge from '/public/images/buildPage/Founders/bgPatternLarge.svg'
-
 import styles from './Founders.module.scss'
 
 const Founders = () => {
@@ -25,11 +22,10 @@ const Founders = () => {
       </div>
       <div className={styles.imgContainer}>
         <Image
-          src={`/${bgPatternLarge.src}`}
-          width={bgPatternLarge.width}
-          height={bgPatternLarge.height}
+          src="/images/buildPage/Founders/brain.png"
+          width={1122}
+          height={595}
           alt="bgImage"
-          quality={100}
           layout="responsive"
         />
         <div className={styles.overlay} />
@@ -60,13 +56,11 @@ const Founders = () => {
       </div>
       <div className={styles.foundersImg}>
         <Image
-          src={`/${FoundersImg.src}`}
-          width={FoundersImg.width}
-          height={FoundersImg.height}
+          src="/images/buildPage/Founders/Founders.png"
+          width={800}
+          height={800}
           alt="Founders"
-          quality={100}
           layout="responsive"
-          priority={false}
         />
       </div>
     </section>

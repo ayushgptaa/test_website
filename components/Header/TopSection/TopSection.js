@@ -1,9 +1,6 @@
 import Link from 'next/link'
 
 import IconContainer from 'components/IconContainer'
-import discord from '/public/images/SocialIcons/discord.svg'
-import twitter from '/public/images/SocialIcons/twitter.svg'
-import telegram from '/public/images/SocialIcons/telegram.svg'
 
 import styles from './TopSection.module.scss'
 
@@ -18,19 +15,19 @@ const TopSection = () => {
           <Link href="/whitepapers">Whitepapers</Link>
         </span>
         <IconContainer
-          img={`/${discord.src}`}
+          img="/images/SocialIcons/discord.svg"
           alt="discord"
           height={20}
           width={20}
         />
         <IconContainer
-          img={`/${twitter.src}`}
+          img="/images/SocialIcons/twitter.svg"
           alt="twitter"
           height={20}
           width={20}
         />
         <IconContainer
-          img={`/${telegram.src}`}
+          img="/images/SocialIcons/telegram.svg"
           alt="telegram"
           height={20}
           width={20}

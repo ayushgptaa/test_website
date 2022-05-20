@@ -1,7 +1,5 @@
 import Image from 'next/image'
 
-import mainHeading from '/public/images/homePage/Features/mainHeading.svg'
-
 import styles from './MainFeature.module.scss'
 
 const MainFeature = () => {
@@ -9,7 +7,12 @@ const MainFeature = () => {
     <div className={styles.container}>
       <div className={styles.bgPattern}></div>
       <div className={styles.heading}>
-        <Image src={mainHeading} quality={100} priority />
+        <Image
+          src="/images/homePage/Features/mainHeading.png"
+          width={602}
+          height={294}
+          priority
+        />
       </div>
       <p className={styles.para}>
         The Züs Cloud Network is a hyper-speed data storage network. Enabled by

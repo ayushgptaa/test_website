@@ -9,11 +9,17 @@ import useAnimatedNavToggler from 'Hooks/useAnimatedNavToggler'
 import styles from './Header.module.scss'
 import DesktopNav from './DesktopNav'
 import TopSection from './TopSection'
+import Image from 'next/image'
 
 const ImgComponent = ({ removeImg }) => {
   return (
     <div className={clsx(styles.imgContainer, removeImg && styles.removeImg)}>
-      <div className={styles.heroImg} />
+      <Image
+        src="/images/homePage/Hero/hero-img.png"
+        width={876}
+        height={527}
+        priority
+      />
     </div>
   )
 }

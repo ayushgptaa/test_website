@@ -4,10 +4,7 @@ import TextContainerBorder from 'components/TextContainerBorder'
 import Button from '/components/Button'
 import Heading from 'components/Heading'
 
-import laptopDesktop from '/public/images/homePage/Features/laptopDesktop.svg'
-import laptopMobile from '/public/images/homePage/Features/laptopMobile.svg'
-
-import styles from './LaptoBg.module.scss'
+import styles from './LaptopBg.module.scss'
 
 const data = {
   heading: 'Unbounded Storage Capacity',
@@ -19,22 +16,13 @@ const MobileBackground = () => {
   return (
     <div className={styles.laptopImgBg}>
       <div className={styles.imgContainer}>
-        <div className={styles.laptopDesktop}>
-          <Image
-            src={laptopDesktop}
-            quality={100}
-            layout="responsive"
-            priority={1}
-          />
-        </div>
-        <div className={styles.laptopMobile}>
-          <Image
-            src={laptopMobile}
-            quality={100}
-            layout="responsive"
-            priority={1}
-          />
-        </div>
+        <Image
+          src="/images/homePage/Features/laptop.png"
+          width={624}
+          height={462}
+          quality={100}
+          priority={1}
+        />
       </div>
       <div className={styles.textContainer}>
         <Heading text={data.heading} />

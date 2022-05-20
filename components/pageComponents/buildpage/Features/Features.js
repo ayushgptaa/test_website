@@ -7,8 +7,6 @@ import FeaturesList from 'pageComponents/homepage/Features/FeaturesList'
 
 import featurelistData from './featuresListData'
 
-import codeImg from 'public/images/buildPage/Features/codeImg.svg'
-
 import styles from './Features.module.scss'
 
 const Features = () => {
@@ -17,12 +15,11 @@ const Features = () => {
       <div className={styles.header}>
         <div className={styles.codeImgContainer}>
           <Image
-            src={`/${codeImg.src}`}
-            width={codeImg.width}
-            height={codeImg.height}
+            src="/images/buildPage/Features/codeImg.png"
+            width={460}
+            height={570}
             alt="migrate any app"
             quality={100}
-            layout="fixed"
           />
         </div>
         <div className={styles.textContainer}>

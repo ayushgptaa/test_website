@@ -19,7 +19,7 @@ const Card = ({ data }) => {
     <div key={data.id} className={styles.cardWrapper}>
       <div className={styles.imageWrapper}>
         <Image
-          src={`/${data.image}`}
+          src={data.image}
           alt={data.title}
           sizes="50vw"
           layout="fill"

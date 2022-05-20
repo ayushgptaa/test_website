@@ -1,18 +1,15 @@
 import Heading from 'components/Heading'
 import Image from 'next/image'
 
-import discord from '/public/images/SocialIcons/discord.svg'
-import zendesk from '/public/images/earn/Provider/zendesk.svg'
-
 import styles from './Provider.module.scss'
 
 const buttonData = [
   {
-    icon: discord,
+    icon: '/images/SocialIcons/discord.svg',
     text: 'Talk to the community',
   },
   {
-    icon: zendesk,
+    icon: '/images/earn/Provider/zendesk.svg',
     text: 'Get technical support',
   },
 ]
@@ -32,9 +29,9 @@ const Provider = () => {
           <div className={styles.button} key={text}>
             <div className={styles.icon}>
               <Image
-                src={`/${icon.src}`}
-                width={icon.width}
-                height={icon.height}
+                src={icon}
+                width={80}
+                height={80}
                 alt={text}
                 layout="fixed"
               />

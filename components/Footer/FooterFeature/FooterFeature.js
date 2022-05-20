@@ -5,17 +5,15 @@ import Heading from 'components/Heading'
 import Text from 'components/Text'
 import Button from 'components/Button'
 
-import ZusLogoWhite from '/public/images/Footer/zusLogoWhite.svg'
-
 import styles from './FooterFeature.module.scss'
 
 const FooterFeature = ({ data }) => {
   return (
     <div className={styles.container}>
       <Image
-        src={`/${ZusLogoWhite.src}`}
-        width={ZusLogoWhite.width}
-        height={ZusLogoWhite.height}
+        src="/images/Footer/zusLogoWhite.svg"
+        width={65}
+        height={70}
         alt="züs"
         quality={100}
       />

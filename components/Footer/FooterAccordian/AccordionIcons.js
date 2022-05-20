@@ -1,12 +1,9 @@
 import Image from 'next/image'
 
-import upIcon from '/public/images/Footer/upIcon.svg'
-import downIcon from '/public/images/Footer/downIcon.svg'
-
 const UpIcon = () => {
   return (
     <Image
-      src={`/${upIcon.src}`}
+      src="/images/Footer/upIcon.svg"
       alt="up"
       quality={100}
       width={24}
@@ -18,7 +15,7 @@ const UpIcon = () => {
 const DownIcon = () => {
   return (
     <Image
-      src={`/${downIcon.src}`}
+      src="/images/Footer/downIcon.svg"
       alt="down"
       quality={100}
       width={24}

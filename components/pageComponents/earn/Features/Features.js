@@ -9,35 +9,48 @@ import styles from './Features.module.scss'
 
 const Features = () => {
   const renderFeatures = () => {
-    return featuresData.map(({ imgDesktop, imgMobile, heading, text }) => (
-      <section className={styles.container} key={heading}>
-        <div className={styles.imgContainer}>
-          <div className={styles.imgDesktop}>
-            <Image
-              src={`/${imgDesktop.src}`}
-              width={imgDesktop.width}
-              height={imgDesktop.height}
-              alt={heading}
-              quality={100}
-            />
+    return featuresData.map(
+      ({
+        imgDesktop,
+        imgDesktopWidth,
+        imgDesktopHeight,
+        imgMobile,
+        imgMobileWidth,
+        imgMobileHeight,
+        heading,
+        text,
+      }) => (
+        <section className={styles.container} key={heading}>
+          <div className={styles.imgContainer}>
+            <div className={styles.imgDesktop}>
+              <Image
+                src={imgDesktop}
+                width={imgDesktopWidth}
+                height={imgDesktopHeight}
+                alt={heading}
+                quality={100}
+                priority
+              />
+            </div>
+            <div className={styles.imgMobile}>
+              <Image
+                src={imgMobile}
+                width={imgMobileWidth}
+                height={imgMobileHeight}
+                alt={heading}
+                quality={100}
+                priority
+              />
+            </div>
           </div>
-          <div className={styles.imgMobile}>
-            <Image
-              src={`/${imgMobile.src}`}
-              width={imgMobile.width}
-              height={imgMobile.height}
-              alt={heading}
-              quality={100}
-            />
+          <div className={styles.textContent}>
+            <Heading text={heading} />
+            <p className={styles.text}>{text}</p>
+            <Button text="Get Notified" type="button" />
           </div>
-        </div>
-        <div className={styles.textContent}>
-          <Heading text={heading} />
-          <p className={styles.text}>{text}</p>
-          <Button text="Get Notified" type="button" />
-        </div>
-      </section>
-    ))
+        </section>
+      )
+    )
   }
   return (
     <div className={styles.rootWrapper}>
