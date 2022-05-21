@@ -3,6 +3,12 @@ $color-background: #030819;
 $primary-blue: #0b9dff;
 
 // Gradient
+
+$zus-primary-gradient: linear-gradient(
+  121.99deg,
+  #00d3ff -26.48%,
+  #1a49ff 64.48%
+);
 $blue-gradient-center: radial-gradient(
   50% 50% at 50% 50%,
   #1477f8 0%,

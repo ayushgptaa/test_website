@@ -13,7 +13,7 @@ const Button = ({ type, text, black, transparent, onClick }) => {
         transparent && styles.transparent
       )}
       onClick={onClick}>
-      {text}
+      <span>{text}</span>
     </button>
   )
 }
