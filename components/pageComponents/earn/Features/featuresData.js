@@ -1,16 +1,19 @@
+import styles from './Features.module.scss'
+
 const featuresData = [
   {
+    customStyle: styles.phoneStyle,
     imgDesktop: '/images/earn/Features/earn-phone-desktop.svg',
     imgMobile: '/images/earn/Features/earn-phone-mobile.svg',
     imgDesktopWidth: '431',
     imgDesktopHeight: '470',
     imgMobileWidth: '375',
     imgMobileHeight: '420',
-
     heading: 'Stake & Earn',
     text: 'Want to Earn without becoming a Storage Provider? On the Bolt app you can delegate $ZCN to other active Storage Providers and earn alongside them.',
   },
   {
+    customStyle: styles.laptopStyle,
     imgDesktop: '/images/earn/Features/earn-laptop-desktop.png',
     imgMobile: '/images/earn/Features/earn-laptop-mobile.png',
     imgDesktopWidth: '1700',

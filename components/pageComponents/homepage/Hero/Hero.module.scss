@@ -6,6 +6,8 @@
   width: $mobile-width;
   margin-top: 4rem;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .mainHeading {

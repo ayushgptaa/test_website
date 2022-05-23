@@ -18,7 +18,7 @@ const SingleAccordion = ({ id, expanded, setExpanded, name, subLinks }) => {
         }}
         onClick={() => setExpanded(isOpen ? false : id)}
         className={styles.container}>
-        <p>{name}</p>
+        <span>{name}</span>
         {isOpen ? <UpIcon /> : <DownIcon />}
       </motion.div>
       <AnimatePresence initial={false}>

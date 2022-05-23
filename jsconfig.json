@@ -5,6 +5,7 @@
       "*": ["*"],
       "pageComponents/*": ["./components/pageComponents/*"],
       "util": ["./util/*"],
+      "screens/*": ["./screens/*"],
       "styles": ["./styles/"]
     }
   }

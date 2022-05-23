@@ -1,35 +1,36 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import PropTypes from 'prop-types'
+import { Fade } from 'react-awesome-reveal'
 
 import Heading from 'components/Heading'
 import Text from 'components/Text'
 import Button from 'components/Button'
-
-import twitterIcon from '/public/images/BlueContainerWithImg/twitterIcon.svg'
 
 import styles from './BlueContainerWithImg.module.scss'
 
 // Main content for Contact and Press page
 const BlueContainerWithImg = ({ heading, subHeading }) => {
   return (
-    <>
+    <Fade>
       <div className={styles.primaryContainer}>
-        <div className={styles.bgImage}></div>
-        <p>{subHeading}</p>
-        <Heading text={heading} />
-        <div className={styles.iconContainer}>
-          <Image
-            src={`/${twitterIcon.src}`}
-            alt="twitter"
-            quality={100}
-            layout="fixed"
-            height={24}
-            width={24}
-          />
-          <p>@ZusCloud</p>
-        </div>
-        <Button type="button" text="DM us on Twitter" />
+        <div className={styles.bgImage} />
+        <Fade direction="up">
+          <p>{subHeading}</p>
+          <Heading text={heading} />
+          <div className={styles.iconContainer}>
+            <Image
+              src="/images/BlueContainerWithImg/twitterIcon.svg"
+              alt="twitter"
+              quality={100}
+              layout="fixed"
+              height={24}
+              width={24}
+            />
+            <p>@ZusCloud</p>
+          </div>
+          <Button type="button" text="DM us on Twitter" />
+        </Fade>
       </div>
       <div className={styles.secondaryContainer}>
         <Text>
@@ -39,7 +40,7 @@ const BlueContainerWithImg = ({ heading, subHeading }) => {
           <Link href="/">forum</Link>. is a great place to start.
         </Text>
       </div>
-    </>
+    </Fade>
   )
 }
 

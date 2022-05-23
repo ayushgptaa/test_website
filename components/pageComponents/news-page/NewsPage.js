@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import ReactPaginate from 'react-paginate'
+import { Fade } from 'react-awesome-reveal'
 
 import Card from './Card'
 import { WorkWithUs } from './CTA'
@@ -26,42 +27,46 @@ const NewsPage = () => {
   }
 
   return (
-    <div className={styles.container}>
-      <div className={styles.topEllipse} />
-      <h1>NEWS</h1>
-      {currentItems.map((data) => {
-        return <Card data={data} key={data.id} />
-      })}
-      <div className={styles.pagination}>
-        <ReactPaginate
-          breakLabel="..."
-          nextLabel={
-            <Image
-              src="/images/blog/pagination/arrow-right.svg"
-              width={80}
-              height={32}
-            />
-          }
-          onPageChange={handlePageClick}
-          pageRangeDisplayed={4}
-          marginPagesDisplayed={1}
-          pageCount={pageCount}
-          previousLabel={
-            <Image
-              src="/images/blog/pagination/arrow-left.svg"
-              width={80}
-              height={32}
-            />
-          }
-          renderOnZeroPageCount={null}
-          activeClassName={styles.active}
-          disabledClassName={styles.disabled}
-        />
+    <Fade>
+      <div className={styles.container}>
+        <div className={styles.topEllipse} />
+        <h1>NEWS</h1>
+        <Fade>
+          {currentItems.map((data) => {
+            return <Card data={data} key={data.id} />
+          })}
+        </Fade>
+        <div className={styles.pagination}>
+          <ReactPaginate
+            breakLabel="..."
+            nextLabel={
+              <Image
+                src="/images/blog/pagination/arrow-right.svg"
+                width={80}
+                height={32}
+              />
+            }
+            onPageChange={handlePageClick}
+            pageRangeDisplayed={4}
+            marginPagesDisplayed={1}
+            pageCount={pageCount}
+            previousLabel={
+              <Image
+                src="/images/blog/pagination/arrow-left.svg"
+                width={80}
+                height={32}
+              />
+            }
+            renderOnZeroPageCount={null}
+            activeClassName={styles.active}
+            disabledClassName={styles.disabled}
+          />
+        </div>
+        <div className={styles.cta}>
+          <WorkWithUs />
+        </div>
       </div>
-      <div className={styles.cta}>
-        <WorkWithUs />
-      </div>
-    </div>
+    </Fade>
   )
 }
 

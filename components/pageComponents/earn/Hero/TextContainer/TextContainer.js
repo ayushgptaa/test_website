@@ -1,3 +1,4 @@
+import { Fade, Slide } from 'react-awesome-reveal'
 import Button from 'components/Button'
 import styles from './TextContainer.module.scss'
 
@@ -16,15 +17,19 @@ const data = [
 
 const TextContainer = () => {
   return data.map(({ heading, text, buttonText }) => (
-    <div className={styles.container} key={heading}>
-      <div className={styles.bgPattern}></div>
-      <div className={styles.ellipseBottom}></div>
-      <div className={styles.textContainer}>
-        <h3 className={styles.heading}>{heading}</h3>
-        <p className={styles.text}>{text}</p>
-        <Button type="button" text={buttonText} black transparent />
+    <Slide direction="left" cascade>
+      <div className={styles.container} key={heading}>
+        <div className={styles.bgPattern} />
+        <div className={styles.ellipseBottom} />
+        <div className={styles.textContainer}>
+          <Fade>
+            <h3 className={styles.heading}>{heading}</h3>
+            <p className={styles.text}>{text}</p>
+            <Button type="button" text={buttonText} black transparent />
+          </Fade>
+        </div>
       </div>
-    </div>
+    </Slide>
   ))
 }
 

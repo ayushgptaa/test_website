@@ -5,16 +5,21 @@ import Footer from 'components/Footer'
 import Founders from 'pageComponents/buildpage/Founders'
 
 import footerFeatureData from 'pageComponents/buildpage/Footer/footerFeatureData'
+import ScrollSnap, { ScrollSnapSection } from 'components/ScrollSnap'
 
 const Build = () => {
   return (
-    <>
-      <Header removeImg />
-      <Hero />
+    <ScrollSnap>
+      <ScrollSnapSection style={{ position: 'relative' }}>
+        <Header removeImg />
+        <Hero />
+      </ScrollSnapSection>
       <Features />
       <Founders />
-      <Footer footerFeatureData={footerFeatureData} />
-    </>
+      <ScrollSnapSection alignMobile="start">
+        <Footer footerFeatureData={footerFeatureData} />
+      </ScrollSnapSection>
+    </ScrollSnap>
   )
 }
 

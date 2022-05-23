@@ -1,0 +1,51 @@
+@import 'include-media';
+
+.alignMobileStart {
+  scroll-snap-align: start;
+}
+
+.alignMobileCenter {
+  scroll-snap-align: center;
+}
+
+.alignMobileEnd {
+  scroll-snap-align: end;
+}
+
+.marginMobile1x {
+  scroll-margin: 5rem;
+}
+
+.marginMobile2x {
+  scroll-margin: 10rem;
+}
+
+.marginMobile3x {
+  scroll-margin: 15rem;
+}
+
+@include media('>tablet') {
+  .alignDesktopStart {
+    scroll-snap-align: start;
+  }
+
+  .alignDesktopCenter {
+    scroll-snap-align: center;
+  }
+
+  .alignDesktopEnd {
+    scroll-snap-align: end;
+  }
+
+  .marginDesktop1x {
+    scroll-margin: 5rem;
+  }
+
+  .marginDesktop2x {
+    scroll-margin: 10rem;
+  }
+
+  .marginDesktop3x {
+    scroll-margin: 15rem;
+  }
+}

@@ -1,7 +1,9 @@
 import Image from 'next/image'
+import { Fade } from 'react-awesome-reveal'
 
 import Heading from 'components/Heading'
 import Button from 'components/Button'
+import { ScrollSnapSection } from 'components/ScrollSnap'
 
 import featuresData from './featuresData'
 
@@ -11,6 +13,7 @@ const Features = () => {
   const renderFeatures = () => {
     return featuresData.map(
       ({
+        customStyle,
         imgDesktop,
         imgDesktopWidth,
         imgDesktopHeight,
@@ -20,35 +23,41 @@ const Features = () => {
         heading,
         text,
       }) => (
-        <section className={styles.container} key={heading}>
-          <div className={styles.imgContainer}>
-            <div className={styles.imgDesktop}>
-              <Image
-                src={imgDesktop}
-                width={imgDesktopWidth}
-                height={imgDesktopHeight}
-                alt={heading}
-                quality={100}
-                priority
-              />
-            </div>
-            <div className={styles.imgMobile}>
-              <Image
-                src={imgMobile}
-                width={imgMobileWidth}
-                height={imgMobileHeight}
-                alt={heading}
-                quality={100}
-                priority
-              />
-            </div>
-          </div>
-          <div className={styles.textContent}>
-            <Heading text={heading} />
-            <p className={styles.text}>{text}</p>
-            <Button text="Get Notified" type="button" />
-          </div>
-        </section>
+        <ScrollSnapSection marginMobile="1x" alignMobile="start">
+          <Fade>
+            <section
+              className={`${styles.container} ${customStyle}`}
+              key={heading}>
+              <div className={styles.imgContainer}>
+                <div className={styles.imgDesktop}>
+                  <Image
+                    src={imgDesktop}
+                    width={imgDesktopWidth}
+                    height={imgDesktopHeight}
+                    alt={heading}
+                    quality={100}
+                    priority
+                  />
+                </div>
+                <div className={styles.imgMobile}>
+                  <Image
+                    src={imgMobile}
+                    width={imgMobileWidth}
+                    height={imgMobileHeight}
+                    alt={heading}
+                    quality={100}
+                    priority
+                  />
+                </div>
+              </div>
+              <div className={styles.textContent}>
+                <Heading text={heading} />
+                <p className={styles.text}>{text}</p>
+                <Button text="Get Notified" type="button" />
+              </div>
+            </section>
+          </Fade>
+        </ScrollSnapSection>
       )
     )
   }

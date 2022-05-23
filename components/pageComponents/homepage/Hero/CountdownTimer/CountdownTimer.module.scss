@@ -11,44 +11,39 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   font-weight: 200;
+  gap: 1rem;
+}
 
-  div {
-    margin: 0 0.8rem;
-    text-align: center;
+.divider {
+  font-size: 40px;
+  line-height: 120%;
+}
 
-    p {
-      font-size: 2.8rem;
-      margin: 0;
-    }
-    span {
-      text-transform: uppercase;
-      font-size: 12px;
-    }
-  }
-  p {
-    margin: 0;
-    margin-bottom: 22px;
-    font-size: 2rem;
-  }
+.dateTimeWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeValue {
+  font-size: 44px;
+  line-height: 120%;
+}
+
+.timeType {
+  font-size: 12px;
+  line-height: 120%;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 @include media('>tablet') {
   .showCounter {
     gap: 0.9rem;
     margin-bottom: 5rem;
-
-    div {
-      p {
-        font-size: 60px;
-      }
-      span {
-        font-size: 14px;
-        font-weight: 400;
-        text-transform: uppercase;
-      }
-    }
   }
 
   .heading {
@@ -56,5 +51,17 @@
     margin-bottom: 0.8rem;
     font-size: 18px;
     line-height: 120%;
+  }
+
+  .divider {
+    font-size: 52px;
+  }
+
+  .timeValue {
+    font-size: 60px;
+  }
+
+  .timeType {
+    font-size: 14px;
   }
 }

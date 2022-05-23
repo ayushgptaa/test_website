@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { Fade } from 'react-awesome-reveal'
 
 import TextContainerBorder from 'components/TextContainerBorder'
 import Button from '/components/Button'
@@ -12,28 +13,31 @@ const data = {
   btnText: 'Store',
 }
 
-const MobileBackground = () => {
+const LaptopBg = () => {
   return (
     <div className={styles.laptopImgBg}>
-      <div className={styles.imgContainer}>
-        <Image
-          src="/images/homePage/Features/laptop.png"
-          width={624}
-          height={462}
-          quality={100}
-          priority={1}
-        />
-      </div>
-      <div className={styles.textContainer}>
-        <Heading text={data.heading} />
-        <p className={styles.para}>{data.para}</p>
-        <Button type="button" text={data.btnText} black />
-        <div className={styles.textDetails}>
-          <TextContainerBorder />
+      <Fade>
+        <div className={styles.imgContainer}>
+          <Image
+            src="/images/homePage/Features/laptop.png"
+            width={624}
+            height={462}
+            quality={100}
+            priority={1}
+          />
         </div>
-      </div>
+
+        <div className={styles.textContainer}>
+          <Heading text={data.heading} />
+          <p className={styles.para}>{data.para}</p>
+          <Button type="button" text={data.btnText} black />
+          <div className={styles.textDetails}>
+            <TextContainerBorder />
+          </div>
+        </div>
+      </Fade>
     </div>
   )
 }
 
-export default MobileBackground
+export default LaptopBg

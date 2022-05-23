@@ -51,9 +51,9 @@ const Footer = ({
         />
         <SocialIcons />
         <Accordion data={footerMenu} />
-        <p className={styles.bottomText}>
+        <span suppressHydrationWarning className={styles.bottomText}>
           Copyright © 2022 ZÜS All Rights Reserved. Terms & Conditions
-        </p>
+        </span>
       </div>
     )
   }
@@ -82,9 +82,10 @@ const Footer = ({
             })}
           </div>
         </div>
+
         <p className={styles.bottomContainer}>
           <ZusLogo />
-          <span>
+          <span suppressHydrationWarning>
             Copyright © 2022 ZÜS All Rights Reserved. Terms & Conditions
           </span>
         </p>

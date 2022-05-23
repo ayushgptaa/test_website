@@ -1,7 +1,5 @@
-import MainFeature from './MainFeature'
 import FeaturesList from './FeaturesList'
-import MobileBg from './Mobilebg'
-import LaptopBg from './LaptopBg'
+import { Fade } from 'react-awesome-reveal'
 
 import styles from './Features.module.scss'
 
@@ -28,9 +26,8 @@ const featurelistData = [
 
 const Features = () => {
   return (
-    <section>
-      <MainFeature />
-      <div className={styles.featureListWrapper}>
+    <div className={styles.featureListWrapper}>
+      <Fade direction="up" duration={600}>
         {featurelistData.map(({ pattern, heading, text, img }) => (
           <FeaturesList
             pattern={pattern}
@@ -41,10 +38,8 @@ const Features = () => {
             buttonText="Learn More"
           />
         ))}
-      </div>
-      <MobileBg />
-      <LaptopBg />
-    </section>
+      </Fade>
+    </div>
   )
 }
 

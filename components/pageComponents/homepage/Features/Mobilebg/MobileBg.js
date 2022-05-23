@@ -4,6 +4,7 @@ import Button from '/components/Button'
 import Heading from 'components/Heading'
 
 import styles from './MobileBg.module.scss'
+import { Fade } from 'react-awesome-reveal'
 
 const data = {
   heading: 'An Incentive to Scale',
@@ -28,9 +29,11 @@ const MobileBackground = () => {
         <div className={styles.fourthLayer} />
       </div>
       <div className={styles.textContainer}>
-        <Heading text={data.heading} />
-        <p className={styles.para}>{data.para}</p>
-        <Button type="button" text={data.btnText} black />
+        <Fade direction="up">
+          <Heading text={data.heading} />
+          <p className={styles.para}>{data.para}</p>
+          <Button type="button" text={data.btnText} black />
+        </Fade>
       </div>
     </div>
   )

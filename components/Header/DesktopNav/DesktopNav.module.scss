@@ -5,6 +5,8 @@
   @include flex-vertical-center(space-between);
   width: 382px;
   height: 36px;
+  position: relative;
+  z-index: 1;
 
   span {
     cursor: pointer;

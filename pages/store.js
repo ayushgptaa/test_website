@@ -1,18 +1,25 @@
 import Footer from 'components/Footer'
 import Header from 'components/Header'
+import ScrollSnap, { ScrollSnapSection } from 'components/ScrollSnap'
 import Features from 'pageComponents/store/Features'
 import Hero from 'pageComponents/store/Hero'
 import Work from 'pageComponents/store/Work'
 
 const Store = () => {
   return (
-    <>
-      <Header removeImg />
-      <Hero />
+    <ScrollSnap>
+      <ScrollSnapSection>
+        <Header removeImg />
+      </ScrollSnapSection>
+      <ScrollSnapSection alignDesktop="center">
+        <Hero />
+      </ScrollSnapSection>
       <Work />
       <Features />
-      <Footer />
-    </>
+      <ScrollSnapSection alignMobile="start">
+        <Footer />
+      </ScrollSnapSection>
+    </ScrollSnap>
   )
 }
 

@@ -1,3 +1,4 @@
+import { Fade } from 'react-awesome-reveal'
 import PropTypes from 'prop-types'
 import clsx from 'clsx'
 
@@ -5,11 +6,16 @@ import styles from './Container.module.scss'
 
 const Container = ({ children, textContainer }) => {
   return (
-    <div
-      className={clsx(styles.container, textContainer && styles.textContainer)}>
-      <div className={styles.bgPattern}></div>
-      {children}
-    </div>
+    <Fade>
+      <div
+        className={clsx(
+          styles.container,
+          textContainer && styles.textContainer
+        )}>
+        <div className={styles.bgPattern} />
+        {children}
+      </div>
+    </Fade>
   )
 }
 

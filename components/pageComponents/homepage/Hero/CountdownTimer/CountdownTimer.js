@@ -6,9 +6,11 @@ import styles from './CountdownTimer.module.scss'
 
 const DateTimeDisplay = ({ value, type }) => {
   return (
-    <div>
-      <p suppressHydrationWarning>{value}</p>
-      <span>{type}</span>
+    <div className={styles.dateTimeWrapper}>
+      <span className={styles.timeValue} suppressHydrationWarning>
+        {value}
+      </span>
+      <span className={styles.timeType}>{type}</span>
     </div>
   )
 }
@@ -22,11 +24,11 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
   return (
     <div className={styles.showCounter}>
       <DateTimeDisplay value={days} type="Days" />
-      <p>:</p>
+      <span className={styles.divider}>:</span>
       <DateTimeDisplay value={hours} type="Hours" />
-      <p>:</p>
+      <span className={styles.divider}>:</span>
       <DateTimeDisplay value={minutes} type="Minutes" />
-      <p>:</p>
+      <span className={styles.divider}>:</span>
       <DateTimeDisplay value={seconds} type="Seconds" />
     </div>
   )

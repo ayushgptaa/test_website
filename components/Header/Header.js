@@ -4,7 +4,7 @@ import clsx from 'clsx'
 import ZusLogo from 'components/ZusLogo'
 import { MobileNav, ToggleBtn } from './MobileNav'
 
-import useAnimatedNavToggler from 'Hooks/useAnimatedNavToggler'
+import useAnimatedNavToggler from 'hooks/useAnimatedNavToggler'
 
 import styles from './Header.module.scss'
 import DesktopNav from './DesktopNav'
@@ -32,16 +32,16 @@ const Header = ({ removeImg }) => {
   const { showNavLinks, animation, toggleNavbar } = useAnimatedNavToggler()
 
   return (
-    <>
+    <div className={styles.container}>
       <TopSection />
+      <ImgComponent removeImg={removeImg} />
       <header className={styles.header}>
-        <ImgComponent removeImg={removeImg} />
         <ZusLogo />
         <DesktopNav />
         <MobileNav animation={animation} />
         <ToggleBtn toggleNavbar={toggleNavbar} showNavLinks={showNavLinks} />
       </header>
-    </>
+    </div>
   )
 }
 

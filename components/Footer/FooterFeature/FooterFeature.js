@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import PropTypes from 'prop-types'
+import { Fade } from 'react-awesome-reveal'
 
 import Heading from 'components/Heading'
 import Text from 'components/Text'
@@ -10,21 +11,23 @@ import styles from './FooterFeature.module.scss'
 const FooterFeature = ({ data }) => {
   return (
     <div className={styles.container}>
-      <Image
-        src="/images/Footer/zusLogoWhite.svg"
-        width={65}
-        height={70}
-        alt="züs"
-        quality={100}
-      />
-      <Heading text={data.heading} />
-      <Text>{data.text}</Text>
-      <div className={styles.buttons}>
-        <Button text={data.buttonText} type="button" />
-        {data.secondaryBtn && (
-          <Button text="Start Building" type="button" black transparent />
-        )}
-      </div>
+      <Fade direction="up">
+        <Image
+          src="/images/Footer/zusLogoWhite.svg"
+          width={65}
+          height={70}
+          alt="züs"
+          quality={100}
+        />
+        <Heading text={data.heading} />
+        <Text>{data.text}</Text>
+        <div className={styles.buttons}>
+          <Button text={data.buttonText} type="button" />
+          {data.secondaryBtn && (
+            <Button text="Start Building" type="button" black transparent />
+          )}
+        </div>
+      </Fade>
     </div>
   )
 }

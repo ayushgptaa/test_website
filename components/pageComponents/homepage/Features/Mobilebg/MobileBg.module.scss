@@ -45,12 +45,12 @@
 
 @include media('>tablet') {
   .container {
-    margin-top: 0;
-    margin-bottom: -20rem;
+    margin-top: 15rem;
+    margin-bottom: 5rem;
   }
 
   .imgContainer {
-    margin: 17rem auto;
+    margin: 0rem auto;
 
     .firstLayer,
     .secondLayer {
@@ -75,7 +75,7 @@
     align-items: center;
     width: 100%;
     max-width: 813px;
-    top: -30rem;
+    top: -23rem;
 
     h1 {
       font-style: normal;
