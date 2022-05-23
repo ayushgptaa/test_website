@@ -6,5 +6,6 @@ export const theme = {
     grayerBlue: '#192b52',
     grayBlue: '#193652',
     white: '#FFFFFF',
+    lightOrange: '#ee9d0066',
   },
 }

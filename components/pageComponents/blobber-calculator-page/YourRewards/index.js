@@ -1,10 +1,11 @@
 import Wrapper from 'components/Wrapper'
 import PropTypes from 'prop-types'
-import CustomSplineChart from 'components/Chart/CustomSplineChart'
+
 import BlueLineWrapper from 'components/SpecialWrappers/BlueLineWrapper'
 import { convertToDecimalSeparated } from 'util/globalFunctions'
 
 import styles from './index.module.scss'
+import MultipleSplineChart from 'components/Chart/MultipleSplineChart'
 
 const SingleHeader = ({ headerText, bottomText }) => {
   return (
@@ -49,12 +50,19 @@ const YourRewards = ({
         </div>
         {/* Part3 */}
         <div>
-          <CustomSplineChart
+          <MultipleSplineChart
             labels={graphLabels}
-            values={graphValues}
-            legend="Accumulated ZCN"
-            // minY={0}
-            // maxY={100}
+            chartData={[
+              {
+                legend: 'Accumulated ZCN',
+                values: graphValues,
+                color: {
+                  r: 0,
+                  g: 158,
+                  b: 255,
+                },
+              },
+            ]}
             xAxisLegend="Time"
             yAxisLegend="ZCN"
           />
