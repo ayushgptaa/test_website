@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-import useCountdown from '/Hooks/useCountdown'
+import useCountdown from 'hooks/useCountdown'
 
 import styles from './CountdownTimer.module.scss'
 
