@@ -1,23 +1,25 @@
-FROM node:16 AS builder
-
+FROM node:16 as dependencies
 WORKDIR /app
+COPY package.json yarn.lock ./
+RUN yarn install --frozen-lockfile
 
-COPY package*.json ./
-
-RUN npm install 
-
+FROM node:16 as builder
+WORKDIR /app
 COPY . .
+COPY --from=dependencies /app/node_modules ./node_modules
+RUN yarn build
 
-RUN npm i && npm run build
+FROM node:16-alpine as runner
+WORKDIR /app
+# ENV NODE_ENV production
 
-FROM nginx:alpine
+# If you are using a custom next.config.js file, uncomment this line.
+COPY --from=builder /app/next.config.js ./
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/.next ./.next
+COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/package.json ./package.json
 
-COPY ./docker /etc/nginx/conf.d
+EXPOSE 3000
 
-RUN rm -rf /usr/share/nginx/html/*
-
-COPY --from=builder /app/out /usr/share/nginx/html
-
-EXPOSE 80
-
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["yarn", "start"]
