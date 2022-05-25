@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import IconContainer from 'components/IconContainer'
+import SocialIcons from 'components/SocialIcons'
 
 import styles from './TopSection.module.scss'
 
@@ -14,27 +14,7 @@ const TopSection = () => {
         <span>
           <Link href="/whitepapers">Whitepapers</Link>
         </span>
-        <IconContainer
-          img="/images/SocialIcons/discord.svg"
-          alt="discord"
-          height={20}
-          width={20}
-          priority
-        />
-        <IconContainer
-          img="/images/SocialIcons/twitter.svg"
-          alt="twitter"
-          height={20}
-          width={20}
-          priority
-        />
-        <IconContainer
-          img="/images/SocialIcons/telegram.svg"
-          alt="telegram"
-          height={20}
-          width={20}
-          priority
-        />
+        <SocialIcons height={24} width={24} />
       </div>
     </div>
   )

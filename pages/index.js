@@ -21,7 +21,10 @@ const Home = () => {
       <ScrollSnapSection alignMobile="start" marginMobile="3x">
         <Features />
       </ScrollSnapSection>
-      <ScrollSnapSection alignDesktop="start" alignMobile="start">
+      <ScrollSnapSection
+        alignDesktop="start"
+        alignMobile="start"
+        marginDesktop="1x">
         <MobileBg />
       </ScrollSnapSection>
       <ScrollSnapSection alignMobile="start">

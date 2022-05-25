@@ -1,9 +1,14 @@
+import { useRouter } from 'next/router'
 import PropTypes from 'prop-types'
 import clsx from 'clsx'
 
 import styles from './Button.module.scss'
 
-const Button = ({ type, text, black, transparent, onClick }) => {
+const Button = ({ type, text, black, transparent, link }) => {
+  const router = useRouter()
+
+  const navigate = () => link && router.push(link)
+
   return (
     <button
       type={type}
@@ -12,7 +17,7 @@ const Button = ({ type, text, black, transparent, onClick }) => {
         black && styles.black,
         transparent && styles.transparent
       )}
-      onClick={onClick}>
+      onClick={navigate}>
       <span>{text}</span>
     </button>
   )
@@ -23,7 +28,7 @@ Button.propTypes = {
   text: PropTypes.string.isRequired,
   black: PropTypes.bool,
   transparent: PropTypes.bool,
-  onClick: PropTypes.func,
+  link: PropTypes.string,
 }
 
 export default Button

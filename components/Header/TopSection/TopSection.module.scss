@@ -1,10 +1,10 @@
+@use '/styles/mixins.scss' as *;
 @import 'include-media';
 
 .wrapper {
   cursor: pointer;
-  display: flex;
+  @include flex-vertical-center(space-between);
   margin: 1rem 2rem 0;
-  justify-content: space-between;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding-bottom: 0.5rem;
   z-index: 1;
@@ -22,11 +22,22 @@
 }
 
 .wrapperRight {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 229px;
+  @include flex-vertical-center(space-between);
   height: 24px;
+  gap: 24px;
+
+  & > ul {
+    margin-top: 0;
+    gap: 24px;
+
+    li {
+      padding: 0;
+    }
+
+    li:nth-child(2) {
+      border: none;
+    }
+  }
 }
 
 @include media('<=tablet') {

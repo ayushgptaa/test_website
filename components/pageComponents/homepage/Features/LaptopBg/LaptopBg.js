@@ -30,7 +30,7 @@ const LaptopBg = () => {
         <div className={styles.textContainer}>
           <Heading text={data.heading} />
           <p className={styles.para}>{data.para}</p>
-          <Button type="button" text={data.btnText} black />
+          <Button type="button" text={data.btnText} black link="/store" />
           <div className={styles.textDetails}>
             <TextContainerBorder />
           </div>

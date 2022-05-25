@@ -7,11 +7,13 @@ import styles from './Provider.module.scss'
 const buttonData = [
   {
     icon: '/images/SocialIcons/discord.svg',
+    link: 'https://discord.gg/j2geZU6S',
     text: 'Talk to the community',
   },
   {
     icon: '/images/earn/Provider/zendesk.svg',
-    text: 'Get technical support',
+    link: '/',
+    text: 'Talk to the community',
   },
 ]
 
@@ -27,8 +29,13 @@ const Provider = () => {
           </p>
         </div>
         <div className={styles.buttonContainer}>
-          {buttonData.map(({ icon, text }) => (
-            <div className={styles.button} key={text}>
+          {buttonData.map(({ link, icon, text }) => (
+            <a
+              href={link}
+              rel="noreferrer"
+              target="_blank"
+              className={styles.button}
+              key={text}>
               <div className={styles.icon}>
                 <Image
                   src={icon}
@@ -36,12 +43,11 @@ const Provider = () => {
                   height={80}
                   alt={text}
                   layout="fixed"
-                  priority
                 />
               </div>
               <div className={styles.divider} />
               <span className={styles.buttonText}>{text}</span>
-            </div>
+            </a>
           ))}
         </div>
       </Fade>

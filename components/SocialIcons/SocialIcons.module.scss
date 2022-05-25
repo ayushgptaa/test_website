@@ -1,9 +1,9 @@
+@use '/styles/mixins.scss' as *;
 @import 'include-media';
 
 .socialIcons {
   margin-top: 2.5rem;
-  display: flex;
-  justify-content: center;
+  @include flex-center;
 
   li {
     cursor: pointer;

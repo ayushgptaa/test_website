@@ -22,9 +22,15 @@ const FooterFeature = ({ data }) => {
         <Heading text={data.heading} />
         <Text>{data.text}</Text>
         <div className={styles.buttons}>
-          <Button text={data.buttonText} type="button" />
+          <Button text={data.buttonText} type="button" link="launch-apps" />
           {data.secondaryBtn && (
-            <Button text="Start Building" type="button" black transparent />
+            <Button
+              text="Start Building"
+              type="button"
+              black
+              transparent
+              link="/build"
+            />
           )}
         </div>
       </Fade>

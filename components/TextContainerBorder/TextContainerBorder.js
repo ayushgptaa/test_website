@@ -1,5 +1,6 @@
+// import Link from 'next/link'
+
 import styles from './TextContainerBorder.module.scss'
-import Link from 'next/link'
 
 const data = [
   {
@@ -19,7 +20,7 @@ const TextContainerBorder = () => {
       <div className={styles.textContainer}>
         <h4 className={styles.heading}>{heading}</h4>
         <p className={styles.para}>{para}</p>
-        <Link href="/">Learn more</Link>
+        {/* <Link href="/">Learn more</Link> */}
       </div>
     </div>
   ))

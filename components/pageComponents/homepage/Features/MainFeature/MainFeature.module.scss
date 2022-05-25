@@ -4,10 +4,8 @@
 
 .container {
   position: relative;
-  display: flex;
+  @include flex-center;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 85%;
   margin: 9rem auto;
   height: 376px;
@@ -39,6 +37,7 @@
     width: 96%;
     height: 704px;
     gap: 1rem;
+    margin-top: 14rem;
   }
 
   .bgPattern {

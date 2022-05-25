@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import Button from '/components/Button'
+// import Button from '/components/Button'
 import Heading from 'components/Heading'
 
 import styles from './MobileBg.module.scss'
@@ -32,7 +32,7 @@ const MobileBackground = () => {
         <Fade direction="up">
           <Heading text={data.heading} />
           <p className={styles.para}>{data.para}</p>
-          <Button type="button" text={data.btnText} black />
+          {/* <Button type="button" text={data.btnText} black /> */}
         </Fade>
       </div>
     </div>
