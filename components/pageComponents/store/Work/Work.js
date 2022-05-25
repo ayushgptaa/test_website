@@ -3,6 +3,7 @@ import { Fade } from 'react-awesome-reveal'
 import { ScrollSnapSection } from 'components/ScrollSnap'
 
 import styles from './Work.module.scss'
+import Button from 'components/Button'
 
 const Work = () => {
   return (
@@ -30,6 +31,15 @@ const Work = () => {
 
       <section className={styles.workStepContainer}>
         <WorkStep />
+        <ScrollSnapSection
+          alignDesktop="end"
+          marginDesktop="1x"
+          style={{ margin: '2rem 0 ' }}>
+          <Button
+            link="https://drive.google.com/file/d/1tNjb_OvX93s47QQ2gFrfeUBdmP0PcL9k/view"
+            text="Read more"
+          />
+        </ScrollSnapSection>
       </section>
     </>
   )

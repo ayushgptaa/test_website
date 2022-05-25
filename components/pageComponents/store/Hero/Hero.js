@@ -1,8 +1,8 @@
 import { Fade } from 'react-awesome-reveal'
 
 import Heading from 'components/Heading'
-import GetNotified from 'components/GetNotified'
-import SocialIcons from 'components/SocialIcons'
+// import GetNotified from 'components/GetNotified'
+// import SocialIcons from 'components/SocialIcons'
 
 import styles from './Hero.module.scss'
 
@@ -19,13 +19,13 @@ const Hero = () => {
               network and a lightning-fast Layer 1 blockchain protocol. This
               makes the process of getting started swift and ituitive.
             </span>
-            <h4 className={styles.secondaryHeading}>
+            {/* <h4 className={styles.secondaryHeading}>
               Get notified when it&#39;s ready
             </h4>
             <div className={styles.bottom}>
               <GetNotified />
               <SocialIcons />
-            </div>
+            </div> */}
           </Fade>
         </div>
       </Fade>

@@ -3,7 +3,7 @@ import { Fade } from 'react-awesome-reveal'
 import { ScrollSnapSection } from 'components/ScrollSnap'
 
 import Heading from 'components/Heading'
-import Button from 'components/Button'
+// import Button from 'components/Button'
 
 import statisticImgMobile from '/public/images/store/Features/statisticImgMobile.svg'
 import statisticImgDesktop from '/public/images/store/Features/statisticImgDesktop.svg'
@@ -53,12 +53,12 @@ const Features = () => {
                   stored on centralized servers, which are controlled by a
                   handful of corporations.
                 </span>
-                <Button
+                {/* <Button
                   text="Check Our Solutions"
                   type="button"
                   black
                   transparent
-                />
+                /> */}
               </Fade>
             </div>
           </section>
