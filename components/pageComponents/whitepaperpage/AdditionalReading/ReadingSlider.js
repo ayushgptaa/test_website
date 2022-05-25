@@ -33,6 +33,7 @@ const DesktopComponent = () => {
               alt={title}
               quality={100}
               layout="fixed"
+              priority
             />
           </div>
           <p>{title}</p>
@@ -72,6 +73,7 @@ const MobileComponent = () => {
                   alt={title}
                   quality={100}
                   layout="fixed"
+                  priority
                 />
               </div>
               <p>{title}</p>

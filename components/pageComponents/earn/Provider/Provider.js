@@ -36,6 +36,7 @@ const Provider = () => {
                   height={80}
                   alt={text}
                   layout="fixed"
+                  priority
                 />
               </div>
               <div className={styles.divider} />

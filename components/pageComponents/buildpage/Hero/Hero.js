@@ -16,7 +16,6 @@ const Hero = () => {
             quality={100}
             alt="heroImg"
             objectFit="cover"
-            srcSet="2048w"
             priority
           />
         </div>

@@ -19,18 +19,21 @@ const TopSection = () => {
           alt="discord"
           height={20}
           width={20}
+          priority
         />
         <IconContainer
           img="/images/SocialIcons/twitter.svg"
           alt="twitter"
           height={20}
           width={20}
+          priority
         />
         <IconContainer
           img="/images/SocialIcons/telegram.svg"
           alt="telegram"
           height={20}
           width={20}
+          priority
         />
       </div>
     </div>

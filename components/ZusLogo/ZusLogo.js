@@ -14,6 +14,7 @@ const ZusLogo = () => {
           height={40}
           width={40}
           quality={100}
+          priority
         />
         <span>züs</span>
       </a>

@@ -17,6 +17,7 @@ const IconContainer = () => {
             height={80}
             width={80}
             layout="fixed"
+            priority
           />
           <p>{text}</p>
         </div>
