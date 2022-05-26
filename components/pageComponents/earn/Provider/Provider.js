@@ -10,11 +10,11 @@ const buttonData = [
     link: 'https://discord.gg/j2geZU6S',
     text: 'Talk to the community',
   },
-  {
-    icon: '/images/earn/Provider/zendesk.svg',
-    link: '/',
-    text: 'Talk to the community',
-  },
+  // {
+  //   icon: '/images/earn/Provider/zendesk.svg',
+  //   link: '/',
+  //   text: 'Talk to the community',
+  // },
 ]
 
 const Provider = () => {

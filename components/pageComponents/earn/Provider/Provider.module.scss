@@ -137,7 +137,6 @@
 @include media('>tablet', '<1025px') {
   .container {
     .buttonContainer {
-      margin: 0 2rem;
       gap: 1rem;
 
       .button {

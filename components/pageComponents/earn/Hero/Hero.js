@@ -1,6 +1,6 @@
 import Heading from 'components/Heading'
 
-import TextContainer from './TextContainer'
+// import TextContainer from './TextContainer'
 
 import styles from './Hero.module.scss'
 import { Fade } from 'react-awesome-reveal'
@@ -21,11 +21,11 @@ const Hero = () => {
           </Fade>
         </div>
       </ScrollSnapSection>
-      <ScrollSnapSection>
+      {/* <ScrollSnapSection>
         <div className={styles.textContainer}>
           <TextContainer />
         </div>
-      </ScrollSnapSection>
+      </ScrollSnapSection> */}
     </main>
   )
 }

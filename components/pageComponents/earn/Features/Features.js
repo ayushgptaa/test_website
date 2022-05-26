@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { Fade } from 'react-awesome-reveal'
 
 import Heading from 'components/Heading'
-import Button from 'components/Button'
+// import Button from 'components/Button'
 import { ScrollSnapSection } from 'components/ScrollSnap'
 
 import featuresData from './featuresData'
@@ -53,7 +53,7 @@ const Features = () => {
               <div className={styles.textContent}>
                 <Heading text={heading} />
                 <p className={styles.text}>{text}</p>
-                <Button text="Get Notified" type="button" />
+                {/* <Button text="Get Notified" type="button" /> */}
               </div>
             </section>
           </Fade>
