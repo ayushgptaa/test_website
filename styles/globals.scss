@@ -24,16 +24,6 @@ a {
   text-decoration: none;
 }
 
-button {
-  &,
-  &:focus,
-  &:active {
-    outline: none;
-    background: transparent;
-    border: none;
-  }
-}
-
 ul {
   list-style-type: none;
 }

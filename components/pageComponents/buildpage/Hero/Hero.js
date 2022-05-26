@@ -29,7 +29,11 @@ const Hero = () => {
             centralized cloud solutions. Be the decentralized answer to an
             increasingly centralized problem. Build on Züs.
           </span>
-          <Button type="button" text="Check Out Our GitHub" />
+          <Button
+            type="button"
+            text="Check Our GitHub"
+            link="https://github.com/0chain"
+          />
         </Fade>
       </div>
     </main>

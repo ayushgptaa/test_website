@@ -36,7 +36,11 @@ const Features = () => {
                 any application to easily migrate to the Züs Cloud Network for
                 enterprise-grade storage.
               </Text>
-              <Button type="button" text="Storage Tutorials" />
+              <Button
+                type="button"
+                text="Documentation"
+                link="https://docs.0chain.net/0chain/0miner"
+              />
             </Fade>
           </div>
         </div>
@@ -67,14 +71,15 @@ const Features = () => {
             <div className={styles.featureListDataContainer}>
               <Fade>
                 {featurelistData.map(
-                  ({ pattern, heading, text, img, buttonText }) => (
+                  ({ pattern, heading, text, img, link }) => (
                     <FeaturesList
                       pattern={pattern}
                       heading={heading}
                       text={text}
                       img={img}
                       key={heading}
-                      buttonText={buttonText}
+                      buttonText="View"
+                      link={link}
                     />
                   )
                 )}

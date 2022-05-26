@@ -1,5 +1,11 @@
 @import 'include-media';
 
+.toggleBtn {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
 @include media('>tablet') {
   .toggleBtn {
     display: none !important;

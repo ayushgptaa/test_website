@@ -44,19 +44,11 @@
     justify-content: center;
     align-items: center;
 
-    h1 {
+    & > h1 {
       font-style: normal;
       font-weight: 700;
       font-size: 71px;
       line-height: 120%;
-    }
-
-    span {
-      max-width: 567px;
-      font-weight: 400;
-      font-size: 15px;
-      line-height: 178.5%;
-      text-align: center;
     }
 
     button {
@@ -64,7 +56,11 @@
       height: 48px;
       font-weight: 600;
       font-size: 15px;
-      line-height: 24px;
+    }
+
+    .text {
+      max-width: 600px;
+      line-height: 178.5%;
     }
   }
 }
