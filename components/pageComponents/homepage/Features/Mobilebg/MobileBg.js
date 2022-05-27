@@ -8,8 +8,8 @@ import { Fade } from 'react-awesome-reveal'
 
 const data = {
   heading: 'An Incentive to Scale',
-  para: 'A crypto economic model that rewards network growth. As more data isstored on the network, more Züs Cloud Network ($ZCN) tokens are staked on the network.',
-  btnText: 'Token Economics',
+  para: 'A crypto economic model that rewards network growth. As more data is stored on the network, more Züs Cloud Network tokens (ZCN) are staked on the network.',
+  // btnText: 'Token Economics',
 }
 
 const MobileBackground = () => {

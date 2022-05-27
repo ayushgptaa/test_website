@@ -16,7 +16,7 @@ import styles from './Footer.module.scss'
 
 const defaultfooterFeatureData = {
   heading: 'Reclaim control of your data',
-  text: ' The Züs Cloud Network is a decentralized data storage network. Enabled by a cutting-edge storage protocol; secured by a novel layer 1 blockchain.',
+  text: 'The Züs Cloud Network is a decentralized data storage network that delivers data ownership to the user. Become part of the movement.',
   buttonText: 'Launch Apps',
   secondaryBtn: true,
 }
