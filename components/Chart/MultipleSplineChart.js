@@ -135,6 +135,13 @@ export const MultipleSplineChart = ({
       },
       legend: {
         display: showLegend === true,
+        position: 'bottom',
+
+        labels: {
+          boxHeight: 0,
+          boxWidth: 60,
+          color: '#FFFFFF',
+        },
       },
       annotation: {
         annotations: {

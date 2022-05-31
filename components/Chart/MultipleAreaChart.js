@@ -5,7 +5,6 @@ import Chart from 'chart.js/auto'
 
 import PropTypes from 'prop-types'
 import {
-  convertNumberToStringRepresentation,
   getRandomColor,
   getTextDisplayWidth,
   padToIncreaseWidth,
@@ -22,6 +21,7 @@ export const MultipleAreaChart = ({
   chartTitle,
   showLegend,
   chartData,
+  formatYLabels,
 }) => {
   const [data, setData] = React.useState({
     labels: [],
@@ -117,9 +117,7 @@ export const MultipleAreaChart = ({
         y: {
           ticks: {
             color: '#FFFFFF',
-            callback: (value) => {
-              return convertNumberToStringRepresentation(value)
-            },
+            callback: formatYLabels || undefined,
           },
           min: minY,
           max: maxY,
@@ -205,14 +203,12 @@ export const MultipleAreaChart = ({
   }
 
   return (
-    <div>
-      <Line
-        data={data}
-        options={options}
-        id="chart"
-        plugins={[drawDottedLinePlugin]}
-      />
-    </div>
+    <Line
+      data={data}
+      options={options}
+      id="chart"
+      plugins={[drawDottedLinePlugin]}
+    />
   )
 }
 
@@ -238,6 +234,7 @@ MultipleAreaChart.propTypes = {
   yAxisLegend: PropTypes.string,
   chartTitle: PropTypes.string,
   showLegend: PropTypes.bool,
+  formatYLabels: PropTypes.func,
 }
 
 export default MultipleAreaChart

@@ -16,7 +16,7 @@ const InflationChart = () => {
   const values1 = [0, 90, 100, 100, 100, 100, 100]
   const values2 = [45, 80, 85, 90, 95, 97, 100]
 
-  const formatYLabels = value => `${value}%`
+  const formatYLabels = (value) => `${value}%`
 
   return (
     <MultipleSplineChart
@@ -24,18 +24,19 @@ const InflationChart = () => {
         {
           values: values1,
           color: theme.defaultTheme.blue,
-          legend: 'chart1',
+          legend: '$ZCN',
         },
         {
           values: values2,
           color: theme.defaultTheme.lightOrange,
-          legend: 'chart2',
-          dotted: [11, 7],
+          legend: '$BTC',
+          dotted: [9, 9],
         },
       ]}
       labels={labels}
       values={values1}
       formatYLabels={formatYLabels}
+      xAxisLegend="Year Since Genesis Block"
       showLegend
     />
   )

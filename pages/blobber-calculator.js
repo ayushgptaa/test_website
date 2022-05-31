@@ -1,10 +1,9 @@
 import CalculatorComponent from 'components/pageComponents/blobber-calculator-page/CalculatorComponent'
-import InflationChart from 'components/pageComponents/blobber-calculator-page/InflationGraph'
+import ZCNSupply from 'components/pageComponents/blobber-calculator-page/ZCNSupply'
 
 const BlobberCalculator = () => {
   return (
     <div>
-      <InflationChart />
       <div
         style={{
           justifyContent: 'center',
@@ -12,7 +11,8 @@ const BlobberCalculator = () => {
           display: 'flex',
           flexDirection: 'column',
         }}>
-        <div>Top Part</div>
+        <ZCNSupply />
+
         <CalculatorComponent />
       </div>
     </div>
