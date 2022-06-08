@@ -1,7 +1,9 @@
-import Heading from 'components/Heading'
 import { Fade } from 'react-awesome-reveal'
+
+import Heading from 'components/Heading'
 import ReadingSlider from './AdditionalReading/ReadingSlider'
 import IconContainer from './IconContainer'
+
 import styles from './WhitepaperComponent.module.scss'
 
 const WhitepaperComponent = () => {
