@@ -2,7 +2,7 @@
 
 @import 'include-media';
 
-.container {
+.rootContainer {
   position: relative;
   margin-top: 3rem;
 }
@@ -25,15 +25,17 @@
   text-align: center;
 }
 
-.iconContainer {
-  span {
-    width: 100px !important;
-    height: 100px !important;
-  }
+.appLaunchContainer {
+  margin: 6rem auto 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, $mobile-width);
+  justify-content: center;
+  gap: 30px;
 }
 
-.appLaunchContainer {
-  margin-top: 5rem;
+.iconContainer {
+  width: 100px !important;
+  height: 100px !important;
 }
 
 .containerContent {
@@ -46,7 +48,22 @@
   }
 }
 
+.whiteBorder {
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  inset: 0;
+  z-index: -99;
+  border: 4px solid #fff;
+  border-radius: inherit;
+  opacity: 0;
+}
+
 @include media('>tablet') {
+  .rootContainer {
+    position: relative;
+    margin-top: 8rem;
+  }
+
   .ellipse {
     height: 1410px;
     top: -1100px;
@@ -57,38 +74,28 @@
   .mainText {
     width: 100%;
     max-width: 1145px;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
 
     h1 {
-      font-weight: 700;
       font-size: 72px;
-      line-height: 120%;
-    }
-  }
-
-  .containerContent {
-    & > h1 {
-      font-weight: 700;
-      font-size: 52px;
-      line-height: 116%;
     }
   }
 
   .appLaunchContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     width: 100%;
-    max-width: 983px;
-    margin: 6rem auto;
-    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 7rem auto 10rem;
+  }
+
+  .containerContent {
+    pointer-events: none;
+    
+    > h1 {
+      font-size: 40px;
+      line-height: 116%;
+    }
   }
 
   .iconContainer {
-    span {
-      width: 140px !important;
-      height: 140px !important;
-    }
+    pointer-events: all;
   }
 }

@@ -1,10 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Image from 'next/image'
 import Link from 'next/link'
+import propTypes from 'prop-types'
 
 import styles from './ZusLogo.module.scss'
 
-const ZusLogo = () => {
+const ZusLogo = ({ removeZusText }) => {
   return (
     <Link href="/" passHref>
       <a className={styles.logoLink}>
@@ -16,10 +17,14 @@ const ZusLogo = () => {
           quality={100}
           priority
         />
-        <span>züs</span>
+        {!removeZusText && <span>züs</span>}
       </a>
     </Link>
   )
+}
+
+ZusLogo.propTypes = {
+  removeZusText: propTypes.bool,
 }
 
 export default ZusLogo

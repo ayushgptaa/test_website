@@ -5,7 +5,7 @@ import Footer from 'components/Footer'
 const LaunchApps = () => {
   return (
     <>
-      <Header removeImg />
+      <Header removeImg removeDesktopNav removeSocialIcons removeZusText />
       <AppLaunchComponent />
       <Footer showfooterBackground={false} showfooterFeature={false} />
     </>

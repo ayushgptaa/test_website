@@ -8,6 +8,7 @@ const applaunchData = [
     heading: 'Vult',
     text: 'A Züs crypto app. Securely upload, download, and share files',
     btnText: 'Storage',
+    border: true,
   },
   {
     icon: boltIcon,
@@ -20,6 +21,7 @@ const applaunchData = [
     heading: 'Atlus',
     text: 'An explorer optimised to search and querly the Züs Cloud Network',
     btnText: 'Explore',
+    btnTextSecondary: 'Releasing in 10 days',
   },
 ]
 

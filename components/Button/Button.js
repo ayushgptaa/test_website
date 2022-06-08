@@ -4,7 +4,7 @@ import clsx from 'clsx'
 
 import styles from './Button.module.scss'
 
-const Button = ({ type, text, black, transparent, link }) => {
+const Button = ({ type, text, black, transparent, link, ...rest }) => {
   const router = useRouter()
 
   const navigate = () => link && router.push(link)
@@ -17,7 +17,8 @@ const Button = ({ type, text, black, transparent, link }) => {
         black && styles.black,
         transparent && styles.transparent
       )}
-      onClick={navigate}>
+      onClick={navigate}
+      {...rest}>
       <span>{text}</span>
     </button>
   )
