@@ -1,17 +1,26 @@
+@use '/styles/mixins.scss' as *;
+
 @import 'include-media';
 
+$breakpoints: (
+  tablet: 768px,
+  desktop: 1074px,
+);
+
 .testimonialContainer {
-  margin-top: 2rem;
+  margin-top: 3rem;
   width: 100%;
+  cursor: grab;
 }
 
 .image {
   position: relative;
   height: 360px;
   width: 327px;
+  border-radius: 16px;
 
   > span {
-    border-radius: 16px;
+    border-radius: inherit;
   }
 }
 
@@ -19,20 +28,20 @@
   position: relative;
   margin-top: 2.5rem;
   font-weight: 700;
-  font-size: 1.1rem;
-  line-height: 2rem;
+  font-size: 1.2rem;
+  line-height: 32px;
 
   &:before {
     content: '';
-    display: inline-block;
-    width: 97px;
-    height: 72px;
-    background: url('/images/homePage/Testimonials/textPattern.svg')
-      center/contain no-repeat;
-    position: absolute;
-    z-index: -99;
-    top: -20px;
-    left: -25px;
+    @include background-image(
+      '/images/homePage/Testimonials/textPattern.svg',
+      center,
+      contain,
+      70px,
+      97px
+    );
+    top: -15px;
+    left: 0;
   }
 }
 
@@ -54,7 +63,7 @@
 
 .name {
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 20px;
   line-height: 28px;
 }
 
@@ -63,29 +72,53 @@
     display: flex;
     align-items: center;
     margin: 2rem 0;
+    gap: 70px;
   }
 
   .image {
-    width: 492px;
-    height: 492px;
+    min-width: 350px;
+    height: 350px;
+  }
 
-    > span {
-      width: 492px !important;
-      height: 492px !important;
-      border-radius: 24px;
+  .review {
+    font-size: 20px;
+    line-height: 40px;
+
+    &:before {
+      width: 100px;
+      height: 65px;
+      top: -6px;
+      left: -55px;
     }
+  }
+
+  .role {
+    gap: 0;
+  }
+}
+
+@include media('>=desktop') {
+  .testimonialContainer {
+    gap: 100px;
+  }
+
+  .image {
+    position: relative;
+    min-width: 492px;
+    height: 492px;
+    border-radius: 24px;
   }
 
   .reviewContainer {
     display: flex;
     flex-direction: column;
-    margin: 0 10rem;
+    max-width: 580px;
+    width: auto;
   }
 
   .review {
     margin: 0;
-    width: 580px;
-    font-size: 32px;
+    font-size: 30px;
     line-height: 48px;
 
     &:before {
@@ -101,7 +134,6 @@
   }
 
   .name {
-    font-weight: 700;
     font-size: 24px;
     line-height: 28px;
   }

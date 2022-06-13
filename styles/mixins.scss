@@ -21,8 +21,8 @@
 }
 
 @mixin background-image($url, $position, $size, $height, $width) {
-  background: url($url) $position/$size no-repeat;
   position: absolute;
+  background: url($url) $position/$size no-repeat;
   z-index: -9;
   height: $height;
   width: $width;
