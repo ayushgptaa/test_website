@@ -8,7 +8,6 @@ const applaunchData = [
     heading: 'Vult',
     text: 'A Züs crypto app. Securely upload, download, and share files',
     btnText: 'Storage',
-    border: true,
   },
   {
     icon: boltIcon,

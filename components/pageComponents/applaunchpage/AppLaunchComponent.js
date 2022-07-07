@@ -1,8 +1,9 @@
 import { useEffect } from 'react'
 import Image from 'next/image'
 import { Fade, Zoom } from 'react-awesome-reveal'
+import clsx from 'clsx'
 
-import Container from './Container'
+import AppContainer from './AppContainer'
 import Heading from 'components/Heading'
 import Text from 'components/Text'
 import Button from 'components/Button'
@@ -13,23 +14,30 @@ import styles from './AppLaunch.module.scss'
 
 const AppLaunchComponent = () => {
   useEffect(() => {
-    const IconContainer = document.getElementById('IconContainer')
-    const vultBorder = document.getElementById('vultBorder')
+    const IconContainers = document.querySelectorAll('.IconContainer')
 
-    const showBorder = () => {
-      vultBorder.style.opacity = 1
+    const getBorder = (index) => {
+      return `.border-${index}`
     }
 
-    const hideBorder = () => {
-      vultBorder.style.opacity = 0
+    const showBorder = (index) => {
+      document.querySelector(getBorder(index)).style.opacity = 1
     }
 
-    IconContainer.addEventListener('mouseenter', showBorder)
-    IconContainer.addEventListener('mouseleave', hideBorder)
+    const hideBorder = (index) => {
+      document.querySelector(getBorder(index)).style.opacity = 0
+    }
+
+    IconContainers.forEach((IconContainer, index) => {
+      IconContainer.addEventListener('mouseenter', showBorder.bind(null, index))
+      IconContainer.addEventListener('mouseleave', hideBorder.bind(null, index))
+    })
 
     return () => {
-      IconContainer.removeEventListener('mouseenter', showBorder)
-      IconContainer.removeEventListener('mouseleave', hideBorder)
+      IconContainers.forEach((IconContainer) => {
+        IconContainer.removeEventListener('mouseenter', showBorder)
+        IconContainer.removeEventListener('mouseleave', hideBorder)
+      })
     }
   }, [])
 
@@ -46,19 +54,18 @@ const AppLaunchComponent = () => {
       <Zoom cascade>
         <div className={styles.appLaunchContainer}>
           {applaunchData.map(
-            ({ icon, heading, text, btnText, border, btnTextSecondary }) => (
-              <Container key={heading}>
-                <div
-                  className={styles.whiteBorder}
-                  id={border && 'vultBorder'} />
+            ({ icon, heading, text, btnText, btnTextSecondary }, index) => (
+              <AppContainer key={heading}>
+                <div className={clsx(styles.whiteBorder, `border-${index}`)} />
                 <div className={styles.containerContent}>
-                  <div className={styles.iconContainer} id="IconContainer">
+                  <div className={clsx(styles.iconContainer, 'IconContainer')}>
                     <Image
                       src={icon}
                       width={icon.width}
                       height={icon.height}
                       alt={heading}
                       layout="fixed"
+                      priority="false"
                     />
                   </div>
                   <Heading text={heading} />
@@ -73,12 +80,12 @@ const AppLaunchComponent = () => {
                     style={{ top: '4.5rem' }}
                   />
                 )}
-              </Container>
+              </AppContainer>
             )
           )}
-          <Container textContainer>
+          <AppContainer textContainer>
             <Heading text="More coming soon" />
-          </Container>
+          </AppContainer>
         </div>
       </Zoom>
     </section>

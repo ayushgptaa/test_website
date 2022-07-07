@@ -2,9 +2,9 @@ import { Fade } from 'react-awesome-reveal'
 import PropTypes from 'prop-types'
 import clsx from 'clsx'
 
-import styles from './Container.module.scss'
+import styles from './AppContainer.module.scss'
 
-const Container = ({ children, textContainer }) => {
+const AppContainer = ({ children, textContainer }) => {
   return (
     <Fade>
       <div
@@ -19,8 +19,8 @@ const Container = ({ children, textContainer }) => {
   )
 }
 
-Container.propTypes = {
+AppContainer.propTypes = {
   children: PropTypes.any,
   textContainer: PropTypes.bool,
 }
-export default Container
+export default AppContainer
