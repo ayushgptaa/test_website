@@ -1,9 +1,10 @@
+import { Fade } from 'react-awesome-reveal'
+
 import Heading from 'components/Heading'
 import Button from 'components/Button'
 import Image from 'next/image'
 
 import styles from './Hero.module.scss'
-import { Fade } from 'react-awesome-reveal'
 
 const Hero = () => {
   return (
@@ -20,8 +21,8 @@ const Hero = () => {
           />
         </div>
       </Fade>
-      <div className={styles.contentContainer}>
-        <Fade direction="up">
+      <Fade direction="up">
+        <div className={styles.contentContainer}>
           <Heading text="Build for the future" uppercase />
           <span className={styles.text}>
             Global data consumption is growing at a faster rate than global data
@@ -29,13 +30,14 @@ const Hero = () => {
             centralized cloud solutions. Be the decentralized answer to an
             increasingly centralized problem. Build on Züs.
           </span>
+
           <Button
             type="button"
             text="Check Our GitHub"
             link="https://github.com/0chain"
           />
-        </Fade>
-      </div>
+        </div>
+      </Fade>
     </main>
   )
 }

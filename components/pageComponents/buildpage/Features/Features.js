@@ -1,15 +1,15 @@
 import Image from 'next/image'
+import { Fade } from 'react-awesome-reveal'
 
 import Button from 'components/Button'
 import Heading from 'components/Heading'
 import Text from 'components/Text'
+import { ScrollSnapSection } from 'components/ScrollSnap'
 import FeaturesList from 'pageComponents/homepage/Features/FeaturesList'
 
 import featurelistData from './featuresListData'
 
 import styles from './Features.module.scss'
-import { ScrollSnapSection } from 'components/ScrollSnap'
-import { Fade } from 'react-awesome-reveal'
 
 const Features = () => {
   return (
@@ -27,8 +27,8 @@ const Features = () => {
               />
             </div>
           </Fade>
-          <div className={styles.textContainer}>
-            <Fade direction="up">
+          <Fade direction="up">
+            <div className={styles.textContainer}>
               <Heading text="Migrate Any App" />
               <Text>
                 Züs is designed from the ground-up to simplify the migration
@@ -41,8 +41,8 @@ const Features = () => {
                 text="Documentation"
                 link="https://docs.0chain.net/0chain/0miner"
               />
-            </Fade>
-          </div>
+            </div>
+          </Fade>
         </div>
       </ScrollSnapSection>
 
@@ -51,8 +51,8 @@ const Features = () => {
           <Fade direction="up" cascade>
             <Heading text="Affordable Pricing, Top Performance" />
             <Text>
-              With added file security features only possible on Züs&#39;
-              blockchain powered Cloud Network.
+              With added file security features only possible on the Züs
+              blockchain
             </Text>
           </Fade>
         </div>

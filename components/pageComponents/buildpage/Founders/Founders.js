@@ -49,7 +49,7 @@ const Founders = () => {
               app would be unworkable on Ethereum due to various latency and
               scalability constraints. He needed a blockchain capable of
               providing fast-finality, scalability, and a high performance
-              storage service. Since such a platform didn’t exist, Saswata was
+              storage service. Since such a platform didn’t exist, Saswata
               teamed up with Tom Austin to build the platform from scratch.
               <span>
                 Four years later, they’ve built not only Züs - a hyper-speed
@@ -66,6 +66,12 @@ const Founders = () => {
             </Text>
           </Fade>
         </div>
+      </ScrollSnapSection>
+
+      <ScrollSnapSection
+        alignMobile="start"
+        marginMobile="1x"
+        alignDesktop="end">
         <Zoom>
           <div className={styles.foundersContainer}>
             <div className={styles.foundersImg}>
