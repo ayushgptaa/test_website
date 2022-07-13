@@ -18,7 +18,7 @@ const MainFeature = () => {
         </div>
         <p className={styles.para}>
           The Züs Cloud Network is a hyper-speed data storage network. Enabled
-          by a cutting-edge storage protocol; secured by a novel layer 1
+          by a cutting-edge storage protocol. Secured by a novel layer 1
           blockchain.
         </p>
       </Fade>
