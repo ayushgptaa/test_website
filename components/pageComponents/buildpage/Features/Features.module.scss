@@ -3,160 +3,177 @@
 
 @import 'include-media';
 
-.container {
+.mainFeatureWrapper {
   margin: auto;
-  margin-top: 2rem;
-  width: $mobile-width;
+  border-top: $border-gray;
+  padding-top: 3rem;
 }
 
 .textContainer {
-  margin-top: -2rem;
-  z-index: 1;
+  padding: 20px;
+  text-align: left;
 
-  button {
-    margin-top: 2rem;
+  h3 {
+    font-size: 42px;
+    line-height: 110%;
   }
-}
-
-.codeImgContainer {
-  span {
-    width: $mobile-width !important;
-  }
-}
-
-.bgImgContainer {
-  padding: 1rem;
-  text-align: center;
-  margin-top: 6rem;
-  width: $mobile-width;
-  height: 347px;
-  border-radius: 16px;
-  background: url('/images/buildPage/Features/bgPatternMobile.svg') top
-    left/contain no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
   p {
-    font-weight: 700;
-    font-size: 23px;
-    line-height: 122%;
+    text-align: left;
+    margin-top: 2rem;
   }
 }
 
-.featureList {
-  margin-top: 6rem;
-  text-align: center;
+.btnContainer {
+  // margin: auto;
+  margin-top: 2rem;
+  @include flex-vertical-center(center);
+  gap: 8px;
 
   button {
+    width: 170px;
+    height: 48px;
+    margin: none;
+  }
+}
+
+.laptopImgContainer {
+  position: relative;
+  height: 390px;
+  width: 425px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.pricingFeatureWrapper {
+  padding: 2rem 0;
+  border-top: $border-gray;
+}
+
+.pricingFeature {
+  position: relative;
+  border-radius: 16px;
+  padding: 48px 20px;
+  width: 85%;
+  height: 279px;
+  margin: auto;
+  text-align: center;
+  overflow: hidden;
+
+  h3 {
+    font-size: 28px;
+    line-height: 115%;
+  }
+
+  p {
     margin-top: 2rem;
   }
+}
+.ellipseLeft {
+  position: absolute;
+  width: 894px;
+  height: 894px;
+  left: -600px;
+  top: -416px;
+  background: $blue-gradient-center;
+  opacity: 0.2;
+}
+
+.ellipseRight {
+  position: absolute;
+  width: 686px;
+  height: 686px;
+  left: 30px;
+  top: -19px;
+  background: $blue-gradient-center;
+  opacity: 0.2;
 }
 
 @include media('>880px') {
-  .container {
-    margin: 0;
-    padding: 6rem 2rem;
+  .mainFeatureWrapper {
+    position: relative;
+    height: 583px;
     width: 100%;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.02);
+    z-index: 9;
   }
 
-  .header {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-
-    .codeImgContainer {
-      span {
-        width: 460px !important;
-      }
-    }
-
-    .textContainer {
-      max-width: 490px;
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-
-      h1 {
-        font-style: normal;
-        font-weight: 700;
-        font-size: 79px;
-        line-height: 116%;
-      }
-
-      p {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 178.5%;
-        margin: 0;
-      }
-
-      button {
-        margin: 0;
-        width: 183px;
-        height: 48px;
-      }
-    }
+  .mainFeature {
+    position: relative;
+    width: 1440px;
+    height: 100%;
+    margin: auto;
+    @include flex-vertical-center(flex-start);
   }
 
-  .bgImgContainer {
-    width: 100%;
-    height: 605px;
-    background: url('/images/buildPage/Features/bgPatternDesktop.svg')
-      center/cover no-repeat;
+  .laptopImgContainer {
+    position: absolute;
+    width: 1080px;
+    height: 930px;
+    transform: none;
+    left: 480px;
+    bottom: -305px;
+    transform: none;
+    // right: -10%;
+  }
+
+  .textContainer {
+    max-width: 490px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 5rem 0;
+    gap: 2rem;
+    margin-left: 8rem;
 
-    h1 {
-      font-weight: 700;
-      font-size: 79px;
-      line-height: 122%;
-      max-width: 704px;
+    h3 {
+      font-size: 54px;
+      line-height: 110%;
     }
 
     p {
-      max-width: 993px;
-      font-weight: 700;
-      font-size: 31px;
-      line-height: 178.5%;
+      text-align: left;
+    }
+
+    .btnContainer {
+      margin: 0;
+      gap: 40px;
+      width: auto;
+      justify-content: flex-start;
+
+      button {
+        margin: 0;
+      }
     }
   }
 
-  .featureList {
-    margin: 8rem 0 2rem;
+  .pricingFeatureWrapper {
+    padding: 100px 0;
+  }
 
-    > h1 {
-      font-weight: 700;
-      font-size: 79px;
-      line-height: 116%;
+  .pricingFeature {
+    width: 1160px;
+    height: 605px;
+    border-radius: 32px;
+    margin: auto;
+    padding: 160px 200px 0 200px;
+
+    h3 {
+      font-size: 80px;
+      line-height: 122%;
     }
+  }
 
-    > p {
-      max-width: 607px;
-      margin: 2rem auto;
+  .ellipseRight {
+    width: 1694px;
+    height: 1694px;
+    left: -699px;
+    top: -735px;
+  }
 
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 178.5%;
-    }
-
-    .featureListDataContainer {
-      display: flex;
-      gap: 4rem;
-      flex-wrap: wrap;
-      justify-content: center;
-
-      p {
-        width: 288px;
-        height: 87px;
-      }
-    }
+  .ellipseLeft {
+    width: 1694px;
+    height: 1694px;
+    left: 219px;
+    top: -305px;
   }
 }

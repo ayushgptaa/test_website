@@ -1,0 +1,155 @@
+@use '/styles/variables.scss' as *;
+@use '/styles/mixins.scss' as *;
+
+@import 'include-media';
+
+.container {
+  padding: 96px 0 67px 0;
+  background: $off-white;
+  color: $grey-7;
+  p {
+    color: inherit;
+  }
+}
+
+.textContent {
+  text-align: center;
+  padding: 0 20px;
+
+  h3 {
+    font-size: 28px;
+    line-height: 115%;
+  }
+
+  p {
+    margin-top: 2rem;
+  }
+}
+
+.apps {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, 310px);
+  padding-top: 35px;
+}
+
+.app {
+  position: relative;
+  padding: 50px 25px 0;
+  width: 310px;
+  height: 410px;
+  border: 1px solid $grey-3;
+  text-align: center;
+  overflow: hidden;
+  background-color: #fff;
+
+  h3,
+  p {
+    margin-top: 24px;
+  }
+
+  h3 {
+    font-size: 28px;
+    line-height: 115%;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 160%;
+  }
+
+  button {
+    margin-top: 40px;
+    border: 1px solid $grey-7;
+    width: 140px;
+    font-size: 16px;
+    line-height: 24px;
+    color: inherit;
+  }
+}
+
+.icon {
+  position: relative;
+  width: 92.21px;
+  height: 71.22px;
+  margin: auto;
+  z-index: 2;
+}
+
+.gosdk {
+  position: absolute;
+  width: 338px;
+  height: 338px;
+  top: -50px;
+  left: 25px;
+  @include custom-gradient-center(#2d00ff 0%, rgba(45, 0, 255, 0) 100%);
+  opacity: 0.1;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  z-index: 1;
+}
+
+.blobber {
+  position: absolute;
+  width: 288px;
+  height: 288px;
+  left: 50px;
+  top: -20px;
+  @include custom-gradient-center(#0053ff 0%, rgba(0, 83, 255, 0) 100%);
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.zboxcli {
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  left: 90px;
+  top: 5px;
+  @include custom-gradient-center(#009eff 0%, rgba(0, 158, 255, 0) 100%);
+  opacity: 0.1;
+  transform: matrix(1, 0, 0, -1, 0, 0);
+  z-index: 1;
+}
+
+.zwalletcli {
+  position: absolute;
+  width: 338px;
+  height: 338px;
+  left: 25px;
+  top: -25px;
+  @include custom-gradient-center(#2d00ff 0%, rgba(45, 0, 255, 0) 100%);
+  opacity: 0.1;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  z-index: 1;
+}
+
+@include media('>tablet') {
+  .container {
+    padding: 120px 0 90px 0;
+    background: $off-white;
+    color: $grey-7;
+    p {
+      color: inherit;
+    }
+  }
+
+  .textContent {
+    width: 607px;
+    margin: auto;
+
+    h3 {
+      font-size: 54px;
+      line-height: 110%;
+    }
+
+    p {
+      margin-top: 40px;
+      font-size: 18px;
+      line-height: 160%;
+    }
+  }
+
+  .apps {
+    padding-top: 65px;
+  }
+}

@@ -3,92 +3,66 @@ import { Fade } from 'react-awesome-reveal'
 
 import Button from 'components/Button'
 import Heading from 'components/Heading'
-import Text from 'components/Text'
-import { ScrollSnapSection } from 'components/ScrollSnap'
-import FeaturesList from 'pageComponents/homepage/Features/FeaturesList'
+import Paragraph from 'components/Paragraph'
 
-import featurelistData from './featuresListData'
+import useGetScreenSize from 'hooks/useGetScreenSize'
 
 import styles from './Features.module.scss'
 
 const Features = () => {
+  const isMobile = useGetScreenSize()
   return (
-    <section className={styles.container}>
-      <ScrollSnapSection>
-        <div className={styles.header}>
-          <Fade direction="up">
-            <div className={styles.codeImgContainer}>
+    <>
+      <section className={styles.mainFeatureWrapper}>
+        <div className={styles.mainFeature}>
+          <Fade duration={600} triggerOnce>
+            <div className={styles.laptopImgContainer}>
               <Image
-                src="/images/buildPage/Features/codeImg.png"
-                width={460}
-                height={570}
+                src={
+                  isMobile
+                    ? `/images/buildPage/Features/laptopImgMobile.png`
+                    : `/images/buildPage/Features/laptopImgdesktop.png`
+                }
                 alt="migrate any app"
                 quality={100}
+                layout="fill"
+                priority={false}
               />
             </div>
           </Fade>
-          <Fade direction="up">
-            <div className={styles.textContainer}>
-              <Heading text="Migrate Any App" />
-              <Text>
+
+          <div className={styles.textContainer}>
+            <Fade direction="up" triggerOnce cascade>
+              <Heading text="Migrate Any App" Tag="h3" />
+              <Paragraph>
                 Züs is designed from the ground-up to simplify the migration
                 process from traditional cloud. Tools such as the Zbox CLI allow
                 any application to easily migrate to the Züs Cloud Network for
                 enterprise-grade storage.
-              </Text>
-              <Button
-                type="button"
-                text="Documentation"
-                link="https://docs.0chain.net/0chain/0miner"
-              />
-            </div>
-          </Fade>
-        </div>
-      </ScrollSnapSection>
-
-      <ScrollSnapSection>
-        <div className={styles.bgImgContainer}>
-          <Fade direction="up" cascade>
-            <Heading text="Affordable Pricing, Top Performance" />
-            <Text>
-              With added file security features only possible on the Züs
-              blockchain
-            </Text>
-          </Fade>
-        </div>
-      </ScrollSnapSection>
-
-      <ScrollSnapSection alignMobile="start">
-        <Fade cascade>
-          <div className={styles.featureList}>
-            <Heading text="Building Resources" />
-            <Text>
-              We’ve brought together the tools and documentation to help get you
-              started. Join a growing community of engineers. Build the next
-              generation of the public cloud.
-            </Text>
-
-            <div className={styles.featureListDataContainer}>
-              <Fade>
-                {featurelistData.map(
-                  ({ pattern, heading, text, img, link }) => (
-                    <FeaturesList
-                      pattern={pattern}
-                      heading={heading}
-                      text={text}
-                      img={img}
-                      key={heading}
-                      buttonText="View"
-                      link={link}
-                    />
-                  )
-                )}
-              </Fade>
-            </div>
+              </Paragraph>
+              <div className={styles.btnContainer}>
+                <Button type="button" black transparent text="CLI Migration" />
+                <Button type="button" text="Blimp Migration" />
+              </div>
+            </Fade>
           </div>
-        </Fade>
-      </ScrollSnapSection>
-    </section>
+        </div>
+      </section>
+
+      <section className={styles.pricingFeatureWrapper}>
+        <div className={styles.pricingFeature}>
+          <div className={styles.ellipseLeft} />
+          <div className={styles.ellipseRight} />
+          <Fade direction="up" cascade triggerOnce duration={600}>
+            <Heading text="Affordable Pricing, Top Performance" Tag="h3" />
+            <Paragraph>
+              With added file security features only possible on Züs' blockchain
+              powered Cloud Network.
+            </Paragraph>
+          </Fade>
+        </div>
+      </section>
+    </>
   )
 }
 

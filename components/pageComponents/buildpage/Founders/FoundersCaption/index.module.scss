@@ -3,44 +3,49 @@
 
 @import 'include-media';
 
-.foundersCaption {
-  width: $mobile-width;
-  @include flex(space-between, flex-start);
-  gap: 10px;
-  text-align: center;
-  margin-top: 10px;
-
-  > div {
-    width: 50%;
-  }
-}
-
-.heading {
-  font-weight: 700;
-  font-size: 1.1rem;
-  line-height: 28px;
-}
-
-.text {
-  @include primary-text-mobile;
-  font-size: 0.8rem;
-  line-height: normal;
+.container {
+  display: none;
 }
 
 @include media('>tablet') {
-  .foundersCaption {
+  .container {
+    display: block;
+    padding: 70px 0 40px;
+    @include flex-center;
+    gap: 2rem;
+    border-top: $border-gray;
     width: 100%;
-    max-width: 700px;
-    gap: 50px;
   }
 
-  .heading {
-    font-size: 1.5rem;
+  .details {
+    width: 284px;
+    height: 235px;
+    color: $grey-7;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
   }
 
-  .text {
-    font-size: 1rem;
-    line-height: 24px;
-    margin-top: 0.5rem;
+  .name {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 125%;
+  }
+
+  .role {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 125%;
+    color: $grey-6;
+    margin-top: 10px;
+  }
+
+  .description,
+  .work {
+    font-size: 14px;
+    line-height: 160%;
+    color: $grey-5;
+    font-weight: 400;
+    margin-top: 10px;
   }
 }

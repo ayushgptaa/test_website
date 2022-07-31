@@ -3,23 +3,20 @@ import Hero from 'pageComponents/buildpage/Hero'
 import Features from 'pageComponents/buildpage/Features'
 import Footer from 'components/Footer'
 import Founders from 'pageComponents/buildpage/Founders'
-
 import footerFeatureData from 'pageComponents/buildpage/Footer/footerFeatureData'
-import ScrollSnap, { ScrollSnapSection } from 'components/ScrollSnap'
+import PageContainer from 'components/PageContainer'
+import Apps from 'components/pageComponents/buildpage/Apps'
 
 const Build = () => {
   return (
-    <ScrollSnap>
-      <ScrollSnapSection style={{ position: 'relative' }}>
-        <Header removeImg />
-        <Hero />
-      </ScrollSnapSection>
+    <PageContainer>
+      <Header removeImg />
+      <Hero />
       <Features />
+      <Apps />
       <Founders />
-      <ScrollSnapSection alignMobile="start">
-        <Footer footerFeatureData={footerFeatureData} />
-      </ScrollSnapSection>
-    </ScrollSnap>
+      <Footer footerFeatureData={footerFeatureData} />
+    </PageContainer>
   )
 }
 
