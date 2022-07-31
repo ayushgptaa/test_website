@@ -1,0 +1,29 @@
+@use '/styles/mixins.scss' as *;
+@use '/styles/variables.scss' as *;
+
+@import 'include-media';
+
+.container {
+  position: relative;
+  padding: 4rem 0 4rem 0;
+}
+
+.contentContainer {
+  padding: 0 20px;
+  margin: auto;
+  text-align: center;
+
+  p {
+    margin-top: 2rem;
+  }
+}
+
+@include media('>tablet') {
+  .container {
+    padding: 5rem 0 6rem 0;
+  }
+
+  .contentContainer {
+    width: 807px;
+  }
+}
