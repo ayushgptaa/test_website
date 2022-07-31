@@ -11,8 +11,9 @@ const GetNotified = () => {
         name="email"
         id="email"
         placeholder="Enter your email"
+        autoComplete="off"
       />
-      <Button type="submit" text="Get notified" />
+      <Button type="submit" text="Get Notified" />
     </form>
   )
 }

@@ -4,16 +4,16 @@
 .socialIcons {
   margin-top: 2.5rem;
   @include flex-center;
+  z-index: 99;
 
   li {
     cursor: pointer;
     padding: 0 1.8rem;
+    border-right: 1px solid rgb(255, 255, 255, 0.1);
   }
 
-  li:nth-child(2) {
-    border: 1px solid rgb(255, 255, 255, 0.1);
-    border-top: none;
-    border-bottom: none;
+  li:last-child {
+    border-right: none;
   }
 }
 

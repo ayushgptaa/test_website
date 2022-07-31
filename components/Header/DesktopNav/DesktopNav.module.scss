@@ -3,28 +3,27 @@
 
 .wrapper {
   @include flex-vertical-center(space-between);
-  width: 382px;
-  height: 36px;
-  position: relative;
-  z-index: 1;
+  gap: 60px;
 
   span {
     cursor: pointer;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 18px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: capitalize;
   }
 
   button {
-    padding: 6px 24px;
+    padding: 12px 24px;
+    max-height: 40px;
     width: auto;
     margin: 0;
-    font-size: 14px;
+    @include flex-center;
 
     & > span {
-      font-weight: 600;
-      font-size: 14px;
-      line-height: 24px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 16px;
     }
   }
 }

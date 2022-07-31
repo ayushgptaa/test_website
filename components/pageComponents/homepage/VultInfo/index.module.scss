@@ -1,0 +1,140 @@
+@use '/styles/mixins.scss' as *;
+@import 'include-media';
+
+$breakpoints: (
+  tablet: 768px,
+  smallDesktop: 1200px,
+);
+
+.vultArtMobile {
+  position: relative;
+  width: 740.95px;
+  height: 740.95px;
+  left: 14%;
+  transform: translateX(-50%);
+  top: -238.48px;
+}
+
+.textContent {
+  margin-top: -14rem;
+  padding: 0 1.5rem;
+
+  p {
+    margin-top: 2rem;
+  }
+}
+
+.ellipseContainer,
+.vultArtDesktop {
+  display: none;
+}
+
+.textContainerBorderWrapper {
+  padding-top: 1rem;
+}
+
+@include media('>tablet') {
+  .vultArtMobile {
+    display: none;
+  }
+
+  .textContent {
+    padding: 0;
+  }
+
+  .ellipseContainer {
+    display: block;
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: inherit;
+    z-index: -1;
+  }
+
+  .ellipseTop {
+    position: absolute;
+    width: 1694px;
+    height: 1694px;
+    left: -699px;
+    top: -735.5px;
+
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      #4987ff 0%,
+      rgba(0, 10, 240, 0) 100%
+    );
+    opacity: 0.4;
+  }
+
+  .ellipseBottom {
+    position: absolute;
+    width: 1694px;
+    height: 1694px;
+    left: 219px;
+    top: -305.5px;
+
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      #4987ff 0%,
+      rgba(0, 10, 240, 0) 100%
+    );
+    opacity: 0.5;
+  }
+
+  .textContent {
+    margin: 0;
+    text-align: left;
+
+    p {
+      text-align: left;
+      padding: 0;
+      width: 80%;
+    }
+  }
+
+  .vultArtDesktop {
+    display: block;
+    margin-top: calc(680px - 500px);
+    margin-left: -6%;
+  }
+
+  .textContainerBorderWrapper {
+    @include flex-vertical-center(flex-start);
+    gap: 2.5rem;
+    margin-top: 3.25rem;
+  }
+}
+
+@include media('<=smallDesktop', '>tablet') {
+  .vultArtDesktop {
+    margin-left: 100px;
+  }
+
+  .teContainerWrapper {
+    width: 70%;
+    margin: auto;
+    padding-bottom: 3rem;
+    margin-top: 3rem;
+
+    .textContent {
+      text-align: center;
+
+      P {
+        text-align: center;
+        width: 100%;
+      }
+
+      button {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .textContainerBorderWrapper {
+      @include flex-vertical-center(center);
+      margin-top: 2rem;
+    }
+  }
+}

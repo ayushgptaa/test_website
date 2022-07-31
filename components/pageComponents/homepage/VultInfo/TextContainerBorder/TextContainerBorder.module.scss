@@ -1,0 +1,73 @@
+@use '/styles/variables.scss' as *;
+@use '/styles/mixins.scss' as *;
+@import 'include-media';
+
+$breakpoints: (
+  tablet: 768px,
+  smallDesktop: 1200px,
+);
+
+.container {
+  @include flex(space-between, flex-start);
+  text-align: left;
+  gap: 1.8rem;
+  margin: 2rem;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  a {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    color: $light-blue;
+  }
+}
+
+.heading {
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 125%;
+}
+
+.para {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  color: #cfd2dc;
+}
+
+.divider {
+  width: 3px;
+  height: 134px;
+  background: rgba(139, 139, 139, 0.3);
+}
+
+@include media('>tablet') {
+  .divider {
+    display: none;
+  }
+
+  .container {
+    margin: 0;
+    max-width: 240px;
+  }
+
+  .textContainer {
+    a {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 100%;
+    }
+  }
+}
+
+@include media('<=smallDesktop', '>tablet') {
+  .textContainer {
+    align-items: center;
+    text-align: center;
+  }
+}

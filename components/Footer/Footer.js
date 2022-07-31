@@ -1,112 +1,92 @@
-import { useEffect, useState } from 'react'
-import PropTypes from 'prop-types'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
+import { Fade } from 'react-awesome-reveal'
 
-import Accordion from 'components/Footer/FooterAccordian'
-import Button from 'components/Button'
-import Heading from 'components/Heading'
-import SocialIcons from 'components/SocialIcons'
-import ZusLogo from 'components/ZusLogo'
+import FooterSocialLinks from './FooterSocialLinks'
 import FooterFeature from './FooterFeature'
-
 import footerMenu from './footerMenu'
+import Heading from 'components/Heading'
+import IconContainer from 'components/IconContainer'
+
+import useGetScreenSize from 'hooks/useGetScreenSize'
 
 import styles from './Footer.module.scss'
 
 const defaultfooterFeatureData = {
   heading: 'Reclaim control of your data',
-  text: 'The Züs Cloud Network is a decentralized data storage network that delivers data ownership to the user. Become part of the movement.',
-  buttonText: 'Launch Apps',
+  text: 'The Züs Cloud Network is a decentralized data storage network. Enabled by a cutting-edge storage protocol; secured by a novel layer 1 blockchain.',
+  buttonText: 'Start building',
   secondaryBtn: true,
 }
 
-const Footer = ({
-  footerFeatureData,
-  showfooterBackground = true,
-  showfooterFeature = true,
-}) => {
-  const [featureData, setFeatureData] = useState(defaultfooterFeatureData)
-  const router = useRouter()
-
-  useEffect(() => {
-    if (footerFeatureData) {
-      setFeatureData(footerFeatureData)
-    } else {
-      setFeatureData(defaultfooterFeatureData)
-    }
-  }, [footerFeatureData])
-
-  const renderMobile = () => {
-    return (
-      <div className={styles.mobileContainer}>
-        <ZusLogo />
-        <Heading text="Go beyond the cloud" />
-        <Button
-          text="Whitepapers"
-          type="button"
-          black
-          transparent
-          onClick={() => router.push('/whitepapers')}
-        />
-        <SocialIcons />
-        <Accordion data={footerMenu} />
-        <span suppressHydrationWarning className={styles.bottomText}>
-          Copyright © 2022 ZÜS All Rights Reserved. Terms & Conditions
-        </span>
-      </div>
-    )
-  }
-
-  const renderDesktop = () => {
-    return (
-      <div className={styles.desktopContainer}>
-        <div className={styles.menuContainer}>
-          <Heading text="Go beyond the cloud" />
-          <div className={styles.footerMenu}>
-            {footerMenu.map((menu) => {
-              return (
-                <div key={menu.id} className={styles.footerMenuItem}>
-                  <span className={styles.titleMenu}>{menu.name}</span>
-                  <ul className={styles.subMenu}>
-                    {menu.subLinks.map(({ name, link }) => {
-                      return (
-                        <li key={name}>
-                          <Link href={link ? `/${link}` : '/'}>{name}</Link>
-                        </li>
-                      )
-                    })}
-                  </ul>
-                </div>
-              )
-            })}
-          </div>
-        </div>
-
-        <p className={styles.bottomContainer}>
-          <ZusLogo />
-          <span suppressHydrationWarning>
-            Copyright © 2022 ZÜS All Rights Reserved. Terms & Conditions
-          </span>
-        </p>
-      </div>
-    )
-  }
+const FooterMenu = () => {
+  const isMobile = useGetScreenSize()
 
   return (
-    <footer className={styles.footer}>
-      {showfooterBackground && <div className={styles.footerBackground}></div>}
-      {showfooterFeature && <FooterFeature data={featureData} />}
-      {renderMobile()}
-      {renderDesktop()}
-    </footer>
+    <div className={styles.menuContainer}>
+      <Fade
+        direction="up"
+        duration={600}
+        cascade={isMobile}
+        fraction={0.4}
+        triggerOnce>
+        <Heading text="Go beyond the cloud" Tag="h3" />
+      </Fade>
+
+      <div className={styles.menuLinksContainer}>
+        {footerMenu.map((menu) => {
+          return (
+            <Fade
+              direction="up"
+              duration={600}
+              cascade={isMobile}
+              fraction={0.5}
+              triggerOnce
+              key={menu.id}>
+              <div className={styles.footerMenuItem}>
+                <h5 className={styles.titleMenu}>{menu.name}</h5>
+                <ul className={styles.subMenu}>
+                  {menu.subLinks.map(({ name, link }) => {
+                    return (
+                      <li key={name}>
+                        <Link href={link ? `/${link}` : '/'}>{name}</Link>
+                      </li>
+                    )
+                  })}
+                </ul>
+              </div>
+            </Fade>
+          )
+        })}
+      </div>
+    </div>
   )
 }
 
-Footer.propTypes = {
-  footerFeatureData: PropTypes.object,
-  showfooterBackground: PropTypes.bool,
-  showfooterFeature: PropTypes.bool,
+const FooterBottomContainer = () => {
+  return (
+    <div className={styles.bottomContainer}>
+      <IconContainer
+        img="/images/Footer/zusLogoWhiteWithText.svg"
+        alt="Züs"
+        height={30}
+        width={100}
+      />
+      <p suppressHydrationWarning>
+        Copyright © 2022 ZÜS All Rights Reserved. Terms & Conditions
+      </p>
+    </div>
+  )
+}
+
+const Footer = () => {
+  return (
+    <footer className={styles.footer}>
+      <FooterFeature data={defaultfooterFeatureData} />
+      <FooterSocialLinks />
+      <FooterMenu />
+      <FooterBottomContainer />
+    </footer>
+  )
 }
 
 export default Footer

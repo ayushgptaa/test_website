@@ -1,28 +1,27 @@
-import Image from 'next/image'
 import { Fade } from 'react-awesome-reveal'
+
+import Paragraph from 'components/Paragraph'
 
 import styles from './MainFeature.module.scss'
 
 const MainFeature = () => {
   return (
-    <div className={styles.container}>
-      <div className={styles.bgPattern} />
-      <Fade direction="up" cascade duration={700}>
-        <div className={styles.heading}>
-          <Image
-            src="/images/homePage/Features/mainHeading.png"
-            width={602}
-            height={294}
-            priority
-          />
-        </div>
-        <p className={styles.para}>
-          The Züs Cloud Network is a hyper-speed data storage network. Enabled
-          by a cutting-edge storage protocol. Secured by a novel layer 1
-          blockchain.
-        </p>
-      </Fade>
-    </div>
+    <section className={styles.container}>
+      <div className={styles.mainContent}>
+        <div className={styles.bgPatternLeft} />
+        <div className={styles.bgPatternRight} />
+        <Fade direction="up" cascade duration={800} fraction={0.8} triggerOnce>
+          <h2 className={styles.heading}>
+            Lightning Fast. Decentralized. Storage.
+          </h2>
+          <Paragraph>
+            The Züs Cloud Network is a hyper-speed data storage network. Enabled
+            by a cutting-edge storage protocol; secured by a novel layer 1
+            blockchain.
+          </Paragraph>
+        </Fade>
+      </div>
+    </section>
   )
 }
 

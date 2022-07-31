@@ -3,46 +3,88 @@
 @import 'include-media';
 
 .container {
-  position: relative;
-  @include flex-center;
-  flex-direction: column;
-  width: 85%;
-  margin: 9rem auto;
-  height: 376px;
-  width: $mobile-width;
-  background-color: #030819;
-  border-radius: 1rem;
-  padding: 3rem 2rem;
-  overflow: hidden;
-}
-
-.bgPattern {
-  position: absolute;
-  height: 100%;
   width: 100%;
-  inset: 0;
-  background: url('/images/homePage/Features/boxSmall.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  padding-top: 6.25rem;
+  border-top: $border-gray;
 }
 
-.para {
-  @include primary-text-mobile;
-  margin-top: 1.5rem;
-  max-width: 602px;
+.mainContent {
+  width: 85%;
+  margin: auto;
+
+  p {
+    margin-top: 2rem;
+  }
+}
+
+.heading {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 122%;
+  text-align: center;
+  background: linear-gradient(125.02deg, #ffffff 47.98%, #95d3ff 72.6%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 @include media('>tablet') {
   .container {
-    width: 96%;
-    height: 704px;
+    width: 100%;
     gap: 1rem;
-    margin-top: 14rem;
+    padding: 5.5rem 0;
   }
 
-  .bgPattern {
-    background: url('/images/homePage/Features/boxLarge.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
+  .mainContent {
+    position: relative;
+    max-width: 1160px;
+    width: 80%;
+    padding: 8.5rem 0;
+    border-radius: 40px;
+    overflow: hidden;
+
+    p {
+      max-width: 563px;
+      margin: auto;
+      margin-top: 2rem;
+    }
+  }
+
+  .heading {
+    font-size: 80px;
+    line-height: 120%;
+    max-width: 602px;
+    margin: auto;
+  }
+
+  .bgPatternLeft {
+    position: absolute;
+    width: 1694px;
+    height: 1694px;
+    left: 219px;
+    top: -305px;
+
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      #1477f8 0%,
+      rgba(5, 11, 25, 0) 100%
+    );
+    opacity: 0.3;
+  }
+
+  .bgPatternRight {
+    position: absolute;
+    width: 1394.02px;
+    height: 1394.02px;
+    left: -465.73px;
+    top: -501.73px;
+
+    background: radial-gradient(
+      63.28% 63.28% at 50% 50%,
+      #1477f8 0%,
+      rgba(5, 11, 25, 0) 100%
+    );
+    opacity: 0.35;
+    border-radius: 50%;
   }
 }

@@ -4,39 +4,47 @@ import IconContainer from '/components/IconContainer'
 
 import styles from './SocialIcons.module.scss'
 
+const iconsData = [
+  {
+    link: 'https://discord.gg/j2geZU6S',
+    name: 'discord',
+    img: '/images/SocialIcons/discord.svg',
+  },
+  {
+    link: 'https://twitter.com/zuscloud',
+    name: 'twitter',
+    img: '/images/SocialIcons/twitter.svg',
+  },
+  {
+    link: '/images/SocialIcons/twitter.svg',
+    name: 'medium',
+    img: '/images/SocialIcons/medium.svg',
+  },
+
+  {
+    link: 'https://t.me/ZusCloudNetwork',
+    name: 'telegram',
+    img: '/images/SocialIcons/telegram.svg',
+  },
+]
+
 const SocialIcons = ({ height = 28, width = 28 }) => {
   return (
     <ul className={styles.socialIcons}>
-      <li>
-        <a href="https://discord.gg/j2geZU6S" rel="noreferrer" target="_blank">
-          <IconContainer
-            img="/images/SocialIcons/discord.svg"
-            alt="discord"
-            height={height}
-            width={width}
-          />
-        </a>
-      </li>
-      <li>
-        <a href="https://twitter.com/zuscloud" rel="noreferrer" target="_blank">
-          <IconContainer
-            img="/images/SocialIcons/twitter.svg"
-            alt="twitter"
-            height={height}
-            width={width}
-          />
-        </a>
-      </li>
-      <li>
-        <a href="https://t.me/ZusCloudNetwork" rel="noreferrer" target="_blank">
-          <IconContainer
-            img="/images/SocialIcons/telegram.svg"
-            alt="telegram"
-            height={height}
-            width={width}
-          />
-        </a>
-      </li>
+      {iconsData.map(({ name, link, img }) => {
+        return (
+          <li key={name}>
+            <a href={link} rel="noreferrer" target="_blank">
+              <IconContainer
+                img={img}
+                alt={name}
+                height={height}
+                width={width}
+              />
+            </a>
+          </li>
+        )
+      })}
     </ul>
   )
 }

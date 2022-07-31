@@ -1,9 +1,10 @@
 // Colors
 $color-background: #030819;
+$color-background-dark: #161618;
 $primary-blue: #0b9dff;
+$light-blue: #82d0e9;
 
 // Gradient
-
 $zus-primary-gradient: linear-gradient(
   121.99deg,
   #00d3ff -26.48%,
@@ -43,3 +44,6 @@ $gradient-layer: linear-gradient(180deg, rgba(3, 8, 25, 0) 0%, #030819 100%);
 
 // Layout
 $mobile-width: 327px;
+
+//Borders
+$border-gray: 1px solid rgba(139, 139, 139, 0.3);

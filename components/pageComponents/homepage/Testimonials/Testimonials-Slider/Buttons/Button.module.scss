@@ -1,13 +1,14 @@
+@import 'include-media';
+
 .prevBtn,
 .nextBtn {
   background: transparent;
   border: none;
   outline: none;
   cursor: pointer;
-  width: 56px;
-  height: 32px;
+  width: 63px;
+  height: 36px;
   position: relative;
-  margin-top: 1.8rem;
   font-size: 0;
 }
 
@@ -15,10 +16,10 @@
   margin-left: 1.8rem;
 }
 
-.prevBtn:disabled,
-.nextBtn:disabled {
-  opacity: 0.2;
-}
+// .prevBtn:disabled,
+// .nextBtn:disabled {
+//   opacity: 0.2;
+// }
 
 .prevBtn::before {
   content: '';
@@ -34,4 +35,12 @@
     no-repeat;
   position: absolute;
   inset: 0;
+}
+
+@include media('>tablet') {
+  .prevBtn,
+  .nextBtn {
+    width: 125px;
+    height: 50px;
+  }
 }

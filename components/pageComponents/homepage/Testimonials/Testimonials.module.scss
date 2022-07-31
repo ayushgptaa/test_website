@@ -1,22 +1,47 @@
+@use '/styles/variables.scss' as *;
+@use '/styles/mixins.scss' as *;
 @import 'include-media';
 
 .container {
-  width: 327px;
+  position: relative;
+  width: 100%;
+  padding: 1.5rem;
+  padding-top: 5.3rem;
   margin: auto;
-  margin-top: -3rem;
   margin-bottom: 5rem;
+  text-align: center;
+  border-top: $border-gray;
+}
+
+.bgPattern {
+  @include background-image(
+    '/images/homepage/Testimonials/bgPattern.svg',
+    center center,
+    contain,
+    100px,
+    100px
+  );
+  right: -10px;
+  top: 120px;
+  // z-index: -1;
 }
 
 @include media('>tablet') {
   .container {
     width: 100%;
-    padding: 7.5rem 2rem;
-    background-color: #040819;
+    padding: 7.8rem 0 6.8rem 0;
     margin-bottom: 0;
 
     h1 {
       font-size: 80px;
       line-height: 116%;
     }
+  }
+
+  .bgPattern {
+    top: 185px;
+    left: 140px;
+    height: 150px;
+    width: 150px;
   }
 }

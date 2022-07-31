@@ -4,34 +4,83 @@
 @import 'include-media';
 
 .container {
-  padding: 3rem 0;
+  position: relative;
+  padding: 3rem 1rem;
   margin: auto;
   text-align: center;
-  width: $mobile-width;
+  overflow: hidden;
+  background: linear-gradient(180.15deg, #00d3ff -29.76%, #1a49ff 125.39%);
 
   h1 {
+    font-size: 28px;
+    line-height: 115%;
+    max-width: 70%;
+    margin: auto;
     margin-top: 1.5rem;
   }
 }
 
+.bgPattern {
+  position: absolute;
+  width: 2118.19px;
+  height: 2118.19px;
+  left: calc(50% - 2118.19px / 2);
+  top: -919.1px;
+
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #5da3ff 0%,
+    rgba(5, 11, 25, 0) 100%,
+    rgba(156, 185, 255, 0) 100%
+  );
+}
+
+.zusLogoWhite {
+  position: relative;
+  width: 45.88px;
+  height: 40px;
+  margin: auto;
+}
+
 .buttons {
-  margin-top: 1.8rem;
+  margin-top: 1.5rem;
+  @include flex-center;
+  gap: 10px;
+
+  button {
+    width: 159px;
+    height: 48px;
+    margin: 0;
+  }
+
+  button:first-child {
+    background: #ffffff;
+    color: #202127;
+  }
 }
 
 @include media('>tablet') {
   .container {
     width: 100%;
-    padding: 10rem 0;
+    padding: 4.5rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     h1 {
-      margin-top: 1.5rem;
       font-weight: 700;
-      font-size: 47px;
-      line-height: 122%;
+      font-size: 54px;
+      line-height: 110%;
     }
+
+    p {
+      max-width: 800px;
+    }
+  }
+
+  .zusLogoWhite {
+    width: 65px;
+    height: 45px;
   }
 
   .text {
@@ -39,12 +88,11 @@
   }
 
   .buttons {
-    display: flex;
-    flex-direction: row-reverse;
     gap: 1rem;
 
     button {
-      width: 159px;
+      width: 167px;
+      height: 56px;
     }
   }
 }

@@ -1,32 +1,14 @@
-import Image from 'next/image'
 import propTypes from 'prop-types'
-import clsx from 'clsx'
 
 import ZusLogo from 'components/ZusLogo'
 import DesktopNav from './DesktopNav'
 import TopSection from './TopSection'
 import { MobileNav, ToggleBtn } from './MobileNav'
+import HeaderImgComponent from './HeaderImgComponent'
 
 import useAnimatedNavToggler from 'hooks/useAnimatedNavToggler'
 
 import styles from './Header.module.scss'
-
-const ImgComponent = ({ removeImg }) => {
-  return (
-    <div className={clsx(styles.imgContainer, removeImg && styles.removeImg)}>
-      <Image
-        src="/images/homePage/Hero/hero-img.png"
-        width={876}
-        height={527}
-        priority
-      />
-    </div>
-  )
-}
-
-ImgComponent.propTypes = {
-  removeImg: propTypes.bool,
-}
 
 const Header = ({
   removeImg,
@@ -39,7 +21,7 @@ const Header = ({
   return (
     <div className={styles.container}>
       <TopSection removeSocialIcons={removeSocialIcons} />
-      <ImgComponent removeImg={removeImg} />
+      <HeaderImgComponent removeImg={removeImg} />
       <header className={styles.header}>
         <ZusLogo removeZusText={removeZusText} />
         <DesktopNav removeDesktopNav={removeDesktopNav} />

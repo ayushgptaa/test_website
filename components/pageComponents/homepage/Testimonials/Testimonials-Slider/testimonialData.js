@@ -11,6 +11,7 @@ const testimonialData = [
     img: '/images/homePage/Testimonials/Users/tomAustin.png',
     text: '“Züs presents a new paradigm for enterprise in its transparent, low-cost storage platform. It offers high performance, availability, censorpship resistance, and privacy.“',
   },
+
   {
     name: 'Ric Asselstine',
     description: 'CEO and Co-founder, GEEQ',

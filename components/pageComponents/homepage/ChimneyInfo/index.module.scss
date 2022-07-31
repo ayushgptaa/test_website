@@ -1,0 +1,119 @@
+@use '/styles/variables.scss' as *;
+@use '/styles/mixins.scss' as *;
+@import 'include-media';
+
+$breakpoints: (
+  tablet: 768px,
+  smallDesktop: 1200px,
+);
+
+.chimneyArtMobile {
+  position: relative;
+  width: 793.83px;
+  height: 746.92px;
+  left: 50%;
+  transform: translateX(-75%);
+  opacity: 1;
+}
+
+.textContent {
+  margin-top: -8rem;
+  padding: 0 1.5rem;
+
+  p {
+    margin-top: 2rem;
+  }
+}
+
+.chimneyArtDesktop,
+.ellipseContainer {
+  display: none;
+}
+
+@include media('>tablet') {
+  .chimneyArtMobile {
+    display: none;
+  }
+
+  .ellipseContainer {
+    display: block;
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: inherit;
+    z-index: -1;
+  }
+
+  .ellipseTop {
+    position: absolute;
+    width: 1694px;
+    height: 1694px;
+    left: -850px;
+    top: -735.5px;
+
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      #b44b91 0%,
+      rgba(5, 11, 25, 0) 100%
+    );
+    opacity: 0.5;
+  }
+
+  .ellipseBottom {
+    position: absolute;
+    width: 1694px;
+    height: 1694px;
+    left: 400px;
+    top: -250px;
+
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      #b44b91 0%,
+      rgba(5, 11, 25, 0) 100%
+    );
+    opacity: 0.5;
+  }
+
+  .chimneyArtDesktop {
+    display: block;
+    margin-left: -16%;
+    margin-top: 2rem;
+  }
+
+  .textContent {
+    margin: 0;
+    width: 45%;
+    text-align: left;
+
+    p {
+      text-align: left;
+      padding: 0;
+      width: 80%;
+    }
+  }
+}
+
+@include media('<=smallDesktop', '>tablet') {
+  .chimneyArtDesktop {
+    margin: 0;
+  }
+
+  .textContent {
+    text-align: center;
+    width: 70%;
+    padding-bottom: 3rem;
+    margin-top: -3rem;
+
+    P {
+      text-align: center;
+      width: 100%;
+    }
+
+    button {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

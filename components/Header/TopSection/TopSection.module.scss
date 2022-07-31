@@ -1,19 +1,17 @@
 @use '/styles/mixins.scss' as *;
+@use '/styles/variables.scss' as *;
 @import 'include-media';
 
 .wrapper {
-  cursor: pointer;
-  @include flex-vertical-center(space-between);
-  margin: 1rem 2rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding-bottom: 0.5rem;
-  z-index: 1;
-  position: relative;
+  @include flex(space-between, center);
+  padding: 12px 80px;
+  border-bottom: $border-gray;
 
   span {
     font-weight: 700;
     font-size: 14px;
     line-height: 24px;
+    cursor: pointer;
   }
 }
 
@@ -23,7 +21,6 @@
 
 .wrapperRight {
   @include flex-vertical-center(space-between);
-  height: 24px;
   gap: 24px;
 
   & > ul {
@@ -32,6 +29,11 @@
 
     li {
       padding: 0;
+      height: 24px;
+
+      a {
+        display: inline-block;
+      }
     }
 
     li:nth-child(2) {

@@ -1,79 +1,57 @@
 @use '/styles/mixins.scss' as *;
 @use '/styles/variables.scss' as *;
+@import 'include-media';
 
-.feature {
+.container {
   position: relative;
-  max-width: $mobile-width;
+  width: $mobile-width;
   margin: auto;
-  margin-top: 6rem;
+  padding-top: 3.75rem;
+
+  button {
+    width: 146px;
+    height: 52px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 1.8rem;
+    border: 1px solid rgba(139, 139, 139, 0.6);
+    padding: 0;
+  }
 }
 
 .icon {
+  position: relative;
   margin: auto;
-  width: fit-content;
-  height: 87px;
+  height: 180px;
+  width: 180px;
 }
 
 .textContainer {
   text-align: center;
-  color: #fff;
   width: 100%;
-  margin-top: 1rem;
+  margin-top: 1.8rem;
+
+  p {
+    margin-top: 1.25rem;
+  }
 }
 
 .heading {
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 28px;
+  line-height: 115%;
 }
 
-.para {
-  @include primary-text-mobile;
-  margin: 2rem 0;
-}
+@include media('>tablet') {
+  .container {
+    padding: 0;
+    height: 100%;
+    width: 350px;
+  }
 
-.pattern1 {
-  position: absolute;
-  width: 246px;
-  height: 246px;
-
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    #2d00ff 0%,
-    rgba(45, 0, 255, 0) 100%
-  );
-  opacity: 0.2;
-
-  top: -50px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.pattern2 {
-  position: absolute;
-  width: 222px;
-  height: 225px;
-
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    #0053ff 0%,
-    rgba(0, 83, 255, 0) 100%
-  );
-  opacity: 0.2;
-  left: 95px;
-  top: 15px;
-}
-
-.pattern3 {
-  position: absolute;
-  width: 190px;
-  height: 190px;
-
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    #009eff 0%,
-    rgba(0, 158, 255, 0) 100%
-  );
-  opacity: 0.2;
-  left: 105px;
-  top: 20px;
+  .icon {
+    height: 250px;
+    width: 250px;
+  }
 }

@@ -3,17 +3,24 @@ import clsx from 'clsx'
 
 import styles from './Heading.module.scss'
 
-const Heading = ({ text, uppercase, withoutPeriod }) => {
+const Heading = ({
+  text,
+  uppercase,
+  withoutPeriod,
+  periodColor,
+  Tag = 'h1',
+}) => {
   return (
-    <h1
+    <Tag
       className={clsx(
         styles.heading,
         uppercase && styles.uppercase,
-        withoutPeriod && styles.withoutPeriod
+        withoutPeriod && styles.withoutPeriod,
+        Tag === 'h3' && styles.h3
       )}>
       {text}
-      <span>.</span>
-    </h1>
+      <span style={periodColor && { color: `${periodColor}` }}>.</span>
+    </Tag>
   )
 }
 
@@ -21,6 +28,8 @@ Heading.propTypes = {
   text: PropTypes.string.isRequired,
   uppercase: PropTypes.bool,
   withoutPeriod: PropTypes.bool,
+  Tag: PropTypes.string,
+  periodColor: PropTypes.string,
 }
 
 export default Heading

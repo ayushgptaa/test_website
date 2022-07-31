@@ -11,25 +11,27 @@ import styles from './FooterFeature.module.scss'
 const FooterFeature = ({ data }) => {
   return (
     <div className={styles.container}>
-      <Fade direction="up">
-        <Image
-          src="/images/Footer/zusLogoWhite.svg"
-          width={65}
-          height={70}
-          alt="züs"
-          quality={100}
-        />
+      <div className={styles.bgPattern}></div>
+      <Fade direction="up" cascade triggerOnce duration={600}>
+        <div className={styles.zusLogoWhite}>
+          <Image
+            src="/images/Footer/zusLogoWhite.svg"
+            layout="fill"
+            alt="züs"
+            quality={100}
+          />
+        </div>
         <Heading text={data.heading} />
         <Text>{data.text}</Text>
         <div className={styles.buttons}>
-          <Button text={data.buttonText} type="button" link="launch-apps" />
+          <Button text={data.buttonText} type="button" />
           {data.secondaryBtn && (
             <Button
-              text="Start Building"
+              text="Launch Apps"
               type="button"
               black
               transparent
-              link="/build"
+              link="/launch-apps"
             />
           )}
         </div>

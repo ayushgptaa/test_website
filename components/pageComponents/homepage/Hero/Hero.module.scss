@@ -2,45 +2,30 @@
 @import 'include-media';
 
 .container {
+  position: relative;
   margin: auto;
   width: $mobile-width;
-  margin-top: 4rem;
   text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
-.mainHeading {
-  margin-top: 4rem;
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: 700;
-  font-size: 2.2rem;
-  span {
-    color: $primary-blue;
-    display: inline;
-  }
+  padding-top: 4rem;
+  padding-bottom: 3rem;
 }
 
 .secondaryHeading {
   font-weight: 600;
   margin-top: 3rem;
   margin-bottom: 1.5rem;
-  text-align: center;
 }
 
 @include media('>tablet') {
   .container {
     width: 100%;
-    padding: 0 2rem;
-    margin-bottom: 10rem;
+    padding-top: 4.5rem;
+    padding-bottom: 5rem;
   }
 
   .secondaryHeading {
-    margin-top: 5rem;
-    margin-bottom: 2rem;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 120%;
+    font-size: 21px;
+    line-height: 125%;
+    margin-top: 4.2rem;
   }
 }

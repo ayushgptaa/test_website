@@ -1,0 +1,99 @@
+@use '/styles/variables.scss' as *;
+@use '/styles/mixins.scss' as *;
+@import 'include-media';
+
+.blimpArtMobile {
+  position: relative;
+  width: 858px;
+  height: 858px;
+  left: 13%;
+  transform: translateX(-50%);
+  top: -298px;
+}
+
+.textContent {
+  margin-top: -25rem;
+  z-index: 5;
+
+  p {
+    margin-top: 2rem;
+    padding: 0 1.5rem;
+  }
+}
+
+.blimpArtDesktop,
+.ellipseContainer {
+  display: none;
+}
+
+@include media('>tablet') {
+  .blimpArtMobile {
+    display: none;
+  }
+
+  .blimpArtDesktop {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -250px;
+    z-index: 2;
+  }
+
+  .ellipseContainer {
+    background: #06122a;
+    display: block;
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: inherit;
+    // z-index: -1;
+  }
+
+  .ellipseTop {
+    position: absolute;
+    width: 812.68px;
+    height: 812.68px;
+    left: -150px;
+    top: -210.5px;
+
+    background: radial-gradient(
+      77.87% 77.87% at 50% 50%,
+      #17618a 0%,
+      rgba(5, 11, 25, 0) 100%
+    );
+    opacity: 0.4;
+
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  .rectangle {
+    position: absolute;
+    width: 1160px;
+    height: 463px;
+    left: 0px;
+    bottom: 0;
+
+    background: linear-gradient(
+      180deg,
+      rgba(3, 8, 25, 0) 13.81%,
+      rgba(6, 18, 42, 0.92) 42.42%
+    );
+
+    border-radius: 40px;
+    z-index: 3;
+  }
+
+  .textContent {
+    margin-top: 16rem;
+    max-width: 700px;
+
+    button {
+      max-width: 200px;
+      margin: 2rem auto 0 auto;
+    }
+  }
+}

@@ -2,6 +2,8 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import PropTypes from 'prop-types'
 
+import navData from '../navData'
+
 import styles from './Mobilenav.module.scss'
 
 const MobileNav = ({ animation }) => {
@@ -10,17 +12,13 @@ const MobileNav = ({ animation }) => {
       className={styles.mobileNav}
       initial={{ x: '150%', display: 'none' }}
       animate={animation}
-      transition={{ duration: 0.7, type: 'spring', ease: 'easeInOut' }}>
+      transition={{ duration: 0.5, type: 'linear', ease: 'easeInOut' }}>
       <ul className={styles.navlinksContainer}>
-        <li>
-          <Link href="/store">Store</Link>
-        </li>
-        <li>
-          <Link href="/build">Build</Link>
-        </li>
-        <li>
-          <Link href="/earn">Earn</Link>
-        </li>
+        {navData.map(({ name, link }) => (
+          <li key={name}>
+            <Link href={link}>{name}</Link>
+          </li>
+        ))}
       </ul>
     </motion.nav>
   )

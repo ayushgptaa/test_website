@@ -1,5 +1,4 @@
 @use '/styles/mixins.scss' as *;
-
 @import 'include-media';
 
 $breakpoints: (
@@ -8,133 +7,104 @@ $breakpoints: (
 );
 
 .testimonialContainer {
+  position: relative;
+  margin: auto;
   margin-top: 3rem;
-  width: 100%;
   cursor: grab;
+  width: 325px;
+  height: 340px;
+  background: rgba(27, 51, 100, 0.5);
+  border: 1px solid rgba(139, 139, 139, 0.3);
+  /* Add some fallback support for backdrop-filter */
+  backdrop-filter: blur(11px);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: left;
+  user-select: none;
+
+  & > p {
+    text-align: left;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 160%;
+  }
 }
 
-.image {
-  position: relative;
-  height: 360px;
-  width: 327px;
-  border-radius: 16px;
+.founderInfoContainer {
+  @include flex(space-between, center);
+  display: flex;
+  gap: 1.6rem;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+}
 
-  > span {
+.founderImg {
+  position: relative;
+  border-radius: 50%;
+
+  span {
     border-radius: inherit;
   }
 }
 
-.review {
-  position: relative;
-  margin-top: 2.5rem;
-  font-weight: 700;
-  font-size: 1.2rem;
-  line-height: 32px;
-
-  &:before {
-    content: '';
-    @include background-image(
-      '/images/homePage/Testimonials/textPattern.svg',
-      center,
-      contain,
-      70px,
-      97px
-    );
-    top: -15px;
-    left: 0;
-  }
+.founderInfoText {
+  width: calc(100% - 65px);
 }
 
-.role {
-  margin-top: 1.8rem;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-
-.description {
+.name {
   font-weight: 400;
   font-size: 12px;
   line-height: 20px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  padding-bottom: 0.5rem;
 }
 
-.name {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 28px;
+.description {
+  padding-top: 0.5rem;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 125%;
+}
+
+.buttonsContainer {
+  margin-top: 3rem;
 }
 
 @include media('>tablet') {
   .testimonialContainer {
-    display: flex;
-    align-items: center;
-    margin: 2rem 0;
-    gap: 70px;
-  }
+    width: 680px;
+    height: 582px;
+    padding: 4rem;
 
-  .image {
-    min-width: 350px;
-    height: 350px;
-  }
-
-  .review {
-    font-size: 20px;
-    line-height: 40px;
-
-    &:before {
-      width: 100px;
-      height: 65px;
-      top: -6px;
-      left: -55px;
+    & > p {
+      font-style: italic;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 38px;
     }
   }
 
-  .role {
-    gap: 0;
-  }
-}
-
-@include media('>=desktop') {
-  .testimonialContainer {
-    gap: 100px;
+  .founderInfoContainer {
+    bottom: 3rem;
+    left: 4rem;
+    right: 4rem;
   }
 
-  .image {
-    position: relative;
-    min-width: 492px;
-    height: 492px;
-    border-radius: 24px;
-  }
-
-  .reviewContainer {
-    display: flex;
-    flex-direction: column;
-    max-width: 580px;
-    width: auto;
-  }
-
-  .review {
-    margin: 0;
-    font-size: 30px;
-    line-height: 48px;
-
-    &:before {
-      width: 199px;
-      height: 147px;
-      top: -60px;
-      left: -65px;
-    }
-  }
-
-  .role {
-    gap: 0.6rem;
+  .founderInfoText {
+    padding: 19px 0;
   }
 
   .name {
-    font-size: 24px;
-    line-height: 28px;
+    font-size: 14px;
+  }
+
+  .description {
+    font-size: 28px;
+  }
+
+  .buttonsContainer {
+    margin-top: 4.5rem;
   }
 }
