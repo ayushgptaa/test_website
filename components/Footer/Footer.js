@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Fade } from 'react-awesome-reveal'
+import PropTypes from 'prop-types'
 
 import FooterSocialLinks from './FooterSocialLinks'
 import FooterFeature from './FooterFeature'
@@ -78,15 +79,19 @@ const FooterBottomContainer = () => {
   )
 }
 
-const Footer = () => {
+const Footer = ({ footerSocialLinks = true }) => {
   return (
     <footer className={styles.footer}>
       <FooterFeature data={defaultfooterFeatureData} />
-      <FooterSocialLinks />
+      {footerSocialLinks && <FooterSocialLinks />}
       <FooterMenu />
       <FooterBottomContainer />
     </footer>
   )
+}
+
+Footer.propTypes = {
+  footerSocialLinks: PropTypes.bool,
 }
 
 export default Footer

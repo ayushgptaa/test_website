@@ -3,38 +3,37 @@
 
 @import 'include-media';
 
-.container {
+.textContainerwrapper {
   position: relative;
-  margin: 3rem 0;
+  border-top: $border-gray;
+  border-bottom: $border-gray;
 }
 
-.bgTexture {
-  height: 381px;
-  left: 282px;
-  top: -2px;
-  background: url('/images/store/Work/pattern-large.svg') top/cover no-repeat;
+.textContainer {
+  padding: 3rem 0;
+  width: $mobile-width;
+  margin: auto;
+
+  h3 {
+    font-size: 28px;
+    line-height: 115%;
+  }
+
+  p {
+    margin-top: 2rem;
+  }
 }
 
-.textureLayer,
-.textureLayer2 {
-  position: absolute;
-  left: 0px;
-  top: 3rem;
-  background: linear-gradient(180deg, rgba(3, 8, 25, 0) 0%, #030819 101.88%);
-  width: 100%;
-  height: 337px;
+.ellipseRight,
+.ellipseLeft,
+.bgTexture,
+.blueBgImg {
+  display: none;
 }
+
 .imgContainer {
   max-width: 500px;
   margin: 0 auto;
-}
-
-.imgText {
-  width: $mobile-width;
-  top: 10rem;
-  left: 50%;
-  transform: translate(-50%);
-  position: absolute;
 }
 
 .heading {
@@ -44,28 +43,50 @@
   text-align: center;
 }
 
-.text {
-  margin-top: 2rem;
-  @include primary-text-mobile;
-}
-
 .workStepContainer {
-  width: $mobile-width;
   margin: auto;
 }
 
 @include media('>tablet') {
-  .container {
-    height: 577px;
-    margin: 10rem 0;
+  .textContainerwrapper {
+    border-bottom: none;
+  }
+
+  .textContainer {
+    padding: 5.75rem 0 6.75rem;
+    width: 700px;
+
+    h3 {
+      font-size: 42px;
+      line-height: 110%;
+    }
   }
 
   .ellipseLeft {
+    display: block;
     position: absolute;
     width: 1874px;
     height: 1874px;
     left: -1035px;
     top: -9px;
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      #1477f8 0%,
+      rgba(5, 11, 25, 0) 100%
+    );
+    opacity: 0.2;
+    filter: blur(200px);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    z-index: -8;
+  }
+
+  .ellipseRight {
+    display: block;
+    position: absolute;
+    width: 1338px;
+    height: 1338px;
+    left: 800px;
+    top: -60px;
 
     background: radial-gradient(
       50% 50% at 50% 50%,
@@ -75,49 +96,34 @@
     opacity: 0.2;
     filter: blur(200px);
     transform: matrix(-1, 0, 0, 1, 0, 0);
-    z-index: 1;
+    z-index: -8;
+  }
+
+  .blueBgImg {
+    display: block;
+    @include background-image(
+      '/images/store/blueBgImg.png',
+      top left,
+      cover,
+      375px,
+      565px
+    );
+    left: 1025px;
+    top: -20px;
+    transform: rotate(-30deg);
+    opacity: 0.5;
   }
 
   .bgTexture {
-    position: absolute;
-    width: 876px;
-    height: 577px;
+    display: block;
+    @include background-image(
+      '/images/store/bgTexture.png',
+      top left,
+      cover,
+      337px,
+      100%
+    );
     left: 0;
-    top: 0;
-  }
-
-  .textureLayer,
-  .textureLayer2 {
-    top: 240px;
-  }
-
-  .imgContainer {
-    max-width: 876px;
-    position: relative;
-  }
-
-  .imgText {
-    width: 701px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    top: 15rem;
-
-    .heading {
-      font-weight: 700;
-      font-size: 79px;
-      line-height: 122%;
-    }
-
-    .text {
-      width: 588px;
-    }
-  }
-
-  .workStepContainer {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-top: -10rem;
+    top: 120px;
   }
 }

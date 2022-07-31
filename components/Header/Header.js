@@ -1,17 +1,18 @@
 import propTypes from 'prop-types'
+import clsx from 'clsx'
 
-import ZusLogo from 'components/ZusLogo'
 import DesktopNav from './DesktopNav'
 import TopSection from './TopSection'
 import { MobileNav, ToggleBtn } from './MobileNav'
 import HeaderImgComponent from './HeaderImgComponent'
+import ZusLogo from 'components/ZusLogo'
 
 import useAnimatedNavToggler from 'hooks/useAnimatedNavToggler'
 
 import styles from './Header.module.scss'
 
 const Header = ({
-  removeImg,
+  removeImg = false,
   removeDesktopNav,
   removeSocialIcons,
   removeZusText,
@@ -22,7 +23,7 @@ const Header = ({
     <div className={styles.container}>
       <TopSection removeSocialIcons={removeSocialIcons} />
       <HeaderImgComponent removeImg={removeImg} />
-      <header className={styles.header}>
+      <header className={clsx(styles.header, removeImg && styles.borderBottom)}>
         <ZusLogo removeZusText={removeZusText} />
         <DesktopNav removeDesktopNav={removeDesktopNav} />
         <MobileNav animation={animation} />

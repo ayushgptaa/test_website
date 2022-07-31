@@ -4,8 +4,26 @@
 @import 'include-media';
 
 .container {
-  width: 100%;
-  margin-top: 3rem;
+  border-bottom: $border-gray;
+  padding-bottom: 40px;
+  padding-top: 20px;
+}
+
+.imgContainer {
+  position: relative;
+  @include flex-center;
+}
+
+.textContainer {
+  max-width: 480px;
+  padding: 20px;
+  margin-top: -2rem;
+
+  p {
+    text-align: left;
+    font-size: 14px;
+    margin-top: 12px;
+  }
 }
 
 .serial {
@@ -22,12 +40,7 @@
   font-weight: 700;
   font-size: 1.5rem;
   line-height: 28px;
-  margin: 1.5rem 0;
-}
-
-.primaryText {
-  @include primary-text-mobile;
-  text-align: left;
+  margin: 20px 0 20px 0;
 }
 
 .primaryText2 {
@@ -58,43 +71,37 @@
   }
 }
 
-.imgContainer {
-  margin: -2rem;
-}
-
-.textContainer {
-  max-width: 480px;
-}
-
 @include media('>tablet') {
   .container {
-    display: flex;
-    align-items: center;
+    position: relative;
+    @include flex-center;
+    gap: 120px;
     width: 100%;
-    justify-content: center;
+    padding: 40px;
   }
 
-  .imgContainer {
-    max-width: 50%;
+  .textContainer {
+    margin: 0;
+    padding: 0;
+
+    p {
+      font-size: 18px;
+      line-height: 160%;
+    }
   }
 
   .serial {
     width: 64px;
     height: 64px;
-    font-weight: 700;
     font-size: 32px;
     line-height: 122%;
-    margin-bottom: 2rem;
+    margin-bottom: 20px;
+    background-color: $dark-blue;
   }
 
   .heading {
     font-weight: 700;
     font-size: 47px;
     line-height: 122%;
-  }
-
-  .textContainer {
-    margin: 4rem;
-    padding-top: 13rem;
   }
 }

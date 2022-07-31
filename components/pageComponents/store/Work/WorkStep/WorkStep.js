@@ -1,12 +1,15 @@
 import Image from 'next/image'
-import { ScrollSnapSection } from 'components/ScrollSnap'
 import { Zoom } from 'react-awesome-reveal'
 
 import workStepData from './workStepData'
+import Paragraph from 'components/Paragraph'
+
+import useGetScreenSize from 'hooks/useGetScreenSize'
 
 import styles from './WorkStep.module.scss'
 
 const WorkStep = () => {
+  const isMobile = useGetScreenSize()
   return workStepData.map(
     ({
       img,
@@ -16,35 +19,34 @@ const WorkStep = () => {
       primaryText2,
       secondaryText,
     }) => (
-      <ScrollSnapSection>
-        <Zoom cascade>
-          <div className={styles.container} key={serialNo}>
-            <div className={styles.imgContainer}>
-              <Image
-                src={img}
-                width={img.width}
-                height={img.height}
-                alt={primaryHeading}
-                quality={100}
-                priority
-              />
-            </div>
+      <Zoom duration={800} fraction={0.5} triggerOnce key={serialNo}>
+        <div className={styles.container}>
+          <div className={styles.imgContainer}>
+            <Image
+              src={img}
+              alt={primaryHeading}
+              quality={100}
+              width={isMobile ? 250 : 400}
+              height={isMobile ? 200 : 340}
+            />
+          </div>
 
-            <div className={styles.textContainer}>
-              <span className={styles.serial}>{serialNo}</span>
-              <h4 className={styles.heading}>{primaryHeading}</h4>
-              <span className={styles.primaryText}>{primaryText}</span>
-              {primaryText2 && (
-                <span className={styles.primaryText2}>{primaryText2}</span>
-              )}
-              <div className={styles.secondaryText}>
-                <h5>Technical Note</h5>
-                <span>{secondaryText.text}</span>
-              </div>
+          <div className={styles.textContainer}>
+            <span className={styles.serial}>{serialNo}</span>
+            <h4 className={styles.heading}>{primaryHeading}</h4>
+            <Paragraph>{primaryText}</Paragraph>
+            {primaryText2 && (
+              <Paragraph className={styles.primaryText2}>
+                {primaryText2}
+              </Paragraph>
+            )}
+            <div className={styles.secondaryText}>
+              <h5>Technical Note</h5>
+              <span>{secondaryText.text}</span>
             </div>
           </div>
-        </Zoom>
-      </ScrollSnapSection>
+        </div>
+      </Zoom>
     )
   )
 }

@@ -11,6 +11,10 @@
   @include flex(space-between, flex-start);
 }
 
+.borderBottom {
+  border-bottom: $border-gray;
+}
+
 @include media('>tablet') {
   .header {
     padding: 20px 80px;
