@@ -12,7 +12,7 @@ import useGetScreenSize from 'hooks/useGetScreenSize'
 
 import styles from './Footer.module.scss'
 
-const defaultfooterFeatureData = {
+let defaultfooterFeatureData = {
   heading: 'Reclaim control of your data',
   text: 'The Züs Cloud Network is a decentralized data storage network. Enabled by a cutting-edge storage protocol; secured by a novel layer 1 blockchain.',
   buttonText: 'Start building',
@@ -79,7 +79,11 @@ const FooterBottomContainer = () => {
   )
 }
 
-const Footer = ({ footerSocialLinks = true }) => {
+const Footer = ({ footerSocialLinks = true, footerFeatureData = {} }) => {
+  // Improve this logic
+  if (Object.keys(footerFeatureData).length !== 0) {
+    defaultfooterFeatureData = footerFeatureData
+  }
   return (
     <footer className={styles.footer}>
       <FooterFeature data={defaultfooterFeatureData} />
@@ -92,6 +96,7 @@ const Footer = ({ footerSocialLinks = true }) => {
 
 Footer.propTypes = {
   footerSocialLinks: PropTypes.bool,
+  footerFeatureData: PropTypes.object,
 }
 
 export default Footer

@@ -1,0 +1,174 @@
+@use '/styles/variables.scss' as *;
+@use '/styles/mixins.scss' as *;
+
+@import 'include-media';
+
+.container {
+  padding: 80px 0 80px 0;
+  border-top: $border-gray;
+}
+
+.TextContent1 {
+  padding: 0 20px;
+  margin: auto;
+  text-align: center;
+
+  p {
+    margin-top: 20px;
+  }
+}
+
+.pattern1 {
+  display: none;
+}
+
+.featureList {
+  padding-bottom: 80px;
+}
+
+.feature {
+  @include flex-center;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 35px;
+
+  button {
+    padding: 8px 20px;
+    width: 155px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+.icon {
+  position: relative;
+}
+
+.TextContent2 {
+  padding: 80px 20px 0;
+  margin: auto;
+  text-align: center;
+  border-top: $border-gray;
+
+  p {
+    margin-top: 2rem;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 125%;
+  }
+}
+
+.chartImg {
+  position: relative;
+  width: 327px;
+  height: 519px;
+  margin: auto;
+}
+
+.chartText {
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+  }
+
+  button {
+    width: 253px;
+    height: 48px;
+    margin-top: 2rem;
+  }
+}
+@include media('>tablet') {
+  .container {
+    padding: 100px 0;
+    border-top: none;
+  }
+
+  .TextContent1 {
+    h3 {
+      font-size: 64px;
+      line-height: 122%;
+    }
+    p {
+      font-size: 16px;
+      line-height: 178.5%;
+    }
+  }
+
+  .featureList {
+    @include flex-center;
+    flex-direction: row;
+    gap: 120px;
+    margin-top: 64px;
+  }
+
+  .feature {
+    position: relative;
+    gap: 30px;
+
+    button {
+      padding: 12px 28px;
+      width: 175px;
+      height: 48px;
+      font-size: 16px;
+    }
+  }
+
+  .pattern1 {
+    display: block;
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    inset: 0;
+    top: 30px;
+
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      #1477f8 0%,
+      rgba(20, 119, 248, 0) 100%
+    );
+    opacity: 0.5;
+    filter: blur(60px);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+
+  .pattern2 {
+    top: -30px;
+  }
+
+  .TextContent2 {
+    border-top: none;
+    max-width: 950px;
+    width: 80%;
+
+    h3 {
+      font-size: 65px;
+      line-height: 122%;
+    }
+
+    p {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 178.5%;
+    }
+  }
+
+  .chartImg {
+    width: 881px;
+    height: 521px;
+  }
+
+  .chartText {
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 178.5%;
+      margin-top: 3.8rem;
+    }
+
+    button {
+      margin-top: 4rem;
+    }
+  }
+}

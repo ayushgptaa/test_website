@@ -1,0 +1,152 @@
+@use '/styles/variables.scss' as *;
+@use '/styles/mixins.scss' as *;
+
+@import 'include-media';
+
+.aboutZcn {
+  width: 100%;
+  background: $darker-blue;
+  padding: 80px 32px;
+  text-align: center;
+
+  h3 {
+    font-size: 42px;
+    line-height: 110%;
+  }
+
+  p {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+}
+.moreInfo {
+  padding: 80px 0;
+}
+
+.imgContainer {
+  position: relative;
+  width: 330px;
+  height: 475px;
+  margin: auto;
+}
+
+.infoText {
+  padding-top: 60px;
+  width: $mobile-width;
+  margin: auto;
+  text-align: left;
+
+  h3 {
+    font-size: 28px;
+    line-height: 115%;
+  }
+
+  p {
+    text-align: left;
+    font-size: 14px;
+    margin-top: 2rem;
+
+    span {
+      display: block;
+      margin-top: 10px;
+    }
+  }
+
+  button {
+    width: 175px;
+    height: 48px;
+    margin: 0;
+    margin-top: 20px;
+  }
+}
+
+@include media('>850px') {
+  .aboutZcn {
+    position: relative;
+    padding-top: 130px;
+    max-width: 1160px;
+    width: 80%;
+    height: 400px;
+    margin: auto;
+    border-radius: 32px;
+    overflow: hidden;
+    background: transparent;
+
+    h3 {
+      font-size: 68px;
+      line-height: 100%;
+      text-align: center;
+      letter-spacing: -0.01em;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    p {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 125%;
+      margin: auto;
+      margin-top: 22px;
+      max-width: 800px;
+    }
+  }
+
+  .ellipseRight {
+    position: absolute;
+    width: 1694px;
+    height: 1694px;
+    left: -699px;
+    top: -735px;
+    background: $blue-gradient-center;
+    opacity: 0.5;
+    z-index: -1;
+  }
+
+  .ellipseLeft {
+    position: absolute;
+    width: 1694px;
+    height: 1694px;
+    left: 219px;
+    top: -305px;
+    background: $blue-gradient-center;
+    opacity: 0.2;
+    z-index: -1;
+  }
+
+  .moreInfo {
+    @include flex-horizontal-center(flex-start);
+    flex-direction: row;
+    gap: 120px;
+    padding: 100px 0 120px 0;
+  }
+
+  .imgContainer {
+    width: 375px;
+    height: 510px;
+  }
+
+  .infoText {
+    margin: 0;
+    width: 473px;
+    padding: 0;
+
+    h3 {
+      font-size: 80px;
+      line-height: 122%;
+      width: 120%;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 160%;
+
+      span {
+        margin-top: 2rem;
+      }
+    }
+
+    button {
+      margin-top: 2rem;
+    }
+  }
+}

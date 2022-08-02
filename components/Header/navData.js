@@ -12,10 +12,6 @@ const navData = [
     link: '/provide',
   },
   {
-    name: 'apps',
-    link: '/app-launch',
-  },
-  {
     name: 'ZCN',
     link: '/zcn',
   },

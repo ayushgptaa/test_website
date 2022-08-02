@@ -1,0 +1,90 @@
+@use '/styles/mixins.scss' as *;
+@use '/styles/variables.scss' as *;
+
+@import 'include-media';
+
+.container {
+  position: relative;
+  padding: 70px 0 50px 0;
+}
+
+.heroImg {
+  display: none;
+}
+
+.contentContainer {
+  width: $mobile-width;
+  margin: auto;
+  text-align: center;
+
+  p {
+    margin-top: 2rem;
+  }
+
+  .customPara {
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+.buttons {
+  @include flex-vertical-center(space-between);
+  gap: 20px;
+
+  button {
+    margin-top: 2rem;
+    width: 155px;
+    height: 48px;
+  }
+}
+
+@include media('>tablet') {
+  .container {
+    padding: 85px 0 150px 0;
+  }
+
+  @-webkit-keyframes zoomOut {
+    100% {
+      -webkit-transform: scale(1);
+    }
+  }
+
+  @keyframes zoomOut {
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .heroImg {
+    display: block;
+    position: absolute;
+    width: 1440px;
+    height: 1319px;
+    margin: auto;
+    inset: 0;
+    transform: scale(1.2);
+    top: -700px;
+    z-index: -9;
+    pointer-events: none;
+    animation: zoomOut 2.8s forwards;
+  }
+
+  .buttons {
+    margin-top: 70px;
+  }
+
+  .contentContainer {
+    width: 100%;
+    max-width: 853px;
+    @include flex-center;
+    flex-direction: column;
+
+    .customPara {
+      p {
+        font-size: 18px;
+        width: 950px;
+      }
+    }
+  }
+}
