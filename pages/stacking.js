@@ -1,0 +1,18 @@
+import PageContainer from 'components/PageContainer'
+import Header from 'components/Header'
+import Hero from 'components/pageComponents/stacking/Hero'
+import Features from 'components/pageComponents/stacking/Features'
+import Footer from 'components/Footer'
+
+const Build = () => {
+  return (
+    <PageContainer>
+      <Header removeImg />
+      <Hero />
+      <Features />
+      <Footer footerSocialLinks={false} footerFeature={false} />
+    </PageContainer>
+  )
+}
+
+export default Build

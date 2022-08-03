@@ -1,0 +1,122 @@
+@use '/styles/variables.scss' as *;
+@use '/styles/mixins.scss' as *;
+
+@import 'include-media';
+
+.container1 {
+  padding: 65px 20px 70px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.02);
+  border-top: $border-gray;
+
+  h3 {
+    font-size: 28px;
+    line-height: 115%;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 160%;
+    margin-top: 30px;
+  }
+
+  button {
+    width: 335px;
+    height: 48px;
+    margin-top: 30px;
+  }
+}
+
+.container2 {
+  padding: 80px 20px;
+  text-align: center;
+  border-top: $border-gray;
+
+  h3 {
+    font-size: 42px;
+    line-height: 110%;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 160%;
+    margin-top: 2rem;
+  }
+}
+
+.cardsContainer {
+  padding-top: 50px;
+}
+
+.card {
+  position: relative;
+  width: 320px;
+  height: 215px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.cardsBottomText {
+  padding: 0 20px;
+
+  p {
+    font-size: 14px;
+    line-height: 160%;
+    margin-top: 2rem;
+  }
+
+  button {
+    width: 200px;
+    height: 48px;
+    margin-top: 2rem;
+  }
+}
+
+@include media('>tablet') {
+  .container1 {
+    padding: 85px 0;
+
+    h3 {
+      width: 620px;
+      margin: auto;
+    }
+
+    p {
+      width: 600px;
+      margin: auto;
+      margin-top: 1.8rem;
+    }
+
+    button {
+      width: 600px;
+    }
+  }
+
+  .container2 {
+    padding: 130px 0 200px;
+
+    h3 {
+      font-size: 68px;
+      line-height: 100%;
+    }
+
+    p {
+      font-size: 18px;
+      max-width: 850px;
+      width: 80%;
+      margin: auto;
+      margin-top: 2rem;
+    }
+
+    .cardsContainer {
+      @include flex-center;
+      gap: 30px;
+    }
+
+    .card {
+      width: 472px;
+      height: 317.28px;
+      margin: 0;
+    }
+  }
+}

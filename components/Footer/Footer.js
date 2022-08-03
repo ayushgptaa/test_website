@@ -79,14 +79,18 @@ const FooterBottomContainer = () => {
   )
 }
 
-const Footer = ({ footerSocialLinks = true, footerFeatureData = {} }) => {
+const Footer = ({
+  footerSocialLinks = true,
+  footerFeature = true,
+  footerFeatureData = {},
+}) => {
   // Improve this logic
   if (Object.keys(footerFeatureData).length !== 0) {
     defaultfooterFeatureData = footerFeatureData
   }
   return (
     <footer className={styles.footer}>
-      <FooterFeature data={defaultfooterFeatureData} />
+      {footerFeature && <FooterFeature data={defaultfooterFeatureData} />}
       {footerSocialLinks && <FooterSocialLinks />}
       <FooterMenu />
       <FooterBottomContainer />
@@ -96,6 +100,7 @@ const Footer = ({ footerSocialLinks = true, footerFeatureData = {} }) => {
 
 Footer.propTypes = {
   footerSocialLinks: PropTypes.bool,
+  footerFeature: PropTypes.bool,
   footerFeatureData: PropTypes.object,
 }
 

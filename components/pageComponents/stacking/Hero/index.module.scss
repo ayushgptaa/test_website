@@ -1,0 +1,79 @@
+@import 'include-media';
+
+.rootContainer {
+  padding: 70px 0 0;
+}
+
+.mainTextContent {
+  padding: 0 20px;
+  text-align: center;
+
+  p {
+    margin-top: 2rem;
+  }
+}
+
+.heroImageMobile {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 650px;
+}
+
+.img1 {
+  position: absolute;
+  width: 529px;
+  height: 487px;
+  top: -120px;
+  right: -50px;
+}
+
+.img2 {
+  position: absolute;
+  width: 330px;
+  height: 160px;
+  top: 210px;
+  left: -15px;
+}
+
+.img3 {
+  position: absolute;
+  width: 330px;
+  height: 160px;
+  top: 384px;
+  right: -158px;
+  width: 580px;
+  height: 469px;
+}
+
+.heroDesktop {
+  display: none;
+}
+
+@include media('>tablet') {
+  .rootContainer {
+    padding: 80px 0 0;
+  }
+
+  .mainTextContent {
+    padding: 0 20px;
+    text-align: center;
+
+    p {
+      max-width: 820px;
+      margin: auto;
+      margin-top: 2rem;
+    }
+  }
+
+  .heroImageMobile {
+    display: none;
+  }
+
+  .heroDesktop {
+    display: block;
+    position: relative;
+    max-width: 975px;
+    margin: auto;
+  }
+}
