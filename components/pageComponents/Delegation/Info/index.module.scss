@@ -1,0 +1,179 @@
+@use '/styles/variables.scss' as *;
+@use '/styles/mixins.scss' as *;
+
+@import 'include-media';
+
+.rootContainer {
+  h4 {
+    font-size: 32px;
+    line-height: 122%;
+  }
+
+  padding-bottom: 80px;
+}
+
+.container1 {
+  background: $darker-blue;
+  padding: 40px 0 55px;
+  text-align: center;
+  border-top: $border-gray;
+
+  h3 {
+    font-size: 42px;
+    line-height: 110%;
+  }
+}
+
+.container1Img {
+  position: relative;
+  width: 392.71px;
+  height: 211.09px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 30px;
+}
+
+.container1ImgDesktop {
+  position: relative;
+  display: none;
+}
+
+.container1Text {
+  text-align: left;
+  position: relative;
+  background: $darker-blue;
+  padding: 50px 20px 55px;
+  z-index: 2;
+
+  p {
+    font-size: 16px;
+    line-height: 178.5%;
+    text-align: left;
+    margin-top: 1rem;
+  }
+}
+
+.container2 {
+  padding: 80px 0 0;
+  border-top: $border-gray;
+}
+
+.purpleText {
+  display: none;
+  font-size: 18px;
+  line-height: 100%;
+  background: linear-gradient(135deg, #d0d6fb 0%, #7e8acb 91.98%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.container2Text {
+  padding: 0 20px;
+
+  p {
+    font-size: 16px;
+    line-height: 178.5%;
+    margin-top: 1rem;
+    text-align: left;
+  }
+}
+
+.container2Img {
+  margin-top: 50px;
+  position: relative;
+  width: 375px;
+  height: 1660.31px;
+  right: -20px;
+}
+
+.tools {
+  padding-top: 80px;
+  text-align: center;
+
+  p {
+    font-size: 16px;
+    line-height: 178.5%;
+    padding: 0 20px;
+    margin-top: 30px;
+  }
+}
+
+.buttonsContainer {
+  margin-top: 24px;
+  @include flex-center;
+  gap: 20px;
+
+  button {
+    width: 155px;
+    height: 48px;
+    margin: 0;
+  }
+}
+@include media('>tablet') {
+  .rootContainer {
+    padding-bottom: 0px;
+
+    h4 {
+      font-size: 42px;
+      line-height: 110%;
+    }
+  }
+
+  .container1 {
+    @include flex-vertical-center(flex-start);
+    height: 572px;
+    overflow: hidden;
+
+    h3 {
+      display: none;
+    }
+  }
+
+  .container1Img {
+    display: none;
+  }
+
+  .container1ImgDesktop {
+    display: block;
+    width: 760px;
+    height: 800px;
+    left: 0;
+    bottom: -200px;
+    left: -100px;
+    transform: none;
+    flex-shrink: 0;
+  }
+
+  .container1Text {
+    width: 421.87px;
+  }
+
+  .purpleText {
+    display: block;
+  }
+
+  .container2 {
+    background: $darker-blue;
+    padding: 120px 0;
+  }
+
+  .container2Text {
+    text-align: center;
+    padding: 0;
+    max-width: 755px;
+    margin: auto;
+
+    p {
+      text-align: center;
+      margin-top: 30px;
+    }
+  }
+  .container2Img {
+    width: 971px;
+    height: 1229px;
+    margin: 65px 0 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
