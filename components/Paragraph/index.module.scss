@@ -1,8 +1,9 @@
+@use '/styles/variables.scss' as *;
+
 .paragraph {
   font-weight: 400;
   font-size: 18px;
   line-height: 160%;
-  color: #ffffff;
-  opacity: 0.8;
+  color: $text-2;
   text-align: center;
 }

@@ -1,0 +1,142 @@
+@use '/styles/variables.scss' as *;
+@use '/styles/mixins.scss' as *;
+
+@import 'include-media';
+
+.rootContainer {
+  padding: 80px 0;
+  background: #fff;
+  color: #000;
+
+  button {
+    border: 1px solid rgba(139, 139, 139, 0.6);
+    padding: 16px 32px;
+    width: 335px;
+    height: 56px;
+    color: $grey-7;
+    font-weight: 600;
+    margin-top: 50px;
+  }
+}
+
+.topTextContent {
+  padding: 0 20px;
+  text-align: center;
+
+  p {
+    color: $grey-6;
+    font-size: 14px;
+    line-height: 160%;
+    margin-top: 2rem;
+  }
+}
+
+.blobberInfoImg {
+  padding-top: 50px;
+
+  button {
+    display: none;
+  }
+}
+
+.featuresContainer {
+  & > div:last-child {
+    border-bottom: none;
+  }
+}
+
+.features {
+  padding: 40px 30px;
+  border-bottom: $border-gray;
+
+  h4 {
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 125%;
+    color: $grey-7;
+  }
+
+  p {
+    font-size: 14px;
+    color: $grey-6;
+    margin-top: 20px;
+    text-align: left;
+  }
+}
+
+@include media('>tablet') {
+  .rootContainer {
+    padding: 100px 0;
+
+    button {
+      display: none;
+    }
+  }
+  .topTextContent {
+    h3 {
+      font-size: 54px;
+      line-height: 110%;
+    }
+
+    p {
+      font-size: 18px;
+      max-width: 830px;
+      width: 80%;
+      margin: auto;
+      margin-top: 2rem;
+    }
+  }
+
+  .blobberInfoImg {
+    position: relative;
+    padding: 0;
+    @include flex-horizontal-center(flex-start);
+    border: $border-gray;
+    border-radius: 20px;
+    width: fit-content;
+    width: fit-content;
+    margin: auto;
+    background: rgba(139, 139, 139, 0.06);
+    margin-top: 50px;
+
+    & > div:first-child {
+      border-right: 1px dashed rgba(139, 139, 139, 0.6);
+      padding: 80px 60px 0 80px;
+    }
+
+    & > div:nth-child(2) {
+      padding: 80px 80px 0 60px;
+    }
+
+    button {
+      display: block;
+      position: absolute;
+      bottom: 50px;
+      width: 850px;
+      height: 56px;
+      background: #fff;
+    }
+  }
+
+  .features {
+    // @include flex(center, flex-start);
+    @include flex-center;
+    padding: 50px;
+  }
+
+  .featuresTextContent {
+    @include flex(space-between, flex-start);
+    width: calc(554px + 236px + 70px);
+    gap: 70px;
+
+    h4 {
+      max-width: 236px;
+      flex-shrink: 1;
+    }
+
+    p {
+      margin: 0;
+      max-width: 554px;
+    }
+  }
+}

@@ -1,0 +1,163 @@
+@use '/styles/mixins.scss' as *;
+@use '/styles/variables.scss' as *;
+
+@import 'include-media';
+
+.rootContainer {
+  background: #040c1d;
+  padding: 110px 0 50px;
+
+  p {
+    opacity: 0.8;
+  }
+}
+
+.topTextContent {
+  padding: 20px;
+  text-align: center;
+
+  p {
+    margin-top: 20px;
+  }
+}
+
+.rewardMobile {
+  position: relative;
+  width: 332px;
+  height: 1215.17px;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.rewardDesktop {
+  display: none;
+  position: relative;
+}
+
+.featureListContainer {
+  & > div:last-child {
+    border-bottom: none;
+  }
+}
+
+.featureList {
+  padding: 30px;
+  border-bottom: $border-gray;
+
+  p {
+    font-size: 14px;
+    margin-top: 30px;
+    text-align: left;
+  }
+}
+
+.heading {
+  @include flex-vertical-center(flex-start);
+  gap: 30px;
+
+  h4 {
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 125%;
+    width: auto;
+  }
+}
+
+.number {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  @include flex-center;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 122%;
+  box-shadow: 2px 4px 24px rgba(0, 0, 0, 0.95);
+}
+
+.number1 {
+  background: #0b2044;
+}
+
+.number2 {
+  background: linear-gradient(
+      0deg,
+      rgba(26, 73, 255, 0.2),
+      rgba(26, 73, 255, 0.2)
+    ),
+    #0b2044;
+}
+
+.number3 {
+  background: rgba(26, 73, 255, 0.5);
+}
+
+.number4 {
+  background: $zus-primary-gradient;
+}
+
+@include media('>tablet') {
+  .rootContainer {
+    background: $darker-blue;
+    margin-top: -115px;
+    padding: 220px 0 150px;
+  }
+
+  .topTextContent {
+    padding: 0;
+    width: 695px;
+    margin: auto;
+
+    h3 {
+      font-size: 54px;
+      line-height: 110%;
+    }
+
+    p {
+      margin-top: 2rem;
+    }
+  }
+
+  .rewardsContainer {
+    @include flex-horizontal-center(flex-start);
+    gap: 100px;
+    padding-top: 100px;
+  }
+
+  .rewardMobile {
+    display: none;
+  }
+
+  .rewardDesktop {
+    display: block;
+    width: 473px;
+    height: 1473.51px;
+    flex-shrink: 0;
+    z-index: 5;
+  }
+
+  .featureListContainer {
+    & > div:last-child {
+      & > div:last-child {
+        display: none;
+      }
+    }
+  }
+
+  .featureList {
+    position: relative;
+    max-width: 441px;
+    padding: 60px 0;
+    border-bottom: none;
+  }
+
+  .line {
+    position: absolute;
+    width: 200vw;
+    bottom: 0;
+    left: -100vw;
+    height: 1px;
+    background: rgba(139, 139, 139, 0.3);
+    z-index: 2;
+  }
+}

@@ -1,0 +1,78 @@
+@use '/styles/variables.scss' as *;
+@use '/styles/mixins.scss' as *;
+
+@import 'include-media';
+
+.container {
+  @include flex-center-column;
+  padding: 50px 0 60px;
+  background: rgba(139, 139, 139, 0.06);
+  border: $border-gray;
+  box-shadow: inset 26.4526px -26.4526px 26.4526px rgba(194, 194, 194, 0.041);
+
+  h4 {
+    margin-top: 30px;
+    font-size: 32px;
+    line-height: 40px;
+    color: $grey-7;
+  }
+}
+
+.icon {
+  position: relative;
+}
+
+.ellipse {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  inset: 0;
+
+  opacity: 0.6;
+  filter: blur(70px);
+}
+
+.formulaContainer {
+  width: 340px;
+  height: 90px;
+  background: url('/images/block-rewards/BlobberInfo/bracketLeft.svg') no-repeat
+      left center,
+    url('/images/block-rewards/BlobberInfo/bracketRight.svg') no-repeat right
+      center;
+  background-size: 9.5px 71px;
+
+  margin-top: 24px;
+  @include flex-vertical-center(space-between);
+}
+
+.formula {
+  height: 46px;
+  width: 129.6px;
+  margin: 0 10px;
+  background: url('/images/block-rewards/BlobberInfo/parenLeft.svg') no-repeat
+      left top,
+    url('/images/block-rewards/BlobberInfo/parenRight.svg') no-repeat right top;
+  background-size: 12px 45px;
+  text-align: center;
+
+  h5 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 125%;
+  }
+}
+
+.infoBtn {
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+@include media('>tablet') {
+  .container {
+    height: 472px;
+    // padding: 80px 60px 0 80px;
+    border: none;
+    justify-content: flex-start;
+  }
+}

@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types'
-import clsx from 'clsx'
 
 import styles from './index.module.scss'
 
-const Paragraph = ({ children, left }) => {
+const Paragraph = ({ children }) => {
   return <p className={styles.paragraph}>{children}</p>
 }
 

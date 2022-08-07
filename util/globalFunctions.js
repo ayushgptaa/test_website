@@ -51,3 +51,7 @@ export const padToIncreaseWidth = (text, width, padder) => {
 
   return output
 }
+
+export const toLowerCaseRemoveSpaces = (string) => {
+  return string.toLowerCase().split(' ').join('')
+}
