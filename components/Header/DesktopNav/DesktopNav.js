@@ -17,7 +17,13 @@ const DesktopNav = ({ removeDesktopNav }) => {
           </span>
         ))}
 
-        <Button type="button" text="Launch Apps" black link="/launch-apps" />
+        <Button
+          type="button"
+          text="Launch Apps"
+          black
+          transparent
+          link="/launch-apps"
+        />
       </div>
     )
   )

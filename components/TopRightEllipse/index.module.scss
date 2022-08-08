@@ -1,0 +1,28 @@
+@use '/styles/variables.scss' as *;
+
+@import 'include-media';
+
+.ellipseRight {
+  position: absolute;
+  width: 342.21px;
+  height: 338.65px;
+  left: 159.61px;
+  top: -129.18px;
+
+  background: $blue-gradient-center;
+  opacity: 0.6;
+  filter: blur(70px);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  z-index: -1;
+}
+
+@include media('>tablet') {
+  .ellipseRight {
+    width: 1265.5px;
+    height: 1265.5px;
+    left: 385px;
+    top: -600px;
+    opacity: 0.5;
+    filter: blur(150px);
+  }
+}

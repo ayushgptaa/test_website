@@ -1,14 +1,15 @@
+import PageContainer from '/components/PageContainer'
 import Header from 'components/Header'
 import AppLaunchComponent from 'pageComponents/applaunchpage'
 import Footer from 'components/Footer'
 
 const LaunchApps = () => {
   return (
-    <>
-      <Header removeImg removeDesktopNav removeSocialIcons removeZusText />
+    <PageContainer>
+      <Header removeImg />
       <AppLaunchComponent />
       <Footer showfooterBackground={false} showfooterFeature={false} />
-    </>
+    </PageContainer>
   )
 }
 

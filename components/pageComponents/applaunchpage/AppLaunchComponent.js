@@ -1,11 +1,12 @@
 import { useEffect } from 'react'
 import Image from 'next/image'
-import { Fade, Zoom } from 'react-awesome-reveal'
+import { Fade } from 'react-awesome-reveal'
 import clsx from 'clsx'
 
+import TopRightEllipse from 'components/TopRightEllipse'
 import AppContainer from './AppContainer'
 import Heading from 'components/Heading'
-import Text from 'components/Text'
+import Paragraph from 'components/Paragraph'
 import Button from 'components/Button'
 
 import applaunchData from './applaunchData'
@@ -43,16 +44,21 @@ const AppLaunchComponent = () => {
 
   return (
     <section className={styles.rootContainer}>
-      <div className={styles.ellipse} />
+      <TopRightEllipse />
 
       <div className={styles.mainText}>
-        <Fade direction="up" cascade>
-          <Heading text="The App ecosystem" uppercase />
-          <Text>See what’s possible on the Züs Cloud Network.</Text>
+        <Fade direction="up" cascade triggerOnce duration={1000}>
+          <Heading text="The app ecosystem" className={styles.headingDesktop} />
+          <Heading
+            text="Dive into then app ecosystem"
+            className={styles.headingMobile}
+          />
+          <Paragraph>See what’s possible on the Züs Cloud Network.</Paragraph>
         </Fade>
       </div>
-      <Zoom cascade>
-        <div className={styles.appLaunchContainer}>
+
+      <div className={styles.appLaunchContainer}>
+        <Fade direction="up" cascade triggerOnce duration={600} fraction={0.2}>
           {applaunchData.map(
             ({ icon, heading, text, btnText, btnTextSecondary }, index) => (
               <AppContainer key={heading}>
@@ -61,15 +67,15 @@ const AppLaunchComponent = () => {
                   <div className={clsx(styles.iconContainer, 'IconContainer')}>
                     <Image
                       src={icon}
-                      width={icon.width}
-                      height={icon.height}
+                      width={90}
+                      height={90}
                       alt={heading}
                       layout="fixed"
                       priority="false"
                     />
                   </div>
                   <Heading text={heading} />
-                  <Text>{text}</Text>
+                  <Paragraph>{text}</Paragraph>
                 </div>
                 <Button transparent text={btnText} type="button" />
                 {btnTextSecondary && (
@@ -86,8 +92,8 @@ const AppLaunchComponent = () => {
           <AppContainer textContainer>
             <Heading text="More coming soon" />
           </AppContainer>
-        </div>
-      </Zoom>
+        </Fade>
+      </div>
     </section>
   )
 }
