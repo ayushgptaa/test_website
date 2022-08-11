@@ -2,8 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Draggable from 'react-draggable'
 
-import styles from './SliderEditor.module.scss'
 import Node from './Node'
+
+import styles from './SliderEditor.module.scss'
 
 const SliderNode = ({ color }) => {
   return (
@@ -73,7 +74,7 @@ const Slider = ({ percentage, setPercentage, color, secondaryColor }) => {
     background = `linear-gradient(90deg, ${color} ${percentage}%, ${secondaryColor} ${percentage}%)`
 
   return (
-    <div style={{ padding: '16px 0px' }}>
+    <div style={{ padding: '21px 0px 10px' }}>
       <div
         ref={parentRef}
         className={styles.sliderContainer}

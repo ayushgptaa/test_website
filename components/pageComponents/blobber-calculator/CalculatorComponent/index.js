@@ -1,12 +1,11 @@
 import { useState } from 'react'
 
+import YourRewards from 'pageComponents/blobber-calculator/YourRewards'
+import StatsModifier from 'pageComponents/blobber-calculator/StatsModifier'
+import ProjectedStats from 'pageComponents/blobber-calculator/ProjectedStats'
+import BulletText from 'components/BulletText'
 import AccordianContainer from 'components/AccordianContainer'
 import Disclaimer from 'components/Disclaimer'
-import YourRewards from 'pageComponents/blobber-calculator-page/YourRewards'
-import StatsModifier from 'pageComponents/blobber-calculator-page/StatsModifier'
-import ProjectedStats from 'pageComponents/blobber-calculator-page/ProjectedStats'
-import CalculatorIcon from 'components/IconsComponents/calculator'
-import BulletText from 'components/BulletText'
 
 import styles from './index.module.scss'
 
@@ -42,8 +41,14 @@ const CalculatorComponent = () => {
 
   return (
     <div className={styles.container}>
-      <CalculatorIcon />
-      <div className={styles.title}>Blobber Revenue Calculator</div>
+      <YourRewards
+        activeStorage={activeStorage}
+        graphLabels={labels}
+        graphValues={modiifiedValues}
+        zcnDel={zcnDel}
+        projectedAPRText="720%"
+        projectedEarningsText="1.34m ZCN"
+      />
 
       <StatsModifier
         activeStorage={activeStorage}
@@ -55,20 +60,8 @@ const CalculatorComponent = () => {
         commision={commision}
         setComission={setComission}
       />
-      <ProjectedStats
-        avgStorage={300}
-        avgZCNDel={40000}
-        avgZCNStake={30000}
-        totalBlobbers={300}
-      />
-      <YourRewards
-        activeStorage={activeStorage}
-        graphLabels={labels}
-        graphValues={modiifiedValues}
-        zcnDel={zcnDel}
-        projectedAPRText="720%"
-        projectedEarningsText="1.34m ZCN"
-      />
+
+      <ProjectedStats avgStorage={300} avgZCNDel={40000} avgZCNStake={30000} />
 
       <AccordianContainer title="Read About the Network Assumptions">
         <BulletText>
@@ -105,6 +98,7 @@ const CalculatorComponent = () => {
           All Blobbers have 100% Uptime (any downtime may result in)
         </BulletText>
       </AccordianContainer>
+
       <Disclaimer
         className={styles.disclaimer}
         title="Disclaimer"
@@ -120,9 +114,8 @@ const CalculatorComponent = () => {
             block rewards according to the various mathematical formulas
             outlined in this{' '}
             <a href="https://google.com" target="_blank" rel="noreferrer">
-              Economic paper
+              [Economic paper] [LINK TO THE ECONOMIC PAPER].
             </a>
-            .
           </>
         }
       />

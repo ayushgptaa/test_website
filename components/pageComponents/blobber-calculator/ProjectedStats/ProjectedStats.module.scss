@@ -1,56 +1,55 @@
 @use '/styles/color.scss' as *;
+@use '/styles/variables.scss' as *;
 @use '/styles/mixins.scss' as *;
 
-.rootContainer {
-  display: grid;
-  gap: 24px;
-}
+@import 'include-media';
 
 .container1 {
   & > p {
     margin-top: 9px;
-    font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-    color: $blobber-text-white;
   }
 }
 
 .blueText {
   color: $blobber-primary-blue;
+  font-size: 24px;
+  line-height: 125%;
 }
 
 .focusText {
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
-  background-color: rgb(52, 61, 73);
+  background: rgba(139, 139, 139, 0.12);
+  border-radius: 6px;
   padding: 5px 12px;
-  border-radius: 8px;
   width: fit-content;
-}
-
-.container2 {
-  @include flex-vertical-center(initial);
-  gap: 24px;
 }
 
 .statsContainer {
   @include flex-vertical-center(space-between);
-}
-
-.singleStats {
-  width: fit-content;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 2rem 0;
 }
 
 .statsItem {
   display: grid;
   gap: 5px;
+  width: fit-content !important;
 
-  & > h4 {
-    font-weight: 700;
+  h4 {
     font-size: 14px;
     line-height: 17px;
+    color: $text-2;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 15px;
+    color: $text-2;
   }
 }
 
@@ -63,9 +62,16 @@
 
 .note {
   @include flex-vertical-center(initial);
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 120%;
-  color: $blobber-text-white;
   gap: 16px;
+
+  p {
+    font-size: 14px;
+    line-height: 160%;
+  }
+}
+
+@include media('>tablet') {
+  .statsItem {
+    height: 80px;
+  }
 }

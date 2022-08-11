@@ -1,0 +1,50 @@
+@use '/styles/mixins.scss' as *;
+@use '/styles/variables.scss' as *;
+
+@import 'include-media';
+.container {
+  position: relative;
+  padding: 65px 20px 35px;
+  text-align: center;
+
+  h1 {
+    font-size: 28px;
+    line-height: 115%;
+  }
+}
+
+.ellipseRight {
+  position: absolute;
+  width: 468px;
+  height: 468px;
+  top: -240px;
+  left: 90px;
+  background: $blue-gradient-center;
+  opacity: 0.8;
+  filter: blur(150px);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+@include media('>tablet') {
+  .container {
+    padding: 85px 0 60px;
+    // z-index: 2;
+
+    h1 {
+      font-size: 68px;
+      line-height: 100%;
+      width: 600px;
+      margin: auto;
+    }
+  }
+
+  .ellipseRight {
+    width: 1265.5px;
+    height: 1265.5px;
+    top: -600px;
+    left: 350px;
+    z-index: -9;
+    filter: blur(150px);
+    opacity: 0.5;
+  }
+}

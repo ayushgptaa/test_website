@@ -5,18 +5,16 @@ export const getStatsData = ({ avgStorage, avgZCNStake, avgZCNDel }) => {
   return [
     {
       heading: 'Average Active Storage',
-      number: `${convertToDecimalSeparated(avgStorage)}`,
+      number: `${convertToDecimalSeparated(avgStorage)} TB`,
       bottomText: 'Per Blobber',
     },
     {
       heading: 'Average ZCN Stake',
       number: `${convertToDecimalSeparated(avgZCNStake)} ZCN`,
-      bottomText: 'Per Blobber (Self-Delegation)',
     },
     {
       heading: 'Average ZCN Delegations',
       number: `${convertToDecimalSeparated(avgZCNDel)} ZCN`,
-      bottomText: 'Per Blobber',
     },
   ]
 }

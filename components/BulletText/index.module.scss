@@ -1,5 +1,10 @@
+@use '/styles/variables.scss' as *;
+
 .bulletTextContainer {
   display: flex;
+  font-size: 14px;
+  line-height: 160%;
+  color: $grey-3;
 
   li {
     list-style-type: disc;

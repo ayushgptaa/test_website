@@ -1,6 +1,7 @@
 import React from 'react'
 import clsx from 'clsx'
 import PropTypes from 'prop-types'
+
 import Slider from './Slider'
 
 import { convertToDecimalSeparated } from 'util/globalFunctions'
@@ -47,7 +48,7 @@ const SliderEditor = ({
   }, [percentage])
 
   return (
-    <div className={clsx(styles.container)}>
+    <div className={clsx(styles.rootContainer)}>
       {/* Content Above Slider */}
       <div className={styles.textContainer}>
         {/* Left Title */}
@@ -58,15 +59,16 @@ const SliderEditor = ({
             `${convertToDecimalSeparated(currentValue)} ${unitSymbol}`}
         </div>
       </div>
+
       {/* Slider */}
-      <div>
-        <Slider
-          percentage={percentage}
-          setPercentage={setPercentage}
-          color={color}
-          secondaryColor={secondaryColor}
-        />
-      </div>
+
+      <Slider
+        percentage={percentage}
+        setPercentage={setPercentage}
+        color={color}
+        secondaryColor={secondaryColor}
+      />
+
       {/* Labels */}
       <div className={styles.labelContainer}>
         {/* Left Label */}

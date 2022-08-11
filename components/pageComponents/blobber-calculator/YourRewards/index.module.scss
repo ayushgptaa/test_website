@@ -1,0 +1,99 @@
+@use '/styles/variables.scss' as *;
+@use '/styles/mixins.scss' as *;
+
+@import 'include-media';
+
+.rootContainer {
+  background: linear-gradient(0deg, #061631, #061631), #1d2434;
+}
+
+.container1 {
+  @include flex-center-column;
+  gap: 26px;
+}
+
+.singleHeaderContainer {
+  width: 100%;
+  @include flex-vertical-center(space-between);
+  flex-direction: column;
+  border-radius: 6px;
+  padding: 15px 25px;
+  background: rgba(139, 139, 139, 0.12);
+  height: 114px;
+  border: 1px solid rgba(139, 139, 139, 0.3);
+
+  p {
+    width: 100%;
+    font-size: 16px;
+    line-height: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(4, 12, 29, 0.2);
+  }
+
+  h4 {
+    font-size: 28px;
+    line-height: 115%;
+  }
+}
+
+.singleHeaderHeaderText {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #e6e7e8;
+}
+
+.container2 {
+  padding-top: 40px;
+
+  h4 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+.container3 {
+  padding-top: 40px;
+  @include flex-center-column;
+  gap: 24px;
+}
+
+.blueContainer {
+  h5 {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: $text-3;
+  }
+
+  p {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #fff;
+  }
+}
+
+.container4 {
+  width: 100%;
+  padding-top: 2rem;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  color: $text-3;
+
+  a {
+    color: $primary-solid;
+  }
+}
+
+@include media('>tablet') {
+  .container1 {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .container3 {
+    flex-direction: row;
+  }
+}

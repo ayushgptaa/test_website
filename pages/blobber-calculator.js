@@ -1,21 +1,17 @@
-import CalculatorComponent from 'components/pageComponents/blobber-calculator-page/CalculatorComponent'
-import ZCNSupply from 'components/pageComponents/blobber-calculator-page/ZCNSupply'
+import PageContainer from 'components/PageContainer'
+import Header from 'components/Header'
+import Hero from 'components/pageComponents/blobber-calculator/Hero'
+import CalculatorComponent from 'components/pageComponents/blobber-calculator/CalculatorComponent'
+import Footer from 'components/Footer'
 
 const BlobberCalculator = () => {
   return (
-    <div>
-      <div
-        style={{
-          justifyContent: 'center',
-          alignItems: 'center',
-          display: 'flex',
-          flexDirection: 'column',
-        }}>
-        <ZCNSupply />
-
-        <CalculatorComponent />
-      </div>
-    </div>
+    <PageContainer>
+      <Header removeImg />
+      <Hero />
+      <CalculatorComponent />
+      <Footer />
+    </PageContainer>
   )
 }
 

@@ -8,8 +8,8 @@ const Disclaimer = ({ title, description, className }) => {
   return (
     <Wrapper className={className}>
       <div className={styles.disclaimerContent}>
-        <h1>{title}</h1>
-        {description}
+        <h4>{title}</h4>
+        <p>{description}</p>
       </div>
     </Wrapper>
   )

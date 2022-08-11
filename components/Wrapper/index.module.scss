@@ -1,0 +1,21 @@
+@use '/styles/variables.scss' as *;
+@use '/styles/color.scss' as *;
+
+@import 'include-media';
+
+.rootContainer {
+  width: 85%;
+  margin: auto;
+  background: #1d2434;
+  border: 1px solid rgba(129, 133, 142, 0.4);
+  border-radius: 12px;
+  padding: 16px 15px 20px;
+}
+
+@include media('>tablet') {
+  .rootContainer {
+    max-width: 880px;
+    width: 80%;
+    padding: 40px;
+  }
+}

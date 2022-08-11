@@ -13,7 +13,7 @@ const AccordianContainer = ({ title, children }) => {
   return (
     <Wrapper className={styles.rootContainer}>
       <div>
-        <h2 className={styles.title}>{title}</h2>
+        <h4 className={styles.title}>{title}</h4>
         <button onClick={() => setExpanded(!isExpanded)}>
           {isExpanded && <DownArrow />}
           {!isExpanded && <RightArrow />}

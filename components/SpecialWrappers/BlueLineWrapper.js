@@ -1,19 +1,15 @@
 import PropTypes from 'prop-types'
+import clsx from 'clsx'
 
 import style from './BlueLineWrapper.module.scss'
 
-const BlueLineWrapper = ({ children, childenParentDivClassName }) => {
-  return (
-    <div className={style.container}>
-      <div className={style.blueLine}> </div>
-      <div className={childenParentDivClassName}>{children}</div>
-    </div>
-  )
+const BlueLineWrapper = ({ children, className }) => {
+  return <div className={clsx(style.container, className)}>{children}</div>
 }
 
 BlueLineWrapper.propTypes = {
   children: PropTypes.node.isRequired,
-  childenParentDivClassName: PropTypes.string,
+  className: PropTypes.string,
 }
 
 export default BlueLineWrapper
