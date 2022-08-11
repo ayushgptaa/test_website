@@ -1,0 +1,39 @@
+@import 'include-media';
+
+.rootContainer {
+  position: relative;
+  padding: 60px 0 30px;
+}
+
+.mainTextContent {
+  padding: 0 20px;
+  text-align: center;
+
+  h1 {
+    font-size: 28px;
+  }
+
+  p {
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 125%;
+    margin-top: 2rem;
+  }
+}
+
+@include media('>tablet') {
+  .rootContainer {
+    padding: 85px 0 65px;
+  }
+
+  .mainTextContent {
+    max-width: 1000px;
+    width: 80%;
+    margin: auto;
+
+    h1 {
+      font-size: 68px;
+      line-height: 100%;
+    }
+  }
+}

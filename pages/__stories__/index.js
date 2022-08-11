@@ -1,4 +1,4 @@
-import PreMainnerInflationarySupply from 'components/PreMainnerInflationarySupply'
+import PreMainnerInflationarySupply from 'components/pageComponents/zcn-supply-schedule/ZCNSupply/PreMainnerInflationarySupply'
 import CheckOurSolutions from 'components/CheckOurSolutions'
 
 const DummyPreMainner = [

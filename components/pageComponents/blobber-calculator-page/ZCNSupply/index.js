@@ -2,7 +2,7 @@ import clsx from 'clsx'
 
 import Button from 'components/Button'
 import MultipleAreaChart from 'components/Chart/MultipleAreaChart'
-import PreMainnerInflationarySupply from 'components/PreMainnerInflationarySupply'
+import PreMainnerInflationarySupply from 'components/pageComponents/zcn-supply-schedule/ZCNSupply/PreMainnerInflationarySupply'
 
 import InflationChart from '../InflationGraph'
 import ZCNData from './ZCNData'

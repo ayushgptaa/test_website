@@ -1,0 +1,26 @@
+@use '/styles/variables.scss' as *;
+
+@import 'include-media';
+
+.rootContainer {
+  padding-bottom: 104px;
+}
+
+.chartContainer {
+  width: auto;
+  height: auto;
+  margin: auto;
+}
+
+@include media('>tablet') {
+  .rootContainer {
+    border-top: $border-gray;
+    padding: 70px 0 104px;
+  }
+
+  .chartContainer {
+    width: 893px;
+    margin: auto;
+    padding-bottom: 60px;
+  }
+}

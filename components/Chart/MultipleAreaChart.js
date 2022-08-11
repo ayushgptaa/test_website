@@ -1,18 +1,20 @@
 /* eslint-disable no-underscore-dangle */
-import React from 'react'
+import { useState, useEffect } from 'react'
 import { Line } from 'react-chartjs-2'
 import Chart from 'chart.js/auto'
-
 import PropTypes from 'prop-types'
+
 import {
   getRandomColor,
   getTextDisplayWidth,
   padToIncreaseWidth,
 } from 'util/globalFunctions'
 
+import useGetScreenSize from 'hooks/useGetScreenSize'
+
 Chart.register('category')
 
-export const MultipleAreaChart = ({
+const MultipleAreaChart = ({
   labels,
   minY,
   maxY,
@@ -23,14 +25,15 @@ export const MultipleAreaChart = ({
   chartData,
   formatYLabels,
 }) => {
-  const [data, setData] = React.useState({
+  const isMobile = useGetScreenSize()
+
+  const [data, setData] = useState({
     labels: [],
     datasets: [],
   })
+  const [options, setOptions] = useState()
 
-  const [options, setOptions] = React.useState()
-
-  React.useEffect(() => {
+  useEffect(() => {
     const ctx = document.getElementById('chart').getContext('2d')
 
     const datasetsToShow = chartData.map((item) => {
@@ -63,7 +66,7 @@ export const MultipleAreaChart = ({
         fill: 'start',
         backgroundColor: colorObect,
         borderWidth: 2,
-        borderColor: '#6db8ff',
+        borderColor: item?.border || '#6db8ff',
         data: item.values,
         pointRadius: 0,
         pointHoverRadius: 0,
@@ -77,7 +80,6 @@ export const MultipleAreaChart = ({
     setData(finalData)
 
     // Options Part
-
     let maxLengthLegend = ''
 
     chartData.forEach((item) => {
@@ -99,26 +101,34 @@ export const MultipleAreaChart = ({
         x: {
           ticks: {
             color: '#FFFFFF',
+            font: {
+              size: isMobile ? 9 : 12,
+            },
           },
+          padding: isMobile ? 9 : 16,
+
           title: {
             display: xAxisLegend !== undefined,
             text: xAxisLegend,
           },
-          font: {
-            size: 20,
-            fontStyle: 'italic',
-          },
+
           grid: {
             display: true,
-            color: 'rgba(217,143,7,0.1)',
+            color: 'rgba(255,255,255,0.1)',
           },
         },
 
         y: {
           ticks: {
             color: '#FFFFFF',
+            stepSize: 75000000,
             callback: formatYLabels || undefined,
+            padding: isMobile ? 9 : 20,
+            font: {
+              size: isMobile ? 9 : 12,
+            },
           },
+
           min: minY,
           max: maxY,
           title: {
@@ -127,7 +137,7 @@ export const MultipleAreaChart = ({
           },
           grid: {
             display: true,
-            color: 'rgba(217,143,7,0.1)',
+            color: 'rgba(255,255,255,0.1)',
           },
         },
       },
@@ -151,19 +161,19 @@ export const MultipleAreaChart = ({
           enabled: true,
           bodyColor: '#FFFFFF',
           displayColors: false,
-          backgroundColor: '#5F657F',
-          padding: 16,
+          background: 'rgba(4, 12, 29, 0.4)',
+          padding: 22,
+          borderColor: 'rgba(139, 139, 139, 0.3)',
+          borderWidth: 1,
           bodyFont: {
-            size: 14,
+            size: 12,
             family: 'Averta Std',
-            weight: 700,
+            weight: 600,
             lineHeight: '16px',
           },
-          titleFont: {
-            size: 18,
-            family: 'Averta Std',
-          },
+          bodyAlign: 'left',
           callbacks: {
+            title() {},
             label(context) {
               let label = context.dataset.label || ''
               label = padToIncreaseWidth(label, displayWidth)
@@ -181,7 +191,7 @@ export const MultipleAreaChart = ({
     }
 
     setOptions(displayOptions)
-  }, [])
+  }, [isMobile])
 
   const drawDottedLinePlugin = {
     afterDraw: (chart) => {
@@ -216,14 +226,14 @@ MultipleAreaChart.propTypes = {
   chartData: PropTypes.arrayOf(
     PropTypes.shape({
       values: PropTypes.arrayOf(PropTypes.number).isRequired,
-      color: PropTypes.oneOf(
+      color: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.shape({
           r: PropTypes.string.isRequired,
           g: PropTypes.string.isRequired,
           b: PropTypes.string.isRequired,
-        })
-      ),
+        }),
+      ]),
       legend: PropTypes.string.isRequired,
     })
   ).isRequired,

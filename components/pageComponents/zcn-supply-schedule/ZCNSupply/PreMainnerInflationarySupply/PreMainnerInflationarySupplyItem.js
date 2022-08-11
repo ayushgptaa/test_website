@@ -7,7 +7,7 @@ const PreMainetItem = ({ mainnerDetails }) => {
   return (
     <li className={styles.supplyList}>
       <div style={{ backgroundColor: color }} className={styles.dot}></div>
-      <h1>{title}</h1>
+      <h5>{title}</h5>
       <p>{description}</p>
     </li>
   )

@@ -16,7 +16,7 @@ export const convertNumberToStringRepresentation = (num) => {
     return `${(num / 1000).toFixed(1)}K` // convert to K for number from > 1000 < 1 million
   }
   if (num > 1000000) {
-    return `${(num / 1000000).toFixed(1)}M` // convert to M for number from > 1 million
+    return `${(num / 1000000).toFixed(0)}m` // convert to M for number from > 1 million
   }
   if (num < 900) {
     return num // if value < 1000, nothing to do
@@ -54,4 +54,16 @@ export const padToIncreaseWidth = (text, width, padder) => {
 
 export const toLowerCaseRemoveSpaces = (string) => {
   return string.toLowerCase().split(' ').join('')
+}
+
+export const generateCustomArray = ({
+  from = 0,
+  to,
+  step = 0,
+  length = Math.ceil((to - from) / step),
+}) => {
+  const arr = Array.from({ length }, (_, i) => from + i * step)
+  return arr?.map((x) => {
+    return x * 1000000
+  })
 }
