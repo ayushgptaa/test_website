@@ -68,16 +68,6 @@
   }
 }
 
-.tableContainer {
-  padding: 40px 0 0;
-  margin: 0 20px;
-  border-top: $border-gray;
-  @include flex-center;
-  gap: 60px;
-  flex-wrap: wrap;
-  max-width: 1000px;
-}
-
 @include media('>tablet') {
   .rootContainer {
     padding: 120px 0;
@@ -112,8 +102,5 @@
       width: 560px;
       margin: 13px auto 0;
     }
-  }
-  .tableContainer {
-    margin: auto;
   }
 }

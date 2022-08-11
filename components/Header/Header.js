@@ -16,15 +16,24 @@ const Header = ({
   removeDesktopNav,
   removeSocialIcons,
   removeZusText,
+  borderWhite = false,
   color = '',
 }) => {
   const { showNavLinks, animation, toggleNavbar } = useAnimatedNavToggler()
 
   return (
     <div className={clsx(styles.container, styles[color])}>
-      <TopSection removeSocialIcons={removeSocialIcons} />
+      <TopSection
+        removeSocialIcons={removeSocialIcons}
+        borderWhite={borderWhite}
+      />
       <HeaderImgComponent removeImg={removeImg} />
-      <header className={clsx(styles.header, removeImg && styles.borderBottom)}>
+      <header
+        className={clsx(
+          styles.header,
+          removeImg && styles.borderBottom,
+          borderWhite && styles.borderWhite
+        )}>
         <ZusLogo removeZusText={removeZusText} />
         <DesktopNav removeDesktopNav={removeDesktopNav} />
         <MobileNav animation={animation} />
@@ -39,6 +48,7 @@ Header.propTypes = {
   removeDesktopNav: PropTypes.bool,
   removeSocialIcons: PropTypes.bool,
   removeZusText: PropTypes.bool,
+  borderWhite: PropTypes.bool,
   color: PropTypes.string,
 }
 

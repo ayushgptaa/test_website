@@ -1,13 +1,14 @@
 import Link from 'next/link'
+import clsx from 'clsx'
 import propTypes from 'prop-types'
 
 import SocialIcons from 'components/SocialIcons'
 
 import styles from './TopSection.module.scss'
 
-const TopSection = ({ removeSocialIcons }) => {
+const TopSection = ({ removeSocialIcons, borderWhite }) => {
   return (
-    <div className={styles.wrapper}>
+    <div className={clsx(styles.wrapper, borderWhite && styles.borderWhite)}>
       <div className={styles.wrapperLeft}>
         <span>EN</span>
       </div>
@@ -25,6 +26,7 @@ const TopSection = ({ removeSocialIcons }) => {
 
 TopSection.propTypes = {
   removeSocialIcons: propTypes.bool,
+  borderWhite: propTypes.bool,
 }
 
 export default TopSection

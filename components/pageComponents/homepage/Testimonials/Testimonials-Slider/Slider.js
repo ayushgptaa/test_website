@@ -28,6 +28,7 @@ const FounderInfo = ({ img, name, description }) => {
           width={isMobile ? 60 : 110}
           layout="fixed"
           objectFit="cover"
+          quality={100}
         />
       </div>
       <div className={styles.founderInfoText}>

@@ -1,0 +1,66 @@
+@use '/styles/mixins.scss' as *;
+@use '/styles/variables.scss' as *;
+
+@import 'include-media';
+
+.rootContainer {
+  position: relative;
+  padding: 70px 0 0;
+  width: 100%;
+  height: 100vh;
+
+  h1 {
+    font-size: 28px;
+    line-height: 115%;
+    max-width: 395px;
+    margin: auto;
+    text-align: center;
+  }
+}
+
+.backgroundImg {
+  @include background-image(
+    '/images/stability/Hero/heroBackground.png',
+    center center,
+    cover,
+    100%,
+    100%
+  );
+  inset: 0;
+  top: $header-mobile;
+}
+
+.mainTextContent {
+  text-align: center;
+  @include center-horizontal-absolute;
+  max-width: 374px;
+  width: 90%;
+  margin: auto;
+  bottom: calc(50px - $header-mobile);
+}
+
+.secondaryHeading {
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 125%;
+}
+
+@include media('>tablet') {
+  .rootContainer {
+    h1 {
+      font-size: 68px;
+      line-height: 100%;
+      max-width: 1050px;
+      width: 80%;
+    }
+  }
+
+  .backgroundImg {
+    top: $header-desktop;
+  }
+
+  .mainTextContent {
+    max-width: 550px;
+    bottom: calc(100px - $header-desktop);
+  }
+}

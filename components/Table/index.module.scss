@@ -1,18 +1,42 @@
+@use '/styles/mixins.scss' as *;
+@use '/styles/variables.scss' as *;
+
 @import 'include-media';
 
 .rootContainer {
+  border-top: $border-gray;
+  margin-top: 40px;
+  padding: 60px 0;
+
+  p {
+    font-size: 14px;
+    margin-top: 13px;
+  }
+}
+
+.textContent {
+  padding: 0 20px;
+  max-width: 1040px;
+  margin: auto;
+}
+
+.tables {
+  border-top: $border-gray;
+  padding: 40px 0 0;
+  margin: 40px 20px;
+  @include flex-center;
+  gap: 60px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+}
+
+.tableContainer {
   max-width: 374px;
 
   h4 {
     font-weight: 600;
     font-size: 21px;
     line-height: 125%;
-  }
-
-  p {
-    text-align: left;
-    font-size: 14px;
-    margin-top: 13px;
   }
 }
 
@@ -38,6 +62,30 @@
 
 @include media('>tablet') {
   .rootContainer {
+    border-top: $border-gray;
+    margin-top: 40px;
+    padding: 100px 0;
+  }
+
+  .textContent {
+    // padding: 0;
+    h3 {
+      font-size: 28px;
+      line-height: 115%;
+    }
+
+    p {
+      font-size: 18px;
+      max-width: 560.16px;
+    }
+  }
+
+  .tables {
+    margin: 50px auto 0;
+    padding: 50px 0 0;
+  }
+
+  .tableContainer {
     width: 293.33px;
   }
 

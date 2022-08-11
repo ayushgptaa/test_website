@@ -1,12 +1,11 @@
-import Image from 'next/image'
-
+// import MultipleSplineChart from 'components/Chart/MultipleSplineChart'
 import Heading from 'components/Heading'
 import Paragraph from 'components/Paragraph'
+import CountdownTimer from 'components/pageComponents/homepage/Hero/CountdownTimer'
+import Button from 'components/Button'
 import Table from 'components/Table'
 
 import styles from './index.module.scss'
-
-const productColors = [' #F94144', '#F3722C', '#F8961E', '#F9C74F', '#90BE6D']
 
 const tableData = [
   {
@@ -59,54 +58,24 @@ const tableData = [
   },
 ]
 
-const ProductSerial = () => {
-  return (
-    <div className={styles.serialContainer}>
-      {productColors.map((backgroundColor, index) => {
-        return (
-          <div className={styles.productSerial} key={backgroundColor}>
-            <span style={{ backgroundColor }} />
-            <p>{`Product ${index + 1}`}</p>
-          </div>
-        )
-      })}
-    </div>
-  )
-}
+const targetDate = new Date('5 September, 2022').getTime()
 
 const Stats = () => {
   return (
     <section className={styles.rootContainer}>
-      <div className={styles.sectionTextContent}>
-        <Heading text="Some sort of NFT Stat" withoutPeriod Tag="h3" />
+      <div className={styles.textContent}>
+        <Heading text="Reliable Data." withoutPeriod Tag="h3" />{' '}
+        <Heading text="Consistent Uptime." withoutPeriod Tag="h3" />
+        <CountdownTimer targetDate={targetDate} removeHeading />
         <Paragraph>
-          Anyone can move their data over to Züs. Zero headaches. An abundance
-          of storage features.
+          Global data consumption is projected to grow at a rate of over 25% per
+          year. Today, virtually all of the world’s data is stored on
+          centralized servers,.
         </Paragraph>
+        <Button type="button" text="Check Our Solutions" transparent black />
       </div>
 
-      <div className={styles.chartContainer}>
-        <ProductSerial />
-
-        <div className={styles.chartImg}>
-          <Image
-            src="/images/nft/Stats/gaugeChart.png"
-            alt="gauge chart"
-            quality={100}
-            layout="fill"
-          />
-        </div>
-
-        <div className={styles.imageText}>
-          <h5>Some sort of inforgraphic showing the number or value of NFTs</h5>
-          <Paragraph>
-            Anyone can move their data over to Züs. Zero headaches. An abundance
-            of storage features.
-          </Paragraph>
-        </div>
-      </div>
-
-      <Table data={tableData} />
+      <Table data={tableData} background="#000" />
     </section>
   )
 }

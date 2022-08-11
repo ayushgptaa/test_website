@@ -3,6 +3,7 @@
 @import 'include-media';
 
 .inputForm {
+  position: relative;
   @include flex-center;
   flex-direction: column;
   gap: 1.5rem;
@@ -25,6 +26,22 @@
   background-color: $color-background;
 }
 
+.showcasePage {
+  .inputBox {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 16px 24px;
+  }
+
+  button {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: fit-content;
+    height: 48px;
+  }
+}
+
 .inputBox::placeholder {
   color: #cfd2dc;
   font-weight: 600;
@@ -34,7 +51,6 @@
 
 @include media('>tablet') {
   .inputForm {
-    position: relative;
     align-items: stretch;
     flex-direction: row;
     width: 520px;

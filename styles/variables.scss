@@ -55,6 +55,8 @@ $gradient-layer: linear-gradient(180deg, rgba(3, 8, 25, 0) 0%, #030819 100%);
 
 // Layout
 $mobile-width: 327px;
+$header-mobile: -71px;
+$header-desktop: calc(-81px - 49px);
 
 //Borders
 $border-gray: 1px solid rgba(139, 139, 139, 0.3);

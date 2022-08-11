@@ -41,14 +41,14 @@ ShowCounter.propTypes = {
   seconds: PropTypes.number.isRequired,
 }
 
-const CountdownTimer = ({ targetDate }) => {
+const CountdownTimer = ({ targetDate, removeHeading = false }) => {
   const [days, hours, minutes, seconds] = useCountdown(targetDate)
   const countdownFinished = days + hours + minutes + seconds <= 0
 
   return (
     !countdownFinished && (
       <>
-        <h4 className={styles.heading}>Launching in</h4>
+        {!removeHeading && <h4 className={styles.heading}>Launching in</h4>}
         <ShowCounter
           days={days}
           hours={hours}
@@ -62,6 +62,7 @@ const CountdownTimer = ({ targetDate }) => {
 
 CountdownTimer.propTypes = {
   targetDate: PropTypes.number.isRequired,
+  removeHeading: PropTypes.bool,
 }
 
 export default CountdownTimer
