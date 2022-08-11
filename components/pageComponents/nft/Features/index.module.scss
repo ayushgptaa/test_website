@@ -1,0 +1,70 @@
+@use '/styles/variables.scss' as *;
+@use '/styles/mixins.scss' as *;
+
+@import 'include-media';
+
+.rootContainer {
+  padding: 60px 0 0;
+  border-top: $border-gray;
+  box-shadow: inset 0px -1px 0px rgba(142, 142, 142, 0.3);
+  border-radius: 0px;
+}
+
+.sectionTextContent {
+  padding: 0 20px;
+  text-align: center;
+
+  p {
+    margin-top: 20px;
+  }
+}
+
+.featureListWrapper {
+  margin: auto;
+  padding-bottom: 6.25rem;
+}
+
+.featureWithImg {
+  padding: 100px 0;
+  background: $darker-blue;
+  @include flex-center-column;
+  gap: 70px;
+  border-top: $border-gray;
+}
+
+@include media('>tablet') {
+  .rootContainer {
+    padding: 100px 0 0;
+    border-top: $border-gray;
+  }
+
+  .sectionTextContent {
+    padding: 0;
+
+    h3 {
+      font-size: 42px;
+      line-height: 110%;
+    }
+
+    p {
+      margin: auto;
+      margin-top: 20px;
+      max-width: 920px;
+      width: 85%;
+    }
+  }
+
+  .featureListWrapper {
+    @include flex-horizontal-center(stretch);
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 5.5rem 0;
+  }
+
+  .featureWithImg {
+    padding: 150px 0;
+    background: $darker-blue;
+    @include flex-center-column;
+    gap: 130px;
+  }
+}

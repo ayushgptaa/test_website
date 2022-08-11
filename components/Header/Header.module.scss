@@ -6,6 +6,10 @@
   position: relative;
 }
 
+.darker-blue {
+  background: $darker-blue;
+}
+
 .header {
   padding: 20px 16px;
   @include flex(space-between, flex-start);

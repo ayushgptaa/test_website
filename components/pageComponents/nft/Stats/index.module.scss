@@ -1,0 +1,119 @@
+@use '/styles/variables.scss' as *;
+@use '/styles/mixins.scss' as *;
+
+@import 'include-media';
+
+.rootContainer {
+  padding: 60px 0;
+  border-top: $border-gray;
+}
+
+.sectionTextContent {
+  padding: 0 20px;
+  text-align: center;
+
+  p {
+    margin-top: 15px;
+  }
+}
+
+.chartContainer {
+  padding-bottom: 40px;
+}
+
+.serialContainer {
+  @include flex-vertical-center(center);
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  padding: 1.2rem;
+  margin-top: 0.8rem;
+}
+
+.productSerial {
+  @include flex-center;
+  width: fit-content;
+  gap: 12px;
+
+  span {
+    width: 18.85px;
+    height: 18.88px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 160%;
+  }
+}
+
+.chartImg {
+  position: relative;
+  height: 240px;
+  width: 420px;
+  @include center-horizontal;
+}
+
+.imageText {
+  padding: 40px 20px 0;
+  text-align: center;
+
+  h5 {
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 125%;
+  }
+  p {
+    margin-top: 14px;
+  }
+}
+
+.tableContainer {
+  padding: 40px 0 0;
+  margin: 0 20px;
+  border-top: $border-gray;
+  @include flex-center;
+  gap: 60px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+}
+
+@include media('>tablet') {
+  .rootContainer {
+    padding: 120px 0;
+  }
+
+  .sectionTextContent {
+    padding: 0;
+
+    h3 {
+      font-size: 42px;
+      line-height: 110%;
+    }
+
+    p {
+      width: 560px;
+      margin: 13px auto 0;
+    }
+  }
+
+  .serialContainer {
+    gap: 2rem;
+    padding: 0;
+  }
+
+  .chartImg {
+    width: 720px;
+    height: 370px;
+  }
+
+  .imageText {
+    p {
+      width: 560px;
+      margin: 13px auto 0;
+    }
+  }
+  .tableContainer {
+    margin: auto;
+  }
+}

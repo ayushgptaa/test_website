@@ -1,0 +1,47 @@
+@import 'include-media';
+
+.rootContainer {
+  max-width: 374px;
+
+  h4 {
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 125%;
+  }
+
+  p {
+    text-align: left;
+    font-size: 14px;
+    margin-top: 13px;
+  }
+}
+
+.table {
+  margin-top: 13px;
+
+  .left {
+    text-align: left;
+  }
+
+  tbody {
+    tr {
+      td {
+        width: 85px;
+        padding-top: 10px;
+        font-size: 14px;
+        line-height: 160%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@include media('>tablet') {
+  .rootContainer {
+    width: 293.33px;
+  }
+
+  .table {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,86 @@
+@use '/styles/mixins.scss' as *;
+
+@import 'include-media';
+
+.image {
+  position: relative;
+  margin: auto;
+}
+
+.image1 {
+  width: 400px;
+  height: 370px;
+}
+
+.image2 {
+  width: 335px;
+  height: 473px;
+}
+
+.textContent {
+  padding: 0 20px;
+  @include flex-horizontal-center(flex-start);
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 40px;
+  // border: 1px solid red;
+
+  h4 {
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 125%;
+    @include light-purple-gradient-text;
+  }
+  h5 {
+    font-size: 28px;
+    line-height: 115%;
+  }
+
+  p {
+    font-size: 14px;
+    text-align: left;
+  }
+}
+
+@include media('>tablet') {
+  .container {
+    max-width: 1000px;
+    width: 80%;
+    @include flex-vertical-center(space-between);
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+
+  .image {
+    margin: 0;
+  }
+
+  .image1 {
+    order: 1;
+  }
+
+  .textContent {
+    width: 495px;
+    padding: 0;
+  }
+}
+
+@include media('<1250px', '>tablet') {
+  .container {
+    justify-content: center;
+  }
+
+  .image1 {
+    order: 0;
+  }
+
+  .textContent {
+    align-items: center;
+    text-align: center;
+    margin-top: 0;
+
+    p {
+      text-align: center;
+    }
+  }
+}

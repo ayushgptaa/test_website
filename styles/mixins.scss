@@ -1,4 +1,9 @@
 @mixin center-horizontal {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin center-horizontal-absolute {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -61,4 +66,12 @@
 
 @mixin custom-gradient-center($c1, $c2) {
   background: radial-gradient(50% 50% at 50% 50%, $c1, $c2);
+}
+
+@mixin light-purple-gradient-text {
+  background: linear-gradient(135deg, #d0d6fb 0%, #7e8acb 91.98%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }

@@ -1,4 +1,4 @@
-import propTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import clsx from 'clsx'
 
 import DesktopNav from './DesktopNav'
@@ -16,11 +16,12 @@ const Header = ({
   removeDesktopNav,
   removeSocialIcons,
   removeZusText,
+  color = '',
 }) => {
   const { showNavLinks, animation, toggleNavbar } = useAnimatedNavToggler()
 
   return (
-    <div className={styles.container}>
+    <div className={clsx(styles.container, styles[color])}>
       <TopSection removeSocialIcons={removeSocialIcons} />
       <HeaderImgComponent removeImg={removeImg} />
       <header className={clsx(styles.header, removeImg && styles.borderBottom)}>
@@ -34,10 +35,11 @@ const Header = ({
 }
 
 Header.propTypes = {
-  removeImg: propTypes.bool,
-  removeDesktopNav: propTypes.bool,
-  removeSocialIcons: propTypes.bool,
-  removeZusText: propTypes.bool,
+  removeImg: PropTypes.bool,
+  removeDesktopNav: PropTypes.bool,
+  removeSocialIcons: PropTypes.bool,
+  removeZusText: PropTypes.bool,
+  color: PropTypes.string,
 }
 
 export default Header

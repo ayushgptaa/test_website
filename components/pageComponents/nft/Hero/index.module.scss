@@ -1,0 +1,63 @@
+@use '/styles/variables.scss' as *;
+@use '/styles/mixins.scss' as *;
+
+@import 'include-media';
+
+.rootContainer {
+  padding: 65px 0 0;
+  overflow: hidden;
+  background: $darker-blue;
+}
+
+.maintextContent {
+  text-align: center;
+  padding: 0 20px;
+
+  p {
+    margin-top: 2rem;
+  }
+
+  button {
+    margin-top: 2rem;
+    padding: 1rem 0rem;
+
+    width: 267px;
+    height: 56px;
+    background: #fff;
+
+    color: $grey-7;
+    font-weight: 700;
+  }
+}
+
+.mainImg {
+  position: relative;
+  height: 300px;
+  width: 865px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 50px;
+}
+
+@include media('>tablet') {
+  .rootContainer {
+    padding: 85px 0 0;
+    overflow: hidden;
+    background: linear-gradient(0deg, #061631, #061631),
+      linear-gradient(180deg, rgba(0, 0, 0, 0.3) -1.22%, rgba(0, 0, 0, 0) 16.9%);
+  }
+
+  .maintextContent {
+    p {
+      margin: 2rem auto 0;
+      max-width: 800px;
+      width: 85%;
+    }
+  }
+
+  .mainImg {
+    height: 430px;
+    max-width: 1450px;
+    width: 100%;
+  }
+}
