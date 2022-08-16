@@ -1,27 +1,30 @@
 @use '/styles/variables.scss' as *;
+@use '/styles/mixins.scss' as *;
+
 @import 'include-media';
 
 .socialLinksContainer {
   position: relative;
   padding: 4rem 1.25rem;
-  border-top: $border-gray;
-  background: linear-gradient(208.49deg, #092a5c -19.53%, #022d77 80.31%),
+  background: linear-gradient(208.49deg, #151618 -19.53%, #151618 80.31%),
+    linear-gradient(208.49deg, #092a5c -19.53%, #022d77 80.31%),
     linear-gradient(213.75deg, #5ac7de -102.42%, #132e95 77.58%);
   width: 100%;
   text-align: center;
   overflow: hidden;
+  border: none;
 }
 
 .background {
   position: absolute;
-  width: 2118.19px;
-  height: 2118.19px;
-  left: calc(50% - 2118.19px / 2 + 0.5px);
-  top: -1403.1px;
+  width: 808px;
+  height: 808px;
+  @include center-horizontal;
+  top: -518px;
 
   background: radial-gradient(
     50% 50% at 50% 50%,
-    #5da3ff 0%,
+    #1a5aff 0%,
     rgba(5, 11, 25, 0) 100%,
     rgba(156, 185, 255, 0) 100%
   );
@@ -57,7 +60,9 @@
   }
 
   .background {
-    top: -1650px;
+    width: 2118.19px;
+    height: 2118.19px;
+    top: -1600px;
   }
 
   .textContent {

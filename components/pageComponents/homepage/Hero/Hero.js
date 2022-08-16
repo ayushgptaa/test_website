@@ -19,7 +19,7 @@ const Hero = () => {
           Get notified as soon as mainnet launches
         </h4>
         <GetNotified />
-        <SocialIcons styles={styles} />
+        <SocialIcons />
       </Fade>
     </main>
   )

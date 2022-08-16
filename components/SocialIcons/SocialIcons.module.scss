@@ -16,9 +16,3 @@
     border-right: none;
   }
 }
-
-@include media('>tablet') {
-  .socialIcons {
-    margin-top: 2.5rem;
-  }
-}

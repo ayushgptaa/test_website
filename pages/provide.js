@@ -12,7 +12,7 @@ const Earn = () => {
       <Hero />
       <Features />
       <Provider />
-      <Footer footerSocialLinks={false} />
+      <Footer footerCommunity={false} />
     </PageContainer>
     // <ScrollSnap>
     //   <ScrollSnapSection>

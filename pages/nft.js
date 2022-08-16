@@ -12,7 +12,7 @@ const Nft = () => {
       <Hero />
       <Stats />
       <Features />
-      <Footer footerSocialLinks={false} />
+      <Footer footerCommunity={false} />
     </PageContainer>
   )
 }

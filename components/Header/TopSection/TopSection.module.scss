@@ -25,24 +25,21 @@
 
 .wrapperRight {
   @include flex-vertical-center(space-between);
-  gap: 24px;
+  gap: 30px;
 
   & > ul {
     margin-top: 0;
-    gap: 24px;
+    gap: 30px;
 
     li {
       padding: 0;
       height: 24px;
-
-      a {
-        display: inline-block;
-      }
-    }
-
-    li:nth-child(2) {
       border: none;
     }
+
+    // li:nth-child(2) {
+    //   border: none;
+    // }
   }
 }
 

@@ -7,66 +7,77 @@ $breakpoints: (
   smallDesktop: 1000px,
 );
 
-.footer {
-  height: fit-content;
-  width: 100%;
+.menuContainer {
+  padding-top: 50px;
+  text-align: center;
 }
 
-.menuContainer {
-  padding: 2rem;
-  text-align: center;
-  background: $color-background-dark;
-  border-top: $border-gray;
+.leftmenuContainer {
+  padding: 0 30px;
+
+  h3 {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    color: $grey-3;
+    margin-top: 40px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 160%;
+    color: $grey-4;
+    margin-top: 20px;
+  }
 }
 
 .menuLinksContainer {
-  margin-top: 2rem;
-  @include flex-center;
-  flex-direction: column;
   gap: 2rem;
+  width: 100%;
 }
 
 .footerMenuItem {
-  @include flex-center;
-  flex-direction: column;
-  gap: 6px;
+  @include flex-center-column;
+  margin-top: 50px;
 }
 
 .titleMenu {
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 20px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #cfd2dc;
-  opacity: 0.8;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  color: $grey-4;
+  width: 100%;
+  border-bottom: $border-gray;
+  padding-bottom: 20px;
 }
 
 .subMenu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 290px;
+
   li {
+    font-weight: 400;
     margin-top: 10px;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 150%;
+    font-size: 18px;
+    line-height: 160%;
+    width: 140px;
+    color: $grey-3;
   }
 }
 
 .bottomContainer {
-  background: $color-background-dark;
-  border-top: $border-gray;
   text-align: center;
-  padding: 2rem 2rem;
+  padding: 2rem 2rem 2.5rem;
   @include flex-center;
   flex-direction: column;
   gap: 1rem;
-
-  p {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    color: #cfd2dc;
-    opacity: 0.64;
-  }
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: $grey-3;
 }
 
 @include media('>tablet') {
@@ -74,26 +85,41 @@ $breakpoints: (
     overflow: hidden;
     text-align: left;
     @include flex(space-between, flex-start);
-    padding: 5rem 8rem 6rem;
-    gap: 6.5rem;
+    padding-top: 80px;
+    flex-shrink: 0;
+    gap: 7rem;
+    width: fit-content;
+    margin: auto;
+  }
 
-    h3 {
-      font-size: 32px;
-      line-height: 130%;
-      max-width: 165px;
+  .leftmenuContainer {
+    max-width: 240px;
+    text-align: left;
+    padding: 0;
+    padding-left: 20px;
+
+    p {
+      text-align: left;
     }
   }
 
   .menuLinksContainer {
     margin-top: 0;
-    @include flex(space-between, flex-start);
+    @include flex(flex-start, flex-start);
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 4rem;
     width: 100%;
   }
 
   .footerMenuItem {
     align-items: flex-start;
+    width: 135px;
+    margin: 0;
+
+    h5 {
+      border-bottom: none;
+    }
   }
 
   .titleMenu {
@@ -116,25 +142,8 @@ $breakpoints: (
 
   .bottomContainer {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 2.5rem;
     padding: 2rem 8rem;
   }
 }
-
-// @include media('>smallDesktop') {
-//   .footerLinksContainer {
-//     .menuContainer {
-//       gap: 8rem;
-
-//       .menuLinksContainer {
-//         gap: 2rem;
-
-//         .subMenu {
-//           li {
-//             margin-right: 1rem;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }

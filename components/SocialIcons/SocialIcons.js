@@ -2,33 +2,33 @@ import PropTypes from 'prop-types'
 
 import IconContainer from '/components/IconContainer'
 
+import SocialLinks from '/SocialLinks'
+
 import styles from './SocialIcons.module.scss'
 
-const iconsData = [
+const { DISCORD, TWITTER, TELEGRAM } = SocialLinks
+
+let iconsData = [
   {
-    link: 'https://discord.gg/j2geZU6S',
+    link: DISCORD,
     name: 'discord',
     img: '/images/SocialIcons/discord.svg',
   },
   {
-    link: 'https://twitter.com/zuscloud',
+    link: TWITTER,
     name: 'twitter',
     img: '/images/SocialIcons/twitter.svg',
   },
   {
-    link: '/images/SocialIcons/twitter.svg',
-    name: 'medium',
-    img: '/images/SocialIcons/medium.svg',
-  },
-
-  {
-    link: 'https://t.me/ZusCloudNetwork',
+    link: TELEGRAM,
     name: 'telegram',
     img: '/images/SocialIcons/telegram.svg',
   },
 ]
 
-const SocialIcons = ({ height = 28, width = 28 }) => {
+const SocialIcons = ({ height = 28, width = 28, footerIcons = [] }) => {
+  if (footerIcons?.length !== 0) iconsData = footerIcons
+
   return (
     <ul className={styles.socialIcons}>
       {iconsData.map(({ name, link, img }) => {
@@ -52,6 +52,7 @@ const SocialIcons = ({ height = 28, width = 28 }) => {
 SocialIcons.propTypes = {
   height: PropTypes.number,
   width: PropTypes.number,
+  footerIcons: PropTypes.array,
 }
 
 export default SocialIcons

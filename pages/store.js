@@ -13,7 +13,7 @@ const Store = () => {
       <Hero />
       <Work />
       <Features />
-      <Footer footerSocialLinks={false} />
+      <Footer footerCommunity={false} />
     </PageContainer>
     // <ScrollSnap>
     //   <ScrollSnapSection>

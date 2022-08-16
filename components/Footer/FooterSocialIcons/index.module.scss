@@ -1,0 +1,52 @@
+@use '/styles/variables.scss' as *;
+@use '/styles/mixins.scss' as *;
+
+@import 'include-media';
+
+.rootContainer {
+  border-top: $border-gray;
+  border-bottom: $border-gray;
+  margin-top: 2rem;
+  @include flex-center;
+  flex-wrap: wrap;
+}
+
+.topIcons,
+.bottomIcons {
+  & > a:last-child {
+    border-right: $border-gray;
+  }
+}
+
+.bottomIcons {
+  border-top: $border-gray;
+  width: 100%;
+  @include flex-center;
+}
+
+.icon {
+  display: inline-block;
+  padding: 43px 25px;
+  border-left: $border-gray;
+}
+
+@include media('>tablet') {
+  .bottomIcons {
+    width: auto;
+    display: block;
+  }
+
+  .icon {
+    padding: 43px 48px;
+  }
+}
+
+@include media('>1110px') {
+  .bottomIcons {
+    border-top: none;
+
+    & > a:first-child {
+      border-left: none;
+    }
+  }
+}

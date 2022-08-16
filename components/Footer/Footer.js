@@ -2,15 +2,17 @@ import Link from 'next/link'
 import { Fade } from 'react-awesome-reveal'
 import PropTypes from 'prop-types'
 
-import FooterSocialLinks from './FooterSocialLinks'
-import FooterFeature from './FooterFeature'
-import footerMenu from './footerMenu'
 import Heading from 'components/Heading'
-import IconContainer from 'components/IconContainer'
+import Paragraph from 'components/Paragraph'
+import FooterCommunity from './FooterCommunity'
+import FooterFeature from './FooterFeature'
+import FooterProducts from './FooterProducts'
+import FooterSocialIcons from './FooterSocialIcons'
 
-import useGetScreenSize from 'hooks/useGetScreenSize'
+import footerMenu from './footerMenu'
 
 import styles from './Footer.module.scss'
+import IconContainer from 'components/IconContainer'
 
 let defaultfooterFeatureData = {
   heading: 'Reclaim control of your data',
@@ -19,30 +21,38 @@ let defaultfooterFeatureData = {
   secondaryBtn: true,
 }
 
-const FooterMenu = () => {
-  const isMobile = useGetScreenSize()
+const roadmapFeatureData = {
+  heading: 'The Road Ahead',
+  text: "We're just getting started. Read about the key milestones that lie ahead for Züs.",
+  buttonText: 'See Roadmap',
+  secondaryBtn: false,
+}
 
+const FooterMenu = () => {
   return (
     <div className={styles.menuContainer}>
-      <Fade
-        direction="up"
-        duration={600}
-        cascade={isMobile}
-        fraction={0.4}
-        triggerOnce>
-        <Heading text="Go beyond the cloud" Tag="h3" />
-      </Fade>
+      <div className={styles.leftmenuContainer}>
+        <Fade duration={600} cascade fraction={0.4} triggerOnce>
+          <IconContainer
+            img="/images/Footer/zusLogoWhite.svg"
+            alt="Zus"
+            width={52}
+            height={34}
+          />
+
+          <Heading text="Go beyond the cloud" Tag="h3" withoutPeriod />
+          <Paragraph>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut lab.
+          </Paragraph>
+        </Fade>
+      </div>
 
       <div className={styles.menuLinksContainer}>
+        <FooterProducts />
         {footerMenu.map((menu) => {
           return (
-            <Fade
-              direction="up"
-              duration={600}
-              cascade={isMobile}
-              fraction={0.5}
-              triggerOnce
-              key={menu.id}>
+            <Fade duration={600} fraction={0.5} triggerOnce key={menu.id}>
               <div className={styles.footerMenuItem}>
                 <h5 className={styles.titleMenu}>{menu.name}</h5>
                 <ul className={styles.subMenu}>
@@ -66,42 +76,37 @@ const FooterMenu = () => {
 const FooterBottomContainer = () => {
   return (
     <div className={styles.bottomContainer}>
-      <IconContainer
-        img="/images/Footer/zusLogoWhiteWithText.svg"
-        alt="Züs"
-        height={30}
-        width={100}
-      />
-      <p suppressHydrationWarning>
-        Copyright © 2022 ZÜS All Rights Reserved. Terms & Conditions
-      </p>
+      <Link href="/">Terms & Conditions</Link>
+      <Link href="/">Privacy Policy</Link>
+      <p>Copyright © 2022 ZÜS All Rights Reserved.</p>
     </div>
   )
 }
 
 const Footer = ({
-  footerSocialLinks = true,
+  footerCommunity = true,
   footerFeature = true,
-  footerFeatureData = {},
+  roadmapData = false,
 }) => {
-  // Improve this logic
-  if (Object.keys(footerFeatureData).length !== 0) {
-    defaultfooterFeatureData = footerFeatureData
+  if (roadmapData) {
+    defaultfooterFeatureData = roadmapFeatureData
   }
+
   return (
     <footer className={styles.footer}>
       {footerFeature && <FooterFeature data={defaultfooterFeatureData} />}
-      {footerSocialLinks && <FooterSocialLinks />}
+      {footerCommunity && <FooterCommunity />}
       <FooterMenu />
+      <FooterSocialIcons />
       <FooterBottomContainer />
     </footer>
   )
 }
 
 Footer.propTypes = {
-  footerSocialLinks: PropTypes.bool,
+  footerCommunity: PropTypes.bool,
   footerFeature: PropTypes.bool,
-  footerFeatureData: PropTypes.object,
+  roadmapData: PropTypes.bool,
 }
 
 export default Footer

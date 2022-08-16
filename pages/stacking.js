@@ -10,7 +10,7 @@ const Build = () => {
       <Header removeImg />
       <Hero />
       <Features />
-      <Footer footerSocialLinks={false} footerFeature={false} />
+      <Footer footerCommunity={false} footerFeature={false} />
     </PageContainer>
   )
 }
