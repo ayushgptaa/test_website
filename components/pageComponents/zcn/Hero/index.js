@@ -13,7 +13,7 @@ const Hero = () => {
       <div className={styles.heroImg}>
         <Image
           src="/images/zus/Hero/heroImg.png"
-          alt="Zus"
+          alt="Züs"
           layout="fill"
           quality={100}
           priority

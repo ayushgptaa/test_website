@@ -35,7 +35,7 @@ const FooterMenu = () => {
         <Fade duration={600} cascade fraction={0.4} triggerOnce>
           <IconContainer
             img="/images/Footer/zusLogoWhite.svg"
-            alt="Zus"
+            alt="Züs"
             width={52}
             height={34}
           />

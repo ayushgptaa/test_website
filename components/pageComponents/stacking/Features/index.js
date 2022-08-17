@@ -58,7 +58,7 @@ const Features = () => {
         <Heading text="Miner & Sharder Staking" Tag="h3" />
         <Paragraph>
           Miners and Sharders validate and maintain transactions published to
-          the Zus blockchain. Together they represent a group of 141 network
+          the Züs blockchain. Together they represent a group of 141 network
           nodes — 111 miners and 30 sharders. This group is referred to as the
           Active Set.
         </Paragraph>

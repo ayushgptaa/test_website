@@ -88,7 +88,7 @@ const CalculatorComponent = () => {
         </BulletText>
         <BulletText>
           Your “Blobber Weight”, which dictates your share of blobber block
-          rewards, is unchanged over time relative to the entire Zus Cloud
+          rewards, is unchanged over time relative to the entire Züs Cloud
           Network. For instance, if more blobbers plug into the network, you
           will have to increase your Blobber stats (increase your ZCN stake,
           increase your Total Allocated Storage, etc) in order to maintain your

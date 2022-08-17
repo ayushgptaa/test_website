@@ -8,13 +8,14 @@ import Button from 'components/Button'
 
 import featureListData from './featrueListData'
 
-import styles from './index.module.scss'
 import useGetScreenSize from 'hooks/useGetScreenSize'
+
+import styles from './index.module.scss'
 
 const FeatureList = () => {
   return (
     <Fade cascade direction="up" duration={600} triggerOnce>
-      {featureListData.map(({ icon, buttonText, pattern2 }) => (
+      {featureListData.map(({ icon, buttonText, pattern2, link }) => (
         <div className={styles.feature} key={buttonText}>
           <div className={clsx(styles.pattern1, pattern2 && styles.pattern2)} />
           <div className={styles.icon}>
@@ -27,7 +28,13 @@ const FeatureList = () => {
               quality={100}
             />
           </div>
-          <Button type="button" text={buttonText} transparent black />
+          <Button
+            type="button"
+            text={buttonText}
+            transparent
+            black
+            link={link}
+          />
         </div>
       ))}
     </Fade>
@@ -91,6 +98,7 @@ const Features = () => {
                 text="ZCN Supply & Distribution"
                 transparent
                 black
+                link="/zcn-supply-schedule"
               />
             </div>
           </Fade>

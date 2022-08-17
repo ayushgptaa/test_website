@@ -47,15 +47,21 @@ const About = () => {
               corresponding amount of ZCN must be staked on both the client side
               and the service provider side.
               <span>
-                The “Store = Stake” model establishes a relationship between Zus
+                The “Store = Stake” model establishes a relationship between Züs
                 storage and ZCN tokens; in order for any storage to be added to
-                the Zus Cloud Network, a corresponding amount of ZCN musst also
+                the Züs Cloud Network, a corresponding amount of ZCN musst also
                 be staked. This means that as more storage is consumed on the
-                network, more ZCN is locked is Zus storage contracts.
+                network, more ZCN is locked is Züs storage contracts.
               </span>
             </Paragraph>
             <div>
-              <Button type="button" text="Staking Process" transparent black />
+              <Button
+                type="button"
+                text="Staking Process"
+                transparent
+                black
+                link="/stacking"
+              />
             </div>
           </Fade>
         </div>

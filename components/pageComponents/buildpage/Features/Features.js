@@ -21,7 +21,7 @@ const Features = () => {
                 src={
                   isMobile
                     ? `/images/buildPage/Features/laptopImgMobile.png`
-                    : `/images/buildPage/Features/laptopImgdesktop.png`
+                    : `/images/buildPage/Features/laptopImgDesktop.png`
                 }
                 alt="migrate any app"
                 quality={100}

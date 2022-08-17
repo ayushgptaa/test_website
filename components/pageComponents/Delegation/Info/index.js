@@ -16,7 +16,7 @@ const Info = () => {
         <Heading text="How It Works" Tag="h3" />
         <div className={styles.container1Img}>
           <Image
-            src="/images/delegation/Info/blobberMobile.png"
+            src="/images/delegation/Info/blobberImgMobile.png"
             alt="Blobber Delegation"
             qualtiy={100}
             layout="fill"
@@ -26,7 +26,7 @@ const Info = () => {
 
         <div className={styles.container1ImgDesktop}>
           <Image
-            src="/images/delegation/Info/blobberDesktop.png"
+            src="/images/delegation/Info/blobberImgDesktop.png"
             alt="Blobber Delegation"
             qualtiy={100}
             layout="fill"

@@ -3,10 +3,13 @@
 
 @import 'include-media';
 
+.rootWrapper {
+  background: #040c1d;
+}
+
 .container1 {
   padding: 65px 20px 70px;
   text-align: center;
-  background: rgba(255, 255, 255, 0.02);
   border-top: $border-gray;
 
   h3 {

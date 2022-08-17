@@ -8,7 +8,7 @@ import styles from './index.module.scss'
 const data = [
   {
     title: 'Blobbers',
-    text: 'In the first year of mainnet, the Blobber network as a whole will receive a total of ~7,500,000 ZCN in block rewards designated for all active Blobbers on the Zus Cloud Network. The proportion of block reward that each blobber receives is determined by their contributions to the network relative to the average blobber’s contribution on the network. These contributions are measured using the Blobber Weight Formula, which is explained more thoroughly below.',
+    text: 'In the first year of mainnet, the Blobber network as a whole will receive a total of ~7,500,000 ZCN in block rewards designated for all active Blobbers on the Züs Cloud Network. The proportion of block reward that each blobber receives is determined by their contributions to the network relative to the average blobber’s contribution on the network. These contributions are measured using the Blobber Weight Formula, which is explained more thoroughly below.',
     icon: '/images/block-rewards/Hero/blobber.png',
   },
   {
@@ -44,7 +44,7 @@ const Hero = () => {
 
       <div className={styles.heroImgDesktop}>
         <Image
-          src="/images/block-rewards/Hero/HeroImg.png"
+          src="/images/block-rewards/Hero/heroImgDesktop.png"
           alt="Block Rewards"
           layout="fill"
           quality={100}

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { useEffect } from 'react'
 import Image from 'next/image'
 import { Fade } from 'react-awesome-reveal'
@@ -60,33 +61,44 @@ const AppLaunchComponent = () => {
       <div className={styles.appLaunchContainer}>
         <Fade direction="up" cascade triggerOnce duration={600} fraction={0.2}>
           {applaunchData.map(
-            ({ icon, heading, text, btnText, btnTextSecondary }, index) => (
-              <AppContainer key={heading}>
-                <div className={clsx(styles.whiteBorder, `border-${index}`)} />
-                <div className={styles.containerContent}>
-                  <div className={clsx(styles.iconContainer, 'IconContainer')}>
-                    <Image
-                      src={icon}
-                      width={90}
-                      height={90}
-                      alt={heading}
-                      layout="fixed"
-                      priority="false"
+            (
+              { icon, heading, text, btnText, btnTextSecondary, link },
+              index
+            ) => (
+              <Link href={link} passHref key={heading}>
+                <a href={link}>
+                  <AppContainer>
+                    <div
+                      className={clsx(styles.whiteBorder, `border-${index}`)}
                     />
-                  </div>
-                  <Heading text={heading} />
-                  <Paragraph>{text}</Paragraph>
-                </div>
-                <Button transparent text={btnText} type="button" />
-                {btnTextSecondary && (
-                  <Button
-                    transparent
-                    text={btnTextSecondary}
-                    type="button"
-                    style={{ top: '4.5rem' }}
-                  />
-                )}
-              </AppContainer>
+                    <div className={styles.containerContent}>
+                      <div
+                        className={clsx(styles.iconContainer, 'IconContainer')}>
+                        <Image
+                          src={icon}
+                          width={90}
+                          height={90}
+                          alt={heading}
+                          layout="fixed"
+                          priority="false"
+                        />
+                      </div>
+                      <Heading text={heading} />
+                      <Paragraph>{text}</Paragraph>
+                    </div>
+                    <Button transparent text={btnText} type="button" />
+                    {btnTextSecondary && (
+                      <Button
+                        transparent
+                        text={btnTextSecondary}
+                        type="button"
+                        style={{ top: '4.5rem' }}
+                        link={link}
+                      />
+                    )}
+                  </AppContainer>
+                </a>
+              </Link>
             )
           )}
           <AppContainer textContainer>

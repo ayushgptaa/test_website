@@ -12,7 +12,7 @@ import styles from './index.module.scss'
 const blobberFeatrues = [
   {
     heading: 'Free Egress Multiplier',
-    text: 'Blobbers will be incentivized to provide Free Egress (also known as Free Reads) in order to facilitate initial adoption of Zus Cloud Network. Blobbers who provide Free Egress will receive the maximum multiplier. Blobbers who don’t provide Free Egress will receive a lower multiplier. Blobbers who provide Free Egress will receive the maximum multiplier.',
+    text: 'Blobbers will be incentivized to provide Free Egress (also known as Free Reads) in order to facilitate initial adoption of Züs Cloud Network. Blobbers who provide Free Egress will receive the maximum multiplier. Blobbers who don’t provide Free Egress will receive a lower multiplier. Blobbers who provide Free Egress will receive the maximum multiplier.',
   },
   {
     heading: 'Fair Usage Multiplier',
