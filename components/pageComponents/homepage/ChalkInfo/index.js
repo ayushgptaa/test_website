@@ -31,6 +31,7 @@ const ChalkArtMobile = () => {
           alt="Chimney"
           quality={100}
           layout="fill"
+          priority
         />
       </div>
     </MobileArtAnimation>
@@ -48,6 +49,7 @@ const ChalkArtDesktop = () => {
           layout="fixed"
           height={550}
           width={600}
+          priority
         />
       </DesktopArtAnimation>
     </div>
@@ -58,19 +60,25 @@ const TextContainer = () => {
   return (
     <div className={styles.textContent}>
       <TextContainerAnimation>
-        <>
-          <Heading
-            text="Taking NFTs to the next level"
-            Tag="h3"
-            periodColor="#F75A38"
+        <Heading
+          text="Taking NFTs to the next level"
+          Tag="h3"
+          periodColor="#F75A38"
+        />
+        <Paragraph>
+          Codeless NFT minting. Permanent decentralized storage. No upfront
+          cost. The Chalk App leverages Züs to bring groundbreaking features to
+          NFT creators.
+        </Paragraph>
+        <div>
+          <Button
+            type="button"
+            text="Learn more"
+            transparent
+            black
+            link="/nft"
           />
-          <Paragraph>
-            Codeless NFT minting. Permanent decentralized storage. No upfront
-            cost. The Chalk App leverages Züs to bring groundbreaking features
-            to NFT creators.
-          </Paragraph>
-          <Button type="button" text="Learn more" transparent black />
-        </>
+        </div>
       </TextContainerAnimation>
     </div>
   )

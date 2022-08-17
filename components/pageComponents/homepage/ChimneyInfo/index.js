@@ -31,6 +31,7 @@ const ChimneyArtMobile = () => {
           alt="Chimney"
           quality={100}
           layout="fill"
+          priority
         />
       </div>
     </MobileArtAnimation>
@@ -48,6 +49,7 @@ const ChimneyArtDesktop = () => {
           layout="fixed"
           height={680}
           width={750}
+          priority
         />
       </DesktopArtAnimation>
     </div>
@@ -58,14 +60,14 @@ const TextContent = () => {
   return (
     <div className={styles.textContent}>
       <TextContainerAnimation>
-        <>
-          <Heading text="Plug in & earn" Tag="h3" periodColor="#DF7ACF" />
-          <Paragraph>
-            Turn your spare storage into income. The Chimney app can get your
-            server up and running on Züs in just a few clicks.
-          </Paragraph>
+        <Heading text="Plug in & earn" Tag="h3" periodColor="#DF7ACF" />
+        <Paragraph>
+          Turn your spare storage into income. The Chimney app can get your
+          server up and running on Züs in just a few clicks.
+        </Paragraph>
+        <div>
           <Button type="button" text="Learn More" transparent black />
-        </>
+        </div>
       </TextContainerAnimation>
     </div>
   )

@@ -8,7 +8,7 @@ import styles from './SocialIcons.module.scss'
 
 const { DISCORD, TWITTER, TELEGRAM } = SocialLinks
 
-let iconsData = [
+const iconsData = [
   {
     link: DISCORD,
     name: 'discord',
@@ -26,25 +26,24 @@ let iconsData = [
   },
 ]
 
-const SocialIcons = ({ height = 28, width = 28, footerIcons = [] }) => {
-  if (footerIcons?.length !== 0) iconsData = footerIcons
-
+const SocialIcons = ({ height = 28, width = 28, data = iconsData }) => {
   return (
     <ul className={styles.socialIcons}>
-      {iconsData.map(({ name, link, img }) => {
-        return (
-          <li key={name}>
-            <a href={link} rel="noreferrer" target="_blank">
-              <IconContainer
-                img={img}
-                alt={name}
-                height={height}
-                width={width}
-              />
-            </a>
-          </li>
-        )
-      })}
+      {data &&
+        data.map(({ name, link, img }) => {
+          return (
+            <li key={name}>
+              <a href={link} rel="noreferrer" target="_blank">
+                <IconContainer
+                  img={img}
+                  alt={name}
+                  height={height}
+                  width={width}
+                />
+              </a>
+            </li>
+          )
+        })}
     </ul>
   )
 }
@@ -52,7 +51,7 @@ const SocialIcons = ({ height = 28, width = 28, footerIcons = [] }) => {
 SocialIcons.propTypes = {
   height: PropTypes.number,
   width: PropTypes.number,
-  footerIcons: PropTypes.array,
+  data: PropTypes.array,
 }
 
 export default SocialIcons

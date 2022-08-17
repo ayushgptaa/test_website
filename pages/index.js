@@ -9,6 +9,7 @@ import ChimneyInfo from 'components/pageComponents/homepage/ChimneyInfo'
 import ChalkInfo from 'components/pageComponents/homepage/ChalkInfo'
 import VultInfo from 'components/pageComponents/homepage/VultInfo'
 import BlimpInfo from 'components/pageComponents/homepage/BlimpInfo'
+import Showcase from 'components/pageComponents/homepage/ShowCase'
 
 const Home = () => {
   return (
@@ -17,9 +18,10 @@ const Home = () => {
       <Hero />
       <MainFeature />
       <Features />
+      <Showcase />
+      <VultInfo />
       <ChimneyInfo />
       <ChalkInfo />
-      <VultInfo />
       <BlimpInfo />
       <Testimonials />
       <Footer />

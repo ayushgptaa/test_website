@@ -1,4 +1,6 @@
 @use '/styles/variables.scss' as *;
+@use '/styles/mixins.scss' as *;
+
 @import 'include-media';
 
 .container {
@@ -8,6 +10,7 @@
   text-align: center;
   padding-top: 4rem;
   padding-bottom: 3rem;
+  overflow: hidden;
 }
 
 .secondaryHeading {
@@ -20,7 +23,18 @@
   .container {
     width: 100%;
     padding-top: 4.5rem;
-    padding-bottom: 5rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .heroBackground {
+    @include background-image(
+      '/images/homePage/Hero/heroBackground.png',
+      center center,
+      cover,
+      100%,
+      100%
+    );
+    @include inset;
   }
 
   .secondaryHeading {

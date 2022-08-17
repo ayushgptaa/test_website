@@ -8,6 +8,7 @@ $breakpoints: (
 );
 
 .rootWrapper {
+  position: relative;
   border-top: $border-gray;
   text-align: center;
   padding-bottom: 6.25rem;
@@ -15,9 +16,6 @@ $breakpoints: (
 }
 
 .containerWithIcon {
-  @include flex-horizontal-center(baseline);
-  flex-direction: column;
-
   button {
     margin-top: 2rem;
     padding: 1rem 2rem;

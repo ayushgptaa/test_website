@@ -61,9 +61,8 @@ const Slider = () => {
         spaceBetween={30}
         slidesPerView="auto"
         centeredSlides>
-        {testimonialData.map(({ text, description, name, img }, index) => (
-          // eslint-disable-next-line react/no-array-index-key
-          <SwiperSlide key={index} className={styles.testimonialContainer}>
+        {testimonialData.map(({ text, description, name, img }) => (
+          <SwiperSlide key={name} className={styles.testimonialContainer}>
             <Paragraph>{text}</Paragraph>
             <FounderInfo img={img} name={name} description={description} />
           </SwiperSlide>

@@ -1,0 +1,150 @@
+@use '/styles/variables.scss' as *;
+@use '/styles/mixins.scss' as *;
+@import 'include-media';
+
+.ellipseContainer {
+  position: absolute;
+  @include inset;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.ellipseLeft {
+  position: absolute;
+  width: 558.94px;
+  height: 558.94px;
+  left: -260px;
+  top: -130px;
+
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #4ba7b4 0%,
+    rgba(5, 11, 25, 0) 100%
+  );
+
+  opacity: 0.3;
+}
+
+.ellipseRight {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  left: 150px;
+  top: 400px;
+
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #4ba7b4 0%,
+    rgba(5, 11, 25, 0) 100%
+  );
+  opacity: 0.3;
+}
+
+.showcaseArtMobile {
+  position: relative;
+  width: 675px;
+  height: 640px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: -80px;
+}
+
+.textContentWrapper {
+  margin-top: -8rem;
+  padding: 0 1.5rem;
+
+  button {
+    padding: 1rem 2rem;
+    width: fit-content;
+    margin-top: 2rem;
+  }
+}
+
+.textContent {
+  @include flex-vertical-center(flex-start);
+  flex-wrap: wrap;
+
+  h3 {
+    text-align: center;
+  }
+
+  p {
+    margin-top: 2rem;
+  }
+}
+
+.listContainer {
+  margin-top: 20px;
+
+  & > div {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    padding: 2px 0;
+  }
+}
+
+.showcaseArtDesktop {
+  display: none;
+}
+
+@include media('>tablet') {
+  .showcaseArtMobile {
+    display: none;
+  }
+
+  .ellipseLeft {
+    width: 1694px;
+    height: 1694px;
+    left: -920px;
+    top: -930.5px;
+    opacity: 0.5;
+  }
+
+  .ellipseRight {
+    width: 1694px;
+    height: 1694px;
+    left: 228px;
+    top: -196.5px;
+    opacity: 0.5;
+  }
+
+  .showcaseArtDesktop {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -400px;
+    z-index: 2;
+  }
+
+  .textContentWrapper {
+    margin-top: 16rem;
+    margin: 8rem auto 0;
+    padding: 0;
+
+    h3 {
+      font-size: 42px;
+      max-width: 700px;
+      line-height: 110%;
+    }
+
+    button {
+      max-width: fit-content;
+      margin: 2rem auto 0;
+    }
+  }
+
+  .textContent {
+    margin-top: 36px;
+    p {
+      max-width: 382px;
+    }
+  }
+
+  .listContainer {
+    max-width: 382px;
+  }
+}

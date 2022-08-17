@@ -23,7 +23,7 @@ const featurelistData = [
     heading: 'Earn',
     text: 'Fueled by a crypto economy that rewards Service Providers and ZCN Delegators.',
     img: '/images/homePage/Features/earnIcon.svg',
-    link: '/earn',
+    link: '/provide',
   },
 ]
 
@@ -35,7 +35,7 @@ const Features = () => {
       <Fade
         direction="up"
         duration={700}
-        fraction={isMobile ? 0.4 : 0.9}
+        fraction={isMobile ? 0.4 : 0.3}
         cascade
         triggerOnce>
         {featurelistData.map(({ pattern, heading, text, img, link }) => (

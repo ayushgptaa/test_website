@@ -2,25 +2,38 @@
 import { Fade } from 'react-awesome-reveal'
 import PropTypes from 'prop-types'
 
-const MobileArtAnimation = ({ children }) => {
+const MobileArtAnimation = ({ children, direction }) => {
   return (
-    <Fade direction="up" triggerOnce fraction={0.2} duration={800}>
+    <Fade
+      direction={direction === '' ? direction : 'up'}
+      triggerOnce
+      fraction={0.2}
+      duration={800}>
       {children}
     </Fade>
   )
 }
 
-const DesktopArtAnimation = ({ children }) => {
+const DesktopArtAnimation = ({ children, direction }) => {
   return (
-    <Fade direction="up" triggerOnce fraction={0.5} duration={800}>
+    <Fade
+      direction={direction === '' ? direction : 'up'}
+      triggerOnce
+      fraction={0.5}
+      duration={1000}>
       {children}
     </Fade>
   )
 }
 
-const TextContainerAnimation = ({ children }) => {
+const TextContainerAnimation = ({ children, fraction }) => {
   return (
-    <Fade direction="up" triggerOnce fraction={0.5} duration={1000} cascade>
+    <Fade
+      direction="up"
+      triggerOnce
+      fraction={fraction || 0.5}
+      duration={800}
+      cascade>
       {children}
     </Fade>
   )
@@ -32,5 +45,13 @@ MobileArtAnimation.propTypes =
     {
       children: PropTypes.node,
     }
+
+TextContainerAnimation.propTypes = {
+  fraction: PropTypes.number,
+}
+
+MobileArtAnimation.propTypes = {
+  direction: PropTypes.string,
+}
 
 export { MobileArtAnimation, DesktopArtAnimation, TextContainerAnimation }

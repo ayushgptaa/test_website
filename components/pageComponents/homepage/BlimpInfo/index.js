@@ -31,6 +31,7 @@ const BlimpArtMobile = () => {
           alt="Blimp"
           quality={100}
           layout="fill"
+          priority
         />
       </div>
     </MobileArtAnimation>
@@ -40,7 +41,7 @@ const BlimpArtMobile = () => {
 const BlimpArtDesktop = () => {
   return (
     <div className={styles.blimpArtDesktop}>
-      <DesktopArtAnimation>
+      <DesktopArtAnimation direction="">
         <Image
           src="/images/homePage/BlimpInfo/blimpArtDesktop.png"
           alt="Blimp"
@@ -48,6 +49,7 @@ const BlimpArtDesktop = () => {
           layout="fixed"
           height={750}
           width={750}
+          priority
         />
       </DesktopArtAnimation>
     </div>
@@ -58,19 +60,15 @@ const TextContainer = () => {
   return (
     <div className={styles.textContent}>
       <TextContainerAnimation>
-        <>
-          <Heading
-            text="An incentive to scale"
-            Tag="h3"
-            periodColor="#2EB5DF"
-          />
-          <Paragraph>
-            A crypto-economic model that rewards network growth. As more data is
-            stored on the network, more Züs Cloud Network ($ZCN) tokens are
-            staked on the network.
-          </Paragraph>
+        <Heading text="An incentive to scale" Tag="h3" periodColor="#2EB5DF" />
+        <Paragraph>
+          A crypto-economic model that rewards network growth. As more data is
+          stored on the network, more Züs Cloud Network ($ZCN) tokens are staked
+          on the network.
+        </Paragraph>
+        <div>
           <Button type="button" text="Token Economics" transparent black />
-        </>
+        </div>
       </TextContainerAnimation>
     </div>
   )

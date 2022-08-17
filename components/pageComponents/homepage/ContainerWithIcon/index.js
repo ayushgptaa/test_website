@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import PropTypes from 'prop-types'
 import clsx from 'clsx'
+import { Fade } from 'react-awesome-reveal'
 
 import styles from './index.module.scss'
 
@@ -12,24 +13,29 @@ const ContainerWithIcon = ({
   width,
   vultContainer = false,
   blimpContainer = false,
+  style,
 }) => {
   return (
-    <section className={styles.rootWrapper}>
+    <section className={styles.rootWrapper} style={style}>
       <div
         className={clsx(
           styles.containerWithIcon,
           vultContainer && styles.vultContainer,
           blimpContainer && styles.blimpContainer
         )}>
-        <div className={styles.logo}>
-          <Image
-            src={logo}
-            alt={alt}
-            layout="fixed"
-            width={width}
-            height={height}
-          />
-        </div>
+        {logo && (
+          <div className={styles.logo}>
+            <Fade triggerOnce duration={1000}>
+              <Image
+                src={logo}
+                alt={alt}
+                layout="fixed"
+                width={width}
+                height={height}
+              />
+            </Fade>
+          </div>
+        )}
         {children}
       </div>
     </section>
@@ -42,6 +48,7 @@ ContainerWithIcon.propTypes = {
   alt: PropTypes.string.isRequired,
   height: PropTypes.number.isRequired,
   width: PropTypes.number.isRequired,
+  style: PropTypes.object,
   vultContainer: PropTypes.bool,
   blimpContainer: PropTypes.bool,
 }

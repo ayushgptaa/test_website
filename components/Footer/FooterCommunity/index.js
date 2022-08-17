@@ -55,7 +55,7 @@ const FooterCommunity = () => {
           <SocialIcons
             height={dimensions}
             width={dimensions}
-            footerIcons={footerIcons}
+            data={footerIcons}
           />
         </Fade>
       </div>

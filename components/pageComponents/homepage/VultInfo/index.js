@@ -19,10 +19,11 @@ const VultArtMobile = () => {
     <MobileArtAnimation>
       <div className={styles.vultArtMobile}>
         <Image
-          src="/images/homePage/VultInfo/VultArtMobile.png"
+          src="/images/homePage/VultInfo/vultArtMobile.png"
           alt="Chimney"
           quality={100}
           layout="fill"
+          priority
         />
       </div>
     </MobileArtAnimation>
@@ -49,6 +50,7 @@ const VultArtDesktop = () => {
           layout="fixed"
           height={500}
           width={600}
+          priority
         />
       </DesktopArtAnimation>
     </div>
@@ -57,8 +59,8 @@ const VultArtDesktop = () => {
 
 const TextContent = () => {
   return (
-    <TextContainerAnimation>
-      <div className={styles.teContainerWrapper}>
+    <div className={styles.teContainerWrapper}>
+      <TextContainerAnimation>
         <div className={styles.textContent}>
           <Heading
             text="Unbounded Storage Capacity"
@@ -69,20 +71,29 @@ const TextContent = () => {
             There is no limit to the amount of storage that can be put on the
             Züs Cloud Network. The more storage, the better.
           </Paragraph>
-          <Button type="button" text="Store" link="/store" transparent black />
+          <div>
+            <Button
+              type="button"
+              text="Store"
+              link="/store"
+              transparent
+              black
+            />
+          </div>
         </div>
+
         <div className={styles.textContainerBorderWrapper}>
           <TextContainerBorder />
         </div>
-      </div>
-    </TextContainerAnimation>
+      </TextContainerAnimation>
+    </div>
   )
 }
 
 const VultInfo = () => {
   return (
     <ContainerWithIcon
-      logo="/images/homepage/VultInfo/vultLogo.svg"
+      logo="/images/homePage/VultInfo/vultLogo.svg"
       alt="Vult Logo"
       height={50}
       width={70}
