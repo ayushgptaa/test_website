@@ -13,7 +13,8 @@ const Hero = () => {
           <Heading text="Earn rewards for growing the cloud" />
           <Paragraph className={styles.text}>
             Turn your unused server capacity into income by simply logging your
-            server onto Züs.
+            server onto Züs. Turn your ZCN into staking income by delegating
+            tokens to Blobbers.
           </Paragraph>
         </Fade>
       </div>

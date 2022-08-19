@@ -5,27 +5,11 @@ import clsx from 'clsx'
 import Heading from 'components/Heading'
 import Button from 'components/Button'
 import Paragraph from 'components/Paragraph'
+import MainFeature from './MainFeature'
 
 import featuresData from './featuresData'
 
 import styles from './Features.module.scss'
-
-const mainFeature = [
-  {
-    mainHeading: 'Want to learn more about the rewards?',
-    mainText:
-      'There are many ways you can earn rewards in the Züs ecosystem. Read our Token Economics document to learn more about our sustainable rewards model.',
-    btnText: 'Token Economics',
-    serial: '1',
-  },
-  {
-    mainHeading: 'Want to add Servers to the Network?',
-    mainText:
-      'Getting your Servers connected to our network is straightforward. To help, we’ve assembled a comprehensive Installation Guide.',
-    btnText: 'Installation guide',
-    serial: '2',
-  },
-]
 
 const Features = () => {
   const renderFeatures = () => {
@@ -63,6 +47,7 @@ const Features = () => {
                   height={imgDesktopHeight}
                   alt={heading}
                   quality={100}
+                  priority
                 />
               </div>
               <div
@@ -83,38 +68,26 @@ const Features = () => {
               </div>
             </div>
           </Fade>
-          <Fade
-            direction="up"
-            triggerOnce
-            duration={800}
-            fraction={0.5}
-            cascade>
-            <div className={styles.textContent}>
-              {textContentEllipse && (
-                <div className={styles.textContentEllipse} />
-              )}
+
+          <div className={styles.textContent}>
+            {textContentEllipse && (
+              <div className={styles.textContentEllipse} />
+            )}
+            <Fade triggerOnce duration={600} fraction={0.5} cascade>
               <Heading text={heading} />
               <Paragraph className={styles.text}>{text}</Paragraph>
-              <Button text="Get Notified" type="button" />
-            </div>
-          </Fade>
+              <div>
+                <Button text="Get Notified" type="button" />
+              </div>
+            </Fade>
+          </div>
         </section>
       )
     )
   }
   return (
-    <div className={styles.rootWrapper}>
-      <section className={styles.mainFeatures}>
-        <Fade direction="up" triggerOnce duration={800} fraction={0.3} cascade>
-          {mainFeature.map(({ mainHeading, mainText, btnText, serial }) => (
-            <div className={styles.blueContainer} key={serial}>
-              <Heading text={mainHeading} Tag="h3" withoutPeriod />
-              <Paragraph>{mainText}</Paragraph>
-              <Button type="button" text={btnText} transparent black />
-            </div>
-          ))}
-        </Fade>
-      </section>
+    <div className={styles.rootContainer}>
+      <MainFeature />
       {renderFeatures()}
     </div>
   )

@@ -32,8 +32,8 @@ const Provider = () => {
 
   return (
     <section className={styles.container}>
-      <Fade>
-        <div className={styles.textContainer}>
+      <div className={styles.textContainer}>
+        <Fade direction="up" cascade duration={800} tiggerOnce>
           <Heading
             text="Service Providers Information"
             Tag="h3"
@@ -43,8 +43,8 @@ const Provider = () => {
             Have more questions you need help with? Reach out to us on the
             channels below.
           </Paragraph>
-        </div>
-      </Fade>
+        </Fade>
+      </div>
 
       <div className={styles.iconContainerWrapper}>
         <Fade

@@ -1,0 +1,65 @@
+@use '/styles/variables.scss' as *;
+
+@import 'include-media';
+
+.rootContainer {
+  position: relative;
+  border-top: $border-gray;
+  width: 335px;
+  margin: 20px auto 0;
+  padding-top: 20px;
+
+  & > h4 {
+    font-size: 28px;
+    line-height: 115%;
+  }
+}
+
+.backgroundPattern {
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  top: -130px;
+  right: -130px;
+}
+
+.earning {
+  text-align: right;
+  margin-top: 30px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(139, 139, 139, 0.6);
+
+  & > h5 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  & > h4 {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 80%;
+    margin-top: 10px;
+    display: inline-block;
+  }
+}
+
+.customSlider {
+  height: 114px;
+  align-items: flex-start;
+
+  & > div:nth-child(3) {
+    margin-top: 40px;
+  }
+
+  & > div:nth-child(2) {
+    margin-top: 33px;
+    align-items: flex-start;
+  }
+}
+
+@include media('>tablet') {
+  .rootContainer {
+    width: 369px;
+  }
+}

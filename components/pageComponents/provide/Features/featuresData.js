@@ -3,8 +3,8 @@ import styles from './Features.module.scss'
 const featuresData = [
   {
     customStyle: styles.phoneStyle,
-    imgDesktop: '/images/provide/features/phoneDesktop.png',
-    imgMobile: '/images/provide/features/phone.png',
+    imgDesktop: '/images/provide/Features/phoneDesktop.png',
+    imgMobile: '/images/provide/Features/phone.png',
     imgDesktopWidth: '554',
     imgDesktopHeight: '728',
     imgMobileWidth: '289',
@@ -16,8 +16,8 @@ const featuresData = [
   },
   {
     customStyle: styles.laptopStyle,
-    imgDesktop: '/images/provide/features/laptopDesktop.png',
-    imgMobile: '/images/provide/features/laptop.png',
+    imgDesktop: '/images/provide/Features/laptopDesktop.png',
+    imgMobile: '/images/provide/Features/laptop.png',
     imgDesktopWidth: '1100',
     imgDesktopHeight: '486',
     imgMobileWidth: '940',

@@ -1,0 +1,128 @@
+@use '/styles/variables.scss' as *;
+@use '/styles/mixins.scss' as *;
+
+@import 'include-media';
+
+.rootContainer {
+  border-top: $border-gray;
+  overflow: hidden;
+  padding-bottom: 76px;
+}
+
+.icon {
+  display: none;
+}
+
+.chimneyArtMobile {
+  position: relative;
+  width: 793.83px;
+  height: 746.92px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+}
+
+.textContent {
+  margin: auto;
+  width: 335px;
+  margin: -10rem auto 0;
+
+  h3 {
+    font-size: 42px;
+    line-height: 110%;
+  }
+}
+
+.paragraph {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.ellipseContainer,
+.chimneyArtDesktop {
+  display: none;
+}
+
+@include media('>tablet') {
+  .rootContainer {
+    border-top: none;
+    padding: 50px 0 86px;
+  }
+
+  .contentContainer {
+    position: relative;
+    @include flex-center;
+    flex-wrap: wrap;
+    height: 789px;
+    max-width: 1000px;
+    width: 80%;
+    margin: auto;
+    border-radius: 32px;
+    border: $border-gray;
+  }
+
+  .icon {
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+  }
+
+  .ellipseContainer {
+    display: block;
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: inherit;
+    z-index: -1;
+    overflow: hidden;
+  }
+
+  .ellipseBottom {
+    position: absolute;
+    width: 1694px;
+    height: 1694px;
+    left: 240px;
+    top: -305px;
+
+    background: radial-gradient(
+      83.03% 83.03% at 50% 50%,
+      #2e65ba 0%,
+      rgba(5, 11, 25, 0) 70.68%
+    );
+    opacity: 0.3;
+    border-radius: 50%;
+  }
+
+  .ellipseTop {
+    position: absolute;
+    width: 1694px;
+    height: 1694px;
+    left: -699px;
+    top: -735px;
+
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      #b44b91 0%,
+      rgba(5, 11, 25, 0) 100%
+    );
+    opacity: 0.4;
+  }
+
+  .chimneyArtDesktop {
+    display: block;
+    margin-left: -25%;
+    margin-top: 2rem;
+  }
+
+  .chimneyArtMobile {
+    display: none;
+  }
+
+  .textContent {
+    margin: 0;
+    width: 370px;
+  }
+}

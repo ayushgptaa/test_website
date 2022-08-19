@@ -26,12 +26,12 @@ const DesktopArtAnimation = ({ children, direction }) => {
   )
 }
 
-const TextContainerAnimation = ({ children, fraction }) => {
+const TextContainerAnimation = ({ children, direction = 'up' }) => {
   return (
     <Fade
-      direction="up"
+      direction={direction}
       triggerOnce
-      fraction={fraction || 0.5}
+      fraction={0.5}
       duration={800}
       cascade>
       {children}
@@ -44,14 +44,7 @@ MobileArtAnimation.propTypes =
   TextContainerAnimation.propTypes =
     {
       children: PropTypes.node,
+      direction: PropTypes.string,
     }
-
-TextContainerAnimation.propTypes = {
-  fraction: PropTypes.number,
-}
-
-MobileArtAnimation.propTypes = {
-  direction: PropTypes.string,
-}
 
 export { MobileArtAnimation, DesktopArtAnimation, TextContainerAnimation }

@@ -1,9 +1,16 @@
 import Image from 'next/image'
 import PropTypes from 'prop-types'
 
-const IconContainer = ({ img, alt, height, width }) => {
+const IconContainer = ({ img, alt, height, width, layout = '' }) => {
   return (
-    <Image src={img} alt={alt} quality={100} height={height} width={width} />
+    <Image
+      src={img}
+      alt={alt}
+      quality={100}
+      height={height}
+      width={width}
+      layout={layout}
+    />
   )
 }
 
@@ -12,6 +19,7 @@ IconContainer.propTypes = {
   alt: PropTypes.string,
   height: PropTypes.number,
   width: PropTypes.number,
+  layout: PropTypes.string,
 }
 
 export default IconContainer
