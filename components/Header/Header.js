@@ -13,8 +13,6 @@ import styles from './Header.module.scss'
 
 const Header = ({
   removeImg = false,
-  removeDesktopNav,
-  removeSocialIcons,
   removeZusText,
   borderWhite = false,
   color = '',
@@ -23,10 +21,7 @@ const Header = ({
 
   return (
     <div className={clsx(styles.container, styles[color])}>
-      <TopSection
-        removeSocialIcons={removeSocialIcons}
-        borderWhite={borderWhite}
-      />
+      <TopSection borderWhite={borderWhite} />
       <HeaderImgComponent removeImg={removeImg} />
       <header
         className={clsx(
@@ -35,7 +30,7 @@ const Header = ({
           borderWhite && styles.borderWhite
         )}>
         <ZusLogo removeZusText={removeZusText} />
-        <DesktopNav removeDesktopNav={removeDesktopNav} />
+        <DesktopNav />
         <MobileNav animation={animation} />
         <ToggleBtn toggleNavbar={toggleNavbar} showNavLinks={showNavLinks} />
       </header>
@@ -45,8 +40,6 @@ const Header = ({
 
 Header.propTypes = {
   removeImg: PropTypes.bool,
-  removeDesktopNav: PropTypes.bool,
-  removeSocialIcons: PropTypes.bool,
   removeZusText: PropTypes.bool,
   borderWhite: PropTypes.bool,
   color: PropTypes.string,

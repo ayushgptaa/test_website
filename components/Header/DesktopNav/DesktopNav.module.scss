@@ -33,3 +33,9 @@
     display: none;
   }
 }
+
+@include media('<1028px', '>tablet') {
+  .wrapper {
+    gap: 35px;
+  }
+}

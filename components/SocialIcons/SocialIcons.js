@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import clsx from 'clsx'
 
 import IconContainer from '/components/IconContainer'
 
@@ -26,9 +27,14 @@ const iconsData = [
   },
 ]
 
-const SocialIcons = ({ height = 28, width = 28, data = iconsData }) => {
+const SocialIcons = ({
+  height = 28,
+  width = 28,
+  data = iconsData,
+  className = '',
+}) => {
   return (
-    <ul className={styles.socialIcons}>
+    <ul className={clsx(styles.socialIcons, className)}>
       {data &&
         data.map(({ name, link, img }) => {
           return (
@@ -52,6 +58,7 @@ SocialIcons.propTypes = {
   height: PropTypes.number,
   width: PropTypes.number,
   data: PropTypes.array,
+  className: PropTypes.string,
 }
 
 export default SocialIcons

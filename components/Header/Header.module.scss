@@ -13,7 +13,7 @@
 .header {
   padding: 20px 16px;
   border-bottom: $border-gray;
-  @include flex(space-between, flex-start);
+  @include flex(space-between, center);
 }
 
 .borderBottom {
@@ -27,6 +27,11 @@
 @include media('>tablet') {
   .header {
     padding: 20px 80px;
-    @include flex-vertical-center(space-between);
+  }
+}
+
+@include media('<1028px', '>tablet') {
+  .header {
+    padding: 20px 30px;
   }
 }

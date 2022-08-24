@@ -15,6 +15,10 @@ const navData = [
     name: 'ZCN',
     link: '/zcn',
   },
+  {
+    name: 'Blog',
+    link: 'https://blog.testnet-0chain.net/',
+  },
 ]
 
 export default navData
