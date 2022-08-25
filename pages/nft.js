@@ -2,14 +2,16 @@ import PageContainer from 'components/PageContainer'
 import Header from 'components/Header'
 import Hero from 'components/pageComponents/nft/Hero'
 import Features from 'components/pageComponents/nft/Features'
-import Footer from 'components/Footer'
+import NftCreations from 'components/pageComponents/nft/NftCreations'
 import Stats from 'components/pageComponents/nft/Stats'
+import Footer from 'components/Footer'
 
 const Nft = () => {
   return (
     <PageContainer>
       <Header removeImg color="darker-blue" />
       <Hero />
+      <NftCreations />
       <Stats />
       <Features />
       <Footer footerCommunity={false} />

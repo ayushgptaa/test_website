@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import clsx from 'clsx'
+import { Fade } from 'react-awesome-reveal'
 
 import Paragraph from 'components/Paragraph'
 
@@ -28,20 +29,24 @@ const FeatureWithImg = () => {
   return data.map(({ heading1, heading2, text, img, id }) => {
     return (
       <div className={styles.container} key={id}>
-        <div className={clsx(styles.image, styles[`image${id}`])}>
-          <Image
-            src={img}
-            alt={heading1}
-            quality={100}
-            layout="fill"
-            priority={false}
-          />
-        </div>
+        <Fade delay={400} duration={600} cascade triggerOnce>
+          <div className={clsx(styles.image, styles[`image${id}`])}>
+            <Image
+              src={img}
+              alt={heading1}
+              quality={100}
+              layout="fill"
+              priority={false}
+            />
+          </div>
+        </Fade>
 
         <div className={styles.textContent}>
-          <h4>{heading1}</h4>
-          <h5>{heading2}</h5>
-          <Paragraph>{text}</Paragraph>
+          <Fade direction="up" duration={600} cascade triggerOnce>
+            <h4>{heading1}</h4>
+            <h5>{heading2}</h5>
+            <Paragraph>{text}</Paragraph>
+          </Fade>
         </div>
       </div>
     )

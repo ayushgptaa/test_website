@@ -37,24 +37,27 @@ const Features = () => {
   return (
     <section className={styles.rootContainer}>
       <div className={styles.sectionTextContent}>
-        <Heading
-          text="Infinite Mutations & other UVPs"
-          Tag="h3"
-          withoutPeriod
-        />
-        <Paragraph>
-          Cloud Storage on Züs is enabled by a reliable decentralized cloud
-          network and a lightning-fast Layer 1 blockchain protocol. This makes
-          the process of getting started swift and intuitive.
-        </Paragraph>
+        <Fade direction="up" duration={600} cascade triggerOnce>
+          <Heading
+            text="Infinite Mutations & other UVPs"
+            Tag="h3"
+            withoutPeriod
+          />
+          <Paragraph>
+            Cloud Storage on Züs is enabled by a reliable decentralized cloud
+            network and a lightning-fast Layer 1 blockchain protocol. This makes
+            the process of getting started swift and intuitive.
+          </Paragraph>
+        </Fade>
       </div>
 
       <div className={styles.featureListWrapper}>
         <Fade
           direction="up"
           duration={600}
-          fraction={isMobile ? 0.2 : 0.9}
+          fraction={isMobile ? 0.2 : 0.6}
           cascade
+          delay={500}
           triggerOnce>
           {featurelistData.map(({ pattern, heading, text, img, link }) => (
             <FeaturesList

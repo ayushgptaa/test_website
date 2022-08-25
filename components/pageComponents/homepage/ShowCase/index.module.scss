@@ -1,6 +1,12 @@
 @use '/styles/variables.scss' as *;
 @use '/styles/mixins.scss' as *;
+
 @import 'include-media';
+
+$breakpoints: (
+  tablet: 768px,
+  smallDesktop: 1200px,
+);
 
 .ellipseContainer {
   position: absolute;
@@ -42,7 +48,7 @@
   opacity: 0.3;
 }
 
-.showcaseArtMobile {
+.showcaseArt {
   position: relative;
   width: 675px;
   height: 640px;
@@ -63,7 +69,7 @@
 }
 
 .textContent {
-  @include flex-vertical-center(flex-start);
+  @include flex-center;
   flex-wrap: wrap;
 
   h3 {
@@ -86,13 +92,20 @@
   }
 }
 
-.showcaseArtDesktop {
-  display: none;
-}
-
 @include media('>tablet') {
-  .showcaseArtMobile {
-    display: none;
+  .containerWithIcon {
+    padding: 18rem 0 7.8rem;
+  }
+
+  .showcaseArt {
+    width: 833.33px;
+    height: 800px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -350px;
+    z-index: 2;
   }
 
   .ellipseLeft {
@@ -111,18 +124,9 @@
     opacity: 0.5;
   }
 
-  .showcaseArtDesktop {
-    display: block;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: -400px;
-    z-index: 2;
-  }
-
   .textContentWrapper {
     margin-top: 16rem;
-    margin: 8rem auto 0;
+    margin: 6rem auto 0;
     padding: 0;
 
     h3 {
@@ -138,7 +142,7 @@
   }
 
   .textContent {
-    margin-top: 36px;
+    margin-top: 16px;
     p {
       max-width: 382px;
     }
@@ -146,5 +150,15 @@
 
   .listContainer {
     max-width: 382px;
+  }
+}
+
+@include media('<=smallDesktop', '>tablet') {
+  .textContentWrapper {
+    margin: 8rem 0 3rem;
+  }
+
+  .textContent {
+    margin-top: 0;
   }
 }

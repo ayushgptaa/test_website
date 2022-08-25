@@ -5,11 +5,8 @@ import Button from 'components/Button'
 import Heading from 'components/Heading'
 import ContainerWithIcon from '../ContainerWithIcon'
 
-import {
-  MobileArtAnimation,
-  DesktopArtAnimation,
-  TextContainerAnimation,
-} from '../AppsAnimations'
+import { ImageAnimation, TextContainerAnimation } from '../AppsAnimations'
+
 
 import styles from './index.module.scss'
 
@@ -22,36 +19,18 @@ const ChimneyBackground = () => {
   )
 }
 
-const ChimneyArtMobile = () => {
+const ChimneyArt = () => {
   return (
-    <MobileArtAnimation>
-      <div className={styles.chimneyArtMobile}>
+    <div className={styles.chimneyArt}>
+      <ImageAnimation>
         <Image
-          src="/images/homePage/ChimneyInfo/chimneyArtMobile.png"
+          src="/images/homePage/ChimneyInfo/chimneyArt.png"
           alt="Chimney"
           quality={100}
           layout="fill"
           priority
         />
-      </div>
-    </MobileArtAnimation>
-  )
-}
-
-const ChimneyArtDesktop = () => {
-  return (
-    <div className={styles.chimneyArtDesktop}>
-      <DesktopArtAnimation>
-        <Image
-          src="/images/homePage/ChimneyInfo/chimneyArtDesktop.png"
-          alt="Chimney"
-          quality={100}
-          layout="fixed"
-          height={680}
-          width={750}
-          priority
-        />
-      </DesktopArtAnimation>
+      </ImageAnimation>
     </div>
   )
 }
@@ -62,8 +41,9 @@ const TextContent = () => {
       <TextContainerAnimation>
         <Heading text="Plug in & earn" Tag="h3" periodColor="#DF7ACF" />
         <Paragraph>
-          Turn your spare storage into income. The Chimney app can get your
-          server up and running on Züs in just a few clicks.
+          Turn your spare storage into income. The Chimney app is an easy-to-use
+          service that will help you get your server running in just a few
+          clicks!
         </Paragraph>
         <div>
           <Button type="button" text="Learn More" transparent black />
@@ -81,8 +61,7 @@ const ChimneyInfo = () => {
       height={40}
       width={40}>
       <ChimneyBackground />
-      <ChimneyArtMobile />
-      <ChimneyArtDesktop />
+      <ChimneyArt />
       <TextContent />
     </ContainerWithIcon>
   )

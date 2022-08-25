@@ -9,7 +9,7 @@ import styles from './Roadmap.module.scss'
 const RoadmapComponent = () => {
   return (
     <section className={styles.container}>
-      <Fade>
+      <Fade triggerOnce cascade>
         <div className={styles.topEllipse} />
         <div className={styles.mainText}>
           <Heading text="The road ahead" uppercase />

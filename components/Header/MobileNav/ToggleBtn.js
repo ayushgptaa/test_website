@@ -11,6 +11,7 @@ const MenuIcon = () => {
       alt="Menu"
       height={24}
       width={24}
+      priority
     />
   )
 }
@@ -22,6 +23,7 @@ const CloseIcon = () => {
       alt="Close"
       height={28}
       width={28}
+      priority
     />
   )
 }

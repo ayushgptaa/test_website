@@ -20,13 +20,12 @@
   width: 808px;
   height: 808px;
   @include center-horizontal;
-  top: -518px;
+  top: -460px;
 
   background: radial-gradient(
     50% 50% at 50% 50%,
     #1a5aff 0%,
-    rgba(5, 11, 25, 0) 100%,
-    rgba(156, 185, 255, 0) 100%
+    rgba(5, 11, 25, 0) 100%
   );
 }
 
@@ -63,6 +62,13 @@
     width: 2118.19px;
     height: 2118.19px;
     top: -1600px;
+
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      #1a5aff 0%,
+      rgba(5, 11, 25, 0) 100%,
+      rgba(156, 185, 255, 0) 100%
+    );
   }
 
   .textContent {

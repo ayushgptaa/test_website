@@ -12,9 +12,11 @@ const Hero = () => {
         <Fade direction="up" triggerOnce duration={800} cascade>
           <Heading text="Store and Retrieve your files on Züs" />
           <Paragraph>
-            Cloud Storage on Züs is enabled by a reliable decentralized cloud
-            network and a lightning-fast Layer 1 blockchain protocol. This makes
-            the process of getting started swift and ituitive.
+            You are one step closer to having access to any information,
+            anywhere in the world. The Zus network provides you a reliable
+            decentralized storage for your files that is fast and easy with
+            their blockchain protocol. The process is swift and intuitive. Let's
+            get started!
           </Paragraph>
         </Fade>
       </div>

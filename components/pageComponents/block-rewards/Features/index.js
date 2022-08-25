@@ -1,9 +1,12 @@
 import Image from 'next/image'
 import clsx from 'clsx'
 import PropTypes from 'prop-types'
+import { Fade } from 'react-awesome-reveal'
 
 import Heading from 'components/Heading'
 import Paragraph from 'components/Paragraph'
+
+import useGetScreenSize from 'hooks/useGetScreenSize'
 
 import styles from './index.module.scss'
 
@@ -33,51 +36,63 @@ const featureListData = [
 const FeatureList = ({ number, heading, text }) => {
   return (
     <div className={styles.featureList}>
-      <div className={styles.heading}>
-        <span className={clsx(styles.number, styles[`number${number}`])}>
-          {number}
-        </span>
-        <Heading text={heading} withoutPeriod Tag="h4" />
-      </div>
-      <Paragraph>{text}</Paragraph>
+      <Fade duration={600} cascade triggerOnce>
+        <div className={styles.heading}>
+          <span className={clsx(styles.number, styles[`number${number}`])}>
+            {number}
+          </span>
+          <Heading text={heading} withoutPeriod Tag="h4" />
+        </div>
+        <Paragraph>{text}</Paragraph>
+      </Fade>
       <div className={styles.line} />
     </div>
   )
 }
 
 const Features = () => {
+  const isMobile = useGetScreenSize()
+
   return (
     <section className={styles.rootContainer}>
       <div className={styles.topTextContent}>
-        <Heading text="The Blobber Block Reward Process" Tag="h3" />
-        <Paragraph>
-          Blobbers are given rewards based on a lottery mechanism that favors
-          the most productive and honest blobbers on the network. Any blobber
-          who passes a challenge within the given time period is entered into
-          the lottery..
-        </Paragraph>
+        <Fade direction="up" cascade duration={600} triggerOnce>
+          <Heading text="The Blobber Block Reward Process" Tag="h3" />
+          <Paragraph>
+            Blobbers are given rewards based on a lottery mechanism that favors
+            the most productive and honest blobbers on the network. Any blobber
+            who passes a challenge within the given time period is entered into
+            the lottery..
+          </Paragraph>
+        </Fade>
       </div>
 
       <div className={styles.rewardsContainer}>
-        <div className={styles.rewardMobile}>
-          <Image
-            src="/images/block-rewards/Features/rewardsMobile.png"
-            alt="Zcn Rewards"
-            quality={100}
-            layout="fill"
-            priority={false}
-          />
-        </div>
+        {isMobile && (
+          <Fade duration={600} cascade triggerOnce>
+            <div className={styles.rewardMobile}>
+              <Image
+                src="/images/block-rewards/Features/rewardsMobile.png"
+                alt="Zcn Rewards"
+                quality={100}
+                layout="fill"
+                priority={false}
+              />
+            </div>
+          </Fade>
+        )}
 
-        <div className={styles.rewardDesktop}>
-          <Image
-            src="/images/block-rewards/Features/rewardsDesktop.png"
-            alt="Zcn Rewards"
-            quality={100}
-            layout="fill"
-            priority={false}
-          />
-        </div>
+        <Fade duration={600} cascade triggerOnce>
+          <div className={styles.rewardDesktop}>
+            <Image
+              src="/images/block-rewards/Features/rewardsDesktop.png"
+              alt="Zcn Rewards"
+              quality={100}
+              layout="fill"
+              priority={false}
+            />
+          </div>
+        </Fade>
 
         <div className={styles.featureListContainer}>
           {featureListData.map(({ number, heading, text }) => {

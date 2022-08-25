@@ -12,12 +12,13 @@
 .imgContainer {
   position: relative;
   @include flex-center;
+  filter: drop-shadow(40px 54px 250px rgba(159, 157, 252, 0.9));
 }
 
 .textContainer {
   max-width: 480px;
   padding: 20px;
-  margin-top: -2rem;
+  margin: -2rem auto 0;
 
   p {
     text-align: left;
@@ -103,5 +104,10 @@
     font-weight: 700;
     font-size: 47px;
     line-height: 122%;
+  }
+
+  .secondaryText {
+    padding-left: 0;
+    border-left: none;
   }
 }

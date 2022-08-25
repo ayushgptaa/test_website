@@ -54,9 +54,6 @@ const Slider = () => {
           prevEl: '.prev-btn',
           nextEl: '.next-btn',
         }}
-        pagination={{
-          clickable: true,
-        }}
         loop
         spaceBetween={30}
         slidesPerView="auto"

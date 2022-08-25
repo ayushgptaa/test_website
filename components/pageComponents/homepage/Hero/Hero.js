@@ -1,6 +1,7 @@
+import { Fade } from 'react-awesome-reveal'
+
 import Heading from 'components/Heading'
 import SocialIcons from 'components/SocialIcons'
-import { Fade } from 'react-awesome-reveal'
 
 import CountDownTimer from './CountdownTimer'
 import GetNotified from 'components/GetNotified'
@@ -12,7 +13,7 @@ const targetDate = new Date('15 September, 2022').getTime()
 const Hero = () => {
   return (
     <main className={styles.container}>
-      <Fade c duration={800} triggerOnce>
+      <Fade duration={800} triggerOnce>
         <div className={styles.heroBackground} />
       </Fade>
       <Fade cascade duration={800} damping={0.2} direction="up" triggerOnce>

@@ -1,5 +1,6 @@
 @use '/styles/variables.scss' as *;
 @use '/styles/mixins.scss' as *;
+
 @import 'include-media';
 
 $breakpoints: (
@@ -11,8 +12,9 @@ $breakpoints: (
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  width: 568.21px;
-  height: 545px;
+  width: 424px;
+  height: 283.05px;
+  margin-top: 200px;
 }
 
 .textContent {
@@ -22,11 +24,30 @@ $breakpoints: (
   p {
     margin-top: 2rem;
   }
+
+  button {
+    width: $mobile-width;
+  }
 }
 
-.chalkArtDesktop,
-.ellipseContainer {
+.chalkArtDesktop {
   display: none;
+}
+
+.ellipseTop {
+  position: absolute;
+  width: 424.89px;
+  height: 424.89px;
+  left: -123.21px;
+  top: -62.94px;
+
+  background: radial-gradient(
+    44.65% 54.66% at 50% 50%,
+    #ffb076 0%,
+    rgba(5, 11, 25, 0) 100%
+  );
+  opacity: 0.4;
+  z-index: -9;
 }
 
 @include media('>tablet') {
@@ -53,18 +74,10 @@ $breakpoints: (
   }
 
   .ellipseTop {
-    position: absolute;
     width: 862.71px;
     height: 862.71px;
     left: 47.29px;
     top: -142.71px;
-
-    background: radial-gradient(
-      44.65% 54.66% at 50% 50%,
-      #ffb076 0%,
-      rgba(5, 11, 25, 0) 100%
-    );
-    opacity: 0.4;
   }
 
   .ellipseBottom {

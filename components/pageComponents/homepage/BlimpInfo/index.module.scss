@@ -1,42 +1,60 @@
 @use '/styles/variables.scss' as *;
 @use '/styles/mixins.scss' as *;
+
 @import 'include-media';
 
-.blimpArtMobile {
+.blimpArt {
   position: relative;
-  width: 858px;
-  height: 858px;
-  left: 30%;
+  width: 424px;
+  height: 268px;
+  left: 50%;
   transform: translateX(-50%);
-  top: -298px;
+  margin-top: 150px;
 }
 
 .textContent {
-  margin-top: -25rem;
+  margin-top: 2rem;
   z-index: 5;
 
   p {
     margin-top: 2rem;
     padding: 0 1.5rem;
   }
+
+  button {
+    width: $mobile-width;
+  }
 }
 
-.blimpArtDesktop,
-.ellipseContainer {
+.ellipseTop {
+  position: absolute;
+  width: 858px;
+  height: 858px;
+  left: -307px;
+  top: -298px;
+
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #1477f8 0%,
+    rgba(5, 11, 25, 0) 100%
+  );
+  opacity: 0.4;
+  z-index: -9;
+}
+
+.blimpArtDesktop {
   display: none;
 }
 
 @include media('>tablet') {
-  .blimpArtMobile {
-    display: none;
-  }
-
-  .blimpArtDesktop {
-    display: block;
+  .blimpArt {
+    width: 868px;
+    height: 550px;
+    margin-top: 0;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: -250px;
+    top: -100px;
     z-index: 2;
   }
 
@@ -49,22 +67,13 @@
     width: 100%;
     overflow: hidden;
     border-radius: inherit;
-    // z-index: -1;
   }
 
   .ellipseTop {
-    position: absolute;
     width: 812.68px;
     height: 812.68px;
     left: -150px;
     top: -210.5px;
-
-    background: radial-gradient(
-      77.87% 77.87% at 50% 50%,
-      #17618a 0%,
-      rgba(5, 11, 25, 0) 100%
-    );
-    opacity: 0.4;
 
     border-radius: 50%;
     z-index: 1;

@@ -4,15 +4,8 @@ import Paragraph from '/components/Paragraph'
 import Button from 'components/Button'
 import Heading from 'components/Heading'
 import ContainerWithIcon from '../ContainerWithIcon'
-import BulletText from 'components/BulletText'
 
-import {
-  MobileArtAnimation,
-  DesktopArtAnimation,
-  TextContainerAnimation,
-} from '../AppsAnimations'
-
-import useGetScreenSize from 'hooks/useGetScreenSize'
+import { ImageAnimation, TextContainerAnimation } from '../AppsAnimations'
 
 import styles from './index.module.scss'
 
@@ -25,10 +18,10 @@ const ShowcaseBackground = () => {
   )
 }
 
-const ShowcaseArtMobile = () => {
+const ShowcaseArt = () => {
   return (
-    <MobileArtAnimation>
-      <div className={styles.showcaseArtMobile}>
+    <div className={styles.showcaseArt}>
+      <ImageAnimation>
         <Image
           src="/images/homePage/Showcase/showcaseArt.png"
           alt="showcase"
@@ -36,25 +29,7 @@ const ShowcaseArtMobile = () => {
           layout="fill"
           priority
         />
-      </div>
-    </MobileArtAnimation>
-  )
-}
-
-const ShowcaseArtDesktop = () => {
-  return (
-    <div className={styles.showcaseArtDesktop}>
-      <DesktopArtAnimation direction="">
-        <Image
-          src="/images/homePage/Showcase/showcaseArt.png"
-          alt="showcase"
-          quality={100}
-          layout="fixed"
-          height={800}
-          width={860}
-          priority
-        />
-      </DesktopArtAnimation>
+      </ImageAnimation>
     </div>
   )
 }
@@ -78,13 +53,11 @@ const TextContainer = () => {
             dolore magna aliqua.
           </Paragraph>
 
-          <div className={styles.listContainer}>
-            <BulletText>Consistent uptime. Lorem ipsum</BulletText>
-            <BulletText>dolor sit amet, consectetur adipiscing elit</BulletText>
-            <BulletText>
-              Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </BulletText>
-          </div>
+          <Paragraph left>
+            High-fidelity is the ultimate form of accuracy. The data is the most
+            accurate and complete representation of the product’s original
+            information.
+          </Paragraph>
         </TextContainerAnimation>
       </div>
       <TextContainerAnimation>
@@ -103,18 +76,15 @@ const TextContainer = () => {
 }
 
 const Showcase = () => {
-  const isMobile = useGetScreenSize()
-
   return (
     <ContainerWithIcon
       logo=""
       alt=""
       height={0}
       width={0}
-      style={{ padding: isMobile ? null : '21rem 0 7.8rem' }}>
+      className={styles.containerWithIcon}>
       <ShowcaseBackground />
-      <ShowcaseArtMobile />
-      <ShowcaseArtDesktop />
+      <ShowcaseArt />
       <TextContainer />
     </ContainerWithIcon>
   )

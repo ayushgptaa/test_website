@@ -178,7 +178,6 @@ const MultipleAreaChart = ({
               let label = context.dataset.label || ''
               label = padToIncreaseWidth(label, displayWidth)
 
-              if (label) label += ': '
               if (context.parsed.y !== null) {
                 label += new Intl.NumberFormat('en-US').format(context.parsed.y)
               }

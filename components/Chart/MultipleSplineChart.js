@@ -1,4 +1,5 @@
 import ReactChart from 'chart.js/auto'
+import useGetScreenSize from 'hooks/useGetScreenSize'
 import PropTypes from 'prop-types'
 import { useState, useEffect } from 'react'
 import { Line } from 'react-chartjs-2'
@@ -18,12 +19,15 @@ export const MultipleSplineChart = ({
   showLegend,
   formatYLabels,
   hidePoints,
+  borderColor,
+  stepSize,
 }) => {
   const [data, setData] = useState({
     labels: [],
     datasets: [],
   })
 
+  const isMobile = useGetScreenSize()
   // Example taken from https://codepen.io/kurkle/pen/zYYPagB
 
   useEffect(() => {
@@ -59,7 +63,7 @@ export const MultipleSplineChart = ({
         label: item.legend,
         fill: backgroundColor && 'start',
         backgroundColor,
-        borderColor: colorToUse,
+        borderColor: borderColor || colorToUse,
         pointBorderColor: 'rgba(0, 0, 0, 0)',
         pointBackgroundColor: 'rgba(0, 0, 0, 0)',
         pointHoverBackgroundColor: item.pointColor ?? colorToUse,
@@ -95,27 +99,35 @@ export const MultipleSplineChart = ({
     scales: {
       x: {
         ticks: {
-          color: theme.defaultTheme.white,
+          color: '#e6e7e8',
+          padding: isMobile ? 10 : 15,
+          font: {
+            size: isMobile ? 9 : 12,
+          },
         },
+
         title: {
           display: xAxisLegend !== undefined,
           text: xAxisLegend,
         },
-        font: {
-          size: 20,
-          fontStyle: 'italic',
-        },
+
         grid: {
           display: true,
-          color: 'rgba(255,255,255,0.1)',
+          color: 'rgba(139, 139, 139, 0.3)',
         },
       },
 
       y: {
         ticks: {
-          color: theme.defaultTheme.white,
+          color: '#e6e7e8',
           callback: formatYLabels || undefined,
+          stepSize: stepSize || undefined,
+          padding: isMobile ? 15 : 45,
+          font: {
+            size: isMobile ? 9 : 14,
+          },
         },
+
         min: minY,
         max: maxY,
         title: {
@@ -124,7 +136,7 @@ export const MultipleSplineChart = ({
         },
         grid: {
           display: true,
-          color: 'rgba(255,255,255,0.1)',
+          color: 'rgba(139, 139, 139, 0.3)',
         },
       },
     },
@@ -133,14 +145,25 @@ export const MultipleSplineChart = ({
         display: chartTitle !== undefined,
         text: chartTitle,
       },
+      htmlLegend: {
+        // ID of the container to put the legend in
+        containerID: 'legend-container',
+      },
+
       legend: {
         display: showLegend === true,
         position: 'bottom',
-
         labels: {
-          boxHeight: 0,
-          boxWidth: 60,
-          color: '#FFFFFF',
+          boxHeight: 6,
+          boxWidth: 6,
+          usePointStyle: true,
+          pointStyle: 'circle',
+          pointStyleWidth: 6,
+          color: '#e6e7e8',
+          font: {
+            size: isMobile ? 9 : 14,
+          },
+          padding: 20,
         },
       },
       annotation: {
@@ -189,6 +212,8 @@ MultipleSplineChart.propTypes = {
   formatYLabels: PropTypes.func,
   // a function that takes in y parameter value and returns text    refer https://www.chartjs.org/docs/latest/axes/labelling.html
   hidePoints: PropTypes.bool,
+  borderColor: PropTypes.string,
+  stepSize: PropTypes.number,
 }
 
 export default MultipleSplineChart

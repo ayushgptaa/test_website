@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Zoom } from 'react-awesome-reveal'
+import { Fade } from 'react-awesome-reveal'
 
 import workStepData from './workStepData'
 import Paragraph from 'components/Paragraph'
@@ -19,7 +19,7 @@ const WorkStep = () => {
       primaryText2,
       secondaryText,
     }) => (
-      <Zoom duration={800} fraction={0.5} triggerOnce key={serialNo}>
+      <Fade duration={800} fraction={0.4} triggerOnce key={serialNo}>
         <div className={styles.container}>
           <div className={styles.imgContainer}>
             <Image
@@ -28,6 +28,8 @@ const WorkStep = () => {
               quality={100}
               width={isMobile ? 250 : 400}
               height={isMobile ? 200 : 340}
+              layout="fixed"
+              priority
             />
           </div>
 
@@ -46,7 +48,7 @@ const WorkStep = () => {
             </div>
           </div>
         </div>
-      </Zoom>
+      </Fade>
     )
   )
 }

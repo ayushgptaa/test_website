@@ -6,9 +6,8 @@ import IconContainer from 'components/IconContainer'
 import RewardsCalculator from './RewardsCalculator'
 
 import {
-  MobileArtAnimation,
-  DesktopArtAnimation,
   TextContainerAnimation,
+  ImageAnimation,
 } from '../../homepage/AppsAnimations'
 
 import styles from './index.module.scss'
@@ -24,34 +23,16 @@ const ChimneyBackground = () => {
 
 const ChimneyArtMobile = () => {
   return (
-    <MobileArtAnimation direction="">
-      <div className={styles.chimneyArtMobile}>
+    <div className={styles.chimneyArt}>
+      <ImageAnimation direction="">
         <Image
-          src="/images/homePage/ChimneyInfo/chimneyArtMobile.png"
+          src="/images/homePage/ChimneyInfo/chimneyArt.png"
           alt="Chimney"
           quality={100}
           layout="fill"
           priority
         />
-      </div>
-    </MobileArtAnimation>
-  )
-}
-
-const ChimneyArtDesktop = () => {
-  return (
-    <div className={styles.chimneyArtDesktop}>
-      <DesktopArtAnimation direction="">
-        <Image
-          src="/images/homePage/ChimneyInfo/chimneyArtDesktop.png"
-          alt="Chimney"
-          quality={100}
-          layout="fixed"
-          height={680}
-          width={750}
-          priority
-        />
-      </DesktopArtAnimation>
+      </ImageAnimation>
     </div>
   )
 }
@@ -66,6 +47,7 @@ const TextContent = () => {
           server up and running on Züs in just a few clicks.
         </Paragraph>
       </TextContainerAnimation>
+
       <TextContainerAnimation direction="">
         <RewardsCalculator />
       </TextContainerAnimation>
@@ -83,11 +65,11 @@ const Earnings = () => {
             alt="Chimney Logo"
             height={40}
             width={40}
+            priority
           />
         </div>
         <ChimneyBackground />
         <ChimneyArtMobile />
-        <ChimneyArtDesktop />
         <TextContent />
       </div>
     </section>

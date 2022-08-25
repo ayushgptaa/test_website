@@ -20,7 +20,7 @@ const DesktopArtAnimation = ({ children, direction }) => {
       direction={direction === '' ? direction : 'up'}
       triggerOnce
       fraction={0.5}
-      duration={1000}>
+      duration={800}>
       {children}
     </Fade>
   )
@@ -32,8 +32,21 @@ const TextContainerAnimation = ({ children, direction = 'up' }) => {
       direction={direction}
       triggerOnce
       fraction={0.5}
-      duration={800}
+      duration={600}
       cascade>
+      {children}
+    </Fade>
+  )
+}
+
+const ImageAnimation = ({ children, direction = 'up' }) => {
+  return (
+    <Fade
+      direction={direction}
+      triggerOnce
+      fraction={0.4}
+      duration={600}
+      style={{ position: 'relative', height: '100%', width: '100%' }}>
       {children}
     </Fade>
   )
@@ -42,9 +55,15 @@ const TextContainerAnimation = ({ children, direction = 'up' }) => {
 MobileArtAnimation.propTypes =
   DesktopArtAnimation.propTypes =
   TextContainerAnimation.propTypes =
+  ImageAnimation.propTypes =
     {
       children: PropTypes.node,
       direction: PropTypes.string,
     }
 
-export { MobileArtAnimation, DesktopArtAnimation, TextContainerAnimation }
+export {
+  MobileArtAnimation,
+  DesktopArtAnimation,
+  TextContainerAnimation,
+  ImageAnimation,
+}

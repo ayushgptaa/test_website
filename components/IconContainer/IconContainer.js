@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import PropTypes from 'prop-types'
 
-const IconContainer = ({ img, alt, height, width, layout = '' }) => {
+const IconContainer = ({ img, alt, height, width, layout = '', ...rest }) => {
   return (
     <Image
       src={img}
@@ -10,6 +10,7 @@ const IconContainer = ({ img, alt, height, width, layout = '' }) => {
       height={height}
       width={width}
       layout={layout}
+      {...rest}
     />
   )
 }

@@ -33,11 +33,6 @@
   margin-top: 30px;
 }
 
-.container1ImgDesktop {
-  position: relative;
-  display: none;
-}
-
 .container1Text {
   text-align: left;
   position: relative;
@@ -117,11 +112,12 @@
     h4 {
       font-size: 42px;
       line-height: 110%;
+      margin-top: 1rem;
     }
   }
 
   .container1 {
-    @include flex-vertical-center(flex-start);
+    @include flex-vertical-center(center);
     height: 572px;
     overflow: hidden;
 
@@ -131,10 +127,6 @@
   }
 
   .container1Img {
-    display: none;
-  }
-
-  .container1ImgDesktop {
     display: block;
     width: 760px;
     height: 800px;
@@ -146,7 +138,8 @@
   }
 
   .container1Text {
-    width: 421.87px;
+    width: 473px;
+    padding: 0;
   }
 
   .purpleText {

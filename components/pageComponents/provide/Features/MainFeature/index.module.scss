@@ -60,11 +60,15 @@
 
   & > div:nth-child(3) {
     input[type='range']::-webkit-slider-thumb {
-      background: #fff;
+      background: url('/images/provide/Earnings/RewardsCalculator/gripBlue.svg')
+          center / 12px 12px no-repeat,
+        #fff;
     }
 
     input[type='range']::-moz-range-thumb {
-      background: #fff;
+      background: url('/images/provide/Earnings/RewardsCalculator/gripBlue.svg')
+          center / 12px 12px no-repeat,
+        #fff;
     }
 
     & > p {

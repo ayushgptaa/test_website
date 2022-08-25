@@ -10,7 +10,6 @@ const BgElements = () => {
     <>
       <div className={styles.ellipseLeft} />
       <div className={styles.ellipseRight} />
-      <div className={styles.blueBgImg} />
       <div className={styles.bgTexture} />
     </>
   )
@@ -18,9 +17,10 @@ const BgElements = () => {
 
 const Work = () => {
   return (
-    <>
+    <div className={styles.rootContainer}>
+      <BgElements />
       <section className={styles.textContainerwrapper}>
-        <BgElements />
+        <div className={styles.blueBgImg} />
         <div className={styles.textContainer}>
           <Fade direction="up" cascade triggerOnce duration={800}>
             <h3 className={styles.heading}>How Does it Work?</h3>
@@ -36,7 +36,7 @@ const Work = () => {
       <section className={styles.workStepContainer}>
         <WorkStep />
       </section>
-    </>
+    </div>
   )
 }
 

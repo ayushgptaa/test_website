@@ -6,27 +6,23 @@ import Heading from 'components/Heading'
 import TextContainerBorder from './TextContainerBorder'
 import ContainerWithIcon from '../ContainerWithIcon'
 
-import {
-  MobileArtAnimation,
-  DesktopArtAnimation,
-  TextContainerAnimation,
-} from '../AppsAnimations'
+import { TextContainerAnimation, ImageAnimation } from '../AppsAnimations'
 
 import styles from './index.module.scss'
 
-const VultArtMobile = () => {
+const VultArt = () => {
   return (
-    <MobileArtAnimation>
-      <div className={styles.vultArtMobile}>
+    <ImageAnimation>
+      <div className={styles.vultArt}>
         <Image
-          src="/images/homePage/VultInfo/vultArtMobile.png"
-          alt="Chimney"
+          src="/images/homePage/VultInfo/vultArt.png"
+          alt="Vult"
           quality={100}
           layout="fill"
           priority
         />
       </div>
-    </MobileArtAnimation>
+    </ImageAnimation>
   )
 }
 
@@ -39,27 +35,9 @@ const VultBackground = () => {
   )
 }
 
-const VultArtDesktop = () => {
-  return (
-    <div className={styles.vultArtDesktop}>
-      <DesktopArtAnimation>
-        <Image
-          src="/images/homePage/VultInfo/vultArtDesktop.png"
-          alt="Chimney"
-          quality={100}
-          layout="fixed"
-          height={500}
-          width={600}
-          priority
-        />
-      </DesktopArtAnimation>
-    </div>
-  )
-}
-
 const TextContent = () => {
   return (
-    <div className={styles.teContainerWrapper}>
+    <div className={styles.textContainerWrapper}>
       <TextContainerAnimation>
         <div className={styles.textContent}>
           <Heading
@@ -68,8 +46,9 @@ const TextContent = () => {
             periodColor="#0B9DFF"
           />
           <Paragraph>
-            There is no limit to the amount of storage that can be put on the
-            Züs Cloud Network. The more storage, the better.
+            The Zus Cloud Network provides an unlimited amount of storage. This
+            means that with more space, you can keep all your important files
+            safe!
           </Paragraph>
           <div>
             <Button
@@ -98,8 +77,7 @@ const VultInfo = () => {
       height={50}
       width={70}
       vultContainer>
-      <VultArtMobile />
-      <VultArtDesktop />
+      <VultArt />
       <TextContent />
       <VultBackground />
     </ContainerWithIcon>

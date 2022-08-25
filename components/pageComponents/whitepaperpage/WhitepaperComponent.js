@@ -10,13 +10,13 @@ const WhitepaperComponent = () => {
   return (
     <>
       <main className={styles.mainContainer}>
-        <Fade>
-          <Heading text="whitepapers" uppercase />
-          <IconContainer />
+        <Fade triggerOnce direction="up">
+          <Heading text="Whitepapers" />
         </Fade>
+        <IconContainer />
       </main>
       <section className={styles.sectionContainer}>
-        <Fade>
+        <Fade triggerOnce>
           <h2 className={styles.heading}>Additional Reading</h2>
           <ReadingSlider />
         </Fade>

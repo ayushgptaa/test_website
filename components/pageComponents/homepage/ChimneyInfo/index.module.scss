@@ -1,5 +1,6 @@
 @use '/styles/variables.scss' as *;
 @use '/styles/mixins.scss' as *;
+
 @import 'include-media';
 
 $breakpoints: (
@@ -7,32 +8,51 @@ $breakpoints: (
   smallDesktop: 1200px,
 );
 
-.chimneyArtMobile {
+.chimneyArt {
   position: relative;
-  width: 793.83px;
-  height: 746.92px;
+  width: 650px;
+  height: 650px;
   left: 50%;
   transform: translateX(-50%);
-  opacity: 1;
 }
 
 .textContent {
-  margin-top: -8rem;
+  margin-top: -9rem;
   padding: 0 1.5rem;
 
   p {
     margin-top: 2rem;
   }
+
+  button {
+    width: $mobile-width;
+  }
 }
 
-.chimneyArtDesktop,
-.ellipseContainer {
-  display: none;
+.ellipseTop {
+  position: absolute;
+  width: 424.89px;
+  height: 424.89px;
+  left: -133.21px;
+  top: -2.94px;
+
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #b44b91 0%,
+    rgba(5, 11, 25, 0) 100%
+  );
+  opacity: 0.5;
+  z-index: -9;
 }
 
 @include media('>tablet') {
-  .chimneyArtMobile {
-    display: none;
+  .chimneyArt {
+    width: 786px;
+    height: 799px;
+    margin-left: -28%;
+    margin-top: 2rem;
+    left: 0;
+    transform: none;
   }
 
   .ellipseContainer {
@@ -47,18 +67,10 @@ $breakpoints: (
   }
 
   .ellipseTop {
-    position: absolute;
     width: 1694px;
     height: 1694px;
     left: -850px;
     top: -735.5px;
-
-    background: radial-gradient(
-      50% 50% at 50% 50%,
-      #b44b91 0%,
-      rgba(5, 11, 25, 0) 100%
-    );
-    opacity: 0.5;
   }
 
   .ellipseBottom {
@@ -76,35 +88,30 @@ $breakpoints: (
     opacity: 0.5;
   }
 
-  .chimneyArtDesktop {
-    display: block;
-    margin-left: -16%;
-    margin-top: 2rem;
-  }
-
   .textContent {
     margin: 0;
-    width: 45%;
+    max-width: 466px;
     text-align: left;
+    padding: 0;
 
     p {
       text-align: left;
       padding: 0;
-      width: 80%;
     }
   }
 }
 
 @include media('<=smallDesktop', '>tablet') {
-  .chimneyArtDesktop {
-    margin: 0;
+  .chimneyArt {
+    margin-left: 0;
+    margin-top: -3rem;
   }
 
   .textContent {
     text-align: center;
     width: 70%;
     padding-bottom: 3rem;
-    margin-top: -3rem;
+    margin-top: -8rem;
 
     P {
       text-align: center;

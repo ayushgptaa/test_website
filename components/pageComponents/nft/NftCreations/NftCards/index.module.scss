@@ -1,0 +1,104 @@
+@use '/styles/variables.scss' as *;
+@use '/styles/mixins.scss' as *;
+
+@import 'include-media';
+
+.mySwiper {
+  overflow: visible;
+  margin-top: 100px;
+}
+
+.cardsContainer {
+  position: relative;
+  width: 285.46px;
+  height: 319.04px;
+  overflow: visible;
+}
+
+.card {
+  @include flex-center-column;
+  justify-content: flex-start;
+  position: absolute;
+  width: 173.51px;
+  height: 207.71px;
+  padding-top: 35px;
+  background: $darker-blue;
+  box-shadow: 2px 4px 250px rgba(255, 255, 255, 0.08);
+
+  .cardContent {
+    font-size: 9.79519px;
+    line-height: 100%;
+
+    .nftImage {
+      position: relative;
+      height: 97px;
+      width: 97px;
+    }
+
+    .name {
+      color: $grey-2;
+      margin-top: 7px;
+    }
+
+    .creater {
+      color: $grey-3;
+      font-weight: 400;
+      margin-top: 5px;
+    }
+
+    .priceContainer {
+      @include flex(flex-start, center);
+      margin-top: 5.5px;
+      gap: 5px;
+      color: $grey-3;
+
+      .ethIcon {
+        position: relative;
+        height: 10px;
+        width: 10px;
+      }
+
+      p {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@include media('>tablet') {
+  .mySwiper {
+    & > div {
+      display: flex;
+      justify-content: center !important;
+    }
+  }
+
+  .cardsContainer {
+    position: relative;
+    width: 408px;
+    height: 456px;
+  }
+
+  .card {
+    width: 248px;
+    height: 296px;
+    padding-top: 54px;
+
+    .cardContent {
+      font-size: 14px;
+
+      .nftImage {
+        height: 140px;
+        width: 140px;
+      }
+
+      .priceContainer {
+        .ethIcon {
+          position: relative;
+          height: 14px;
+          width: 14px;
+        }
+      }
+    }
+  }
+}

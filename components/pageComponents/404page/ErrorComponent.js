@@ -8,7 +8,7 @@ import styles from './ErrorComponent.module.scss'
 
 const ErrorComponent = () => {
   return (
-    <Bounce>
+    <Bounce triggerOnce>
       <section className={styles.rootContainer}>
         <div className={styles.errorImg} />
         <div className={styles.textContainer}>

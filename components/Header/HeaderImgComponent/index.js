@@ -1,12 +1,10 @@
 import Image from 'next/image'
-import propTypes from 'prop-types'
-import clsx from 'clsx'
 
 import styles from './index.module.scss'
 
-const HeaderImgComponent = ({ removeImg = false }) => {
+const HeaderImgComponent = () => {
   return (
-    <div className={clsx(styles.imgContainer, removeImg && styles.removeImg)}>
+    <div className={styles.imgContainer}>
       <Image
         src="/images/homePage/Hero/hero-img.png"
         width={876}
@@ -15,10 +13,6 @@ const HeaderImgComponent = ({ removeImg = false }) => {
       />
     </div>
   )
-}
-
-HeaderImgComponent.propTypes = {
-  removeImg: propTypes.bool,
 }
 
 export default HeaderImgComponent

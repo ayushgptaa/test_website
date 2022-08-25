@@ -5,11 +5,9 @@ import Button from 'components/Button'
 import Heading from 'components/Heading'
 import ContainerWithIcon from '../ContainerWithIcon'
 
-import {
-  MobileArtAnimation,
-  DesktopArtAnimation,
-  TextContainerAnimation,
-} from '../AppsAnimations'
+import { ImageAnimation, TextContainerAnimation } from '../AppsAnimations'
+
+import useGetScreenSize from 'hooks/useGetScreenSize'
 
 import styles from './index.module.scss'
 
@@ -24,24 +22,23 @@ const EllipseContainer = () => {
 
 const ChalkArtMobile = () => {
   return (
-    <MobileArtAnimation>
-      <div className={styles.chalkArtMobile}>
+    <div className={styles.chalkArtMobile}>
+      <ImageAnimation>
         <Image
           src="/images/homePage/ChalkInfo/chalkArtMobile.png"
-          alt="Chimney"
+          alt="Chalk"
           quality={100}
           layout="fill"
-          priority
         />
-      </div>
-    </MobileArtAnimation>
+      </ImageAnimation>
+    </div>
   )
 }
 
 const ChalkArtDesktop = () => {
   return (
     <div className={styles.chalkArtDesktop}>
-      <DesktopArtAnimation>
+      <ImageAnimation>
         <Image
           src="/images/homePage/ChalkInfo/chalkArtDesktop.png"
           alt="Chalk"
@@ -49,9 +46,8 @@ const ChalkArtDesktop = () => {
           layout="fixed"
           height={550}
           width={600}
-          priority
         />
-      </DesktopArtAnimation>
+      </ImageAnimation>
     </div>
   )
 }
@@ -66,9 +62,10 @@ const TextContainer = () => {
           periodColor="#F75A38"
         />
         <Paragraph>
-          Codeless NFT minting. Permanent decentralized storage. No upfront
-          cost. The Chalk App leverages Züs to bring groundbreaking features to
-          NFT creators.
+          The Chalk app brings groundbreaking features to NFT creators. By
+          leveraging Zus, creators will now enjoy codeless NFT minting without
+          upfront costs as well as permanent decentralized storage that will
+          never go offline
         </Paragraph>
         <div>
           <Button
@@ -85,6 +82,7 @@ const TextContainer = () => {
 }
 
 const ChalkInfo = () => {
+  const isMobile = useGetScreenSize()
   return (
     <ContainerWithIcon
       logo="/images/homePage/ChalkInfo/chalkLogo.svg"
@@ -92,9 +90,9 @@ const ChalkInfo = () => {
       height={55}
       width={75}>
       <EllipseContainer />
-      <ChalkArtMobile />
+      {isMobile && <ChalkArtMobile />}
       <TextContainer />
-      <ChalkArtDesktop />
+      {!isMobile && <ChalkArtDesktop />}
     </ContainerWithIcon>
   )
 }

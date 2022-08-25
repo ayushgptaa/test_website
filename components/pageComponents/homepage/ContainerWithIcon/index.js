@@ -13,10 +13,10 @@ const ContainerWithIcon = ({
   width,
   vultContainer = false,
   blimpContainer = false,
-  style,
+  className,
 }) => {
   return (
-    <section className={styles.rootWrapper} style={style}>
+    <section className={clsx(styles.rootWrapper, className)}>
       <div
         className={clsx(
           styles.containerWithIcon,
@@ -48,7 +48,7 @@ ContainerWithIcon.propTypes = {
   alt: PropTypes.string.isRequired,
   height: PropTypes.number.isRequired,
   width: PropTypes.number.isRequired,
-  style: PropTypes.object,
+  className: PropTypes.string,
   vultContainer: PropTypes.bool,
   blimpContainer: PropTypes.bool,
 }

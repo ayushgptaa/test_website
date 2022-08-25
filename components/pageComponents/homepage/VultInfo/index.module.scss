@@ -1,4 +1,5 @@
 @use '/styles/mixins.scss' as *;
+@use '/styles/variables.scss' as *;
 @import 'include-media';
 
 $breakpoints: (
@@ -6,40 +7,54 @@ $breakpoints: (
   smallDesktop: 1200px,
 );
 
-.vultArtMobile {
+.vultArt {
   position: relative;
-  width: 740.95px;
-  height: 740.95px;
-  left: 30%;
+  width: 336px;
+  height: 271px;
+  left: 55%;
   transform: translateX(-50%);
-  top: -238.48px;
+  margin-top: 185px;
 }
 
 .textContent {
-  margin-top: -14rem;
   padding: 0 1.5rem;
+  margin: 56px auto 0;
 
   p {
     margin-top: 2rem;
   }
+
+  button {
+    width: $mobile-width;
+  }
 }
 
-.ellipseContainer,
 .vultArtDesktop {
   display: none;
 }
 
-.textContainerBorderWrapper {
-  padding-top: 1rem;
+.ellipseTop {
+  position: absolute;
+  width: 740.95px;
+  height: 740.95px;
+  left: -272.48px;
+  top: -238.48px;
+
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #4987ff 0%,
+    rgba(0, 10, 240, 0) 100%
+  );
+  opacity: 0.4;
+  z-index: -9;
 }
 
 @include media('>tablet') {
-  .vultArtMobile {
-    display: none;
-  }
-
-  .textContent {
-    padding: 0;
+  .vultArt {
+    margin-top: calc(680px - 500px);
+    margin-left: -10%;
+    height: 500px;
+    width: 600px;
   }
 
   .ellipseContainer {
@@ -54,18 +69,10 @@ $breakpoints: (
   }
 
   .ellipseTop {
-    position: absolute;
     width: 1694px;
     height: 1694px;
     left: -699px;
     top: -735.5px;
-
-    background: radial-gradient(
-      50% 50% at 50% 50%,
-      #4987ff 0%,
-      rgba(0, 10, 240, 0) 100%
-    );
-    opacity: 0.4;
   }
 
   .ellipseBottom {
@@ -83,36 +90,44 @@ $breakpoints: (
     opacity: 0.5;
   }
 
+  .textContainerWrapper {
+    margin: 0 0 0 -4%;
+  }
+
   .textContent {
-    margin: 0;
     text-align: left;
+    padding: 0;
 
     p {
       text-align: left;
       padding: 0;
-      width: 80%;
+      width: 90%;
     }
   }
 
-  .vultArtDesktop {
-    display: block;
-    margin-top: calc(680px - 500px);
-    margin-left: -6%;
-  }
-
   .textContainerBorderWrapper {
-    @include flex-vertical-center(flex-start);
+    @include flex(flex-start, streach);
     gap: 2.5rem;
     margin-top: 3.25rem;
+
+    & > div:first-child {
+      width: 173px;
+      height: 156px;
+    }
+
+    & > div:nth-child(2) {
+      width: 307px;
+      height: 156px;
+    }
   }
 }
 
 @include media('<=smallDesktop', '>tablet') {
-  .vultArtDesktop {
-    margin-left: 100px;
+  .vultArt {
+    margin-left: 0;
   }
 
-  .teContainerWrapper {
+  .textContainerWrapper {
     width: 70%;
     margin: auto;
     padding-bottom: 3rem;
@@ -121,7 +136,7 @@ $breakpoints: (
     .textContent {
       text-align: center;
 
-      P {
+      p {
         text-align: center;
         width: 100%;
       }
@@ -133,7 +148,7 @@ $breakpoints: (
     }
 
     .textContainerBorderWrapper {
-      @include flex-vertical-center(center);
+      @include flex(center, flex-start);
       margin-top: 2rem;
     }
   }

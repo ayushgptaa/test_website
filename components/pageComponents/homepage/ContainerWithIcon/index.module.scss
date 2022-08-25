@@ -1,5 +1,6 @@
 @use '/styles/variables.scss' as *;
 @use '/styles/mixins.scss' as *;
+
 @import 'include-media';
 
 $breakpoints: (
@@ -11,7 +12,7 @@ $breakpoints: (
   position: relative;
   border-top: $border-gray;
   text-align: center;
-  padding-bottom: 6.25rem;
+  padding-bottom: 6rem;
   overflow: hidden;
 }
 
@@ -27,7 +28,11 @@ $breakpoints: (
 }
 
 .logo {
-  display: none;
+  display: block;
+  position: absolute;
+  top: 100px;
+  left: 55px;
+  z-index: 10;
 }
 
 @include media('>tablet') {
@@ -57,11 +62,8 @@ $breakpoints: (
   }
 
   .logo {
-    display: block;
-    position: absolute;
-    left: 50px;
     top: 50px;
-    z-index: 10;
+    left: 50px;
   }
 
   .blimpContainer {

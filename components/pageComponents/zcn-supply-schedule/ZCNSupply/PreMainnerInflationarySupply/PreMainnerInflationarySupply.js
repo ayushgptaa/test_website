@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import { Fade } from 'react-awesome-reveal'
 
 import PreMainetItem from './PreMainnerInflationarySupplyItem'
 
@@ -10,14 +11,18 @@ const PreMainnerInflationarySupply = ({ data }) => {
   ))
   return (
     <div className={styles.rootContainer}>
-      <div className={styles.listContent}>
-        <h4>Pre-Mainnet Supply</h4>
-        <ul>{PreMainnerItem.slice(0, 5)}</ul>
-      </div>
-      <div className={styles.listContent}>
-        <h4>Inflationary Supply (Block Rewards)</h4>
-        <ul>{PreMainnerItem.slice(5, 9)}</ul>
-      </div>
+      <Fade delay={500} duration={700} triggerOnce>
+        <div className={styles.listContent}>
+          <h4>Pre-Mainnet Supply</h4>
+          <ul>{PreMainnerItem.slice(0, 5)}</ul>
+        </div>
+      </Fade>
+      <Fade delay={500} duration={700} triggerOnce>
+        <div className={styles.listContent}>
+          <h4>Inflationary Supply (Block Rewards)</h4>
+          <ul>{PreMainnerItem.slice(5, 9)}</ul>
+        </div>
+      </Fade>
     </div>
   )
 }

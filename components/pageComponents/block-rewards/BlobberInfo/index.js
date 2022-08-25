@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import { Fade, Zoom } from 'react-awesome-reveal'
 
 import Button from 'components/Button'
 import Heading from 'components/Heading'
@@ -31,15 +32,17 @@ const blobberFeatrues = [
 
 const Features = ({ heading, text }) => {
   return (
-    <div
-      className={styles.features}
-      key={heading}
-      id={toLowerCaseRemoveSpaces(heading)}>
-      <div className={styles.featuresTextContent}>
-        <Heading text={heading} Tag="h4" withoutPeriod />
-        <Paragraph>{text}</Paragraph>
+    <Fade cascade duration={600} triggerOnce>
+      <div
+        className={styles.features}
+        key={heading}
+        id={toLowerCaseRemoveSpaces(heading)}>
+        <div className={styles.featuresTextContent}>
+          <Heading text={heading} Tag="h4" withoutPeriod />
+          <Paragraph>{text}</Paragraph>
+        </div>
       </div>
-    </div>
+    </Fade>
   )
 }
 
@@ -47,23 +50,27 @@ const BlobberInfo = () => {
   return (
     <section className={styles.rootContainer}>
       <div className={styles.topTextContent}>
-        <Heading text="Blobber Weight Formula" Tag="h3" />
-        <Paragraph>
-          The proportion of block reward that each blobber receives is
-          determined by their contributions to the network relative to the
-          average blobber’s contribution on the network. These contributions are
-          measured using the Blobber Weight Formula, which is comprised of the
-          following: “Goodness Factor”, which is determined by the [free egress
-          multiplier] and the [fair usage multiplier]; and “Adjusted Stake”,
-          which is determined by [ZCN Delegated] and [Successful Challenges]
-        </Paragraph>
+        <Fade direction="up" cascade duration={600} triggerOnce>
+          <Heading text="Blobber Weight Formula" Tag="h3" />
+          <Paragraph>
+            The proportion of block reward that each blobber receives is
+            determined by their contributions to the network relative to the
+            average blobber’s contribution on the network. These contributions
+            are measured using the Blobber Weight Formula, which is comprised of
+            the following: “Goodness Factor”, which is determined by the [free
+            egress multiplier] and the [fair usage multiplier]; and “Adjusted
+            Stake”, which is determined by [ZCN Delegated] and [Successful
+            Challenges]
+          </Paragraph>
+        </Fade>
       </div>
 
-      <div className={styles.blobberInfoImg}>
-        <BlobberInfoImg />
-
-        <Button type="button" text="Read the Economics Whitepaper" black />
-      </div>
+      <Zoom triggerOnce>
+        <div className={styles.blobberInfoImg}>
+          <BlobberInfoImg />
+          <Button type="button" text="Read the Economics Whitepaper" black />
+        </div>
+      </Zoom>
 
       <Button
         type="button"

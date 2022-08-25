@@ -45,6 +45,7 @@ const SocialIcons = ({
                   alt={name}
                   height={height}
                   width={width}
+                  priority
                 />
               </a>
             </li>

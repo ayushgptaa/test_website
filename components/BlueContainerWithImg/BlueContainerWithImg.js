@@ -12,10 +12,10 @@ import styles from './BlueContainerWithImg.module.scss'
 // Main content for Contact and Press page
 const BlueContainerWithImg = ({ heading, subHeading }) => {
   return (
-    <Fade>
+    <Fade triggerOnce>
       <div className={styles.primaryContainer}>
         <div className={styles.bgImage} />
-        <Fade direction="up">
+        <Fade direction="up" triggerOnce>
           <p>{subHeading}</p>
           <Heading text={heading} />
           <div className={styles.iconContainer}>
@@ -26,10 +26,13 @@ const BlueContainerWithImg = ({ heading, subHeading }) => {
               layout="fixed"
               height={24}
               width={24}
+              priority
             />
             <p>@ZusCloud</p>
           </div>
-          <Button type="button" text="DM us on Twitter" />
+          <div>
+            <Button type="button" text="DM us on Twitter" />
+          </div>
         </Fade>
       </div>
       <div className={styles.secondaryContainer}>

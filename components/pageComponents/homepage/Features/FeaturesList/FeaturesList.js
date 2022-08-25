@@ -10,7 +10,7 @@ const FeaturesList = ({ heading, text, img, buttonText, link }) => {
   return (
     <div className={styles.container}>
       <div className={styles.icon}>
-        <Image src={img} quality={100} layout="fill" />
+        <Image src={img} quality={100} layout="fill" priority />
       </div>
       <div className={styles.textContainer}>
         <h3 className={styles.heading}>{heading}</h3>

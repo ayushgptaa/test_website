@@ -25,10 +25,6 @@
   animation: zoomOut 2.8s forwards;
 }
 
-.removeImg {
-  display: none;
-}
-
 @include media('>tablet') {
   .imgContainer {
     display: none;

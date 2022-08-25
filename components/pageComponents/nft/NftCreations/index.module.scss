@@ -1,0 +1,56 @@
+@use '/styles/variables.scss' as *;
+@use '/styles/mixins.scss' as *;
+
+@import 'include-media';
+
+.rootContainer {
+  position: relative;
+  padding: 120px 0;
+  background: $darker-blue;
+  border-top: $border-gray;
+}
+
+.mainTextContent {
+  padding: 0 20px;
+  text-align: center;
+
+  h3 {
+    font-size: 28px;
+    line-height: 115%;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 160%;
+    margin-top: 20px;
+  }
+}
+
+.bottomLink {
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 160%;
+  text-decoration-line: underline;
+  margin-top: 60px;
+  font-family: inherit;
+}
+
+@include media('>tablet') {
+  .rootContainer {
+    padding: 140px 0;
+  }
+
+  .mainTextContent {
+    h3 {
+      font-size: 42px;
+      line-height: 110%;
+    }
+
+    p {
+      font-size: 18px;
+      max-width: 900px;
+      margin: 20px auto 0;
+    }
+  }
+}

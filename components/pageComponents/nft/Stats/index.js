@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { Fade } from 'react-awesome-reveal'
 
 import Heading from 'components/Heading'
 import Paragraph from 'components/Paragraph'
@@ -78,31 +79,41 @@ const Stats = () => {
   return (
     <section className={styles.rootContainer}>
       <div className={styles.sectionTextContent}>
-        <Heading text="Some sort of NFT Stat" withoutPeriod Tag="h3" />
-        <Paragraph>
-          Anyone can move their data over to Züs. Zero headaches. An abundance
-          of storage features.
-        </Paragraph>
-      </div>
-
-      <div className={styles.chartContainer}>
-        <ProductSerial />
-
-        <div className={styles.chartImg}>
-          <Image
-            src="/images/nft/Stats/gaugeChart.png"
-            alt="gauge chart"
-            quality={100}
-            layout="fill"
-          />
-        </div>
-
-        <div className={styles.imageText}>
-          <h5>Some sort of inforgraphic showing the number or value of NFTs</h5>
+        <Fade direction="up" duration={600} cascade triggerOnce>
+          <Heading text="Some sort of NFT Stat" withoutPeriod Tag="h3" />
           <Paragraph>
             Anyone can move their data over to Züs. Zero headaches. An abundance
             of storage features.
           </Paragraph>
+        </Fade>
+      </div>
+
+      <div className={styles.chartContainer}>
+        <Fade direction="up" duration={600} delay={500} cascade triggerOnce>
+          <ProductSerial />
+        </Fade>
+
+        <Fade delay={500} duration={800} fraction={0.3} cascade triggerOnce>
+          <div className={styles.chartImg}>
+            <Image
+              src="/images/nft/Stats/gaugeChart.png"
+              alt="gauge chart"
+              quality={100}
+              layout="fill"
+            />
+          </div>
+        </Fade>
+
+        <div className={styles.imageText}>
+          <Fade direction="up" duration={600} cascade triggerOnce>
+            <h5>
+              Some sort of inforgraphic showing the number or value of NFTs
+            </h5>
+            <Paragraph>
+              Anyone can move their data over to Züs. Zero headaches. An
+              abundance of storage features.
+            </Paragraph>
+          </Fade>
         </div>
       </div>
 

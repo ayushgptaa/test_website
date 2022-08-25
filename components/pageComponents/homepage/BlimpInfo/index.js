@@ -5,11 +5,7 @@ import Button from 'components/Button'
 import Heading from 'components/Heading'
 import ContainerWithIcon from '../ContainerWithIcon'
 
-import {
-  MobileArtAnimation,
-  DesktopArtAnimation,
-  TextContainerAnimation,
-} from '../AppsAnimations'
+import { ImageAnimation, TextContainerAnimation } from '../AppsAnimations'
 
 import styles from './index.module.scss'
 
@@ -22,36 +18,18 @@ const BlimpBackground = () => {
   )
 }
 
-const BlimpArtMobile = () => {
+const BlimpArt = () => {
   return (
-    <MobileArtAnimation>
-      <div className={styles.blimpArtMobile}>
+    <div className={styles.blimpArt}>
+      <ImageAnimation>
         <Image
-          src="/images/homePage/BlimpInfo/blimpArtMobile.png"
+          src="/images/homePage/BlimpInfo/blimpArt.png"
           alt="Blimp"
           quality={100}
           layout="fill"
           priority
         />
-      </div>
-    </MobileArtAnimation>
-  )
-}
-
-const BlimpArtDesktop = () => {
-  return (
-    <div className={styles.blimpArtDesktop}>
-      <DesktopArtAnimation direction="">
-        <Image
-          src="/images/homePage/BlimpInfo/blimpArtDesktop.png"
-          alt="Blimp"
-          quality={100}
-          layout="fixed"
-          height={750}
-          width={750}
-          priority
-        />
-      </DesktopArtAnimation>
+      </ImageAnimation>
     </div>
   )
 }
@@ -83,8 +61,7 @@ const BlimpInfo = () => {
       width={65}
       blimpContainer>
       <BlimpBackground />
-      <BlimpArtMobile />
-      <BlimpArtDesktop />
+      <BlimpArt />
       <TextContainer />
     </ContainerWithIcon>
   )
