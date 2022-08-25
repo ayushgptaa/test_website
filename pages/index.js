@@ -14,7 +14,7 @@ import Showcase from 'components/pageComponents/homepage/ShowCase'
 const Home = () => {
   return (
     <PageContainer>
-      <Header />
+      <Header borderNone />
       <Hero />
       <MainFeature />
       <Features />

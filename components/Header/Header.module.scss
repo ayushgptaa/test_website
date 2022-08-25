@@ -13,6 +13,7 @@
 .header {
   padding: 20px 16px;
   border-bottom: $border-gray;
+  height: 71px;
   @include flex(space-between, center);
 }
 
@@ -24,9 +25,14 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+.borderNone {
+  border-bottom: none;
+}
+
 @include media('>tablet') {
   .header {
     padding: 20px 80px;
+    height: auto;
   }
 }
 

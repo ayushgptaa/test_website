@@ -3,20 +3,21 @@ import { motion } from 'framer-motion'
 import PropTypes from 'prop-types'
 
 import Button from 'components/Button'
+import SocialIcons from 'components/SocialIcons'
 
 import navData from '../navData'
 
 import styles from './Mobilenav.module.scss'
-import SocialIcons from 'components/SocialIcons'
 
 const MobileNav = ({ animation }) => {
   return (
     <motion.nav
       className={styles.mobileNav}
+      id="mobile-nav"
       initial={{ x: '150%', display: 'none' }}
       animate={animation}
       transition={{
-        duration: 0.8,
+        duration: 0.5,
         ease: 'easeInOut',
       }}>
       <ul className={styles.navlinksContainer}>

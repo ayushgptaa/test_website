@@ -34,7 +34,7 @@ const ToggleBtn = ({ toggleNavbar, showNavLinks }) => {
       className={styles.toggleBtn}
       type="button"
       onClick={toggleNavbar}
-      style={{ zIndex: 20 }}>
+      style={{ zIndex: 100 }}>
       {showNavLinks ? <CloseIcon /> : <MenuIcon />}
     </button>
   )
