@@ -6,7 +6,7 @@ import WhitepaperComponent from 'pageComponents/whitepaperpage'
 
 const Whitepapers = () => {
   return (
-    <PageContainer>
+    <PageContainer title="Züs - Whitepapers">
       <PageBackground />
       <Header removeImg />
       <WhitepaperComponent />

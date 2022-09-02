@@ -6,7 +6,7 @@ import Footer from 'components/Footer'
 
 const BlobberCalculator = () => {
   return (
-    <PageContainer>
+    <PageContainer title="Züs - Blobber Rewards Calculator">
       <Header removeImg />
       <Hero />
       <CalculatorComponent />

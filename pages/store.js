@@ -7,7 +7,7 @@ import Work from 'pageComponents/store/Work'
 
 const Store = () => {
   return (
-    <PageContainer>
+    <PageContainer title="Züs - Store and Retrieve your files on Züs">
       <Header removeImg color="darker-blue" />
       <Hero />
       <Work />

@@ -8,7 +8,7 @@ import Testimonials from 'components/pageComponents/homepage/Testimonials'
 
 const Build = () => {
   return (
-    <PageContainer>
+    <PageContainer title="Züs - The Showcase">
       <Header borderWhite removeImg />
       <Hero />
       <Stats />

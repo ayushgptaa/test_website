@@ -5,7 +5,7 @@ import Footer from 'components/Footer'
 
 const Contact = () => {
   return (
-    <PageContainer>
+    <PageContainer title="Züs - The Road Ahead">
       <Header removeImg />
       <RoadmapComponent />
       <Footer showfooterBackground={false} showfooterFeature={false} />

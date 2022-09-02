@@ -6,7 +6,7 @@ import Footer from 'components/Footer'
 
 const Press = () => {
   return (
-    <PageContainer>
+    <PageContainer title="Züs - Press & Media">
       <PageBackground />
       <Header removeImg />
       <BlueContainerWithImg

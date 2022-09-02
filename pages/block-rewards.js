@@ -7,7 +7,7 @@ import Footer from 'components/Footer'
 
 const BlockRewards = () => {
   return (
-    <PageContainer>
+    <PageContainer title="Züs - Block Rewards">
       <Header removeImg />
       <Hero />
       <Features />

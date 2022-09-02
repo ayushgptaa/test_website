@@ -9,7 +9,7 @@ import Apps from 'components/pageComponents/buildpage/Apps'
 
 const Build = () => {
   return (
-    <PageContainer>
+    <PageContainer title="Züs - Build for the future">
       <Header removeImg />
       <Hero />
       <Features />

@@ -1,0 +1,14 @@
+{
+  "name": " Züs - Go Beyond Cloud",
+  "short_name": " Züs",
+  "icons": [
+    {
+      "src": "/android-chrome-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#030819",
+  "background_color": "#030819",
+  "display": "standalone"
+}

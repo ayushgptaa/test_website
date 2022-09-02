@@ -5,7 +5,7 @@ import Footer from 'components/Footer'
 
 const LaunchApps = () => {
   return (
-    <PageContainer>
+    <PageContainer title="Züs - The App Ecosystem">
       <Header removeImg />
       <AppLaunchComponent />
       <Footer showfooterBackground={false} showfooterFeature={false} />

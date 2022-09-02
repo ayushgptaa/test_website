@@ -8,7 +8,7 @@ import Features from 'components/pageComponents/zcn/Features'
 
 const Build = () => {
   return (
-    <PageContainer>
+    <PageContainer title="Züs - ZCN ">
       <Header removeImg />
       <Hero />
       <About />

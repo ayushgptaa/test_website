@@ -6,7 +6,7 @@ import PageBackground from 'components/PageBackground'
 
 const Custom404 = () => {
   return (
-    <PageContainer>
+    <PageContainer title="Züs - Page Not Found">
       <PageBackground />
       <Header removeImg />
       <ErrorComponent />

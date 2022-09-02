@@ -8,7 +8,7 @@ import Footer from 'components/Footer'
 
 const Earn = () => {
   return (
-    <PageContainer>
+    <PageContainer title="Züs - Earn Rewards">
       <Header removeImg />
       <Hero />
       <Earnings />

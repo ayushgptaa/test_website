@@ -6,7 +6,7 @@ import PageContainer from 'components/PageContainer'
 
 const Contact = () => {
   return (
-    <PageContainer>
+    <PageContainer title="Contact - Official Züs Support">
       <PageBackground />
       <Header removeImg />
       <BlueContainerWithImg

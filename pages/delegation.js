@@ -6,7 +6,7 @@ import PageContainer from 'components/PageContainer'
 
 const Delegation = () => {
   return (
-    <PageContainer>
+    <PageContainer title="Züs - Delegation">
       <Header removeImg />
       <Hero />
       <Info />

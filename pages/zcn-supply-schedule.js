@@ -6,7 +6,7 @@ import Footer from 'components/Footer'
 
 const ZcnSupplySchedule = () => {
   return (
-    <PageContainer>
+    <PageContainer title="Züs - ZCN Supply Schedule">
       <Header removeImg />
       <Hero />
       <ZCNSupply />

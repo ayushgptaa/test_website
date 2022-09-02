@@ -6,7 +6,7 @@ import Footer from 'components/Footer'
 
 const Build = () => {
   return (
-    <PageContainer>
+    <PageContainer title="Züs - Blobber Stacking">
       <Header removeImg />
       <Hero />
       <Features />
