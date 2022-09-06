@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import { motion, AnimatePresence } from 'framer-motion'
 
 import useCountdown from 'hooks/useCountdown'
 
@@ -7,9 +8,29 @@ import styles from './CountdownTimer.module.scss'
 const DateTimeDisplay = ({ value, type }) => {
   return (
     <div className={styles.dateTimeWrapper}>
-      <span className={styles.timeValue} suppressHydrationWarning>
-        {value}
-      </span>
+      <div
+        style={{
+          overflow: 'hidden',
+          position: 'relative',
+        }}>
+        <AnimatePresence>
+          <motion.span
+            key={value}
+            transition={{
+              ease: 'easeOut',
+              duration: 0.5,
+            }}
+            initial={{ y: 50 }}
+            animate={{ y: 0 }}
+            exit={{ position: 'absolute', y: -100 }}
+            mode="wait"
+            className={styles.timeValue}
+            suppressHydrationWarning>
+            {value}
+          </motion.span>
+        </AnimatePresence>
+      </div>
+
       <span className={styles.timeType}>{type}</span>
     </div>
   )

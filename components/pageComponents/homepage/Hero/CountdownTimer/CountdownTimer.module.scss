@@ -24,11 +24,14 @@
   @include flex-center;
   flex-direction: column;
   gap: 2px;
+  position: relative;
+  overflow: hidden;
 }
 
 .timeValue {
   font-size: 44px;
   line-height: 120%;
+  display: inline-block;
 }
 
 .timeType {
