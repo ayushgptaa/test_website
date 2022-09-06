@@ -13,6 +13,7 @@ const featuresData = [
     text: 'Want to Earn without becoming a Storage Provider? On the Bolt app you can delegate $ZCN to other active Storage Providers and earn alongside them.',
     phoneMobile: true,
     ellipseRight: true,
+    link: 'provide',
   },
   {
     customStyle: styles.laptopStyle,
@@ -27,6 +28,7 @@ const featuresData = [
     laptopImg: true,
     textContentEllipse: true,
     ellipseLeft: true,
+    link: 'https://staging-blimp.testnet-0chain.net/',
   },
 ]
 

@@ -37,6 +37,7 @@ const Hero = () => {
               type="button"
               text="Check Our GitHub"
               link="https://github.com/0chain"
+              blank
             />
           </div>
         </Fade>

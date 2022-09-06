@@ -26,7 +26,7 @@ const Features = () => {
                 alt="migrate any app"
                 quality={100}
                 layout="fill"
-                priority={false}
+                priority
               />
             </div>
           </Fade>
@@ -41,8 +41,20 @@ const Features = () => {
                 enterprise-grade storage.
               </Paragraph>
               <div className={styles.btnContainer}>
-                <Button type="button" black transparent text="CLI Migration" />
-                <Button type="button" text="Blimp Migration" />
+                <Button
+                  type="button"
+                  black
+                  transparent
+                  text="CLI Migration"
+                  link="https://github.com/0chain/zs3server"
+                  blank
+                />
+                <Button
+                  type="button"
+                  text="Blimp Migration"
+                  link="https://github.com/0chain/s3-migration"
+                  blank
+                />
               </div>
             </Fade>
           </div>

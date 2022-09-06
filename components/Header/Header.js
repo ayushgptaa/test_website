@@ -13,9 +13,9 @@ import styles from './Header.module.scss'
 
 const Header = ({
   removeImg = false,
-  removeZusText,
   borderWhite = false,
   borderNone = false,
+  useWhiteLogo = false,
   color = '',
 }) => {
   const { showNavLinks, animation, toggleNavbar } = useAnimatedNavToggler()
@@ -32,7 +32,7 @@ const Header = ({
           borderWhite && styles.borderWhite,
           borderNone && styles.borderNone
         )}>
-        <ZusLogo removeZusText={removeZusText} />
+        <ZusLogo useWhiteLogo={useWhiteLogo} />
         <DesktopNav />
         <ToggleBtn toggleNavbar={toggleNavbar} showNavLinks={showNavLinks} />
       </header>
@@ -42,7 +42,7 @@ const Header = ({
 
 Header.propTypes = {
   removeImg: PropTypes.bool,
-  removeZusText: PropTypes.bool,
+  useWhiteLogo: PropTypes.bool,
   borderWhite: PropTypes.bool,
   borderNone: PropTypes.bool,
   color: PropTypes.string,

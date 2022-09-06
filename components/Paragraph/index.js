@@ -6,6 +6,7 @@ import styles from './index.module.scss'
 const Paragraph = ({ children, className, left = false }) => {
   return (
     <p
+      suppressHydrationWarning
       className={clsx(
         styles.paragraph,
         className && className,

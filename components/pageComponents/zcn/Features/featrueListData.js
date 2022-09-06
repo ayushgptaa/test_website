@@ -1,17 +1,17 @@
 const featureListData = [
   {
-    icon: '/images/zus/Features/stacking.svg',
+    icon: '/images/zcn/Features/stacking.svg',
     buttonText: 'Staking',
     link: '/stacking',
   },
   {
-    icon: '/images/zus/Features/blockRewards.svg',
+    icon: '/images/zcn/Features/blockRewards.svg',
     buttonText: 'Block Rewards',
     pattern2: true,
     link: '/block-rewards',
   },
   {
-    icon: '/images/zus/Features/delegation.svg',
+    icon: '/images/zcn/Features/delegation.svg',
     buttonText: 'Delegation',
     link: '/delegation',
   },

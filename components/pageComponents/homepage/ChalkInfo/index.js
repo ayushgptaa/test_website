@@ -23,7 +23,7 @@ const EllipseContainer = () => {
 const ChalkArtMobile = () => {
   return (
     <div className={styles.chalkArtMobile}>
-      <ImageAnimation>
+      <ImageAnimation direction="">
         <Image
           src="/images/homePage/ChalkInfo/chalkArtMobile.png"
           alt="Chalk"
@@ -38,7 +38,7 @@ const ChalkArtMobile = () => {
 const ChalkArtDesktop = () => {
   return (
     <div className={styles.chalkArtDesktop}>
-      <ImageAnimation>
+      <ImageAnimation direction="">
         <Image
           src="/images/homePage/ChalkInfo/chalkArtDesktop.png"
           alt="Chalk"
@@ -55,7 +55,7 @@ const ChalkArtDesktop = () => {
 const TextContainer = () => {
   return (
     <div className={styles.textContent}>
-      <TextContainerAnimation>
+      <TextContainerAnimation direction="">
         <Heading
           text="Taking NFTs to the next level"
           Tag="h3"
@@ -63,7 +63,7 @@ const TextContainer = () => {
         />
         <Paragraph>
           The Chalk app brings groundbreaking features to NFT creators. By
-          leveraging Zus, creators will now enjoy codeless NFT minting without
+          leveraging Züs, creators will now enjoy codeless NFT minting without
           upfront costs as well as permanent decentralized storage that will
           never go offline
         </Paragraph>

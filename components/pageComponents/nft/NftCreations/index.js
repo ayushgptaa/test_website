@@ -1,7 +1,10 @@
 import { Fade } from 'react-awesome-reveal'
+
 import Heading from 'components/Heading'
 import Paragraph from 'components/Paragraph'
 import NFtCards from './NftCards'
+
+import { prodcuts } from 'SocialLinks/links'
 
 import styles from './index.module.scss'
 
@@ -25,7 +28,9 @@ const NftCreations = () => {
 
       <Fade direction="up" duration={600} triggerOnce>
         <div className={styles.bottomLink}>
-          <a href="/">View More Züs NFTs</a>
+          <a href={prodcuts.CHALK} rel="noreferrer" target="_blank">
+            View More Züs NFTs
+          </a>
         </div>
       </Fade>
     </section>

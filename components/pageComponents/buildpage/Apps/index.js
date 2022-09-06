@@ -25,7 +25,7 @@ const Apps = () => {
 
       <div className={styles.apps}>
         <Fade direction="up" triggerOnce cascade duration={600} fraction={0.5}>
-          {appsData.map(({ icon, name, description, btnText }) => (
+          {appsData.map(({ icon, name, description, btnText, link }) => (
             <div className={styles.app} key={name}>
               <div className={name && styles[`${name.toLowerCase()}`]}></div>
               <div className={styles.icon}>
@@ -39,7 +39,14 @@ const Apps = () => {
               <div className={styles.appContent}>
                 <Heading text={name} Tag="h3" withoutPeriod />
                 <Paragraph>{description}</Paragraph>
-                <Button type="button" black transparent text={btnText} />
+                <Button
+                  type="button"
+                  black
+                  transparent
+                  text={btnText}
+                  link={link}
+                  blank
+                />
               </div>
             </div>
           ))}

@@ -12,7 +12,7 @@ import styles from './index.module.scss'
 
 const VultArt = () => {
   return (
-    <ImageAnimation>
+    <ImageAnimation direction="">
       <div className={styles.vultArt}>
         <Image
           src="/images/homePage/VultInfo/vultArt.png"
@@ -38,7 +38,7 @@ const VultBackground = () => {
 const TextContent = () => {
   return (
     <div className={styles.textContainerWrapper}>
-      <TextContainerAnimation>
+      <TextContainerAnimation direction="">
         <div className={styles.textContent}>
           <Heading
             text="Unbounded Storage Capacity"
@@ -46,7 +46,7 @@ const TextContent = () => {
             periodColor="#0B9DFF"
           />
           <Paragraph>
-            The Zus Cloud Network provides an unlimited amount of storage. This
+            The Züs Cloud Network provides an unlimited amount of storage. This
             means that with more space, you can keep all your important files
             safe!
           </Paragraph>

@@ -9,7 +9,7 @@ import Footer from 'components/Footer'
 const Nft = () => {
   return (
     <PageContainer title="Züs - Permanent Storage for NFTs ">
-      <Header removeImg color="darker-blue" />
+      <Header removeImg color="darker-blue" useWhiteLogo />
       <Hero />
       <NftCreations />
       <Stats />

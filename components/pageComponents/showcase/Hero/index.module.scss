@@ -6,10 +6,11 @@
 .rootContainer {
   position: relative;
   padding: 70px 0 0;
-  width: 100%;
-  height: 100vh;
+  width: 100vw;
+  height: calc(100vh - 71px);
 
   h1 {
+    position: relative;
     font-size: 28px;
     line-height: 115%;
     max-width: 395px;
@@ -18,16 +19,53 @@
   }
 }
 
-.backgroundImg {
-  @include background-image(
-    '/images/stability/Hero/heroBackground.png',
-    center center,
-    cover,
-    100%,
-    100%
-  );
-  inset: 0;
+.overlay {
+  position: absolute;
+  height: calc(100% - $header-mobile);
+  top: 0;
+  width: 100%;
+  @include inset;
   top: $header-mobile;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.backgroundVideo {
+  position: absolute;
+  @include inset;
+  top: $header-mobile;
+  height: calc(100% - $header-mobile);
+  width: 100%;
+  z-index: -2;
+
+  video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.videoBottomText {
+  position: absolute;
+  @include center-horizontal;
+  bottom: -60px;
+  font-style: normal;
+  color: $grey-2;
+  z-index: 2;
+  width: 370px;
+  text-align: center;
+  letter-spacing: 0.5px;
+
+  span {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+
+    a {
+      text-decoration: underline;
+    }
+  }
 }
 
 .mainTextContent {
@@ -36,7 +74,8 @@
   max-width: 374px;
   width: 90%;
   margin: auto;
-  bottom: calc(50px - $header-mobile);
+  bottom: 50px;
+  z-index: 2;
 }
 
 .secondaryHeading {
@@ -47,6 +86,8 @@
 
 @include media('>tablet') {
   .rootContainer {
+    height: calc(100vh + $header-desktop);
+
     h1 {
       font-size: 68px;
       line-height: 100%;
@@ -55,12 +96,25 @@
     }
   }
 
-  .backgroundImg {
+  .overlay {
     top: $header-desktop;
+    height: calc(100% - $header-desktop);
+  }
+
+  .backgroundVideo {
+    top: $header-desktop;
+    height: calc(100% - $header-desktop);
+  }
+
+  .videoBottomText {
+    right: 20px;
+    bottom: 20px;
+    transform: none;
+    left: unset;
   }
 
   .mainTextContent {
     max-width: 550px;
-    bottom: calc(100px - $header-desktop);
+    bottom: 100px;
   }
 }

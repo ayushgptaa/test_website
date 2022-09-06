@@ -31,18 +31,12 @@ const FeatureWithImg = () => {
       <div className={styles.container} key={id}>
         <Fade delay={400} duration={600} cascade triggerOnce>
           <div className={clsx(styles.image, styles[`image${id}`])}>
-            <Image
-              src={img}
-              alt={heading1}
-              quality={100}
-              layout="fill"
-              priority={false}
-            />
+            <Image src={img} alt={heading1} quality={100} layout="fill" />
           </div>
         </Fade>
 
         <div className={styles.textContent}>
-          <Fade direction="up" duration={600} cascade triggerOnce>
+          <Fade duration={600} cascade triggerOnce>
             <h4>{heading1}</h4>
             <h5>{heading2}</h5>
             <Paragraph>{text}</Paragraph>

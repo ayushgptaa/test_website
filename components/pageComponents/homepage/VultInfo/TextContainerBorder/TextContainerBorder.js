@@ -5,11 +5,11 @@ import styles from './TextContainerBorder.module.scss'
 const data = [
   {
     heading: 'Individual',
-    para: 'Move your data with ease.  Zus offers an abundance of storage features you will love!',
+    para: 'Move your data with ease.  Züs offers an abundance of storage features you will love!',
   },
   {
     heading: 'Enterprise',
-    para: 'Zus is enterprise level software that was built for the ground-up with your needs in mind.  With its intuitive interface, seamless migrations and security features, Zus has you covered!',
+    para: 'Züs is enterprise level software that was built for the ground-up with your needs in mind.  With its intuitive interface, seamless migrations and security features, Züs has you covered!',
   },
 ]
 

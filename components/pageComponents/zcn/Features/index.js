@@ -74,8 +74,8 @@ const Features = () => {
             <Image
               src={
                 isMobile
-                  ? '/images/zus/Features/chart.png'
-                  : '/images/zus/Features/chartDesktop.png'
+                  ? '/images/zcn/Features/chart.png'
+                  : '/images/zcn/Features/chartDesktop.png'
               }
               alt="zcn-cap-graph"
               layout="fill"

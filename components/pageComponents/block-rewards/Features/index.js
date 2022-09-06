@@ -76,7 +76,7 @@ const Features = () => {
                 alt="Zcn Rewards"
                 quality={100}
                 layout="fill"
-                priority={false}
+                priority
               />
             </div>
           </Fade>
@@ -89,7 +89,7 @@ const Features = () => {
               alt="Zcn Rewards"
               quality={100}
               layout="fill"
-              priority={false}
+              priority
             />
           </div>
         </Fade>

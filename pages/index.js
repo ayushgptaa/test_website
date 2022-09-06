@@ -14,7 +14,7 @@ import Showcase from 'components/pageComponents/homepage/ShowCase'
 const Home = () => {
   return (
     <PageContainer title="Züs - Go Beyond Cloud">
-      <Header borderNone />
+      <Header />
       <Hero />
       <MainFeature />
       <Features />

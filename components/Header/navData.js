@@ -18,6 +18,7 @@ const navData = [
   {
     name: 'Blog',
     link: 'https://blog.testnet-0chain.net/',
+    target: '_blank',
   },
 ]
 

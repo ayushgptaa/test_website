@@ -2,9 +2,9 @@ import Image from 'next/image'
 import PropTypes from 'prop-types'
 
 import Button from 'components/Button'
+import Paragraph from 'components/Paragraph'
 
 import styles from './FeaturesList.module.scss'
-import Paragraph from 'components/Paragraph'
 
 const FeaturesList = ({ heading, text, img, buttonText, link }) => {
   return (

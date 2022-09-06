@@ -5,6 +5,8 @@ import Heading from 'components/Heading'
 import Paragraph from 'components/Paragraph'
 import Button from 'components/Button'
 
+import { whitepaperLinks } from 'SocialLinks/links'
+
 import useGetScreenSize from 'hooks/useGetScreenSize'
 
 import styles from './index.module.scss'
@@ -84,8 +86,22 @@ const Info = () => {
           <Fade direction="up" duration={600} cascade triggerOnce>
             <Heading text="Delegation Tools" withoutPeriod Tag="h4" />
             <div className={styles.buttonsContainer}>
-              <Button type="button" text="Bolt App" transparent black />
-              <Button type="button" text="Wallet CLI" transparent black />
+              <Button
+                type="button"
+                text="Bolt App"
+                transparent
+                black
+                link="https://staging-bolt.testnet-0chain.net/"
+                blank
+              />
+              <Button
+                type="button"
+                text="Wallet CLI"
+                transparent
+                black
+                link={whitepaperLinks.ECONOMIC_PROTOCOL}
+                blank
+              />
             </div>
             <Paragraph>
               ZCN holders can delegate via the Bolt wallet app or the CLI.

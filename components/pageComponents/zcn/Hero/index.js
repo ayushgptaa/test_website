@@ -5,20 +5,25 @@ import Heading from 'components/Heading'
 import Button from 'components/Button'
 import Paragraph from 'components/Paragraph'
 
+import useGetScreenSize from 'hooks/useGetScreenSize'
+
 import styles from './index.module.scss'
 
 const Hero = () => {
+  const isMobile = useGetScreenSize()
   return (
     <main className={styles.container}>
-      <div className={styles.heroImg}>
-        <Image
-          src="/images/zus/Hero/heroImg.png"
-          alt="Züs"
-          layout="fill"
-          quality={100}
-          priority
-        />
-      </div>
+      {!isMobile && (
+        <div className={styles.heroImg}>
+          <Image
+            src="/images/zcn/Hero/heroImg.png"
+            alt="Züs"
+            layout="fill"
+            quality={100}
+            priority
+          />
+        </div>
+      )}
       <div className={styles.contentContainer}>
         <Fade direction="up" triggerOnce cascade duration={600}>
           <Heading text="Rainfall Is Here" />

@@ -55,7 +55,7 @@ const Features = () => {
         <Fade
           direction="up"
           duration={600}
-          fraction={isMobile ? 0.2 : 0.6}
+          fraction={isMobile ? 0.2 : 0.4}
           cascade
           delay={500}
           triggerOnce>

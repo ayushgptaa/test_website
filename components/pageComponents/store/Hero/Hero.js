@@ -13,7 +13,7 @@ const Hero = () => {
           <Heading text="Store and Retrieve your files on Züs" />
           <Paragraph>
             You are one step closer to having access to any information,
-            anywhere in the world. The Zus network provides you a reliable
+            anywhere in the world. The Züs network provides you a reliable
             decentralized storage for your files that is fast and easy with
             their blockchain protocol. The process is swift and intuitive. Let's
             get started!

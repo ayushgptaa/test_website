@@ -23,8 +23,13 @@ const ReadingSlider = () => {
 const DesktopComponent = () => {
   return (
     <div className={styles.desktopContainer}>
-      {sliderData.map(({ image, title }) => (
-        <div className={styles.pageContainer} key={title}>
+      {sliderData.map(({ image, title, link }) => (
+        <a
+          href={link}
+          rel="noreferrer"
+          target="_blank"
+          className={styles.pageContainer}
+          key={title}>
           <div className={styles.imgContainer}>
             <Image
               src={image}
@@ -37,7 +42,7 @@ const DesktopComponent = () => {
             />
           </div>
           <p>{title}</p>
-        </div>
+        </a>
       ))}
     </div>
   )
@@ -62,9 +67,13 @@ const MobileComponent = () => {
         centeredSlides
         modules={[Scrollbar]}
         spaceBetween={50}>
-        {sliderData.map(({ image, title }) => (
+        {sliderData.map(({ image, title, link }) => (
           <SwiperSlide key={title}>
-            <div className={styles.pageContainer}>
+            <a
+              href={link}
+              rel="noreferrer"
+              target="_blank"
+              className={styles.pageContainer}>
               <div className={styles.imgContainer}>
                 <Image
                   src={image}
@@ -77,7 +86,7 @@ const MobileComponent = () => {
                 />
               </div>
               <p>{title}</p>
-            </div>
+            </a>
           </SwiperSlide>
         ))}
       </Swiper>

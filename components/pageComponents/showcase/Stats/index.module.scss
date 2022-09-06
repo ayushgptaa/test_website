@@ -3,7 +3,6 @@
 @import 'include-media';
 
 .rootContainer {
-  margin-top: $header-mobile;
   padding: 70px 0 0;
   border-top: $border-gray;
 }
@@ -55,9 +54,6 @@
 }
 
 @include media('>tablet') {
-  .rootContainer {
-    margin-top: $header-desktop;
-  }
   .textContent {
     h3 {
       font-size: 28px;

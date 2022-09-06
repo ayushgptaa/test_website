@@ -5,6 +5,8 @@ import Button from 'components/Button'
 import Heading from 'components/Heading'
 import Paragraph from 'components/Paragraph'
 
+import { whitepaperLinks } from '/SocialLinks/links'
+
 import styles from './index.module.scss'
 
 const Cards = () => {
@@ -64,6 +66,8 @@ const Features = () => {
               text="Read the Storage Paper"
               transparent
               black
+              link={whitepaperLinks.STORAGE_PROTOCOL}
+              blank
             />
           </div>
         </Fade>

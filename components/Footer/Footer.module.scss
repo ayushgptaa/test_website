@@ -78,6 +78,11 @@ $breakpoints: (
   font-size: 16px;
   line-height: 160%;
   color: $grey-3;
+
+  p {
+    font-size: 16px;
+    color: $grey-3;
+  }
 }
 
 @include media('>tablet') {
@@ -93,10 +98,15 @@ $breakpoints: (
   }
 
   .leftmenuContainer {
-    max-width: 240px;
+    max-width: 250px;
     text-align: left;
     padding: 0;
     padding-left: 20px;
+    margin-top: -10px;
+
+    h3 {
+      margin-top: 20px;
+    }
 
     p {
       text-align: left;

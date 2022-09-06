@@ -29,7 +29,6 @@ const WorkStep = () => {
               width={isMobile ? 250 : 400}
               height={isMobile ? 200 : 340}
               layout="fixed"
-              priority
             />
           </div>
 

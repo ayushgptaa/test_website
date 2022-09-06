@@ -32,10 +32,11 @@ const About = () => {
           fraction={0.2}>
           <div className={styles.imgContainer}>
             <Image
-              src="/images/zus/About/lockedZcn.png"
+              src="/images/zcn/About/lockedZcn.png"
               alt="ZCN"
               layout="fill"
               quality={100}
+              priority
             />
           </div>
         </Fade>

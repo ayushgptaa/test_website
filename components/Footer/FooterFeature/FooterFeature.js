@@ -25,7 +25,7 @@ const FooterFeature = ({ data }) => {
         <Heading text={data.heading} withoutPeriod Tag="h4" />
         <Paragraph>{data.text}</Paragraph>
         <div className={styles.buttons}>
-          <Button text={data.buttonText} type="button" />
+          <Button text={data.buttonText} type="button" link={data.link} />
           {data.secondaryBtn && (
             <Button
               text="Launch Apps"

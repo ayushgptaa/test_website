@@ -1,4 +1,5 @@
 import { Fade } from 'react-awesome-reveal'
+import PropTypes from 'prop-types'
 
 import FeaturesList from './FeaturesList'
 
@@ -9,7 +10,7 @@ import styles from './Features.module.scss'
 const featurelistData = [
   {
     heading: 'Store',
-    text: 'Züs storage is easy to set up for enterprises and individuals alike.',
+    text: 'Züs storage provides an intuitive and user-friendly interface for both businesses and well as individuals.',
     img: '/images/homePage/Features/storeIcon.svg',
     link: '/store',
   },
@@ -27,7 +28,7 @@ const featurelistData = [
   },
 ]
 
-const Features = () => {
+const Features = ({ customFeatureData }) => {
   const isMobile = useGetScreenSize()
 
   return (
@@ -38,20 +39,26 @@ const Features = () => {
         fraction={isMobile ? 0.4 : 0.3}
         cascade
         triggerOnce>
-        {featurelistData.map(({ pattern, heading, text, img, link }) => (
-          <FeaturesList
-            pattern={pattern}
-            heading={heading}
-            text={text}
-            img={img}
-            key={heading}
-            link={link}
-            buttonText="Learn More"
-          />
-        ))}
+        {(customFeatureData || featurelistData).map(
+          ({ pattern, heading, text, img, link }) => (
+            <FeaturesList
+              pattern={pattern}
+              heading={heading}
+              text={text}
+              img={img}
+              key={heading}
+              link={link}
+              buttonText="Learn More"
+            />
+          )
+        )}
       </Fade>
     </div>
   )
+}
+
+Features.propTypes = {
+  customFeatureData: PropTypes.array,
 }
 
 export default Features

@@ -12,7 +12,7 @@ import styles from './Features.module.scss'
 const Features = () => {
   return (
     <>
-      <Fade>
+      <Fade triggerOnce>
         <section className={styles.container}>
           <div className={styles.headWrapper}>
             <Fade direction="up" triggerOnce cascade duration={800}>
@@ -52,6 +52,8 @@ const Features = () => {
                   type="button"
                   black
                   transparent
+                  link="https://staging-blimp.testnet-0chain.net/"
+                  blank
                 />
               </>
             </Fade>

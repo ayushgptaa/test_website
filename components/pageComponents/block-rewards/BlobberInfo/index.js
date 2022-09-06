@@ -6,6 +6,8 @@ import Heading from 'components/Heading'
 import Paragraph from 'components/Paragraph'
 import BlobberInfoImg from './BlobberInfoImg'
 
+import { whitepaperLinks } from 'SocialLinks/links'
+
 import { toLowerCaseRemoveSpaces } from 'util/globalFunctions'
 
 import styles from './index.module.scss'
@@ -68,7 +70,13 @@ const BlobberInfo = () => {
       <Zoom triggerOnce>
         <div className={styles.blobberInfoImg}>
           <BlobberInfoImg />
-          <Button type="button" text="Read the Economics Whitepaper" black />
+          <Button
+            type="button"
+            text="Read the Economics Whitepaper"
+            black
+            link={whitepaperLinks.ECONOMIC_PROTOCOL}
+            blank
+          />
         </div>
       </Zoom>
 
@@ -77,6 +85,8 @@ const BlobberInfo = () => {
         text="Read the Economics Whitepaper"
         transparent
         black
+        link={whitepaperLinks.ECONOMIC_PROTOCOL}
+        blank
       />
 
       <div className={styles.featuresContainer}>

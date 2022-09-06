@@ -6,27 +6,27 @@ const data = [
   {
     title: 'Vult',
     icon: '/images/Footer/footerIcons/vult.svg',
-    link: '',
+    link: 'https://staging-vult.testnet-0chain.net/',
   },
   {
     title: 'Bolt',
     icon: '/images/Footer/footerIcons/bolt.svg',
-    link: '',
+    link: 'https://staging-bolt.testnet-0chain.net/',
   },
   {
     title: 'Chimney',
     icon: '/images/Footer/footerIcons/chimney.svg',
-    link: '',
+    link: 'https://staging-chimney.testnet-0chain.net/',
   },
   {
     title: 'Blimp',
     icon: '/images/Footer/footerIcons/blimp.svg',
-    link: '',
+    link: 'https://staging-blimp.testnet-0chain.net/',
   },
   {
     title: 'Chalk',
     icon: '/images/Footer/footerIcons/chalk.svg',
-    link: '',
+    link: 'https://staging-chalk.testnet-0chain.net/',
   },
 ]
 

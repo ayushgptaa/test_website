@@ -4,7 +4,7 @@ import Heading from 'components/Heading'
 import Paragraph from 'components/Paragraph'
 import SocialIcons from 'components/SocialIcons'
 
-import SocialLinks from '/SocialLinks'
+import { SocialLinks } from '/SocialLinks/links'
 
 import useGetScreenSize from 'hooks/useGetScreenSize'
 

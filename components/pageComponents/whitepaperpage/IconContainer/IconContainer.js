@@ -9,8 +9,13 @@ const IconContainer = () => {
   return (
     <div className={styles.rootContainer}>
       <Fade triggerOnce cascade direction="up" delay={500} duration={600}>
-        {whitepaperData.map(({ icon, text }) => (
-          <div className={styles.container} key={text}>
+        {whitepaperData.map(({ icon, text, link }) => (
+          <a
+            href={link}
+            target="_blank"
+            rel="noreferrer"
+            className={styles.container}
+            key={text}>
             <div className={styles.bgPattern}></div>
             <Image
               src={icon}
@@ -22,7 +27,7 @@ const IconContainer = () => {
               priority
             />
             <p>{text}</p>
-          </div>
+          </a>
         ))}
       </Fade>
     </div>

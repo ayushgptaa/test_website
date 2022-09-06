@@ -21,7 +21,7 @@ const BlimpBackground = () => {
 const BlimpArt = () => {
   return (
     <div className={styles.blimpArt}>
-      <ImageAnimation>
+      <ImageAnimation direction="">
         <Image
           src="/images/homePage/BlimpInfo/blimpArt.png"
           alt="Blimp"
@@ -37,12 +37,14 @@ const BlimpArt = () => {
 const TextContainer = () => {
   return (
     <div className={styles.textContent}>
-      <TextContainerAnimation>
+      <TextContainerAnimation direction="">
         <Heading text="An incentive to scale" Tag="h3" periodColor="#2EB5DF" />
         <Paragraph>
-          A crypto-economic model that rewards network growth. As more data is
-          stored on the network, more Züs Cloud Network ($ZCN) tokens are staked
-          on the network.
+          The Züs Cloud Network ($ZCN) is an incentivizing crypto-economic model
+          that rewards network growth. As more data is stored on the network,
+          stakeholders are rewarded with an increase in their token holdings and
+          have greater incentive to help fuel its continued development through
+          staking.
         </Paragraph>
         <div>
           <Button type="button" text="Token Economics" transparent black />

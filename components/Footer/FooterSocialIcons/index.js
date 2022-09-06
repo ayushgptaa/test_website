@@ -2,7 +2,7 @@ import IconContainer from 'components/IconContainer'
 
 import styles from './index.module.scss'
 
-import SocialLinks from '/SocialLinks'
+import { SocialLinks } from '/SocialLinks/links'
 
 const {
   DISCORD,

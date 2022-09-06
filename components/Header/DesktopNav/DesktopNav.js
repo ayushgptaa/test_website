@@ -9,9 +9,13 @@ import styles from './DesktopNav.module.scss'
 const DesktopNav = () => {
   return (
     <div className={styles.wrapper}>
-      {navData.map(({ name, link }) => (
+      {navData.map(({ name, link, target }) => (
         <span key={name}>
-          <Link href={link}>{name}</Link>
+          <Link href={link} passHref>
+            <a href={link} target={target}>
+              {name}
+            </a>
+          </Link>
         </span>
       ))}
 

@@ -7,7 +7,6 @@ import ContainerWithIcon from '../ContainerWithIcon'
 
 import { ImageAnimation, TextContainerAnimation } from '../AppsAnimations'
 
-
 import styles from './index.module.scss'
 
 const ChimneyBackground = () => {
@@ -22,7 +21,7 @@ const ChimneyBackground = () => {
 const ChimneyArt = () => {
   return (
     <div className={styles.chimneyArt}>
-      <ImageAnimation>
+      <ImageAnimation direction="">
         <Image
           src="/images/homePage/ChimneyInfo/chimneyArt.png"
           alt="Chimney"
@@ -38,7 +37,7 @@ const ChimneyArt = () => {
 const TextContent = () => {
   return (
     <div className={styles.textContent}>
-      <TextContainerAnimation>
+      <TextContainerAnimation direction="">
         <Heading text="Plug in & earn" Tag="h3" periodColor="#DF7ACF" />
         <Paragraph>
           Turn your spare storage into income. The Chimney app is an easy-to-use
@@ -46,7 +45,13 @@ const TextContent = () => {
           clicks!
         </Paragraph>
         <div>
-          <Button type="button" text="Learn More" transparent black />
+          <Button
+            type="button"
+            text="Learn More"
+            transparent
+            black
+            link="/provide"
+          />
         </div>
       </TextContainerAnimation>
     </div>

@@ -12,7 +12,6 @@
 .imgContainer {
   position: relative;
   @include flex-center;
-  filter: drop-shadow(40px 54px 250px rgba(159, 157, 252, 0.9));
 }
 
 .textContainer {
@@ -79,6 +78,10 @@
     gap: 120px;
     width: 100%;
     padding: 40px;
+  }
+
+  .imgContainer {
+    filter: drop-shadow(40px 54px 250px rgba(159, 157, 252, 0.9));
   }
 
   .textContainer {

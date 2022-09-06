@@ -29,6 +29,7 @@ const Features = () => {
         textContentEllipse,
         ellipseLeft,
         ellipseRight,
+        link,
       }) => (
         <section className={`${styles.container} ${customStyle}`} key={heading}>
           {ellipseRight && <div className={styles.ellipseRight} />}
@@ -77,7 +78,7 @@ const Features = () => {
               <Heading text={heading} />
               <Paragraph className={styles.text}>{text}</Paragraph>
               <div>
-                <Button text="Get Notified" type="button" />
+                <Button text="Get Notified" type="button" link={link} />
               </div>
             </Fade>
           </div>

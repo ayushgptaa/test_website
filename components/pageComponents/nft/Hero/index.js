@@ -1,11 +1,13 @@
+import { Fade } from 'react-awesome-reveal'
 import Image from 'next/image'
 
 import Button from 'components/Button'
 import Heading from 'components/Heading'
 import Paragraph from 'components/Paragraph'
 
+import { prodcuts } from 'SocialLinks/links'
+
 import styles from './index.module.scss'
-import { Fade } from 'react-awesome-reveal'
 
 const Hero = () => {
   return (
@@ -19,7 +21,12 @@ const Hero = () => {
             the process of getting started swift and intuitive.
           </Paragraph>
           <div>
-            <Button type="button" text="Launch the Chalk NFT App" />
+            <Button
+              type="button"
+              text="Launch the Chalk NFT App"
+              link={prodcuts.CHALK}
+              black
+            />
           </div>
         </Fade>
       </div>
@@ -27,8 +34,8 @@ const Hero = () => {
       <Fade duration={600} delay={1000} triggerOnce>
         <div className={styles.mainImg}>
           <Image
-            src="/images/nft/Hero/mainImg.png"
-            alt="NFT Hero"
+            src="/images/nft/Hero/mainImage.png"
+            alt="Permanent Storage for NFTs"
             layout="fill"
             objectFit="cover"
             quality={100}

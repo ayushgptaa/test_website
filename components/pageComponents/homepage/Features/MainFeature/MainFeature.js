@@ -15,9 +15,10 @@ const MainFeature = () => {
             Lightning Fast. Decentralized. Storage.
           </h2>
           <Paragraph>
-            The Züs Cloud Network is a hyper-speed data storage network. Enabled
-            by a cutting-edge storage protocol; secured by a novel layer 1
-            blockchain.
+            With the power of ZUS at your fingertips, you have limitless
+            possibilities. Our reliable decentralized cloud solution for all
+            types-of rich media can gain back control over your data at
+            lightning speeds.
           </Paragraph>
         </Fade>
       </div>

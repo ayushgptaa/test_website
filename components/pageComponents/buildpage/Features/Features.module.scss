@@ -60,11 +60,6 @@
   text-align: center;
   overflow: hidden;
 
-  h3 {
-    font-size: 28px;
-    line-height: 115%;
-  }
-
   p {
     margin-top: 2rem;
   }
@@ -152,15 +147,10 @@
 
   .pricingFeature {
     width: 1160px;
-    height: 605px;
+    height: 413px;
     border-radius: 32px;
     margin: auto;
-    padding: 160px 200px 0 200px;
-
-    h3 {
-      font-size: 80px;
-      line-height: 122%;
-    }
+    @include flex-center-column;
   }
 
   .ellipseRight {

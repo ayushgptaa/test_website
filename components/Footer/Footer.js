@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 
 import Heading from 'components/Heading'
 import Paragraph from 'components/Paragraph'
+import IconContainer from 'components/IconContainer'
 import FooterCommunity from './FooterCommunity'
 import FooterFeature from './FooterFeature'
 import FooterProducts from './FooterProducts'
@@ -12,12 +13,12 @@ import FooterSocialIcons from './FooterSocialIcons'
 import footerMenu from './footerMenu'
 
 import styles from './Footer.module.scss'
-import IconContainer from 'components/IconContainer'
 
 let defaultfooterFeatureData = {
   heading: 'Reclaim control of your data',
-  text: 'The Züs Cloud Network is a decentralized data storage network. Enabled by a cutting-edge storage protocol; secured by a novel layer 1 blockchain.',
+  text: 'Don’t trust big tech with your data?  Züs gives your absolute privacy and control.',
   buttonText: 'Start building',
+  link: '/build',
   secondaryBtn: true,
 }
 
@@ -25,6 +26,7 @@ const roadmapFeatureData = {
   heading: 'The Road Ahead',
   text: "We're just getting started. Read about the key milestones that lie ahead for Züs.",
   buttonText: 'See Roadmap',
+  link: '/roadmap',
   secondaryBtn: false,
 }
 
@@ -36,14 +38,15 @@ const FooterMenu = () => {
           <IconContainer
             img="/images/Footer/zusLogoWhite.svg"
             alt="Züs"
-            width={52}
-            height={34}
+            width={55}
+            height={35}
           />
 
-          <Heading text="Go beyond the cloud" Tag="h3" withoutPeriod />
+          <Heading text="The Züs family of products." Tag="h3" withoutPeriod />
           <Paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut lab.
+            With Zus’ variety of decentralized product solutions from storage to
+            NFTs, you are sure to find the perfect option for your needs. The
+            time is now. Let us help you find the perfect solution today!
           </Paragraph>
         </Fade>
       </div>
@@ -56,10 +59,14 @@ const FooterMenu = () => {
               <div className={styles.footerMenuItem}>
                 <h5 className={styles.titleMenu}>{menu.name}</h5>
                 <ul className={styles.subMenu}>
-                  {menu.subLinks.map(({ name, link }) => {
+                  {menu.subLinks.map(({ name, link, ...rest }) => {
                     return (
                       <li key={name}>
-                        <Link href={link ? `/${link}` : '/'}>{name}</Link>
+                        <Link href={link || '/'} passHref>
+                          <a href={link || '/'} {...rest}>
+                            {name}
+                          </a>
+                        </Link>
                       </li>
                     )
                   })}
@@ -78,7 +85,7 @@ const FooterBottomContainer = () => {
     <div className={styles.bottomContainer}>
       <Link href="/">Terms & Conditions</Link>
       <Link href="/">Privacy Policy</Link>
-      <p>Copyright © 2022 ZÜS All Rights Reserved.</p>
+      <Paragraph>Copyright © 2022 ZÜS All Rights Reserved.</Paragraph>
     </div>
   )
 }

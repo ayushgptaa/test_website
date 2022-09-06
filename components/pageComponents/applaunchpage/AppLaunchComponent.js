@@ -16,7 +16,7 @@ import styles from './AppLaunch.module.scss'
 
 const AppLaunchComponent = () => {
   useEffect(() => {
-    const IconContainers = document.querySelectorAll('.IconContainer')
+    const appContainers = document.querySelectorAll('.appContainer')
 
     const getBorder = (index) => {
       return `.border-${index}`
@@ -30,15 +30,15 @@ const AppLaunchComponent = () => {
       document.querySelector(getBorder(index)).style.opacity = 0
     }
 
-    IconContainers.forEach((IconContainer, index) => {
-      IconContainer.addEventListener('mouseenter', showBorder.bind(null, index))
-      IconContainer.addEventListener('mouseleave', hideBorder.bind(null, index))
+    appContainers.forEach((appContainer, index) => {
+      appContainer.addEventListener('mouseenter', showBorder.bind(null, index))
+      appContainer.addEventListener('mouseleave', hideBorder.bind(null, index))
     })
 
     return () => {
-      IconContainers.forEach((IconContainer) => {
-        IconContainer.removeEventListener('mouseenter', showBorder)
-        IconContainer.removeEventListener('mouseleave', hideBorder)
+      appContainers.forEach((appContainer) => {
+        appContainer.removeEventListener('mouseenter', showBorder)
+        appContainer.removeEventListener('mouseleave', hideBorder)
       })
     }
   }, [])
@@ -66,14 +66,13 @@ const AppLaunchComponent = () => {
               index
             ) => (
               <Link href={link} passHref key={heading}>
-                <a href={link}>
+                <a href={link} className="appContainer">
                   <AppContainer>
                     <div
                       className={clsx(styles.whiteBorder, `border-${index}`)}
                     />
                     <div className={styles.containerContent}>
-                      <div
-                        className={clsx(styles.iconContainer, 'IconContainer')}>
+                      <div className={styles.iconContainer}>
                         <Image
                           src={icon}
                           width={90}
@@ -86,14 +85,19 @@ const AppLaunchComponent = () => {
                       <Heading text={heading} />
                       <Paragraph>{text}</Paragraph>
                     </div>
-                    <Button transparent text={btnText} type="button" />
+                    <Button
+                      transparent
+                      text={btnText}
+                      type="button"
+                      link={link}
+                      blank
+                    />
                     {btnTextSecondary && (
                       <Button
                         transparent
                         text={btnTextSecondary}
                         type="button"
                         style={{ top: '4.5rem' }}
-                        link={link}
                       />
                     )}
                   </AppContainer>
@@ -101,9 +105,6 @@ const AppLaunchComponent = () => {
               </Link>
             )
           )}
-          <AppContainer textContainer>
-            <Heading text="More coming soon" />
-          </AppContainer>
         </Fade>
       </div>
     </section>

@@ -3,7 +3,7 @@ import clsx from 'clsx'
 
 import IconContainer from '/components/IconContainer'
 
-import SocialLinks from '/SocialLinks'
+import { SocialLinks } from '/SocialLinks/links'
 
 import styles from './SocialIcons.module.scss'
 
