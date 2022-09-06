@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import PropTypes from 'prop-types'
@@ -10,6 +11,15 @@ import navData from '../navData'
 import styles from './Mobilenav.module.scss'
 
 const MobileNav = ({ animation }) => {
+  useEffect(() => {
+    const mobileNav = document.getElementById('mobile-nav')
+
+    // Hacky way to prevent body scroll when mobile nav is open
+    mobileNav.addEventListener('touchmove', (e) => {
+      e.preventDefault()
+    })
+  }, [])
+
   return (
     <motion.nav
       className={styles.mobileNav}
