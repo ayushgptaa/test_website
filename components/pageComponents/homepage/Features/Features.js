@@ -3,9 +3,8 @@ import PropTypes from 'prop-types'
 
 import FeaturesList from './FeaturesList'
 
-import useGetScreenSize from 'hooks/useGetScreenSize'
-
 import styles from './Features.module.scss'
+import useGetScreenSize from 'hooks/useGetScreenSize'
 
 const featurelistData = [
   {
@@ -30,13 +29,13 @@ const featurelistData = [
 
 const Features = ({ customFeatureData }) => {
   const isMobile = useGetScreenSize()
-
   return (
     <div className={styles.featureListWrapper}>
       <Fade
-        direction="up"
-        duration={700}
-        fraction={isMobile ? 0.4 : 0.3}
+        direction={isMobile ? '' : 'up'}
+        duration={600}
+        fraction={0.2}
+        delay={100}
         cascade
         triggerOnce>
         {(customFeatureData || featurelistData).map(

@@ -10,7 +10,13 @@ const MainFeature = () => {
       <div className={styles.mainContent}>
         <div className={styles.bgPatternLeft} />
         <div className={styles.bgPatternRight} />
-        <Fade direction="up" cascade duration={800} fraction={0.8} triggerOnce>
+        <Fade
+          direction="up"
+          cascade
+          duration={800}
+          fraction={0.5}
+          damping={0.2}
+          triggerOnce>
           <h2 className={styles.heading}>
             Lightning Fast. Decentralized. Storage.
           </h2>
