@@ -19,16 +19,17 @@ const WorkStep = () => {
       primaryText2,
       secondaryText,
     }) => (
-      <Fade duration={800} fraction={0.4} triggerOnce key={serialNo}>
+      <Fade duration={800} cascade triggerOnce key={serialNo}>
         <div className={styles.container}>
           <div className={styles.imgContainer}>
             <Image
               src={img}
               alt={primaryHeading}
               quality={100}
-              width={isMobile ? 250 : 400}
-              height={isMobile ? 200 : 340}
+              width={isMobile ? 240 : 440}
+              height={isMobile ? 237 : 437}
               layout="fixed"
+              priority
             />
           </div>
 
