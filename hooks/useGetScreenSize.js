@@ -5,8 +5,9 @@ const useGetScreenSize = () => {
 
   const handleResize = () => {
     if (window.innerWidth < 768) {
-      setIsMobile(true)
+      return setIsMobile(true)
     }
+    return setIsMobile(false)
   }
 
   useEffect(() => {
