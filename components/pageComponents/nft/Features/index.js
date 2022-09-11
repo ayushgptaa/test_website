@@ -1,12 +1,8 @@
-import { Fade } from 'react-awesome-reveal'
-
 import FeaturesList from '/components/pageComponents/homepage/Features/FeaturesList'
 
 import Heading from 'components/Heading'
 import Paragraph from 'components/Paragraph'
 import FeatureWithImg from './FeatureWithImg'
-
-import useGetScreenSize from 'hooks/useGetScreenSize'
 
 import styles from './index.module.scss'
 
@@ -32,45 +28,33 @@ const featurelistData = [
 ]
 
 const Features = () => {
-  const isMobile = useGetScreenSize()
-
   return (
     <section className={styles.rootContainer}>
       <div className={styles.sectionTextContent}>
-        <Fade direction="up" duration={600} cascade triggerOnce>
-          <Heading
-            text="Infinite Mutations & other UVPs"
-            Tag="h3"
-            withoutPeriod
-          />
-          <Paragraph>
-            Cloud Storage on Züs is enabled by a reliable decentralized cloud
-            network and a lightning-fast Layer 1 blockchain protocol. This makes
-            the process of getting started swift and intuitive.
-          </Paragraph>
-        </Fade>
+        <Heading
+          text="Infinite Mutations & other UVPs"
+          Tag="h3"
+          withoutPeriod
+        />
+        <Paragraph>
+          Cloud Storage on Züs is enabled by a reliable decentralized cloud
+          network and a lightning-fast Layer 1 blockchain protocol. This makes
+          the process of getting started swift and intuitive.
+        </Paragraph>
       </div>
 
       <div className={styles.featureListWrapper}>
-        <Fade
-          direction="up"
-          duration={600}
-          fraction={isMobile ? 0.2 : 0.4}
-          cascade
-          delay={500}
-          triggerOnce>
-          {featurelistData.map(({ pattern, heading, text, img, link }) => (
-            <FeaturesList
-              pattern={pattern}
-              heading={heading}
-              text={text}
-              img={img}
-              key={heading}
-              link={link}
-              buttonText="Learn More"
-            />
-          ))}
-        </Fade>
+        {featurelistData.map(({ pattern, heading, text, img, link }) => (
+          <FeaturesList
+            pattern={pattern}
+            heading={heading}
+            text={text}
+            img={img}
+            key={heading}
+            link={link}
+            buttonText="Learn More"
+          />
+        ))}
       </div>
 
       <div className={styles.featureWithImg}>

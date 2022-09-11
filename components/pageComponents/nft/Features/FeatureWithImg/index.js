@@ -29,18 +29,16 @@ const FeatureWithImg = () => {
   return data.map(({ heading1, heading2, text, img, id }) => {
     return (
       <div className={styles.container} key={id}>
-        <Fade delay={400} duration={600} cascade triggerOnce>
+        <Fade delay={200} duration={600} cascade triggerOnce>
           <div className={clsx(styles.image, styles[`image${id}`])}>
             <Image src={img} alt={heading1} quality={100} layout="fill" />
           </div>
         </Fade>
 
         <div className={styles.textContent}>
-          <Fade duration={600} cascade triggerOnce>
-            <h4>{heading1}</h4>
-            <h5>{heading2}</h5>
-            <Paragraph>{text}</Paragraph>
-          </Fade>
+          <h4>{heading1}</h4>
+          <h5>{heading2}</h5>
+          <Paragraph>{text}</Paragraph>
         </div>
       </div>
     )
