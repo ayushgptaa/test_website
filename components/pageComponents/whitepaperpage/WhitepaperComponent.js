@@ -10,9 +10,7 @@ const WhitepaperComponent = () => {
   return (
     <>
       <main className={styles.mainContainer}>
-        <Fade triggerOnce direction="up">
-          <Heading text="Whitepapers" />
-        </Fade>
+        <Heading text="Whitepapers" />
         <IconContainer />
       </main>
       <section className={styles.sectionContainer}>
