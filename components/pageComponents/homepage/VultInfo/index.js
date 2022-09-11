@@ -6,23 +6,23 @@ import Heading from 'components/Heading'
 import TextContainerBorder from './TextContainerBorder'
 import ContainerWithIcon from '../ContainerWithIcon'
 
-import { TextContainerAnimation, ImageAnimation } from '../AppsAnimations'
+// import { TextContainerAnimation, ImageAnimation } from '../AppsAnimations'
 
 import styles from './index.module.scss'
 
 const VultArt = () => {
   return (
-    <ImageAnimation direction="">
-      <div className={styles.vultArt}>
-        <Image
-          src="/images/homePage/VultInfo/vultArt.png"
-          alt="Vult"
-          quality={100}
-          layout="fill"
-          priority
-        />
-      </div>
-    </ImageAnimation>
+    // <ImageAnimation direction="">
+    <div className={styles.vultArt}>
+      <Image
+        src="/images/homePage/VultInfo/vultArt.png"
+        alt="Vult"
+        quality={100}
+        layout="fill"
+        priority
+      />
+    </div>
+    // </ImageAnimation>
   )
 }
 
@@ -38,33 +38,27 @@ const VultBackground = () => {
 const TextContent = () => {
   return (
     <div className={styles.textContainerWrapper}>
-      <TextContainerAnimation direction="">
-        <div className={styles.textContent}>
-          <Heading
-            text="Unbounded Storage Capacity"
-            Tag="h3"
-            periodColor="#0B9DFF"
-          />
-          <Paragraph>
-            The Züs Cloud Network provides an unlimited amount of storage. This
-            means that with more space, you can keep all your important files
-            safe!
-          </Paragraph>
-          <div>
-            <Button
-              type="button"
-              text="Store"
-              link="/store"
-              transparent
-              black
-            />
-          </div>
+      {/* <TextContainerAnimation direction=""> */}
+      <div className={styles.textContent}>
+        <Heading
+          text="Unbounded Storage Capacity"
+          Tag="h3"
+          periodColor="#0B9DFF"
+        />
+        <Paragraph>
+          The Züs Cloud Network provides an unlimited amount of storage. This
+          means that with more space, you can keep all your important files
+          safe!
+        </Paragraph>
+        <div>
+          <Button type="button" text="Store" link="/store" transparent black />
         </div>
+      </div>
 
-        <div className={styles.textContainerBorderWrapper}>
-          <TextContainerBorder />
-        </div>
-      </TextContainerAnimation>
+      <div className={styles.textContainerBorderWrapper}>
+        <TextContainerBorder />
+      </div>
+      {/* </TextContainerAnimation> */}
     </div>
   )
 }

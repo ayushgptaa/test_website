@@ -1,10 +1,11 @@
-import { Fade } from 'react-awesome-reveal'
+// import { Fade } from 'react-awesome-reveal'
 import PropTypes from 'prop-types'
 
 import FeaturesList from './FeaturesList'
 
+// import useGetScreenSize from 'hooks/useGetScreenSize'
+
 import styles from './Features.module.scss'
-import useGetScreenSize from 'hooks/useGetScreenSize'
 
 const featurelistData = [
   {
@@ -28,30 +29,30 @@ const featurelistData = [
 ]
 
 const Features = ({ customFeatureData }) => {
-  const isMobile = useGetScreenSize()
+  // const isMobile = useGetScreenSize()
   return (
     <div className={styles.featureListWrapper}>
-      <Fade
+      {/* <Fade
         direction={isMobile ? '' : 'up'}
         duration={600}
         fraction={0.2}
         delay={100}
         cascade
-        triggerOnce>
-        {(customFeatureData || featurelistData).map(
-          ({ pattern, heading, text, img, link }) => (
-            <FeaturesList
-              pattern={pattern}
-              heading={heading}
-              text={text}
-              img={img}
-              key={heading}
-              link={link}
-              buttonText="Learn More"
-            />
-          )
-        )}
-      </Fade>
+        triggerOnce> */}
+      {(customFeatureData || featurelistData).map(
+        ({ pattern, heading, text, img, link }) => (
+          <FeaturesList
+            pattern={pattern}
+            heading={heading}
+            text={text}
+            img={img}
+            key={heading}
+            link={link}
+            buttonText="Learn More"
+          />
+        )
+      )}
+      {/* </Fade> */}
     </div>
   )
 }
