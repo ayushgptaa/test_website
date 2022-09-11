@@ -11,7 +11,7 @@ import styles from './TextContainer.module.scss'
 const TextContainer = () => {
   return roadmapData.map(({ heading, subHeading, text, color }) => (
     <div className={styles.container} key={subHeading}>
-      <Fade key={heading}>
+      <Fade key={heading} triggerOnce>
         <div className={styles.content}>
           <div className={clsx(styles.lineContainer)}>
             <div className={clsx(styles.circle, styles[`${color}`])} />
