@@ -13,18 +13,16 @@ const Apps = () => {
   return (
     <section className={styles.container}>
       <div className={styles.textContent}>
-        <Fade direction="up" triggerOnce cascade duration={600}>
-          <Heading text="Building Resources" Tag="h3" />
-          <Paragraph>
-            We’ve brought together the tools and documentation to help get you
-            started. Join a growing community of engineers. Build the next
-            generation of the public cloud.
-          </Paragraph>
-        </Fade>
+        <Heading text="Building Resources" Tag="h3" />
+        <Paragraph>
+          We’ve brought together the tools and documentation to help get you
+          started. Join a growing community of engineers. Build the next
+          generation of the public cloud.
+        </Paragraph>
       </div>
 
       <div className={styles.apps}>
-        <Fade direction="up" triggerOnce cascade duration={600} fraction={0.5}>
+        <Fade direction="up" triggerOnce cascade duration={600} fraction={0.3}>
           {appsData.map(({ icon, name, description, btnText, link }) => (
             <div className={styles.app} key={name}>
               <div className={name && styles[`${name.toLowerCase()}`]}></div>
