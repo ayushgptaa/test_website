@@ -132,6 +132,7 @@
     margin: 0;
     text-align: left;
     border-bottom: none;
+    flex-shrink: 0;
 
     h1 {
       font-weight: 700;

@@ -1,4 +1,3 @@
-import { Fade } from 'react-awesome-reveal'
 import Link from 'next/link'
 
 import Heading from 'components/Heading'
@@ -38,45 +37,32 @@ const Provider = () => {
   return (
     <section className={styles.container}>
       <div className={styles.textContainer}>
-        <Fade direction="up" cascade duration={800} tiggerOnce>
-          <Heading
-            text="Service Providers Information"
-            Tag="h3"
-            withoutPeriod
-          />
-          <Paragraph className={styles.text}>
-            Have more questions you need help with? Reach out to us on the
-            channels below.
-          </Paragraph>
-        </Fade>
+        <Heading text="Service Providers Information" Tag="h3" withoutPeriod />
+        <Paragraph className={styles.text}>
+          Have more questions you need help with? Reach out to us on the
+          channels below.
+        </Paragraph>
       </div>
 
       <div className={styles.iconContainerWrapper}>
-        <Fade
-          direction="up"
-          triggerOnce
-          duration={800}
-          fraction={isMobile ? 0 : 0.5}
-          cascade>
-          {providerData.map(({ icon, iconDesktop, heading, text, link }) => (
-            <div className={styles.iconContainer} key={heading}>
-              <Link href={link}>
-                <div className={styles.arrowIcon} />
-              </Link>
-              <div className={styles.icon}>
-                <Image
-                  src={isMobile ? icon : iconDesktop}
-                  alt={heading}
-                  height={80}
-                  width={80}
-                  layout="fixed"
-                />
-              </div>
-              <h4>{heading}</h4>
-              <Paragraph>{text}</Paragraph>
+        {providerData.map(({ icon, iconDesktop, heading, text, link }) => (
+          <div className={styles.iconContainer} key={heading}>
+            <Link href={link}>
+              <div className={styles.arrowIcon} />
+            </Link>
+            <div className={styles.icon}>
+              <Image
+                src={isMobile ? icon : iconDesktop}
+                alt={heading}
+                height={80}
+                width={80}
+                layout="fixed"
+              />
             </div>
-          ))}
-        </Fade>
+            <h4>{heading}</h4>
+            <Paragraph>{text}</Paragraph>
+          </div>
+        ))}
       </div>
     </section>
   )

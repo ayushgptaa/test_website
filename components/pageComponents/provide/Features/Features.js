@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { Fade } from 'react-awesome-reveal'
 import clsx from 'clsx'
 
 import Heading from 'components/Heading'
@@ -10,8 +9,10 @@ import MainFeature from './MainFeature'
 import featuresData from './featuresData'
 
 import styles from './Features.module.scss'
+import useGetScreenSize from 'hooks/useGetScreenSize'
 
 const Features = () => {
+  const isMobile = useGetScreenSize()
   const renderFeatures = () => {
     return featuresData.map(
       ({
@@ -34,23 +35,24 @@ const Features = () => {
         <section className={`${styles.container} ${customStyle}`} key={heading}>
           {ellipseRight && <div className={styles.ellipseRight} />}
           {ellipseLeft && <div className={styles.ellipseleft} />}
-          <Fade triggerOnce duration={500}>
-            <div className={styles.imgContainer}>
-              <div
-                className={clsx(
-                  styles.imgDesktop,
-                  laptopImg && styles.laptopImg
-                )}>
-                <Image
-                  layout="fixed"
-                  src={imgDesktop}
-                  width={imgDesktopWidth}
-                  height={imgDesktopHeight}
-                  alt={heading}
-                  quality={100}
-                  priority
-                />
-              </div>
+
+          <div className={styles.imgContainer}>
+            <div
+              className={clsx(
+                styles.imgDesktop,
+                laptopImg && styles.laptopImg
+              )}>
+              <Image
+                layout="fixed"
+                src={imgDesktop}
+                width={imgDesktopWidth}
+                height={imgDesktopHeight}
+                alt={heading}
+                quality={100}
+                priority
+              />
+            </div>
+            {isMobile && (
               <div
                 className={clsx(
                   styles.imgMobile,
@@ -67,20 +69,19 @@ const Features = () => {
                   priority
                 />
               </div>
-            </div>
-          </Fade>
+            )}
+          </div>
 
           <div className={styles.textContent}>
             {textContentEllipse && (
               <div className={styles.textContentEllipse} />
             )}
-            <Fade triggerOnce duration={600} fraction={0.5} cascade>
-              <Heading text={heading} />
-              <Paragraph className={styles.text}>{text}</Paragraph>
-              <div>
-                <Button text="Get Notified" type="button" link={link} />
-              </div>
-            </Fade>
+
+            <Heading text={heading} />
+            <Paragraph className={styles.text}>{text}</Paragraph>
+            <div>
+              <Button text="Get Notified" type="button" link={link} />
+            </div>
           </div>
         </section>
       )
