@@ -43,25 +43,25 @@ const Hero = () => {
         </span>
       </div>
 
-      <Fade
+      {/* <Fade
         duration={800}
         direction="up"
         triggerOnce
-        style={{ position: 'relative', zIndex: 2 }}>
-        <Heading
-          text="This content is being streamed from ZCN dstorage"
-          withoutPeriod
-        />
-      </Fade>
+        style={{ position: 'relative', zIndex: 2 }}> */}
+      <Heading
+        text="This content is being streamed from ZCN dstorage"
+        withoutPeriod
+      />
+      {/* </Fade> */}
 
       <div className={styles.mainTextContent}>
-        <Fade duration={800} direction="up" triggerOnce delay={500}>
-          <h4 className={styles.secondaryHeading}>
-            Get notified as soon as mainnet launches
-          </h4>
-          <GetNotified showcasePage />
-          <SocialIcons styles={styles} />
-        </Fade>
+        {/* <Fade duration={800} direction="up" triggerOnce delay={500}> */}
+        <h4 className={styles.secondaryHeading}>
+          Get notified as soon as mainnet launches
+        </h4>
+        <GetNotified showcasePage />
+        <SocialIcons styles={styles} />
+        {/* </Fade> */}
       </div>
     </main>
   )

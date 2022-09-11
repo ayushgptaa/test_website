@@ -1,5 +1,3 @@
-import { Fade } from 'react-awesome-reveal'
-
 import Heading from 'components/Heading'
 import Paragraph from 'components/Paragraph'
 import CountdownTimer from 'components/pageComponents/homepage/Hero/CountdownTimer'
@@ -84,54 +82,45 @@ const Stats = () => {
   return (
     <section className={styles.rootContainer}>
       <div className={styles.textContent}>
-        <Fade direction="up" cascade duration={600} triggerOnce>
-          <Heading text="Reliable Data." withoutPeriod Tag="h3" />
-          <Heading text="Consistent Uptime." withoutPeriod Tag="h3" />
-          <CountdownTimer targetDate={targetDate} removeHeading />
-          <Paragraph>
-            Global data consumption is projected to grow at a rate of over 25%
-            per year. Today, virtually all of the world’s data is stored on
-            centralized servers.
-          </Paragraph>
-          <div>
-            <Button
-              type="button"
-              text="Check Our Solutions"
-              transparent
-              black
-            />
-          </div>
-        </Fade>
+        <Heading text="Reliable Data." withoutPeriod Tag="h3" />{' '}
+        <Heading text="Consistent Uptime." withoutPeriod Tag="h3" />
+        <CountdownTimer targetDate={targetDate} removeHeading />
+        <Paragraph>
+          Global data consumption is projected to grow at a rate of over 25% per
+          year. Today, virtually all of the world’s data is stored on
+          centralized servers.
+        </Paragraph>
+        <div>
+          <Button type="button" text="Check Our Solutions" transparent black />
+        </div>
       </div>
 
-      <Fade delay={1000} duration={600} triggerOnce>
-        <div className={styles.chart}>
-          <MultipleSplineChart
-            chartData={[
-              {
-                legend:
-                  'This is our data stream showing x data per day, and uptime',
-                values: chartData,
-                color: {
-                  r: 0,
-                  g: 120,
-                  b: 255,
-                },
+      <div className={styles.chart}>
+        <MultipleSplineChart
+          chartData={[
+            {
+              legend:
+                'This is our data stream showing x data per day, and uptime',
+              values: chartData,
+              color: {
+                r: 0,
+                g: 120,
+                b: 255,
               },
-            ]}
-            labels={labels}
-            minY={0}
-            maxY={4}
-            borderColor="#82D0E9"
-            formatYLabels={(value) => {
-              return `${value}  GB`
-            }}
-            stepSize={1}
-            showLegend
-          />
-          <div className={styles.dot}></div>
-        </div>
-      </Fade>
+            },
+          ]}
+          labels={labels}
+          minY={0}
+          maxY={4}
+          borderColor="#82D0E9"
+          formatYLabels={(value) => {
+            return `${value}  GB`
+          }}
+          stepSize={1}
+          showLegend
+        />
+        <div className={styles.dot}></div>
+      </div>
 
       <Table data={tableData} background="#000" />
     </section>
