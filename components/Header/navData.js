@@ -16,6 +16,10 @@ const navData = [
     link: '/defi',
   },
   {
+    name: 'Nft',
+    link: '/nft',
+  },
+  {
     name: 'Blog',
     link: 'https://blog.testnet-0chain.net/',
     target: '_blank',

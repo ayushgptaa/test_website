@@ -1,44 +1,52 @@
 import Image from 'next/image'
 import clsx from 'clsx'
-import { Fade } from 'react-awesome-reveal'
-
-import Paragraph from 'components/Paragraph'
 
 import styles from './index.module.scss'
+import BulletText from 'components/BulletText'
 
 const data = [
   {
     heading1: 'Something Mutations',
     heading2:
-      'Lorem ipsum dolor sit amet, consectetur ut labore et dolore magna aliqua.',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+      'Chalk offers permanent high-performance NFT storage with no upfront costs.',
+    featureList: [
+      'Store your NFTs permanently and securely',
+      'No upfront costs',
+      'High performance guaranteed',
+    ],
     img: '/images/nft/Features/img1.png',
     id: 1,
   },
   {
-    heading1: 'Something Mutations',
+    heading1: 'Easy Codeless Minting',
     heading2:
-      'Lorem ipsum dolor sit amet, consectetur ut labore et dolore magna aliqua.',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+      'Chalk is the only platform to provide randomized public minting of NFTs and Packs for Ethereum and Polygon.',
+    featureList: [
+      'Codeless creation of NFTs and Packs for Ethereum and Polygon',
+      'Randomized public minting of NFT and packs',
+      'Mutation of data to create unique experiences',
+    ],
     img: '/images/nft/Features/img2.png',
     id: 2,
   },
 ]
 
 const FeatureWithImg = () => {
-  return data.map(({ heading1, heading2, text, img, id }) => {
+  return data.map(({ heading1, heading2, featureList, img, id }) => {
     return (
       <div className={styles.container} key={id}>
-        <Fade delay={200} duration={600} cascade triggerOnce>
-          <div className={clsx(styles.image, styles[`image${id}`])}>
-            <Image src={img} alt={heading1} quality={100} layout="fill" />
-          </div>
-        </Fade>
+        <div className={clsx(styles.image, styles[`image${id}`])}>
+          <Image src={img} alt={heading1} quality={100} layout="fill" />
+        </div>
 
         <div className={styles.textContent}>
           <h4>{heading1}</h4>
           <h5>{heading2}</h5>
-          <Paragraph>{text}</Paragraph>
+          <div className={styles.featuresList}>
+            {featureList.map((feature) => (
+              <BulletText key={feature}>{feature}</BulletText>
+            ))}
+          </div>
         </div>
       </div>
     )

@@ -1,5 +1,4 @@
-import FeaturesList from '/components/pageComponents/homepage/Features/FeaturesList'
-
+import FeaturesList from 'components/pageComponents/homepage/Features/FeaturesList'
 import Heading from 'components/Heading'
 import Paragraph from 'components/Paragraph'
 import FeatureWithImg from './FeatureWithImg'
@@ -8,20 +7,20 @@ import styles from './index.module.scss'
 
 const featurelistData = [
   {
-    heading: 'USP1',
-    text: 'Züs storage is easy to set up for enterprises and individuals alike.',
+    heading: 'Limitless NFT Scalable Storage',
+    text: 'Chalk’s scalable storage (with no upfront cost) is the perfect solution for users that need to store a lot of video and high-resolution NFTs.',
     img: '/images/homePage/Features/storeIcon.svg',
     link: '/store',
   },
   {
-    heading: 'USP2',
-    text: 'Start building on top of the Züs Cloud Network. The future awaits you.',
+    heading: 'Limitless Simple Codeless NFT Minting',
+    text: 'Minting with Chalk is simple, reliable, and secure- perfect for anyone looking to create a high quality NFT portfolio.',
     img: '/images/homePage/Features/buildIcon.svg',
     link: '/build',
   },
   {
-    heading: 'USP3',
-    text: 'Fueled by a crypto economy that rewards Service Providers and ZCN Delegators.',
+    heading: 'Limitless Mutation of NFT Data',
+    text: 'Speed up development time for your NFT projects with simple and fast mutation of your NFT data, without sacrificing security or quality.',
     img: '/images/homePage/Features/earnIcon.svg',
     link: '/earn',
   },
