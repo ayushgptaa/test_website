@@ -1,4 +1,4 @@
-import PageBackground from 'components/PageBackground'
+// import PageBackground from 'components/PageBackground'
 import Header from 'components/Header'
 import BlueContainerWithImg from 'components/BlueContainerWithImg'
 import Footer from 'components/Footer'
@@ -7,7 +7,7 @@ import PageContainer from 'components/PageContainer'
 const Contact = () => {
   return (
     <PageContainer title="Contact - Official Züs Support">
-      <PageBackground />
+      {/* <PageBackground /> */}
       <Header removeImg />
       <BlueContainerWithImg
         heading="Want to reach out? Message us on Twitter"
