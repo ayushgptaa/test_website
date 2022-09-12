@@ -5,7 +5,11 @@ const footerMenu = [
     id: 0,
     name: 'COMPANY',
     subLinks: [
-      { name: 'Züs Net ', link: 'https://demo.0chain.net/', target: '_blank' },
+      {
+        name: 'Züs Net ',
+        link: 'https://staging-explorer.testnet-0chain.net/home',
+        target: '_blank',
+      },
       { name: 'Whitepapers', link: '/whitepapers' },
       { name: 'ZCN', link: '/defi' },
       { name: 'Blog', link: 'https://blog.0chain.net', target: '_blank' },
@@ -27,18 +31,27 @@ const footerMenu = [
       },
       { name: 'API ', link: 'https://docs.zus.network', target: '_blank' },
       { name: 'Github', link: 'https://github.com/0chain', target: '_blank' },
-      { name: 'ZCN', link: '/defi' },
     ],
   },
   {
     id: 2,
     name: 'RESOURCES',
     subLinks: [
-      { name: 'Team', link: '/team' },
+      { name: 'Team', link: '/about' },
       { name: 'News', link: '/news' },
-      { name: 'Solutions', link: '/apps' },
+      { name: 'Solutions', link: '/launch-apps' },
       { name: 'Media Kit', link: '/press' },
       { name: 'Contact Us', link: '/contact' },
+    ],
+  },
+  {
+    id: 3,
+    name: 'DEFI',
+    subLinks: [
+      { name: 'Stacking', link: '/stacking' },
+      { name: 'Block Rewards', link: '/block-rewards' },
+      { name: 'Delegation', link: '/delegation' },
+      { name: 'ZCN Supply', link: '/zcn-supply-schedule' },
     ],
   },
 ]
