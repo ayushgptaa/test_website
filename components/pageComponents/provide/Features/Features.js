@@ -8,8 +8,9 @@ import MainFeature from './MainFeature'
 
 import featuresData from './featuresData'
 
-import styles from './Features.module.scss'
 import useGetScreenSize from 'hooks/useGetScreenSize'
+
+import styles from './Features.module.scss'
 
 const Features = () => {
   const isMobile = useGetScreenSize()
@@ -31,6 +32,8 @@ const Features = () => {
         ellipseLeft,
         ellipseRight,
         link,
+        button,
+        blank,
       }) => (
         <section className={`${styles.container} ${customStyle}`} key={heading}>
           {ellipseRight && <div className={styles.ellipseRight} />}
@@ -80,7 +83,7 @@ const Features = () => {
             <Heading text={heading} />
             <Paragraph className={styles.text}>{text}</Paragraph>
             <div>
-              <Button text="Get Notified" type="button" link={link} />
+              <Button text={button} type="button" link={link} blank={blank} />
             </div>
           </div>
         </section>

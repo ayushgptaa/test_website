@@ -20,7 +20,7 @@ const providerData = [
     iconDesktop: '/images/provide/Provider/documentationDesktop.svg',
     heading: 'Documentation',
     text: 'Visit the 0Chain documentation for detailed guides and setup instructions.',
-    link: '',
+    link: 'https://docs.0chain.net/blobber',
   },
   {
     icon: '/images/provide/Provider/forum.svg',
@@ -46,22 +46,24 @@ const Provider = () => {
 
       <div className={styles.iconContainerWrapper}>
         {providerData.map(({ icon, iconDesktop, heading, text, link }) => (
-          <div className={styles.iconContainer} key={heading}>
-            <Link href={link}>
-              <div className={styles.arrowIcon} />
-            </Link>
-            <div className={styles.icon}>
-              <Image
-                src={isMobile ? icon : iconDesktop}
-                alt={heading}
-                height={80}
-                width={80}
-                layout="fixed"
-              />
-            </div>
-            <h4>{heading}</h4>
-            <Paragraph>{text}</Paragraph>
-          </div>
+          <Link href={link} passHref>
+            <a href={link} target="_black">
+              <div className={styles.iconContainer} key={heading}>
+                <div className={styles.arrowIcon} />
+                <div className={styles.icon}>
+                  <Image
+                    src={isMobile ? icon : iconDesktop}
+                    alt={heading}
+                    height={80}
+                    width={80}
+                    layout="fixed"
+                  />
+                </div>
+                <h4>{heading}</h4>
+                <Paragraph>{text}</Paragraph>
+              </div>
+            </a>
+          </Link>
         ))}
       </div>
     </section>

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { useState } from 'react'
 
 import Heading from 'components/Heading'
@@ -5,8 +6,9 @@ import Button from 'components/Button'
 import Paragraph from 'components/Paragraph'
 import RangeSlider from '../../Earnings/RewardsCalculator/RangeSlider'
 
+import { prodcuts } from 'SocialLinks/links'
+
 import styles from './index.module.scss'
-import Image from 'next/image'
 
 const ModifiedRangeSlider = () => {
   const [stakePercentage, setStakePercentage] = useState(20)
@@ -77,6 +79,8 @@ const mainFeature = [
     background: '#321A33',
     Component: <Component1 />,
     bottomText: 'This explains the staking mechanics',
+    link: prodcuts.CHIMNEY,
+    black: true,
   },
 
   {
@@ -88,6 +92,7 @@ const mainFeature = [
     background: '#061C3E',
     Component: <ServerSpecifications />,
     bottomText: 'This explains the rig requirements',
+    link: '/',
   },
 ]
 
@@ -103,6 +108,8 @@ const MainFeature = () => {
           background,
           Component,
           bottomText,
+          link,
+          black,
         }) => (
           <div
             className={styles.mainFeature}
@@ -114,7 +121,14 @@ const MainFeature = () => {
 
             <div className={styles.bottomContent}>
               <p>{bottomText}</p>
-              <Button type="button" text={btnText} transparent black />
+              <Button
+                type="button"
+                text={btnText}
+                transparent
+                black
+                link={link}
+                blank={black}
+              />
             </div>
           </div>
         )
