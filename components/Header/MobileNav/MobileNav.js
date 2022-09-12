@@ -15,13 +15,9 @@ const MobileNav = ({ animation }) => {
     const mobileNav = document.getElementById('mobile-nav')
 
     // Hacky way to prevent body scroll when mobile nav is open
-    mobileNav.addEventListener(
-      'touchmove',
-      (e) => {
-        e.preventDefault()
-      },
-      { passive: true }
-    )
+    mobileNav.addEventListener('touchmove', (e) => {
+      e.preventDefault()
+    })
   }, [])
 
   return (
