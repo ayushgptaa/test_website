@@ -56,6 +56,7 @@ const Slider = () => {
         }}
         loop
         spaceBetween={30}
+        grabCursor
         slidesPerView="auto"
         centeredSlides>
         {testimonialData.map(({ text, description, name, img }) => (

@@ -16,7 +16,7 @@ const Hero = () => {
       <Fade duration={800} triggerOnce>
         <div className={styles.heroBackground} />
       </Fade>
-      <Fade cascade duration={800} damping={0.2} direction="up" triggerOnce>
+      <Fade cascade duration={600} damping={0.2} direction="up" triggerOnce>
         <Heading text="Go beyond the cloud" />
         <CountDownTimer targetDate={targetDate} />
         <h4 className={styles.secondaryHeading}>
