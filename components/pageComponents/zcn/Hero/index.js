@@ -28,10 +28,9 @@ const Hero = () => {
         <Paragraph>
           Rainfall is the economic protocol for the Züs Cloud Network.
         </Paragraph>
-        <div className={styles.buttons}>
-          <Button type="button" text="Learn More" transparent black />
-          <Button type="button" text="Econ Paper" />
-        </div>
+
+        <Button type="button" text="Econ Paper" />
+
         <div className={styles.customPara}>
           <Paragraph>
             The protocol maintains a low year-over-year inflation rate (sub 10%)
