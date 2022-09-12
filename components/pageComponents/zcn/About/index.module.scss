@@ -115,13 +115,17 @@
   .moreInfo {
     @include flex-horizontal-center(flex-start);
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 120px;
     padding: 100px 0 120px 0;
+    max-width: 970px;
+    margin: auto;
   }
 
   .imgContainer {
     width: 375px;
     height: 510px;
+    order: 2;
   }
 
   .infoText {

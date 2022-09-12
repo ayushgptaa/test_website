@@ -1,9 +1,9 @@
-import { Fade } from 'react-awesome-reveal'
+// import { Fade } from 'react-awesome-reveal'
 import PropTypes from 'prop-types'
 
 import FeaturesList from './FeaturesList'
 
-import useGetScreenSize from 'hooks/useGetScreenSize'
+// import useGetScreenSize from 'hooks/useGetScreenSize'
 
 import styles from './Features.module.scss'
 
@@ -24,35 +24,35 @@ const featurelistData = [
     heading: 'Earn',
     text: 'Fueled by a crypto economy that rewards Service Providers and ZCN Delegators.',
     img: '/images/homePage/Features/earnIcon.svg',
-    link: '/provide',
+    link: '/earn',
   },
 ]
 
 const Features = ({ customFeatureData }) => {
-  const isMobile = useGetScreenSize()
-
+  // const isMobile = useGetScreenSize()
   return (
     <div className={styles.featureListWrapper}>
-      <Fade
-        direction="up"
-        duration={700}
-        fraction={isMobile ? 0.4 : 0.3}
+      {/* <Fade
+        direction={isMobile ? '' : 'up'}
+        duration={600}
+        fraction={0.2}
+        delay={100}
         cascade
-        triggerOnce>
-        {(customFeatureData || featurelistData).map(
-          ({ pattern, heading, text, img, link }) => (
-            <FeaturesList
-              pattern={pattern}
-              heading={heading}
-              text={text}
-              img={img}
-              key={heading}
-              link={link}
-              buttonText="Learn More"
-            />
-          )
-        )}
-      </Fade>
+        triggerOnce> */}
+      {(customFeatureData || featurelistData).map(
+        ({ pattern, heading, text, img, link }) => (
+          <FeaturesList
+            pattern={pattern}
+            heading={heading}
+            text={text}
+            img={img}
+            key={heading}
+            link={link}
+            buttonText="Learn More"
+          />
+        )
+      )}
+      {/* </Fade> */}
     </div>
   )
 }

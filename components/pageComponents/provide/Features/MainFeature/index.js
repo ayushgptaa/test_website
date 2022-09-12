@@ -1,13 +1,14 @@
+import Image from 'next/image'
 import { useState } from 'react'
-import { Fade } from 'react-awesome-reveal'
 
 import Heading from 'components/Heading'
 import Button from 'components/Button'
 import Paragraph from 'components/Paragraph'
 import RangeSlider from '../../Earnings/RewardsCalculator/RangeSlider'
 
+import { prodcuts } from 'SocialLinks/links'
+
 import styles from './index.module.scss'
-import Image from 'next/image'
 
 const ModifiedRangeSlider = () => {
   const [stakePercentage, setStakePercentage] = useState(20)
@@ -78,6 +79,8 @@ const mainFeature = [
     background: '#321A33',
     Component: <Component1 />,
     bottomText: 'This explains the staking mechanics',
+    link: prodcuts.CHIMNEY,
+    black: true,
   },
 
   {
@@ -89,39 +92,47 @@ const mainFeature = [
     background: '#061C3E',
     Component: <ServerSpecifications />,
     bottomText: 'This explains the rig requirements',
+    link: '/',
   },
 ]
 
 const MainFeature = () => {
   return (
     <section className={styles.mainFeatures}>
-      <Fade direction="up" triggerOnce duration={800} fraction={0.3} cascade>
-        {mainFeature.map(
-          ({
-            mainHeading,
-            mainText,
-            btnText,
-            serial,
-            background,
-            Component,
-            bottomText,
-          }) => (
-            <div
-              className={styles.mainFeature}
-              key={serial}
-              style={{ background }}>
-              <Heading text={mainHeading} Tag="h3" withoutPeriod />
-              <Paragraph left>{mainText}</Paragraph>
-              {Component}
+      {mainFeature.map(
+        ({
+          mainHeading,
+          mainText,
+          btnText,
+          serial,
+          background,
+          Component,
+          bottomText,
+          link,
+          black,
+        }) => (
+          <div
+            className={styles.mainFeature}
+            key={serial}
+            style={{ background }}>
+            <Heading text={mainHeading} Tag="h3" withoutPeriod />
+            <Paragraph left>{mainText}</Paragraph>
+            {Component}
 
-              <div className={styles.bottomContent}>
-                <p>{bottomText}</p>
-                <Button type="button" text={btnText} transparent black />
-              </div>
+            <div className={styles.bottomContent}>
+              <p>{bottomText}</p>
+              <Button
+                type="button"
+                text={btnText}
+                transparent
+                black
+                link={link}
+                blank={black}
+              />
             </div>
-          )
-        )}
-      </Fade>
+          </div>
+        )
+      )}
     </section>
   )
 }

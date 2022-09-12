@@ -12,7 +12,7 @@ const RoadmapComponent = () => {
       <Fade triggerOnce cascade>
         <div className={styles.topEllipse} />
         <div className={styles.mainText}>
-          <Heading text="The road ahead" uppercase />
+          <Heading text="The road ahead" />
           {/* <Text center>
             Words that describe the key value pieces/capabilities already in the
             platform and the direction of travel moving forward

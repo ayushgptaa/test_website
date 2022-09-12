@@ -1,5 +1,5 @@
 import PageContainer from 'components/PageContainer'
-import PageBackground from 'components/PageBackground'
+// import PageBackground from 'components/PageBackground'
 import Header from 'components/Header'
 import Footer from 'components/Footer'
 import WhitepaperComponent from 'pageComponents/whitepaperpage'
@@ -7,7 +7,7 @@ import WhitepaperComponent from 'pageComponents/whitepaperpage'
 const Whitepapers = () => {
   return (
     <PageContainer title="Züs - Whitepapers">
-      <PageBackground />
+      {/* <PageBackground /> */}
       <Header removeImg />
       <WhitepaperComponent />
       <Footer showfooterBackground={false} showfooterFeature={false} />

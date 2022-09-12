@@ -13,22 +13,20 @@ const Hero = () => {
   return (
     <main className={styles.rootContainer}>
       <div className={styles.maintextContent}>
-        <Fade direction="up" duration={600} cascade triggerOnce>
-          <Heading text="Permanent Storage for NFTs" withoutPeriod />
-          <Paragraph>
-            Cloud Storage on Züs is enabled by a reliable decentralized cloud
-            network and a lightning-fast Layer 1 blockchain protocol. This makes
-            the process of getting started swift and intuitive.
-          </Paragraph>
-          <div>
-            <Button
-              type="button"
-              text="Launch the Chalk NFT App"
-              link={prodcuts.CHALK}
-              black
-            />
-          </div>
-        </Fade>
+        <Heading text="Permanent Storage for NFTs" withoutPeriod />
+        <Paragraph>
+          Cloud Storage on Züs is enabled by a reliable decentralized cloud
+          network and a lightning-fast Layer 1 blockchain protocol. This makes
+          the process of getting started swift and intuitive.
+        </Paragraph>
+        <div>
+          <Button
+            type="button"
+            text="Launch the Chalk NFT App"
+            link={prodcuts.CHALK}
+            black
+          />
+        </div>
       </div>
 
       <Fade duration={600} delay={1000} triggerOnce>

@@ -1,0 +1,104 @@
+@use '/styles/variables.scss' as *;
+@use '/styles/mixins.scss' as *;
+
+@import 'include-media';
+
+.mainFeatureWrapper {
+  margin: auto;
+  border-top: $border-gray;
+  padding-top: 3rem;
+}
+
+.textContainer {
+  padding: 20px;
+  text-align: left;
+
+  h3 {
+    font-size: 42px;
+    line-height: 110%;
+  }
+
+  p {
+    text-align: left;
+    margin-top: 2rem;
+  }
+}
+
+.btnContainer {
+  // margin: auto;
+  margin-top: 2rem;
+  @include flex-vertical-center(center);
+  gap: 8px;
+
+  button {
+    width: 170px;
+    height: 48px;
+    margin: none;
+  }
+}
+
+.laptopImgContainer {
+  position: relative;
+  height: 390px;
+  width: 425px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@include media('>880px') {
+  .mainFeatureWrapper {
+    position: relative;
+    height: 583px;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.02);
+    z-index: 9;
+  }
+
+  .mainFeature {
+    position: relative;
+    width: 1440px;
+    height: 100%;
+    margin: auto;
+    @include flex-vertical-center(flex-start);
+  }
+
+  .laptopImgContainer {
+    position: absolute;
+    width: 1080px;
+    height: 930px;
+    transform: none;
+    left: 480px;
+    bottom: -305px;
+    transform: none;
+    // right: -10%;
+  }
+
+  .textContainer {
+    max-width: 490px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-left: 8rem;
+
+    h3 {
+      font-size: 54px;
+      line-height: 110%;
+    }
+
+    p {
+      text-align: left;
+    }
+
+    .btnContainer {
+      margin: 0;
+      gap: 40px;
+      width: auto;
+      justify-content: flex-start;
+
+      button {
+        margin: 0;
+      }
+    }
+  }
+}

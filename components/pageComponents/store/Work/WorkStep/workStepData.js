@@ -1,7 +1,7 @@
-import img1 from '/public/images/store/Work/workSteps/1.svg'
-import img2 from '/public/images/store/Work/workSteps/2.svg'
-import img3 from '/public/images/store/Work/workSteps/3.svg'
-import img4 from '/public/images/store/Work/workSteps/4.svg'
+import img1 from '/public/images/store/Work/workSteps/1.png'
+import img2 from '/public/images/store/Work/workSteps/2.png'
+import img3 from '/public/images/store/Work/workSteps/3.png'
+import img4 from '/public/images/store/Work/workSteps/4.png'
 
 const workStepData = [
   {

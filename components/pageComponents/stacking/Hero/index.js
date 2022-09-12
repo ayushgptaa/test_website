@@ -13,16 +13,14 @@ const Hero = () => {
   return (
     <main className={styles.rootContainer}>
       <div className={styles.mainTextContent}>
-        <Fade direction="up" cascade duration={600} triggerOnce>
-          <Heading text="Blobber Staking" />
-          <Paragraph>
-            All Service Providers must stake ZCN on their infrastructure in
-            order to provide a service on Züs. While the Active Set (Miners and
-            Sharders) and Blobbers both have their service commitment
-            collateralized by ZCN, the process by which the two groups stake
-            collateral has slight differences:
-          </Paragraph>
-        </Fade>
+        <Heading text="Blobber Staking" />
+        <Paragraph>
+          All Service Providers must stake ZCN on their infrastructure in order
+          to provide a service on Züs. While the Active Set (Miners and
+          Sharders) and Blobbers both have their service commitment
+          collateralized by ZCN, the process by which the two groups stake
+          collateral has slight differences:
+        </Paragraph>
       </div>
 
       {isMobile && (
@@ -39,7 +37,7 @@ const Hero = () => {
             </div>
           </Fade>
 
-          <Fade direction="right" duration={1000} triggerOnce delay={500}>
+          <Fade direction="right" duration={1000} triggerOnce delay={300}>
             <div className={styles.img2}>
               <Image
                 src="/images/stacking/Hero/img2.png"

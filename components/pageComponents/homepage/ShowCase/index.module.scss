@@ -15,6 +15,7 @@ $breakpoints: (
   width: 100%;
   overflow: hidden;
   border-radius: inherit;
+  z-index: -9;
 }
 
 .ellipseLeft {
@@ -50,15 +51,31 @@ $breakpoints: (
 
 .showcaseArt {
   position: relative;
-  width: 675px;
-  height: 640px;
+  width: 334.44px;
+  height: 246px;
   left: 50%;
   transform: translateX(-50%);
-  margin-top: -80px;
+  z-index: 2;
+  margin-top: 2rem;
+  overflow: hidden;
+}
+
+.showcaseArt {
+  video {
+    height: 92%;
+    width: 92.5%;
+    position: absolute;
+    top: 9px;
+    left: 13.5px;
+    object-fit: cover;
+    z-index: -1;
+    rotate: -0.5deg;
+    border-top-right-radius: 25px;
+  }
 }
 
 .textContentWrapper {
-  margin-top: -8rem;
+  margin-top: 4rem;
   padding: 0 1.5rem;
 
   button {
@@ -98,14 +115,23 @@ $breakpoints: (
   }
 
   .showcaseArt {
-    width: 833.33px;
-    height: 800px;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    width: 537px;
+    height: 395px;
+    left: unset;
+    transform: none;
     top: -350px;
     z-index: 2;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .showcaseArt video {
+    height: 92%;
+    width: 93%;
+    position: absolute;
+    top: 14px;
+    left: 21.5px;
   }
 
   .ellipseLeft {
@@ -125,8 +151,8 @@ $breakpoints: (
   }
 
   .textContentWrapper {
-    margin-top: 16rem;
-    margin: 6rem auto 0;
+    position: absolute;
+    bottom: 3rem;
     padding: 0;
 
     h3 {
@@ -156,8 +182,13 @@ $breakpoints: (
 }
 
 @include media('<=smallDesktop', '>tablet') {
+  .showcaseArt {
+    top: -220px;
+  }
+
   .textContentWrapper {
-    margin: 8rem 0 3rem;
+    position: static;
+    margin: -10rem auto 3rem;
   }
 
   .textContent {

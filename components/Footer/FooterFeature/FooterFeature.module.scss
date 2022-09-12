@@ -14,11 +14,13 @@
   border-bottom: $border-gray;
 
   h4 {
+    position: relative;
     font-size: 28px;
     line-height: 115%;
     max-width: 70%;
     margin: auto;
     margin-top: 1.5rem;
+    z-index: 1;
   }
 
   p {
@@ -28,6 +30,7 @@
     color: #ffffff;
     opacity: 0.9;
     max-width: 800px;
+    z-index: 1;
   }
 }
 

@@ -15,25 +15,24 @@ const BlueContainerWithImg = ({ heading, subHeading }) => {
     <Fade triggerOnce>
       <div className={styles.primaryContainer}>
         <div className={styles.bgImage} />
-        <Fade direction="up" triggerOnce>
-          <p>{subHeading}</p>
-          <Heading text={heading} />
-          <div className={styles.iconContainer}>
-            <Image
-              src="/images/BlueContainerWithImg/twitterIcon.svg"
-              alt="twitter"
-              quality={100}
-              layout="fixed"
-              height={24}
-              width={24}
-              priority
-            />
-            <p>@ZusCloud</p>
-          </div>
-          <div>
-            <Button type="button" text="DM us on Twitter" />
-          </div>
-        </Fade>
+
+        <p>{subHeading}</p>
+        <Heading text={heading} />
+        <div className={styles.iconContainer}>
+          <Image
+            src="/images/BlueContainerWithImg/twitterIcon.svg"
+            alt="twitter"
+            quality={100}
+            layout="fixed"
+            height={24}
+            width={24}
+            priority
+          />
+          <p>@ZusCloud</p>
+        </div>
+        <div>
+          <Button type="button" text="DM us on Twitter" />
+        </div>
       </div>
       <div className={styles.secondaryContainer}>
         <Text>

@@ -21,17 +21,12 @@
   }
 }
 
-.rewardMobile {
+.rewardsImg {
   position: relative;
   width: 332px;
   height: 1215.17px;
   margin: auto;
   margin-top: 30px;
-}
-
-.rewardDesktop {
-  display: none;
-  position: relative;
 }
 
 .featureListContainer {
@@ -124,15 +119,11 @@
     padding-top: 100px;
   }
 
-  .rewardMobile {
-    display: none;
-  }
-
-  .rewardDesktop {
-    display: block;
+  .rewardsImg {
     width: 473px;
     height: 1473.51px;
     flex-shrink: 0;
+    margin: 0;
     z-index: 5;
   }
 
