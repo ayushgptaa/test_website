@@ -8,8 +8,8 @@ const navData = [
     link: '/build',
   },
   {
-    name: 'provide',
-    link: '/provide',
+    name: 'earn',
+    link: '/earn',
   },
   {
     name: 'ZCN',

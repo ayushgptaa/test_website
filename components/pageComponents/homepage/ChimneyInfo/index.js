@@ -49,7 +49,7 @@ const TextContent = () => {
           text="Learn More"
           transparent
           black
-          link="/provide"
+          link="/earn"
         />
       </div>
       {/* </TextContainerAnimation> */}

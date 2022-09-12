@@ -24,7 +24,7 @@ const featurelistData = [
     heading: 'Earn',
     text: 'Fueled by a crypto economy that rewards Service Providers and ZCN Delegators.',
     img: '/images/homePage/Features/earnIcon.svg',
-    link: '/provide',
+    link: '/earn',
   },
 ]
 

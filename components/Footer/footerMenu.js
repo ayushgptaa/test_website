@@ -16,7 +16,7 @@ const footerMenu = [
     id: 1,
     name: 'COMMUNITY',
     subLinks: [
-      { name: 'Miner', link: '/provide' },
+      { name: 'Miner', link: '/earn' },
       { name: 'Developer', link: '/build' },
       { name: 'HackerForum', link: '/build' },
       { name: 'Forum', link: SocialLinks.DISCORD, target: '_blank' },
