@@ -2,9 +2,6 @@
   position: relative;
   width: 100%;
   overflow-x: hidden;
-  // scrollbar-width: none;
-
-  // &::-webkit-scrollbar {
-  //   display: none;
-  // }
+  height: 100vh;
+  overflow-y: scroll;
 }
