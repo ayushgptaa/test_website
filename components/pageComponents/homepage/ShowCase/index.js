@@ -22,15 +22,18 @@ const ShowcaseBackground = () => {
 const ShowcaseArt = () => {
   return (
     <div className={styles.showcaseArt}>
-      {/* <ImageAnimation direction=""> */}
       <Image
         src="/images/homePage/Showcase/showcaseArt.png"
         alt="showcase"
-        quality={100}
         layout="fill"
-        priority
       />
-      {/* </ImageAnimation> */}
+      <video
+        src="https://ayush-gupta.s3.us-east-2.amazonaws.com/test/video2.mp4"
+        poster="/images/homePage/Showcase/poster2.png"
+        playsInline
+        loop
+        muted
+        autoPlay></video>
     </div>
   )
 }
