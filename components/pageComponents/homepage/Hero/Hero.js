@@ -8,7 +8,7 @@ import GetNotified from 'components/GetNotified'
 
 import styles from './Hero.module.scss'
 
-const targetDate = new Date('15 September, 2022').getTime()
+const targetDate = new Date('30 September, 2022').getTime()
 
 const Hero = () => {
   return (

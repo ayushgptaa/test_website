@@ -4,14 +4,18 @@ import { motion, AnimatePresence } from 'framer-motion'
 import useCountdown from 'hooks/useCountdown'
 
 import styles from './CountdownTimer.module.scss'
+import useGetScreenSize from 'hooks/useGetScreenSize'
 
 const DateTimeDisplay = ({ value, type }) => {
+  const isMobile = useGetScreenSize()
   return (
     <div className={styles.dateTimeWrapper}>
       <div
         style={{
           overflow: 'hidden',
           position: 'relative',
+          width: isMobile ? 52 : 70,
+          height: isMobile ? 55 : 74,
         }}>
         <AnimatePresence>
           <motion.span
@@ -22,15 +26,13 @@ const DateTimeDisplay = ({ value, type }) => {
             }}
             initial={{ y: 50 }}
             animate={{ y: 0 }}
-            exit={{ position: 'absolute', y: -100 }}
-            mode="wait"
+            exit={{ position: 'absolute', y: -80 }}
             className={styles.timeValue}
             suppressHydrationWarning>
             {value}
           </motion.span>
         </AnimatePresence>
       </div>
-
       <span className={styles.timeType}>{type}</span>
     </div>
   )

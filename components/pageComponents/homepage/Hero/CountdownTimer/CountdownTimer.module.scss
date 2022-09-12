@@ -12,7 +12,7 @@
 .showCounter {
   @include flex-horizontal-center(flex-start);
   font-weight: 200;
-  gap: 12px;
+  gap: 8px;
 }
 
 .divider {
@@ -43,7 +43,7 @@
 
 @include media('>tablet') {
   .showCounter {
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
   .heading {
