@@ -7,7 +7,7 @@ const footerMenu = [
     subLinks: [
       { name: 'Züs Net ', link: 'https://demo.0chain.net/', target: '_blank' },
       { name: 'Whitepapers', link: '/whitepapers' },
-      { name: 'ZCN', link: '/zcn' },
+      { name: 'ZCN', link: '/defi' },
       { name: 'Blog', link: 'https://blog.0chain.net', target: '_blank' },
       { name: 'FAQ', link: SocialLinks.DISCORD, target: '_blank' },
     ],
@@ -27,7 +27,7 @@ const footerMenu = [
       },
       { name: 'API ', link: 'https://docs.zus.network', target: '_blank' },
       { name: 'Github', link: 'https://github.com/0chain', target: '_blank' },
-      { name: 'ZCN', link: '/zcn' },
+      { name: 'ZCN', link: '/defi' },
     ],
   },
   {

@@ -12,8 +12,8 @@ const navData = [
     link: '/earn',
   },
   {
-    name: 'ZCN',
-    link: '/zcn',
+    name: 'DeFi',
+    link: '/defi',
   },
   {
     name: 'Blog',
