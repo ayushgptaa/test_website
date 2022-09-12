@@ -8,14 +8,6 @@ const appsData = [
     link: 'https://github.com/0chain/gosdk',
   },
   {
-    icon: '/images/buildPage/Apps/blobberIcon.svg',
-    name: 'Blobber',
-    description:
-      'A storage provider (blobber) interface to the blockchain and consumers of storage',
-    btnText: 'View',
-    link: 'https://github.com/0chain/blobber',
-  },
-  {
     icon: '/images/buildPage/Apps/zboxcliIcon.svg',
     name: 'ZboxCLI',
     description:
