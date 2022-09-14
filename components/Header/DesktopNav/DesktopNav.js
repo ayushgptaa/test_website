@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import Button from 'components/Button'
 
@@ -7,16 +8,19 @@ import navData from '../navData'
 import styles from './DesktopNav.module.scss'
 
 const DesktopNav = () => {
+  const router = useRouter()
+
   return (
     <div className={styles.wrapper}>
       {navData.map(({ name, link, target }) => (
-        <span key={name}>
-          <Link href={link} passHref>
-            <a href={link} target={target}>
-              {name}
-            </a>
-          </Link>
-        </span>
+        <Link href={link} passHref key={name}>
+          <a
+            href={link}
+            target={target}
+            className={router.pathname === link ? styles.active : ''}>
+            {name}
+          </a>
+        </Link>
       ))}
 
       <Button

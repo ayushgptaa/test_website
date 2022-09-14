@@ -13,7 +13,8 @@
   padding-top: 45px;
 
   button {
-    width: 150px;
+    min-width: 150px;
+    width: fit-content;
     height: 50px;
     margin: 0;
     font-size: 1rem;
@@ -132,6 +133,7 @@
     margin: 0;
     text-align: left;
     border-bottom: none;
+    flex-shrink: 0;
 
     h1 {
       font-weight: 700;
@@ -146,7 +148,8 @@
     }
 
     button {
-      width: 146px;
+      min-width: 146px;
+      width: fit-content;
       height: 48px;
       font-weight: 600;
       font-size: 15px;

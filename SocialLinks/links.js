@@ -7,6 +7,7 @@ export const SocialLinks = {
   FACEBOOK: 'https://www.facebook.com/0chain',
   GITHUB: 'https://github.com/0chain',
   YOUTUBE: 'https://www.youtube.com/c/0chain',
+  forum: 'https://discord.gg/SERDxv46',
 }
 
 export const whitepaperLinks = {

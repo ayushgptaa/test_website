@@ -5,8 +5,6 @@ import Button from 'components/Button'
 import Heading from 'components/Heading'
 import ContainerWithIcon from '../ContainerWithIcon'
 
-import { ImageAnimation, TextContainerAnimation } from '../AppsAnimations'
-
 import styles from './index.module.scss'
 
 const ChimneyBackground = () => {
@@ -21,15 +19,13 @@ const ChimneyBackground = () => {
 const ChimneyArt = () => {
   return (
     <div className={styles.chimneyArt}>
-      <ImageAnimation direction="">
-        <Image
-          src="/images/homePage/ChimneyInfo/chimneyArt.png"
-          alt="Chimney"
-          quality={100}
-          layout="fill"
-          priority
-        />
-      </ImageAnimation>
+      <Image
+        src="/images/homePage/ChimneyInfo/chimneyArt.png"
+        alt="Chimney"
+        quality={100}
+        layout="fill"
+        priority
+      />
     </div>
   )
 }
@@ -37,23 +33,20 @@ const ChimneyArt = () => {
 const TextContent = () => {
   return (
     <div className={styles.textContent}>
-      <TextContainerAnimation direction="">
-        <Heading text="Plug in & earn" Tag="h3" periodColor="#DF7ACF" />
-        <Paragraph>
-          Turn your spare storage into income. The Chimney app is an easy-to-use
-          service that will help you get your server running in just a few
-          clicks!
-        </Paragraph>
-        <div>
-          <Button
-            type="button"
-            text="Learn More"
-            transparent
-            black
-            link="/provide"
-          />
-        </div>
-      </TextContainerAnimation>
+      <Heading text="Plug in & earn" Tag="h3" periodColor="#DF7ACF" />
+      <Paragraph>
+        Turn your spare storage into income. The Chimney app is an easy-to-use
+        service that will help you get your server running in just a few clicks!
+      </Paragraph>
+      <div>
+        <Button
+          type="button"
+          text="Learn More"
+          transparent
+          black
+          link="/earn"
+        />
+      </div>
     </div>
   )
 }

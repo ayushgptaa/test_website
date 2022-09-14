@@ -5,11 +5,6 @@ import Heading from 'components/Heading'
 import IconContainer from 'components/IconContainer'
 import RewardsCalculator from './RewardsCalculator'
 
-import {
-  TextContainerAnimation,
-  ImageAnimation,
-} from '../../homepage/AppsAnimations'
-
 import styles from './index.module.scss'
 
 const ChimneyBackground = () => {
@@ -24,15 +19,13 @@ const ChimneyBackground = () => {
 const ChimneyArtMobile = () => {
   return (
     <div className={styles.chimneyArt}>
-      <ImageAnimation direction="">
-        <Image
-          src="/images/homePage/ChimneyInfo/chimneyArt.png"
-          alt="Chimney"
-          quality={100}
-          layout="fill"
-          priority
-        />
-      </ImageAnimation>
+      <Image
+        src="/images/homePage/ChimneyInfo/chimneyArt.png"
+        alt="Chimney"
+        quality={100}
+        layout="fill"
+        priority
+      />
     </div>
   )
 }
@@ -40,17 +33,13 @@ const ChimneyArtMobile = () => {
 const TextContent = () => {
   return (
     <div className={styles.textContent}>
-      <TextContainerAnimation direction="">
-        <Heading text="Plug in & earn" Tag="h3" periodColor="#DF7ACF" />
-        <Paragraph left className={styles.paragraph}>
-          Turn your spare storage into income. The Chimney app can get your
-          server up and running on Züs in just a few clicks.
-        </Paragraph>
-      </TextContainerAnimation>
+      <Heading text="Plug in & earn" Tag="h3" periodColor="#DF7ACF" />
+      <Paragraph left className={styles.paragraph}>
+        Turn your spare storage into income. The Chimney app can get your server
+        up and running on Züs in just a few clicks.
+      </Paragraph>
 
-      <TextContainerAnimation direction="">
-        <RewardsCalculator />
-      </TextContainerAnimation>
+      <RewardsCalculator />
     </div>
   )
 }

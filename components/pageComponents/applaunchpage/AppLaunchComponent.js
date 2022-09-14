@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import { useEffect } from 'react'
 import Image from 'next/image'
-import { Fade } from 'react-awesome-reveal'
 import clsx from 'clsx'
 
 import TopRightEllipse from 'components/TopRightEllipse'
@@ -48,18 +47,16 @@ const AppLaunchComponent = () => {
       <TopRightEllipse />
 
       <div className={styles.mainText}>
-        <Fade direction="up" cascade triggerOnce duration={1000}>
-          <Heading text="The app ecosystem" className={styles.headingDesktop} />
-          <Heading
-            text="Dive into then app ecosystem"
-            className={styles.headingMobile}
-          />
-          <Paragraph>See what’s possible on the Züs Cloud Network.</Paragraph>
-        </Fade>
+        <Heading text="The app ecosystem" className={styles.headingDesktop} />
+        <Heading
+          text="Dive into then app ecosystem"
+          className={styles.headingMobile}
+        />
+        <Paragraph>See what’s possible on the Züs Cloud Network.</Paragraph>
       </div>
 
-      <div className={styles.appLaunchContainer}>
-        <Fade direction="up" cascade triggerOnce duration={600} fraction={0.2}>
+      <div className={styles.appLaunchwrapper}>
+        <div className={styles.appLaunchContainer}>
           {applaunchData.map(
             (
               { icon, heading, text, btnText, btnTextSecondary, link },
@@ -105,7 +102,7 @@ const AppLaunchComponent = () => {
               </Link>
             )
           )}
-        </Fade>
+        </div>
       </div>
     </section>
   )

@@ -33,6 +33,7 @@ const TextContainerAnimation = ({ children, direction = 'up' }) => {
       triggerOnce
       fraction={0.5}
       duration={800}
+      damping={0.3}
       cascade>
       {children}
     </Fade>

@@ -1,16 +1,19 @@
 @use '/styles/mixins.scss' as *;
+@use '/styles/variables.scss' as *;
+
 @import 'include-media';
 
 .wrapper {
   @include flex-vertical-center(space-between);
-  gap: 60px;
+  gap: 40px;
 
-  span {
+  a {
     cursor: pointer;
     font-weight: 600;
     font-size: 16px;
     line-height: 16px;
     text-transform: capitalize;
+    padding: 10px;
   }
 
   button {
@@ -28,6 +31,10 @@
   }
 }
 
+.active {
+  color: $primary-blue;
+}
+
 @include media('<=tablet') {
   .wrapper {
     display: none;
@@ -36,6 +43,6 @@
 
 @include media('<1028px', '>tablet') {
   .wrapper {
-    gap: 35px;
+    gap: 20px;
   }
 }

@@ -11,8 +11,7 @@
   margin: 2rem auto;
   background: linear-gradient(96.94deg, #052948 -2.21%, #08174b 64.97%);
   border-radius: 16px;
-  overflow: hidden;
-  z-index: -1 !important;
+  z-index: 1;
 
   & > p {
     font-weight: 700;
@@ -22,7 +21,7 @@
     opacity: 0.8;
   }
 
-  h1 {
+  h3 {
     margin-top: 2rem;
   }
 }
@@ -50,6 +49,7 @@
   );
   bottom: 0;
   right: 0;
+  z-index: 2;
 }
 
 .secondaryContainer {
@@ -74,12 +74,13 @@
   .primaryContainer {
     position: relative;
     width: 96%;
+    max-width: 1200px;
     margin: 5rem auto 6rem;
     height: 600px;
     padding: 7rem 6rem;
     border-radius: 32px;
 
-    h1 {
+    h3 {
       font-weight: 600;
       font-size: 48px;
       line-height: 132%;
@@ -91,6 +92,7 @@
       width: 182px;
       height: 48px;
       padding: 12px 28px;
+      z-index: 9;
     }
   }
 

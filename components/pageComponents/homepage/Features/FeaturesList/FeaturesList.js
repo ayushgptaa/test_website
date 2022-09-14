@@ -13,10 +13,12 @@ const FeaturesList = ({ heading, text, img, buttonText, link }) => {
         <Image src={img} quality={100} layout="fill" priority />
       </div>
       <div className={styles.textContainer}>
-        <h3 className={styles.heading}>{heading}</h3>
-        <Paragraph>{text}</Paragraph>
+        <div>
+          <h3 className={styles.heading}>{heading}</h3>
+          <Paragraph>{text}</Paragraph>
+        </div>
+        <Button type="button" black text={buttonText} link={link} />
       </div>
-      <Button type="button" black text={buttonText} link={link} />
     </div>
   )
 }

@@ -5,8 +5,6 @@ import Button from 'components/Button'
 import Heading from 'components/Heading'
 import ContainerWithIcon from '../ContainerWithIcon'
 
-import { ImageAnimation, TextContainerAnimation } from '../AppsAnimations'
-
 import useGetScreenSize from 'hooks/useGetScreenSize'
 
 import styles from './index.module.scss'
@@ -23,14 +21,12 @@ const EllipseContainer = () => {
 const ChalkArtMobile = () => {
   return (
     <div className={styles.chalkArtMobile}>
-      <ImageAnimation direction="">
-        <Image
-          src="/images/homePage/ChalkInfo/chalkArtMobile.png"
-          alt="Chalk"
-          quality={100}
-          layout="fill"
-        />
-      </ImageAnimation>
+      <Image
+        src="/images/homePage/ChalkInfo/chalkArtMobile.png"
+        alt="Chalk"
+        quality={100}
+        layout="fill"
+      />
     </div>
   )
 }
@@ -38,16 +34,15 @@ const ChalkArtMobile = () => {
 const ChalkArtDesktop = () => {
   return (
     <div className={styles.chalkArtDesktop}>
-      <ImageAnimation direction="">
-        <Image
-          src="/images/homePage/ChalkInfo/chalkArtDesktop.png"
-          alt="Chalk"
-          quality={100}
-          layout="fixed"
-          height={550}
-          width={600}
-        />
-      </ImageAnimation>
+      <Image
+        src="/images/homePage/ChalkInfo/chalkArtDesktop.png"
+        alt="Chalk"
+        quality={100}
+        layout="fixed"
+        height={550}
+        width={600}
+        priority
+      />
     </div>
   )
 }
@@ -55,28 +50,20 @@ const ChalkArtDesktop = () => {
 const TextContainer = () => {
   return (
     <div className={styles.textContent}>
-      <TextContainerAnimation direction="">
-        <Heading
-          text="Taking NFTs to the next level"
-          Tag="h3"
-          periodColor="#F75A38"
-        />
-        <Paragraph>
-          The Chalk app brings groundbreaking features to NFT creators. By
-          leveraging Züs, creators will now enjoy codeless NFT minting without
-          upfront costs as well as permanent decentralized storage that will
-          never go offline
-        </Paragraph>
-        <div>
-          <Button
-            type="button"
-            text="Learn more"
-            transparent
-            black
-            link="/nft"
-          />
-        </div>
-      </TextContainerAnimation>
+      <Heading
+        text="Taking NFTs to the next level"
+        Tag="h3"
+        periodColor="#F75A38"
+      />
+      <Paragraph>
+        The Chalk app brings groundbreaking features to NFT creators. By
+        leveraging Züs, creators will now enjoy codeless NFT minting without
+        upfront costs as well as permanent decentralized storage that will never
+        go offline
+      </Paragraph>
+      <div>
+        <Button type="button" text="Learn more" transparent black link="/nft" />
+      </div>
     </div>
   )
 }

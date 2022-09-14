@@ -52,9 +52,12 @@ $breakpoints: (
 @include media('>tablet') {
   .vultArt {
     margin-top: calc(680px - 500px);
-    margin-left: -10%;
+    margin-left: -5%;
     height: 500px;
     width: 600px;
+    left: unset;
+    transform: unset;
+    flex-shrink: 0;
   }
 
   .ellipseContainer {
@@ -151,5 +154,9 @@ $breakpoints: (
       @include flex(center, flex-start);
       margin-top: 2rem;
     }
+  }
+
+  .ellipseTop {
+    top: 200px;
   }
 }

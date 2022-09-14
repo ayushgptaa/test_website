@@ -13,16 +13,17 @@
   opacity: 0.6;
   filter: blur(70px);
   transform: matrix(-1, 0, 0, 1, 0, 0);
-  z-index: -2;
+  z-index: -5;
 }
 
 @include media('>tablet') {
   .ellipseRight {
     width: 1265.5px;
     height: 1265.5px;
-    left: 385px;
+    left: unset;
+    right: -10%;
     top: -600px;
-    opacity: 0.5;
-    filter: blur(150px);
+    opacity: 0.45;
+    filter: blur(0px);
   }
 }

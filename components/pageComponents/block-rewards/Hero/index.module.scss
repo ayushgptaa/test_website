@@ -24,18 +24,13 @@
   }
 }
 
-.heroImgMobile {
+.heroImg {
   position: relative;
   width: 430px;
   height: 780px;
   left: 50%;
   transform: translateX(-50%);
   margin-top: -60px;
-}
-
-.heroImgDesktop {
-  display: none;
-  position: relative;
 }
 
 .blueContainers {
@@ -114,13 +109,8 @@
     }
   }
 
-  .heroImgMobile {
-    display: none;
-  }
-
-  .heroImgDesktop {
+  .heroImg {
     display: block;
-    margin: auto;
     width: 483px;
     height: 938px;
     z-index: 5;

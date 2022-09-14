@@ -1,5 +1,5 @@
 import Header from 'components/Header'
-import Hero from '/components/pageComponents/Delegation/Hero'
+import Hero from 'components/pageComponents/Delegation/Hero'
 import Info from 'components/pageComponents/Delegation/Info'
 import Footer from 'components/Footer'
 import PageContainer from 'components/PageContainer'

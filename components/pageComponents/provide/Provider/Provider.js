@@ -1,4 +1,3 @@
-import { Fade } from 'react-awesome-reveal'
 import Link from 'next/link'
 
 import Heading from 'components/Heading'
@@ -21,7 +20,7 @@ const providerData = [
     iconDesktop: '/images/provide/Provider/documentationDesktop.svg',
     heading: 'Documentation',
     text: 'Visit the 0Chain documentation for detailed guides and setup instructions.',
-    link: '',
+    link: 'https://docs.0chain.net/blobber',
   },
   {
     icon: '/images/provide/Provider/forum.svg',
@@ -38,45 +37,34 @@ const Provider = () => {
   return (
     <section className={styles.container}>
       <div className={styles.textContainer}>
-        <Fade direction="up" cascade duration={800} tiggerOnce>
-          <Heading
-            text="Service Providers Information"
-            Tag="h3"
-            withoutPeriod
-          />
-          <Paragraph className={styles.text}>
-            Have more questions you need help with? Reach out to us on the
-            channels below.
-          </Paragraph>
-        </Fade>
+        <Heading text="Service Providers Information" Tag="h3" withoutPeriod />
+        <Paragraph className={styles.text}>
+          Have more questions you need help with? Reach out to us on the
+          channels below.
+        </Paragraph>
       </div>
 
       <div className={styles.iconContainerWrapper}>
-        <Fade
-          direction="up"
-          triggerOnce
-          duration={800}
-          fraction={isMobile ? 0 : 0.5}
-          cascade>
-          {providerData.map(({ icon, iconDesktop, heading, text, link }) => (
-            <div className={styles.iconContainer} key={heading}>
-              <Link href={link}>
+        {providerData.map(({ icon, iconDesktop, heading, text, link }) => (
+          <Link href={link} passHref key={heading}>
+            <a href={link} target="_black">
+              <div className={styles.iconContainer} key={heading}>
                 <div className={styles.arrowIcon} />
-              </Link>
-              <div className={styles.icon}>
-                <Image
-                  src={isMobile ? icon : iconDesktop}
-                  alt={heading}
-                  height={80}
-                  width={80}
-                  layout="fixed"
-                />
+                <div className={styles.icon}>
+                  <Image
+                    src={isMobile ? icon : iconDesktop}
+                    alt={heading}
+                    height={80}
+                    width={80}
+                    layout="fixed"
+                  />
+                </div>
+                <h4>{heading}</h4>
+                <Paragraph>{text}</Paragraph>
               </div>
-              <h4>{heading}</h4>
-              <Paragraph>{text}</Paragraph>
-            </div>
-          ))}
-        </Fade>
+            </a>
+          </Link>
+        ))}
       </div>
     </section>
   )

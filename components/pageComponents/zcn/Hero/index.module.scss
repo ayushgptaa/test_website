@@ -6,6 +6,12 @@
 .container {
   position: relative;
   padding: 70px 0 50px 0;
+
+  button {
+    margin-top: 2rem;
+    width: 155px;
+    height: 48px;
+  }
 }
 
 .heroImg {
@@ -28,20 +34,13 @@
   }
 }
 
-.buttons {
-  @include flex-vertical-center(space-between);
-  gap: 20px;
-
-  button {
-    margin-top: 2rem;
-    width: 155px;
-    height: 48px;
-  }
-}
-
 @include media('>tablet') {
   .container {
     padding: 85px 0 150px 0;
+
+    button {
+      margin-top: 70px;
+    }
   }
 
   @-webkit-keyframes zoomOut {
@@ -68,10 +67,6 @@
     z-index: -9;
     pointer-events: none;
     animation: zoomOut 2.8s forwards;
-  }
-
-  .buttons {
-    margin-top: 70px;
   }
 
   .contentContainer {

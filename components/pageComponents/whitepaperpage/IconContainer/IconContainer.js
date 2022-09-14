@@ -8,7 +8,7 @@ import styles from './IconContainer.module.scss'
 const IconContainer = () => {
   return (
     <div className={styles.rootContainer}>
-      <Fade triggerOnce cascade direction="up" delay={500} duration={600}>
+      <Fade triggerOnce cascade duration={600}>
         {whitepaperData.map(({ icon, text, link }) => (
           <a
             href={link}

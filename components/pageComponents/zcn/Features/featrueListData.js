@@ -2,7 +2,7 @@ const featureListData = [
   {
     icon: '/images/zcn/Features/stacking.svg',
     buttonText: 'Staking',
-    link: '/stacking',
+    link: '/staking',
   },
   {
     icon: '/images/zcn/Features/blockRewards.svg',

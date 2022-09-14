@@ -8,15 +8,13 @@ import GetNotified from 'components/GetNotified'
 
 import styles from './Hero.module.scss'
 
-const targetDate = new Date('15 September, 2022').getTime()
+const targetDate = new Date('30 September, 2022').getTime()
 
 const Hero = () => {
   return (
     <main className={styles.container}>
-      <Fade duration={800} triggerOnce>
-        <div className={styles.heroBackground} />
-      </Fade>
-      <Fade cascade duration={800} damping={0.2} direction="up" triggerOnce>
+      <div className={styles.heroBackground} />
+      <Fade cascade duration={600} damping={0.2} direction="up" triggerOnce>
         <Heading text="Go beyond the cloud" />
         <CountDownTimer targetDate={targetDate} />
         <h4 className={styles.secondaryHeading}>

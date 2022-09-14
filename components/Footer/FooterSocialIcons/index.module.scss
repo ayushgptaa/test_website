@@ -6,7 +6,7 @@
 .rootContainer {
   border-top: $border-gray;
   border-bottom: $border-gray;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   @include flex-center;
   flex-wrap: wrap;
 }
@@ -31,6 +31,10 @@
 }
 
 @include media('>tablet') {
+  .rootContainer {
+    margin-top: 4rem;
+  }
+
   .bottomIcons {
     width: auto;
     display: block;

@@ -5,8 +5,6 @@ import Button from 'components/Button'
 import Heading from 'components/Heading'
 import ContainerWithIcon from '../ContainerWithIcon'
 
-import { ImageAnimation, TextContainerAnimation } from '../AppsAnimations'
-
 import styles from './index.module.scss'
 
 const BlimpBackground = () => {
@@ -21,15 +19,13 @@ const BlimpBackground = () => {
 const BlimpArt = () => {
   return (
     <div className={styles.blimpArt}>
-      <ImageAnimation direction="">
-        <Image
-          src="/images/homePage/BlimpInfo/blimpArt.png"
-          alt="Blimp"
-          quality={100}
-          layout="fill"
-          priority
-        />
-      </ImageAnimation>
+      <Image
+        src="/images/homePage/BlimpInfo/blimpArt.png"
+        alt="Blimp"
+        quality={100}
+        layout="fill"
+        priority
+      />
     </div>
   )
 }
@@ -37,19 +33,17 @@ const BlimpArt = () => {
 const TextContainer = () => {
   return (
     <div className={styles.textContent}>
-      <TextContainerAnimation direction="">
-        <Heading text="An incentive to scale" Tag="h3" periodColor="#2EB5DF" />
-        <Paragraph>
-          The Züs Cloud Network ($ZCN) is an incentivizing crypto-economic model
-          that rewards network growth. As more data is stored on the network,
-          stakeholders are rewarded with an increase in their token holdings and
-          have greater incentive to help fuel its continued development through
-          staking.
-        </Paragraph>
-        <div>
-          <Button type="button" text="Token Economics" transparent black />
-        </div>
-      </TextContainerAnimation>
+      <Heading text="An incentive to scale" Tag="h3" periodColor="#2EB5DF" />
+      <Paragraph>
+        The Züs Cloud Network ($ZCN) is an incentivizing crypto-economic model
+        that rewards network growth. As more data is stored on the network,
+        stakeholders are rewarded with an increase in their token holdings and
+        have greater incentive to help fuel its continued development through
+        staking.
+      </Paragraph>
+      <div>
+        <Button type="button" text="Token Economics" transparent black />
+      </div>
     </div>
   )
 }

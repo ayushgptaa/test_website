@@ -5,6 +5,7 @@
 
 .rootContainer {
   margin-top: 60px;
+  text-align: left;
 
   h5 {
     font-weight: 700;
@@ -12,15 +13,16 @@
     line-height: 15px;
     letter-spacing: 0.1em;
     color: $grey-4;
-    padding-bottom: 20px;
     border-bottom: $border-gray;
+    padding: 0 50px 20px;
   }
 }
 
 .productWrapper {
-  @include flex-center;
+  @include flex-vertical-center(flex-start);
   margin-top: 20px;
   gap: 20px;
+  padding: 0 30px;
 
   p {
     font-weight: 600;
@@ -33,9 +35,11 @@
 @include media('>tablet') {
   .rootContainer {
     margin: 0;
+    width: 135px;
 
     h5 {
       border-bottom: none;
+      padding: 0;
     }
 
     & > div:first-child {
@@ -47,5 +51,6 @@
     justify-content: flex-start;
     margin-top: 10px;
     gap: 15px;
+    padding: 0;
   }
 }
