@@ -1,0 +1,62 @@
+@use '/styles/mixins.scss' as *;
+@use '/styles/variables.scss' as *;
+
+@import 'include-media';
+
+.rootContainer {
+  position: relative;
+  padding: 4rem 0rem 0;
+}
+
+.heroBackground {
+  @include background-image(
+    '/images/About/Hero/heroBackground.png',
+    center center,
+    cover,
+    100%,
+    100%
+  );
+  @include inset;
+}
+
+.textContent {
+  width: $mobile-width;
+  margin: auto;
+  text-align: center;
+
+  p {
+    margin-top: 2rem;
+    font-size: 14px;
+  }
+}
+
+.deviceImages {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  height: 360px;
+  width: 864px;
+  aspect-ratio: 12/5;
+}
+
+@include media('>tablet') {
+  .rootContainer {
+    padding: 5rem 0 0;
+  }
+
+  .textContent {
+    width: 764px;
+
+    p {
+      font-size: 18px;
+      width: 575px;
+      margin: 2rem auto 0;
+    }
+  }
+
+  .deviceImages {
+    height: 500px;
+    width: 1200px;
+    aspect-ratio: 2913/1214;
+  }
+}
