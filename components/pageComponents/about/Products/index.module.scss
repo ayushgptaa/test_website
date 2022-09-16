@@ -15,14 +15,17 @@
 }
 
 .products {
-  margin-top: 30px;
+  margin-top: 70px;
+  text-align: center;
+  @include mixins.flex-center-column;
+  gap: 25px;
 }
 
 .productWrapper {
   @include mixins.flex-center;
-  margin-top: 40px;
-  gap: 14px;
-  padding: 0 30px;
+  gap: 18px;
+  padding: 5px 20px;
+  width: fit-content;
 
   p {
     font-weight: 600;
@@ -38,7 +41,7 @@
   }
 
   .products {
-    @include mixins.flex-center;
+    flex-direction: row;
     gap: 65px;
     margin-top: 50px;
   }
@@ -46,5 +49,11 @@
   .productWrapper {
     margin-top: 0;
     padding: 0;
+    padding: 10px 20px;
+
+    &:hover {
+      outline: variables.$border-gray;
+      border-radius: 8px;
+    }
   }
 }
