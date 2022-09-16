@@ -1,0 +1,52 @@
+@use '/styles/variables.scss';
+@use '/styles/mixins.scss';
+
+@import 'include-media';
+
+.rootContainer {
+  padding: 20px 0 60px;
+}
+
+.messageContainer {
+  max-width: 350px;
+  margin: 40px auto 0;
+}
+
+.heading {
+  color: variables.$grey-3;
+  font-size: 14px;
+}
+
+.keywords {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  margin-top: 10px;
+  @include mixins.flex-center;
+  gap: 3px;
+}
+
+@include media('>tablet') {
+  .rootContainer {
+    padding: 70px 0 50px;
+    @include mixins.flex(space-between, flex-start);
+    max-width: 1100px;
+    margin: auto;
+    flex-wrap: wrap;
+  }
+
+  .messageContainer {
+    max-width: 184px;
+    margin: 0;
+  }
+
+  .heading {
+    text-align: left;
+  }
+
+  .keywords {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}

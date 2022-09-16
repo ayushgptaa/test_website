@@ -1,0 +1,50 @@
+@use '/styles/mixins.scss';
+@use '/styles/variables.scss';
+
+@import 'include-media';
+
+.rootContainer {
+  padding: 50px 0 80px;
+  text-align: center;
+  border-top: variables.$border-gray;
+
+  h5 {
+    font-size: 28px;
+    line-height: 115%;
+  }
+}
+
+.products {
+  margin-top: 30px;
+}
+
+.productWrapper {
+  @include mixins.flex-center;
+  margin-top: 40px;
+  gap: 14px;
+  padding: 0 30px;
+
+  p {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 160%;
+    color: variables.$grey-2;
+  }
+}
+
+@include media('>tablet') {
+  .rootContainer {
+    margin: 0;
+  }
+
+  .products {
+    @include mixins.flex-center;
+    gap: 65px;
+    margin-top: 50px;
+  }
+
+  .productWrapper {
+    margin-top: 0;
+    padding: 0;
+  }
+}

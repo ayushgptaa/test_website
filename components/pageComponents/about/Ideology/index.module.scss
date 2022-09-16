@@ -7,11 +7,11 @@
   position: relative;
   padding: 70px 0;
   background: rgba(7, 24, 73, 0.2);
-  box-shadow: inset 0px -1px 0px rgba(142, 142, 142, 0.3);
   backdrop-filter: blur(50px);
   text-align: center;
   margin-top: -4rem;
   z-index: 2;
+  border-bottom: variables.$border-gray;
 }
 
 .textContent {
