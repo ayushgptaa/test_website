@@ -1,0 +1,134 @@
+@use '/styles/mixins';
+@use '/styles/variables';
+
+@import 'include-media';
+
+.rootContainer {
+  position: relative;
+  border-top: variables.$border-gray;
+  padding: 60px 0;
+  background: url('/images/About/Features/backgroundPattern.svg') no-repeat;
+  background-position: center 70px;
+  background-size: 816px;
+}
+
+.sectionContent {
+  padding-top: 140px;
+}
+
+.sectionImage {
+  position: relative;
+  width: 250.23px;
+  height: 173.12px;
+  margin: auto;
+}
+
+.textContent {
+  max-width: 350px;
+  margin: auto;
+  margin-top: 40px;
+  text-align: center;
+
+  h4 {
+    font-size: 28px;
+    line-height: 115%;
+  }
+
+  p {
+    margin-top: 2rem;
+  }
+
+  button {
+    width: fit-content;
+    background: #fff;
+    color: variables.$grey-7;
+    margin-top: 2rem;
+  }
+}
+
+.featuresContainer {
+  max-width: 85%;
+  border-top: variables.$border-gray;
+  margin: 60px auto 0;
+  padding-top: 60px;
+  @include mixins.flex-center-column;
+  gap: 60px;
+}
+
+.features {
+  h5 {
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 125%;
+  }
+
+  p {
+    font-size: 14px;
+    color: variables.$grey-3;
+    margin-top: 12px;
+  }
+}
+
+@include media('>tablet') {
+  .rootContainer {
+    padding: 120px 0 300px;
+    background-position: center 120px;
+  }
+
+  .sectionContent {
+    max-width: 1000px;
+    @include mixins.flex(center, flex-start);
+    margin: auto;
+    padding: 60px 0 0;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+
+  .sectionImage {
+    width: 444px;
+    height: 289px;
+    margin: 0;
+  }
+
+  .textContent {
+    text-align: left;
+    max-width: 450px;
+    margin: 0;
+
+    h4 {
+      font-size: 54px;
+      line-height: 110%;
+      width: 500px;
+    }
+
+    p {
+      text-align: left;
+    }
+
+    button {
+      margin: 2rem 0 0;
+    }
+  }
+
+  .featuresContainer {
+    flex-direction: row;
+    max-width: 1000px;
+    margin: 66px auto 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .features {
+    max-width: 293px;
+  }
+}
+
+@include media('>942px') {
+  .sectionContent {
+    justify-content: space-between;
+  }
+
+  .sectionImage {
+    order: 1;
+  }
+}
