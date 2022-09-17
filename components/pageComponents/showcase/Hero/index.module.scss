@@ -49,7 +49,7 @@
 .videoBottomText {
   position: absolute;
   @include center-horizontal;
-  bottom: -60px;
+  bottom: 20px;
   font-style: normal;
   color: $grey-2;
   z-index: 2;
@@ -60,7 +60,7 @@
   span {
     display: block;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 160%;
 
     a {
@@ -75,7 +75,7 @@
   max-width: 374px;
   width: 90%;
   margin: auto;
-  bottom: 50px;
+  bottom: 100px;
   z-index: 2;
 }
 

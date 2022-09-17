@@ -1,0 +1,47 @@
+@use '/styles/mixins';
+@use '/styles/variables';
+
+@import 'include-media';
+
+.rootContainer {
+  position: relative;
+  padding: 60px 0;
+  text-align: center;
+  background: #000;
+  border-top: variables.$border-gray;
+
+  h3 {
+    font-size: 24px;
+    padding: 30px 20px;
+    z-index: 2;
+  }
+}
+
+@include media('>tablet') {
+  .rootContainer {
+    padding: 15rem 0 6rem;
+
+    h3 {
+      padding: 0;
+      font-size: 36px;
+      width: 80%;
+      margin: auto;
+      margin-top: -10rem;
+    }
+  }
+
+  .mainContainer {
+    position: relative;
+    max-width: 900px;
+    height: 450px;
+    width: 85%;
+    margin: auto;
+    border-radius: 40px;
+    background: #030819;
+
+    & > div:nth-child(2) {
+      @include mixins.center-horizontal;
+      top: -200px;
+    }
+  }
+}

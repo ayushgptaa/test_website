@@ -1,0 +1,163 @@
+@use '/styles/variables.scss';
+@use '/styles/mixins.scss';
+
+@import 'include-media';
+
+.rootContainer {
+  position: relative;
+  text-align: center;
+  padding: 40px 0px;
+  border-top: variables.$border-gray;
+  background: #000;
+}
+
+.mainHeading {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
+  margin-top: 10px;
+  padding-bottom: 40px;
+  width: 327px;
+  margin: auto;
+}
+
+.features {
+  padding: 30px 20px;
+  border-top: variables.$border-gray;
+
+  h4 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+  }
+
+  p {
+    width: 314px;
+    margin: auto;
+    margin-top: 12px;
+    font-size: 16px;
+    line-height: 142%;
+  }
+}
+
+.elaborateFeatureContainer {
+  padding: 60px 20px;
+  border-top: variables.$border-gray;
+  background: #000;
+}
+
+.elaborateFeatureImg {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 750/397;
+}
+
+.elaborateFeatureTextContent {
+  text-align: center;
+}
+
+.elaborateFeatureTextContent {
+  h4 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 125%;
+    margin-top: 2rem;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 160%;
+    margin-top: 20px;
+    padding: 0;
+  }
+}
+
+@include media('>tablet') {
+  .rootContainer {
+    margin-top: 0;
+    padding-bottom: 0;
+  }
+
+  .mainHeading {
+    font-size: 42px;
+    line-height: 110%;
+    padding-bottom: 60px;
+    max-width: 1000px;
+    width: 80%;
+    margin: 16px auto 0;
+  }
+
+  .featuresList {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    border: variables.$border-gray;
+    height: auto;
+  }
+
+  .features {
+    border-left: variables.$border-gray;
+    border-top: none;
+    padding: 40px 20px 40px;
+
+    p {
+      width: 250px;
+    }
+  }
+
+  .featuresList {
+    div:last-child {
+      border-right: variables.$border-gray;
+    }
+  }
+}
+
+@include media('>1050px') {
+  .elaborateFeatureContainer {
+    padding: 90px auto;
+    overflow: hidden;
+  }
+
+  .elaborateFeature {
+    position: relative;
+    @include mixins.flex-center;
+    justify-content: space-between;
+    gap: 50px;
+    height: 533px;
+    width: 1000px;
+    margin: auto;
+  }
+
+  .elaborateFeatureTextContent {
+    max-width: 380px;
+    text-align: left;
+    flex-shrink: 0;
+  }
+
+  .elaborateFeatureTextContent {
+    h4 {
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .elaborateFeatureImg {
+    order: 1;
+    height: 480px;
+    margin: 0;
+  }
+
+  .elaborateFeatureImg {
+    img {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      max-width: 907px;
+      width: auto;
+    }
+  }
+}

@@ -8,7 +8,7 @@ import BulletText from 'components/BulletText'
 
 import styles from './index.module.scss'
 
-const ShowcaseBackground = () => {
+export const ShowcaseBackground = () => {
   return (
     <div className={styles.ellipseContainer}>
       <div className={styles.ellipseLeft}></div>
@@ -17,7 +17,7 @@ const ShowcaseBackground = () => {
   )
 }
 
-const ShowcaseArt = () => {
+export const ShowcaseArt = () => {
   return (
     <div className={styles.showcaseArt}>
       <Image
