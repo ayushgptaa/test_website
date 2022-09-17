@@ -74,6 +74,8 @@ const Features = () => {
             quality={100}
             layout="fill"
             priority
+            sizes="(max-width: 768px) 150vw,
+            50vw"
           />
         </div>
 

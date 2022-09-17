@@ -46,6 +46,8 @@ const Hero = () => {
           layout="fill"
           quality={100}
           priority
+          sizes="(max-width: 768px) 200vw,
+          50vw"
         />
       </div>
 
