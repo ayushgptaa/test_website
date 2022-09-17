@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from 'next/future/image'
 
 import Heading from 'components/Heading'
 import Paragraph from 'components/Paragraph'
@@ -22,7 +22,7 @@ const AppMigration = () => {
             }
             alt="migrate any app"
             quality={100}
-            layout="fill"
+            fill
             priority
           />
         </div>
