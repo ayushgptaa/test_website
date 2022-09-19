@@ -18,7 +18,7 @@ const AppMigration = () => {
             src={
               isMobile
                 ? `/images/buildPage/Features/laptopImgMobile.png`
-                : `/images/buildPage/Features/laptopImgDesktop.png`
+                : `/images/buildPage/Features/laptopImg.png`
             }
             alt="migrate any app"
             quality={100}
