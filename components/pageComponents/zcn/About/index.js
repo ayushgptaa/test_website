@@ -24,7 +24,7 @@ const About = () => {
       <div className={styles.moreInfo}>
         <div className={styles.imgContainer}>
           <Image
-            src="/images/zcn/About/lockedZcn.png"
+            src="/images/nft/Features/img2.png"
             alt="ZCN"
             layout="fill"
             quality={80}

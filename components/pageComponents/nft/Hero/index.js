@@ -1,4 +1,3 @@
-import { Fade } from 'react-awesome-reveal'
 import Image from 'next/image'
 
 import Button from 'components/Button'
@@ -29,18 +28,18 @@ const Hero = () => {
         </div>
       </div>
 
-      <Fade duration={600} triggerOnce>
-        <div className={styles.mainImg}>
-          <Image
-            src="/images/nft/Hero/mainImage.png"
-            alt="Permanent Storage for NFTs"
-            layout="fill"
-            objectFit="cover"
-            quality={100}
-            priority
-          />
-        </div>
-      </Fade>
+      <div className={styles.mainImg}>
+        <Image
+          src="/images/nft/Hero/mainImage.png"
+          alt="Permanent Storage for NFTs"
+          layout="fill"
+          objectFit="cover"
+          quality={80}
+          priority
+          sizes="(max-width : 786px) 100vw,
+          50vw"
+        />
+      </div>
     </main>
   )
 }
