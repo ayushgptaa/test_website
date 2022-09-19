@@ -24,7 +24,6 @@ const ChimneyArt = () => {
         alt="Chimney"
         quality={100}
         layout="fill"
-        priority
       />
     </div>
   )

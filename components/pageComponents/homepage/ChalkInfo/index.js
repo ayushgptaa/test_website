@@ -41,7 +41,6 @@ const ChalkArtDesktop = () => {
         layout="fixed"
         height={550}
         width={600}
-        priority
       />
     </div>
   )

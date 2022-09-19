@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import PropTypes from 'prop-types'
 import clsx from 'clsx'
-import { Fade } from 'react-awesome-reveal'
 
 import styles from './index.module.scss'
 
@@ -25,15 +24,13 @@ const ContainerWithIcon = ({
         )}>
         {logo && (
           <div className={styles.logo}>
-            <Fade triggerOnce duration={1000}>
-              <Image
-                src={logo}
-                alt={alt}
-                layout="fixed"
-                width={width}
-                height={height}
-              />
-            </Fade>
+            <Image
+              src={logo}
+              alt={alt}
+              layout="fixed"
+              width={width}
+              height={height}
+            />
           </div>
         )}
         {children}

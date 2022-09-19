@@ -24,7 +24,6 @@ const BlimpArt = () => {
         alt="Blimp"
         quality={100}
         layout="fill"
-        priority
       />
     </div>
   )

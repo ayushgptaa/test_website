@@ -16,7 +16,6 @@ const VultArt = () => {
         alt="Vult"
         quality={100}
         layout="fill"
-        priority
       />
     </div>
   )
