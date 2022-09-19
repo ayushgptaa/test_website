@@ -27,7 +27,7 @@ const Features = () => {
       <div className={styles.sectionContent}>
         <div className={styles.sectionImage}>
           <Image
-            src="/images/About/Features/foldersImg.svg"
+            src="/images/About/Features/foldersImg.png"
             alt="Geographically diversified storage with wide adoption"
             quality={100}
             fill
