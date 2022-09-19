@@ -19,7 +19,7 @@ const Hero = () => {
       </div>
       <div className={styles.deviceImages}>
         <Image
-          src="/images/About/Hero/phonesArt.png"
+          src="/images/About/Hero/phonesArtnew.png"
           alt="Zus app Ecosystem"
           quality={100}
           fill

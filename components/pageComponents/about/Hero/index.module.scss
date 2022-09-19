@@ -32,10 +32,10 @@
 
 .deviceImages {
   position: relative;
-  left: 50%;
+  left: 34%;
   transform: translate(-50%);
-  height: 360px;
-  width: 864px;
+  width: 1126px;
+  height: 355px;
   aspect-ratio: 12/5;
   z-index: 2;
 }
@@ -56,8 +56,8 @@
   }
 
   .deviceImages {
-    height: 500px;
-    width: 1200px;
-    aspect-ratio: 2913/1214;
+    width: 1550px;
+    height: 480px;
+    left: 45%;
   }
 }
