@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from 'next/future/image'
 
 import Heading from 'components/Heading'
 import Paragraph from 'components/Paragraph'
@@ -18,11 +18,11 @@ const AppMigration = () => {
             src={
               isMobile
                 ? `/images/buildPage/Features/laptopImgMobile.png`
-                : `/images/buildPage/Features/laptopImgDesktop.png`
+                : `/images/buildPage/Features/laptopImg.png`
             }
             alt="migrate any app"
             quality={100}
-            layout="fill"
+            fill
             priority
           />
         </div>

@@ -110,16 +110,13 @@
 
   .blueBgImg {
     display: block;
-    @include background-image(
-      '/images/store/blueBgImg.png',
-      top left,
-      cover,
-      375px,
-      565px
-    );
+    position: absolute;
+    height: 375px;
+    width: 565px;
     left: 85vw;
     top: -20px;
     opacity: 0.5;
+    z-index: -9;
   }
 
   .bgTexture {

@@ -1,3 +1,5 @@
+import Image from 'next/future/image'
+
 import WorkStep from './WorkStep'
 import Paragraph from 'components/Paragraph'
 
@@ -18,7 +20,16 @@ const Work = () => {
     <div className={styles.rootContainer}>
       <BgElements />
       <section className={styles.textContainerwrapper}>
-        <div className={styles.blueBgImg} />
+        <div className={styles.blueBgImg}>
+          <Image
+            src="/images/store/blueBgImg.png"
+            alt="blue background"
+            quality={80}
+            height={375}
+            width={565}
+            priority
+          />
+        </div>
         <div className={styles.textContainer}>
           <h3 className={styles.heading}>How Does it Work?</h3>
           <Paragraph>

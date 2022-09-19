@@ -64,7 +64,6 @@ const Features = () => {
             alt="zcn-cap-graph"
             layout="fill"
             quality={100}
-            priority
           />
         </div>
 

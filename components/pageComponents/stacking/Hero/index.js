@@ -31,6 +31,7 @@ const Hero = () => {
               quality={100}
               layout="fill"
               priority
+              sizes="50vw"
             />
           </div>
 
@@ -41,6 +42,7 @@ const Hero = () => {
               quality={100}
               layout="fill"
               priority
+              sizes="50vw"
             />
           </div>
 
@@ -66,6 +68,7 @@ const Hero = () => {
             height={500}
             layout="responsive"
             priority
+            sizes="50vw"
           />
         </div>
       )}

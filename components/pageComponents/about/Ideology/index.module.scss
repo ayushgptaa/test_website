@@ -1,0 +1,74 @@
+@use '/styles/variables.scss';
+@use '/styles/mixins.scss';
+
+@import 'include-media';
+
+.rootContainer {
+  position: relative;
+  padding: 70px 0;
+  background: rgba(7, 24, 73, 0.2);
+  backdrop-filter: blur(50px);
+  text-align: center;
+  margin-top: -4rem;
+  z-index: 2;
+  border-bottom: variables.$border-gray;
+}
+
+.textContent {
+  padding: 0 30px;
+
+  p {
+    font-size: 16px;
+    line-height: 160%;
+    font-style: italic;
+    color: variables.$grey-3;
+  }
+
+  h4 {
+    font-size: 22px;
+    line-height: 125%;
+    margin-top: 30px;
+  }
+}
+
+.logoContainer {
+  position: relative;
+  width: 192.16px;
+  height: 192.16px;
+  border-radius: 50%;
+  @include mixins.flex-center;
+  margin: auto;
+}
+
+.background {
+  @include mixins.background-image(
+    '/images/About/Idealogy/background.svg',
+    center center,
+    cover,
+    100%,
+    100%
+  );
+
+  @include mixins.inset;
+}
+
+@include media('>tablet') {
+  .rootContainer {
+    padding: 90px 0 50px;
+    margin-top: -5rem;
+  }
+
+  .textContent {
+    max-width: 750px;
+    margin: auto;
+    padding: 0;
+
+    p {
+      font-size: 20px;
+    }
+
+    h4 {
+      font-size: 28px;
+    }
+  }
+}

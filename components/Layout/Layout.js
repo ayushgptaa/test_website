@@ -11,7 +11,7 @@ const Layout = ({ title }) => {
       <title>{title}</title>
 
       {/* Favicons */}
-      <link rel="icon" href="favicons/favicon.ico" />
+      <link rel="icon" href="/favicons/favicon.ico" />
       <link
         rel="apple-touch-icon"
         sizes="76x76"

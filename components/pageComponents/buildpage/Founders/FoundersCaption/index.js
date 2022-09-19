@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { Fade } from 'react-awesome-reveal'
 
 import styles from './index.module.scss'
 
@@ -28,25 +27,23 @@ const data = [
 const FoundersCaption = () => (
   <div className={styles.container}>
     {data.map(({ name, role, description, work, signature, height, width }) => (
-      <Fade direction="up" cascade triggerOnce duration={600} key={name}>
-        <div className={styles.details}>
-          <div>
-            <h4 className={styles.name}>{name}</h4>
-            <p className={styles.role}>{role}</p>
-            <p className={styles.description}>{description}</p>
-            <p className={styles.work}>{work}</p>
-          </div>
-
-          <Image
-            src={signature}
-            alt={name}
-            layout="fixed"
-            height={height}
-            width={width}
-            quality={100}
-          />
+      <div className={styles.details} key={name}>
+        <div>
+          <h4 className={styles.name}>{name}</h4>
+          <p className={styles.role}>{role}</p>
+          <p className={styles.description}>{description}</p>
+          <p className={styles.work}>{work}</p>
         </div>
-      </Fade>
+
+        <Image
+          src={signature}
+          alt={name}
+          layout="fixed"
+          height={height}
+          width={width}
+          quality={100}
+        />
+      </div>
     ))}
   </div>
 )

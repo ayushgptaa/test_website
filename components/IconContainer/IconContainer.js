@@ -11,6 +11,7 @@ const IconContainer = ({ img, alt, height, width, layout = '', ...rest }) => {
       width={width}
       layout={layout}
       {...rest}
+      priority
     />
   )
 }

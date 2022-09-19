@@ -1,0 +1,59 @@
+@use '/styles/mixins.scss';
+@use '/styles/variables.scss';
+
+@import 'include-media';
+
+.rootContainer {
+  padding: 50px 0 80px;
+  text-align: center;
+  border-top: variables.$border-gray;
+
+  h5 {
+    font-size: 28px;
+    line-height: 115%;
+  }
+}
+
+.products {
+  margin-top: 70px;
+  text-align: center;
+  @include mixins.flex-center-column;
+  gap: 25px;
+}
+
+.productWrapper {
+  @include mixins.flex-center;
+  gap: 18px;
+  padding: 5px 20px;
+  width: fit-content;
+
+  p {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 160%;
+    color: variables.$grey-2;
+  }
+}
+
+@include media('>tablet') {
+  .rootContainer {
+    margin: 0;
+  }
+
+  .products {
+    flex-direction: row;
+    gap: 65px;
+    margin-top: 50px;
+  }
+
+  .productWrapper {
+    margin-top: 0;
+    padding: 0;
+    padding: 10px 20px;
+
+    &:hover {
+      outline: variables.$border-gray;
+      border-radius: 8px;
+    }
+  }
+}

@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { Fade } from 'react-awesome-reveal'
 
 import Heading from 'components/Heading'
 import Paragraph from 'components/Paragraph'
@@ -18,21 +17,21 @@ const Info = () => {
     <section className={styles.rootContainer}>
       <div className={styles.container1}>
         <Heading text="How It Works" Tag="h3" />
-        <Fade duration={600} cascade triggerOnce>
-          <div className={styles.container1Img}>
-            <Image
-              src={
-                isMobile
-                  ? '/images/delegation/Info/blobberImgMobile.png'
-                  : '/images/delegation/Info/blobberImgDesktop.png'
-              }
-              alt="Blobber Delegation"
-              qualtiy={100}
-              layout="fill"
-              priority
-            />
-          </div>
-        </Fade>
+        <div className={styles.container1Img}>
+          <Image
+            src={
+              isMobile
+                ? '/images/delegation/Info/blobberImgMobile.png'
+                : '/images/delegation/Info/blobberImgDesktop.png'
+            }
+            alt="Blobber Delegation"
+            qualtiy={100}
+            layout="fill"
+            priority
+            sizes="(min-width: 768px) 50vw,
+              100vw"
+          />
+        </div>
 
         <div className={styles.container1Text}>
           <h5 className={styles.purpleText}>How it Works</h5>
@@ -62,21 +61,20 @@ const Info = () => {
           </Paragraph>
         </div>
 
-        <Fade duration={600} cascade triggerOnce>
-          <div className={styles.container2Img}>
-            <Image
-              src={
-                isMobile
-                  ? '/images/delegation/Info/minerImgMobile.png'
-                  : '/images/delegation/Info/minerImgDesktop.png'
-              }
-              alt="Miner & Sharder Delegation"
-              qualtiy={100}
-              layout="fill"
-              priority
-            />
-          </div>
-        </Fade>
+        <div className={styles.container2Img}>
+          <Image
+            src={
+              isMobile
+                ? '/images/delegation/Info/minerImgMobile.png'
+                : '/images/delegation/Info/minerImgDesktop.png'
+            }
+            alt="Miner & Sharder Delegation"
+            qualtiy={100}
+            layout="fill"
+            priority
+            sizes="50vw"
+          />
+        </div>
 
         <div className={styles.tools}>
           <Heading text="Delegation Tools" withoutPeriod Tag="h4" />

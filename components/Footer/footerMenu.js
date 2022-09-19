@@ -11,7 +11,7 @@ const footerMenu = [
         target: '_blank',
       },
       { name: 'Whitepapers', link: '/whitepapers' },
-      { name: 'Team', link: '/about' },
+      { name: 'About', link: '/about' },
       { name: 'ZCN', link: '/defi' },
       {
         name: 'Blog',
