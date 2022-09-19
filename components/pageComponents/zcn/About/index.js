@@ -28,7 +28,6 @@ const About = () => {
             alt="ZCN"
             layout="fill"
             quality={80}
-            priority
           />
         </div>
 
