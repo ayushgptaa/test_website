@@ -1,4 +1,5 @@
-import Image from 'next/future/image'
+/* eslint-disable @next/next/no-img-element */
+// import Image from 'next/image'
 
 import Heading from 'components/Heading'
 import Paragraph from 'components/Paragraph'
@@ -14,16 +15,13 @@ const AppMigration = () => {
     <section className={styles.mainFeatureWrapper}>
       <div className={styles.mainFeature}>
         <div className={styles.laptopImgContainer}>
-          <Image
+          <img
             src={
               isMobile
                 ? `/images/buildPage/Features/laptopImgMobile.png`
                 : `/images/buildPage/Features/laptopImg.png`
             }
-            alt="migrate any app"
-            quality={100}
-            fill
-            priority
+            alt="Migrate any app"
           />
         </div>
 
