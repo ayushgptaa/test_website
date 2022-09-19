@@ -25,7 +25,6 @@ const Work = () => {
             src="/images/store/blueBgImg.png"
             alt="blue background"
             quality={80}
-            fixed
             height={375}
             width={565}
             priority

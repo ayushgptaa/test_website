@@ -27,7 +27,7 @@ const About = () => {
             src="/images/zcn/About/lockedZcn.png"
             alt="ZCN"
             layout="fill"
-            quality={100}
+            quality={80}
             priority
           />
         </div>
