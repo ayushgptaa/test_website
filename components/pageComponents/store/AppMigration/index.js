@@ -1,5 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
-// import Image from 'next/image'
+import Image from 'next/future/image'
 
 import Heading from 'components/Heading'
 import Paragraph from 'components/Paragraph'
@@ -14,16 +13,31 @@ const AppMigration = () => {
   return (
     <section className={styles.mainFeatureWrapper}>
       <div className={styles.mainFeature}>
-        <div className={styles.laptopImgContainer}>
-          <img
-            src={
-              isMobile
-                ? `/images/buildPage/Features/laptopImgMobile.png`
-                : `/images/buildPage/Features/laptopImg.png`
-            }
-            alt="Migrate any app"
-          />
-        </div>
+        {isMobile && (
+          <div className={styles.mobileImgContainer}>
+            <Image
+              src="/images/buildPage/Features/laptopImgMobile.png"
+              alt="Migrate any app"
+              fixed
+              height={390}
+              width={425}
+              quality={100}
+            />
+          </div>
+        )}
+
+        {!isMobile && (
+          <div className={styles.laptopImgContainer}>
+            <Image
+              src="/images/buildPage/Features/laptopImg.png"
+              alt="Migrate any app"
+              fixed
+              width={1080}
+              height={930}
+              quality={100}
+            />
+          </div>
+        )}
 
         <div className={styles.textContainer}>
           <Heading text="Migrate Any App" Tag="h3" />

@@ -37,12 +37,11 @@
   }
 }
 
-.laptopImgContainer {
-  position: relative;
-  height: 390px;
-  width: 425px;
-  left: 50%;
-  transform: translateX(-50%);
+.mobileImgContainer {
+  & > img {
+    position: relative;
+    @include center-horizontal;
+  }
 }
 
 @include media('>880px') {
@@ -64,14 +63,10 @@
   }
 
   .laptopImgContainer {
-    position: absolute;
-    width: 1080px;
-    height: 930px;
-    transform: none;
-    left: 480px;
-    bottom: -305px;
-    transform: none;
-    // right: -10%;
+    position: relative;
+    order: 1;
+    bottom: -120px;
+    left: -200px;
   }
 
   .textContainer {
@@ -79,6 +74,7 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    flex-shrink: 0;
     margin-left: 8rem;
 
     h3 {
