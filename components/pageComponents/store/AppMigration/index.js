@@ -22,6 +22,7 @@ const AppMigration = () => {
               height={390}
               width={425}
               quality={100}
+              priority
             />
           </div>
         )}
@@ -35,6 +36,7 @@ const AppMigration = () => {
               width={1080}
               height={930}
               quality={100}
+              priority
             />
           </div>
         )}

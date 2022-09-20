@@ -31,7 +31,6 @@
 
 .ellipseRight,
 .ellipseLeft,
-.bgTexture,
 .blueBgImg {
   display: none;
 }
@@ -117,19 +116,6 @@
     top: -20px;
     opacity: 0.5;
     z-index: -9;
-  }
-
-  .bgTexture {
-    display: block;
-    @include background-image(
-      '/images/store/bgTexture.png',
-      top left,
-      cover,
-      337px,
-      100%
-    );
-    left: 0;
-    top: 120px;
   }
 
   .workStepContainer {

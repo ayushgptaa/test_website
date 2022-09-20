@@ -5,12 +5,11 @@ import Paragraph from 'components/Paragraph'
 
 import styles from './Work.module.scss'
 
-const BgElements = () => {
+export const BgElements = () => {
   return (
     <>
       <div className={styles.ellipseLeft} />
       <div className={styles.ellipseRight} />
-      <div className={styles.bgTexture} />
     </>
   )
 }

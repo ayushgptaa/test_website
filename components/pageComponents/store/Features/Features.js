@@ -59,7 +59,19 @@ const Features = () => {
       </section>
 
       <section className={styles.mainFeature}>
-        <div className={styles.bgPattern} />
+        <div className={styles.bgPattern}>
+          <Image
+            src={
+              isMobile
+                ? '/images/store/Features/texture-mobile.png'
+                : '/images/store/Features/texture-desktop.png'
+            }
+            alt="Background Texture"
+            layout="fill"
+            objectFit="contain"
+            quality={100}
+          />
+        </div>
         <div className={styles.textWrapper}>
           <Heading text="A hyper-speed Decentralized Storage Network" />
           <h3 className={styles.secondaryHeading}>Unlike any other Cloud.</h3>

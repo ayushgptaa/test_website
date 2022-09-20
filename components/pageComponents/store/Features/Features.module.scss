@@ -59,11 +59,8 @@
     position: absolute;
     width: 592px;
     height: 592px;
-    left: 240px;
-    right: -100%;
+    left: 0;
     top: 10px;
-    background: url('/images/store/Features/texture-mobile.png') no-repeat top
-      left/contain;
     z-index: -9;
   }
 
@@ -148,8 +145,6 @@
     border-radius: 32px;
 
     .bgPattern {
-      background: url('/images/store/Features/texture-desktop.png') no-repeat
-        center/contain;
       left: auto;
       top: auto;
       bottom: 0;
