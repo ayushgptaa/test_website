@@ -22,7 +22,7 @@ const BlimpArt = () => {
       <Image
         src="/images/homePage/BlimpInfo/blimpArt.png"
         alt="Blimp"
-        quality={100}
+        priority
         layout="fill"
       />
     </div>

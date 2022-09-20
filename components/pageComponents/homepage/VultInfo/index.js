@@ -14,8 +14,8 @@ const VultArt = () => {
       <Image
         src="/images/homePage/VultInfo/vultArt.png"
         alt="Vult"
-        quality={100}
         layout="fill"
+        priority
       />
     </div>
   )

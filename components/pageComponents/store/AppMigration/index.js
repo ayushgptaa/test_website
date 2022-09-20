@@ -18,7 +18,6 @@ const AppMigration = () => {
             <Image
               src="/images/buildPage/Features/laptopImgMobile.png"
               alt="Migrate any app"
-              fixed
               height={390}
               width={425}
               quality={100}
@@ -32,7 +31,6 @@ const AppMigration = () => {
             <Image
               src="/images/buildPage/Features/laptopImg.png"
               alt="Migrate any app"
-              fixed
               width={1080}
               height={930}
               quality={100}

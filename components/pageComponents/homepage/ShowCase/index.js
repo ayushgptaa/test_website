@@ -25,7 +25,6 @@ export const ShowcaseArt = () => {
         alt="showcase"
         layout="fill"
         priority
-        quality={100}
       />
       <video
         src="https://ayush-gupta.s3.us-east-2.amazonaws.com/test/video2.mp4"

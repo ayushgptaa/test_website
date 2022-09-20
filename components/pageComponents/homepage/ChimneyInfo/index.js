@@ -22,7 +22,7 @@ const ChimneyArt = () => {
       <Image
         src="/images/homePage/ChimneyInfo/chimneyArt.png"
         alt="Chimney"
-        quality={100}
+        priority
         layout="fill"
       />
     </div>

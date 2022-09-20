@@ -24,8 +24,8 @@ const ChalkArtMobile = () => {
       <Image
         src="/images/homePage/ChalkInfo/chalkArtMobile.png"
         alt="Chalk"
-        quality={100}
         layout="fill"
+        priority
       />
     </div>
   )
@@ -37,7 +37,7 @@ const ChalkArtDesktop = () => {
       <Image
         src="/images/homePage/ChalkInfo/chalkArtDesktop.png"
         alt="Chalk"
-        quality={100}
+        priority
         layout="fixed"
         height={550}
         width={600}
